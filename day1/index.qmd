@@ -38,11 +38,11 @@ execute:
 1. **ガイダンス、RとRStudioの紹介**
 2. R入門
 3. プロジェクトの整理とデータの読み込み
-4. データの整理
-5. データの可視化
-6. 再現可能な文書の書き方
-7. レポートの発表
-8. 再現性を高めるツール（オンデマンド）
+4. データの整理（１）
+5. データの整理（２）
+6. データの可視化（１）
+7. データの可視化（２）
+8. e-learning（オンデマンド）
 
 ## サイト
 
@@ -73,35 +73,21 @@ execute:
 
 ## リーディング {.smaller}
 
-毎週のリーディングを講義の**前に**読んでください。
-
-- 第２回（2024-04-09）: ガイダンス、データサイエンスとR入門
-  - [R4DS Introduction](https://r4ds.hadley.nz/intro)
-  - [R4DS Chapter 2 (Workflow: Basics)](https://r4ds.hadley.nz/workflow-basics)
-- 第３回（2024-04-16）: プロジェクトの整理とデータの読み込み
-  - [R4DS Chapter 6 (Workflow: Scripts and Projects)](https://r4ds.hadley.nz/workflow-scripts)
-  - [R4DS Chapter 7 (Data Import)](https://r4ds.hadley.nz/data-import)
-
-## リーディング {.smaller}
-
-- 第４回（2024-04-23）: データの整理
-  - [R4DS Chapter 3 (Data Transformation)](https://r4ds.hadley.nz/data-transform)
-  - [R4DS Chapter 5 (Data Tidying)](https://r4ds.hadley.nz/data-tidy)
-- 第５回（2024-05-07）: データの可視化
-  - [R4DS Chapter 1 (Data Visualization)](https://r4ds.hadley.nz/data-visualize)
-- 第６回（2024-05-14）: 再現可能な文書の書き方
-  - [R4DS Chapter 28 (Quarto)](https://r4ds.hadley.nz/quarto)
+PDFをMoodleからダウンロードして、毎週のリーディングを講義の**前に**読んでください。
 
 ## 課題と評価
 
 - 宿題（50%）
-  - サイトで受ける
+  - ブラウザーで受ける（チュートリアル式）
   - Moodleで提出
   - 締め切り：次の週の授業まで
   - 全７回
+
+## 課題と評価
+
 - クイズ（50%）
-  - Socrativeで提出
   - 授業の最初の10分間
+  - Socrativeで提出
   - 5問ほど
   - 全７回
 
@@ -137,7 +123,7 @@ execute:
 
 - 以下のことができるようになる：
   - Rプログラミング言語の基本的な操作
-  - データの読み込みをすること
+  - データの読み込み
   - データの整理
   - データの可視化
 
@@ -176,7 +162,7 @@ execute:
   - 自分が何をやったのか、記録が残る
   - 将来、同じ解析ができる
 
-- コードとして残らない方法はよろしくない（エクセル、SPSSなど）
+- コードとして残らない方法はよろしくない
 
 ## 本授業では、Rを使う
 
@@ -240,6 +226,39 @@ execute:
 
 <https://posit.co/download/rstudio-desktop/>から自分のOSに合ったファイルをダウンロードして、インストール
 
-## 困ったら・・
+## ライブコーディング
 
-ご連絡下さい（<joelnitta@chiba-u.jp>）
+- 本授業では、「ライブコーディング」を実施する
+
+- 先生が打ったコードを**自分のパソコンで打ってください**
+  - 自分が何をしているのか、理解するのが大事
+
+- 何か分からなかったら、**質問してください**
+
+## RStudioの基本的な使い方
+
+- 「R」というソフトではなく、「RStudio」を開くように気をつけてください
+
+---
+
+![](../images/r_vs_rstudio.png)
+
+## RStudioの基本的な使い方
+
+- コンソールにRコードを打って、出力を確認する
+
+- まずは電卓として使ってみる
+
+---
+
+![](../images/rstudo_panel_ja.png)
+
+## 宿題のやり方
+
+- 宿題は全部オンラインになっている
+
+- ブラウザーの中でRコードを実行することによって答える
+
+- 最後に完成コードが出るので、これをMoodleにコピペして、投稿
+
+- 投稿する前に正しく答えられたかどうか確認できる
