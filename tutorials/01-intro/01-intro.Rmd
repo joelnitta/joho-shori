@@ -1,0 +1,244 @@
+
+---
+title: "R入門"
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(gradethis)
+library(learnr)
+library(joholearnr)
+gradethis::gradethis_setup()
+
+moodle_url <- "https://moodle.gs.chiba-u.jp/moodle/mod/assign/view.php?id=1264655"
+```
+
+## Rを計算機として使う
+
+### 足し算
+
+R は最も単純な形では、対話型の計算機として使用できます。
+
+- Q1: 5 + 7 と入力して Run Code を押してください。コードを正しく実行できたら、Submit Answer を押してください。
+
+```{r addition, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r addition-check}
+grade_result(
+  pass_if(~ identical(.result, 12))
+)
+```
+
+### 引き算
+
+- Q2: `-` を使って、4を11から引きなさい。
+
+```{r subtraction, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r subtraction-check}
+grade_result(
+  pass_if(~ identical(.result, 7))
+)
+```
+
+### 掛け算
+
+- Q3: `*` を使って、7を3に掛けなさい。
+
+```{r multiplication, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r multiplication-check}
+grade_result(
+  pass_if(~ identical(.result, 21))
+)
+```
+
+### 割り算
+
+- Q4: `/` を使って、6 を 2 で割りなさい。
+
+```{r division, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r division-check}
+grade_result(
+  pass_if(~ identical(.result, 3))
+)
+```
+
+### 演算の順序
+
+- Q5: `()`を使って、2を5から引いた後に、その結果を8に掛けなさい。
+
+```{r order-op, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r order-op-solution}
+# order last ----
+(5-2)*8
+
+# order first ----
+8*(5-2)
+```
+
+```{r order-op-check}
+grade_this_code()
+```
+
+## オブジェクトについて
+
+### オブジェクトの保存
+
+R では、計算結果などをオブジェクトに保存できます。これはセッション中に計算を後で再利用したい場合に便利です。
+
+保存するには、`<-` (「より小さい」とハイフンを組み合わせた記号)を使います。
+矢印のように見えて、「割り当て文」、あるいは「代入文」と言います。
+
+- Q6: `<-`を使って、 `8 - 1` の結果を `x` というオブジェクトに保存しなさい（`____`を消して、コードを書いてください）。
+
+```{r storing, exercise = TRUE, exercise.lines = 2}
+x <- ____
+```
+
+```{r storing-solution}
+x <- 8 - 1
+```
+
+```{r storing-check}
+grade_this_code()
+```
+
+### オブジェクトの確認
+
+今までの計算機としてのRの使い方では、計算結果がすぐに画面に出てきましたが、割り当て文`<-`を使うと、計算結果がオブジェクトとして保存されるのですぐに出てきません。
+
+オブジェクトの中身を確認したい場合はそのオブジェクトの名前を入力します（もしくはRStudioのEnvironmentパネルを確認する）。
+
+- Q7: `y`に22を5で割った結果を入れてから、次の行に`y`の中身を確認してください。
+
+```{r retrieval, exercise=TRUE, exercise.lines=6}
+# 計算
+y <- ____
+# 計算結果のチェック
+```
+
+```{r retrieval-solution}
+y <- 22 / 5
+y
+```
+
+```{r retrieval-check}
+grade_this_code()
+```
+
+### オブジェクトの上書き（例）
+
+すでに存在しているオブジェクトに新しい値を割り当てると、（何も報告なしに）中身が上書きされます。
+
+例えば、下のコードを実行して見てください。
+
+```{r overwrite-example, exercise = TRUE}
+# 計算結果をyに保存する
+y <- 22 / 5
+# 新しい値を入れる
+y <- 10
+# 中身を確認する
+y
+```
+
+### オブジェクトの上書き
+
+元々の値を取っておきたい場合は、その結果を**別の**オブジェクトとして保存してから、新しい値を割り当てます。
+
+- Q8: `y1`に元々の`y`の値を割り当ててから、`y`に10を入れてください。
+
+```{r overwrite, exercise = TRUE}
+# 計算結果をyに保存する
+y <- 22 / 5
+# y1をyから作る
+y1 <- _____
+# yに10を入れる
+y <- _____
+# それぞれのyとy1の中身を確認する
+y
+y1
+```
+
+```{r overwrite-solution}
+y <- 22 / 5
+y1 <- y
+y <- 10
+y
+y1
+```
+
+```{r overwrite-check}
+grade_this_code()
+```
+
+### オブジェクトの名前
+
+オブジェクトの名前の付け方はいつかのルールがあります。例えば、オブジェクトの名前は文字から始める必要があって、文字、数字、`_`、`.`のみ使用できます。
+
+このルールに従えば、どんな名前でも使ってもいいのですが、いくつかのおすすめがあります：
+
+- 後々自分にとって分かりやすいように、**名前の意味が簡単に伝わる**ように工夫する
+- 文字化けを防ぐためには英字を使う
+- Rは大文字・小文字を区別するので、大文字と小文字を混合させない
+
+- Q9: 以下のオブジェクトの名前のどれがRのルールに従って、かつ最も使いやすい？
+
+```{r object-name, echo=FALSE}
+question("一つを選んでください",
+  answer("01_my_object", message = "オブジェクトの名前は文字から始まらないといけない"),
+  answer("my_object", correct = TRUE),
+  answer("オブジェクトの1", message = "オブジェクトの名前は英字にした方がいい"),
+  answer("My.Object", message = "オブジェクトの名前は大文字と小文字を混合させない方がいい"),
+  allow_retry = TRUE
+)
+```
+
+### 名前をTabキーで書く
+
+そして、Rには名前を打つときに便利な機能があります：Tabキーを押すと、名前を自動的に完成させてくれます。
+この機能を使えば、意味のある名前がもっと作りやすいし、名前が長くてもすぐに（そして、正確に）出てきますので、是非使ってください。
+
+- Q10: Tabキーを使って、`this_is_a_really_long_name`というオブジェクトの中身を確認してください。
+
+<!--
+This works because {joholearnr} includes the data object this_is_a_really_long_name 
+Otherwise, {learnr} won't tab-complete object names from code chunks
+-->
+
+```{r long-obj, exercise = TRUE}
+
+```
+
+```{r long-obj-solution}
+this_is_a_really_long_name
+```
+
+```{r long-obj-check}
+grade_this_code()
+```
+
+## 確認と投稿
+
+```{r, echo=FALSE, results = "asis"}
+res <- knitr::knit_child(
+  system.file("rmd", "summarize_score.Rmd", package = "joholearnr"),
+  quiet = TRUE)
+cat(res, sep = '\n')
+```

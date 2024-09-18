@@ -1,0 +1,90 @@
+
+---
+title: "チュートリアルについて"
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(gradethis)
+library(learnr)
+library(joholearnr)
+gradethis::gradethis_setup()
+
+moodle_url <- "https://moodle.gs.chiba-u.jp/moodle/mod/assign/view.php?id=1267814"
+```
+
+## チュートリアルについて
+
+### コードの書き方
+
+### お試し
+
+本授業の宿題はチュートリアル形式になっている。チュートリアルでは、ブラウザーの中で説明を読んでから、Rコードを書く場所があるから、質問に従ってRコードを書き込んでください。
+
+書き込むボックスの上に二つのボタンがある：
+
+- Run Code: コードを実行する
+
+- Submit Answer: 答えを提出する
+
+まずはRun Codeをクリックして、自分のコードが思う通りの結果を返すかどうか、確認してください。次に、Submit Answerをクリックして、答えを提出してください。
+
+答えを提出したら、その答えが正しいかどうか表示され、正しくない場合はヒントが表示される。答えの投稿は何回でもしても良い。正解になるまで、コードを直して提出してみてください。
+
+例えば：
+
+- Q1: 25/7はいくつですか？
+
+```{r addition, exercise = TRUE, exercise.lines = 2}
+
+```
+
+```{r addition-check}
+grade_result(
+  pass_if(~ identical(.result, 25 / 7))
+)
+```
+
+「Continue」ボタンを押して次の項目に進んでください。
+
+### 他の質問の種類
+
+コードを書く以外に、不数選択の質問もある。
+
+例えば、
+
+- Q2: この授業で使うプログラミング言語の名前は？
+
+```{r object-combine, echo=FALSE}
+question("一つ選んでください：",
+  answer("python", message = "これも人気のあるデータ解析用プログラミング言語ですが、この授業では使わない"),
+  answer("S", message = "この授業で使っているプログラミング言語の一世代前です"),
+  answer("R", correct = TRUE),
+  answer("Arrrgh", message = "スペルが違います"),
+  random_answer_order = TRUE,
+  allow_retry = TRUE
+)
+```
+
+## 確認と投稿
+
+全ての回答が終わったら、自分の名前と学籍番号を入力して、Check Answersをクリックして、提出内容を確認してください。
+
+```{r, echo=FALSE, results = "asis"}
+res <- knitr::knit_child(
+  system.file("rmd", "summarize_score.Rmd", package = "joholearnr"),
+  quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+これでは、答えはまだ提出出来ていない。
+
+答えを提出するには、Generateボタンをクリックしてください。
+
+そうすると、とても長い文字列が上のボックスに現れる。この文字列には、あなたが答えた内容が全部入っている。この文字列をコピして、Moodleの課題で提出してください。
+
+そうしたら、完了です。
