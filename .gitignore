@@ -1,4 +1,8 @@
 .DS_Store
 /.quarto/
 .Rproj.user
+*.Rproj
+*.Rhistory
 docs
+rsconnect/
+*.html
