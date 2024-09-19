@@ -75,6 +75,10 @@ execute:
 
 PDFをMoodleからダウンロードして、毎週のリーディングを講義の**前に**読んでください。
 
+今週：Introduction（）
+
+来週：
+
 ## 課題と評価
 
 - 宿題（50%）
@@ -131,19 +135,11 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## データ解析の循環
 
-![](https://r4ds.hadley.nz/diagrams/data-science/base.png)
-
-[<https://r4ds.hadley.nz/diagrams/data-science/base.png>]{.small}
+![](../images/data-sci-cycle.png)
 
 ---
 
-- Import: データを入力する
-- Tidy and Transform: データを整える
-- Visualize: データを可視化する
-- Model: モデルを構築する（予測する）
-- Communicate: 結果を伝える
-
-![](https://r4ds.hadley.nz/diagrams/data-science/base.png)
+![](../images/data-sci-cycle-annotated.png)
 
 # 再現性とは？
 
