@@ -31,6 +31,8 @@ toc: false
 - 第２回（2024-10-08）: **R入門（２）**
   - [スライド](day2/index.qmd)
     - [R4DS Chapter 2 (Workflow: Basics)](https://r4ds.hadley.nz/workflow-basics)
+- オンデマンド回
+  - [スライド](on-demand/index.qmd)
 
 ## オフィスアワー
 

@@ -1,0 +1,111 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 生成AIの基本
+
+## みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？
+
+:::: {.columns}
+
+::: {.column}
+- 私も使っています
+
+- データサイエンスのみならず、様々な場面において大事なツール
+
+- でも、**そもそもAIが何をしている**のか、分かりますか？
+:::
+
+::: {.column}
+![](../images/chatgpt.png)
+
+<https://chat.openai.com/>
+:::
+
+::::
+
+## Artificial Intelligenceという名前は嘘
+
+::: {.columns}
+::: {.column}
+
+- AI ＝「人工知能」
+
+- ・・でも、AIは何も**考えて**いない！
+  - 真偽を知らない！
+
+:::
+::: {.column}
+![](../images/no_ai.png)
+:::
+:::
+
+::: {.aside}
+ChatGPTによる画像
+:::
+
+## LLMは言葉を予測するモデルである
+
+- ChatGPTは**Large Language Model**（LLM）の一種である
+  - **言葉を予測する**モデル
+  - 莫大的な量のデータ（インターネットの大部分）を使っている
+
+- LLMは入力された言葉に対して、最も確率の高い次に来る言葉を返す
+
+## LLMは言葉を予測するモデルである
+
+![](../images/perplexity.png)
+
+<https://perplexity.vercel.app/>
+
+## LLMは必ず「もっともらしい」言葉を自信満々で返す
+
+・・けど、それが正解とは**限らない**
+
+- 平気な顔で**嘘をつく**
+
+## LLMは「妄想」しがち
+
+![](../images/mei.png)
+
+<https://chat.openai.com/share/dcee3278-0f51-4bc2-8051-849ef1b0b072>
+
+## LLMは「妄想」しがち
+
+- LLMが返した言葉を信用できるかどうか判断するのが**あなたの責任**
+
+## ChatGPTに入れた情報はプラベートではない
+
+- ChatGPTに入力した文章はOpenAI社のサーバーに送られる
+
+- つまり、OpenAI社にとって**あなたのデータ（入力）は新しいモデルを作る材料となっている**
+  - これを[「オフ」にする設定もある](https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance)が、データが向こうに送られるのは変わらない
+
+- 公開したくないなら、ChatGPTに入れない方がいい
+
+## じゃ、どうやって使ったら良いのか？
+
+- 返ってきた答えを**確かめる**
+  - コードを走らせてみる
+  - 内容を他のソースで確認する
+  - 裏付けとなっている文献を出すように指示する
+
+- **必ず批判的なスタンスを持つこと**
+
+## コピペしないこと
+
+- 大学とは自分で考えることを身につける場である
+- LLMは「言葉の計算機」だと思えば良い
+  - 計算機があるからといって、算数を全く勉強しなくていいわけではない
+- LLMは色々な作業を手伝う（よく嘘をつく）アシスタントであるが、自分の代わりに考えるものではない！
+
+## 課題
+
+- 中部大学「データサイエンス」の[「ChatGPT」](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)を**全部**（「詳細」まで）読んでください
+
+- Moodleに宿題がある。締め切りまでに完成させてください。
