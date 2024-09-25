@@ -2,217 +2,217 @@
   {
     "objectID": "day1/index.html#ニッタ-ジョエル",
     "href": "day1/index.html#ニッタ-ジョエル",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "ニッタ ジョエル",
     "text": "ニッタ ジョエル\n\n\n\n研究テーマその１：シダ植物の進化と生態学\n研究テーマその２：データサイエンス用ソフトの開発\nhttps://www.joelnitta.com"
   },
   {
     "objectID": "day1/index.html#スケジュール",
     "href": "day1/index.html#スケジュール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "スケジュール",
     "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）\ne-learning（オンデマンド）"
   },
   {
     "objectID": "day1/index.html#サイト",
     "href": "day1/index.html#サイト",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "サイト",
     "text": "サイト\nhttps://joelnita.github.io/joho-shori\nスライドと動画のリンクが掲載されている"
   },
   {
     "objectID": "day1/index.html#オフィスアワー",
     "href": "day1/index.html#オフィスアワー",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オフィスアワー",
     "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応いたします。"
   },
   {
     "objectID": "day1/index.html#教科書",
     "href": "day1/index.html#教科書",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "教科書",
     "text": "教科書\n\n\n\nR for Data Science (2nd edition)\n\n英語版はオンラインで無料 https://r4ds.hadley.nz/\n日本語版はアマゾンなど（図書館に頼んである）\nPDFを配る"
   },
   {
     "objectID": "day1/index.html#リーディング",
     "href": "day1/index.html#リーディング",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "リーディング",
     "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n今週：「はじめに」 - 「何を学ぶのか」（vi-vii） - 「準備するもの」（ix-xi）\n来週：２章「ワークフロー：基本」（27~32）"
   },
   {
     "objectID": "day1/index.html#課題と評価",
     "href": "day1/index.html#課題と評価",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "課題と評価",
     "text": "課題と評価\n\n宿題（50%）\n\nブラウザーで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n全７回"
   },
   {
     "objectID": "day1/index.html#課題と評価-1",
     "href": "day1/index.html#課題と評価-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "課題と評価",
     "text": "課題と評価\n\nクイズ（50%）\n\n授業の最初の10分間\nSocrativeで提出\n5問ほど\n全７回"
   },
   {
     "objectID": "day1/index.html#欠席ポリシー",
     "href": "day1/index.html#欠席ポリシー",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "欠席ポリシー",
     "text": "欠席ポリシー\n\n出席は取らない　\nどんな理由があっても、遅れた提出・クイズの再実施は認めない\nそのかわり、成績にはもっとも低い宿題・クイズ一件を使わない"
   },
   {
     "objectID": "day1/index.html#データサイエンスとは-1",
     "href": "day1/index.html#データサイエンスとは-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "データサイエンスとは？",
     "text": "データサイエンスとは？\n\nデータから洞察（インサイト）を得ること"
   },
   {
     "objectID": "day1/index.html#データサイエンスとは-2",
     "href": "day1/index.html#データサイエンスとは-2",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "データサイエンスとは？",
     "text": "データサイエンスとは？\n\n他の特徴\n\n大量のデータを扱う（「ビッグデータ」）\n\n統計学を使う\n\nプログラミングを使う（python、R、など）\n様々な用がある（学術研究、治療、産業、など）"
   },
   {
     "objectID": "day1/index.html#なぜデータサイエンスを勉強する",
     "href": "day1/index.html#なぜデータサイエンスを勉強する",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "なぜデータサイエンスを勉強する？",
     "text": "なぜデータサイエンスを勉強する？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため"
   },
   {
     "objectID": "day1/index.html#本授業の目的",
     "href": "day1/index.html#本授業の目的",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "本授業の目的",
     "text": "本授業の目的\n\n以下のことができるようになる：\n\nRプログラミング言語の基本的な操作\nデータの読み込み\nデータの整理\nデータの可視化\n\n\nこのスキルを他の授業で使えるようになること"
   },
   {
     "objectID": "day1/index.html#データ解析の循環",
     "href": "day1/index.html#データ解析の循環",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "データ解析の循環",
     "text": "データ解析の循環"
   },
   {
     "objectID": "day1/index.html#再現性とは-1",
     "href": "day1/index.html#再現性とは-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "再現性とは？",
     "text": "再現性とは？\n\n他の人（将来の自分を含めて）があなたの解析を再度行って、同じ結果を得ることができること\nデータサイエンスにおいて、とても重要。再現性がなければ、「サイエンス」にならない！"
   },
   {
     "objectID": "day1/index.html#再現可能にするには",
     "href": "day1/index.html#再現可能にするには",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "再現可能にするには・・",
     "text": "再現可能にするには・・\n\nコードが必要\n\n自分が何をやったのか、記録が残る\n将来、同じ解析ができる\n\nコードとして残らない方法はよろしくない"
   },
   {
     "objectID": "day1/index.html#本授業ではrを使う",
     "href": "day1/index.html#本授業ではrを使う",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "本授業では、Rを使う",
     "text": "本授業では、Rを使う\n\n\n\n無料\nデータ解析の機能が豊富\n多様なニーズに応えるパッケージ\nコミュニティー\n\n\n\nhttps://www.linkedin.com/pulse/why-r-4-reason-learn-programming-language-business-corporate"
   },
   {
     "objectID": "day1/index.html#他のプログラミング言語もある",
     "href": "day1/index.html#他のプログラミング言語もある",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "他のプログラミング言語もある",
     "text": "他のプログラミング言語もある\n\n特に、PythonはRと同様（あるいはもっと）人気がある\n大事なのは、プログラミングの基本を抑えること"
   },
   {
     "objectID": "day1/index.html#rとrstudioについて",
     "href": "day1/index.html#rとrstudioについて",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "RとRStudioについて",
     "text": "RとRStudioについて\n\n\n\nRとは「R Project for Statistical Computing」という組織が提供しているオープンソースプログラミング言語"
   },
   {
     "objectID": "day1/index.html#rとrstudioについて-1",
     "href": "day1/index.html#rとrstudioについて-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "RとRStudioについて",
     "text": "RとRStudioについて\n\n\n\nRのコードを書く・実行する最適なソフト（「Integrated Development Environment」 = IDE）\n基本的なプランは無料\nRStudioなしでもRは一応使えるけど、不便"
   },
   {
     "objectID": "day1/index.html#rのインストール",
     "href": "day1/index.html#rのインストール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "Rのインストール",
     "text": "Rのインストール\nhttps://cloud.r-project.org/から自分のOSに合ったファイルをダウンロードして、インストール"
   },
   {
     "objectID": "day1/index.html#rstudioのインストール",
     "href": "day1/index.html#rstudioのインストール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "RStudioのインストール",
     "text": "RStudioのインストール\nhttps://posit.co/download/rstudio-desktop/から自分のOSに合ったファイルをダウンロードして、インストール"
   },
   {
     "objectID": "day1/index.html#ライブコーディング",
     "href": "day1/index.html#ライブコーディング",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "ライブコーディング",
     "text": "ライブコーディング\n\n本授業では、「ライブコーディング」を実施する\n先生が打ったコードを自分のパソコンで打ってください\n\n自分が何をしているのか、理解するのが大事\n\n何か分からなかったら、質問してください"
   },
   {
     "objectID": "day1/index.html#rstudioの基本的な使い方",
     "href": "day1/index.html#rstudioの基本的な使い方",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "RStudioの基本的な使い方",
     "text": "RStudioの基本的な使い方\n\n「R」というソフトではなく、「RStudio」を開くように気をつけてください"
   },
   {
     "objectID": "day1/index.html#rstudioの基本的な使い方-1",
     "href": "day1/index.html#rstudioの基本的な使い方-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "RStudioの基本的な使い方",
     "text": "RStudioの基本的な使い方\n\nコンソールにRコードを打って、出力を確認する\nまずは電卓として使ってみる"
   },
   {
     "objectID": "day1/index.html#宿題のやり方",
     "href": "day1/index.html#宿題のやり方",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "宿題のやり方",
     "text": "宿題のやり方\n\n宿題は全部オンラインになっている\nブラウザーの中でRコードを実行することによって答える\n最後に完成コードが出るので、これをMoodleにコピペして、投稿\n投稿する前に正しく答えられたかどうか確認できる"
   },
   {
     "objectID": "day1/index.html#宿題のやり方-1",
     "href": "day1/index.html#宿題のやり方-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "宿題のやり方",
     "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しない）"
   },
   {
     "objectID": "day1/index.html#クイズのやり方",
     "href": "day1/index.html#クイズのやり方",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "クイズのやり方",
     "text": "クイズのやり方\n\nSocrativeというサイトを使う\nアカウントの設定やアプリのインストールは不要\nQRコードをスキャンして、学籍番号を入力してから質問に答えてください"
   },
   {
     "objectID": "day1/index.html#クイズのやり方-1",
     "href": "day1/index.html#クイズのやり方-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "クイズのやり方",
     "text": "クイズのやり方\n\n早速試してみましょう（今回は成績に影響しない）"
   },
   {
     "objectID": "day1/index.html#クイズについて",
     "href": "day1/index.html#クイズについて",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "クイズについて",
     "text": "クイズについて\n\n第二回（来週）以降、毎回クイズがある\n今回学んだことについて(RとRStudio)\nスライドや宿題を復習してください"
   },
   {
     "objectID": "day1/index.html#質問",
     "href": "day1/index.html#質問",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "質問",
     "text": "質問"
   },
@@ -268,182 +268,182 @@
   {
     "objectID": "day2/index.html#スケジュール",
     "href": "day2/index.html#スケジュール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "スケジュール",
     "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）\ne-learning（オンデマンド）"
   },
   {
     "objectID": "day2/index.html#rを計算機として使う",
     "href": "day2/index.html#rを計算機として使う",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "Rを計算機として使う",
     "text": "Rを計算機として使う\n\nRStudioのコンソール（左下のパネル）にカーソルを置いて、簡単な計算をしてみましょう：\n\n\n\n2 * 10\n\n[1] 20"
   },
   {
     "objectID": "day2/index.html#オブジェクトについて",
     "href": "day2/index.html#オブジェクトについて",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オブジェクトについて",
     "text": "オブジェクトについて\n\n次に、Rの中のデータを変数（Rでは、「オブジェクト Object」と呼ぶ）として保存しよう：\n\n\n\nage &lt;- 2 * 10"
   },
   {
     "objectID": "day2/index.html#オブジェクトについて-1",
     "href": "day2/index.html#オブジェクトについて-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オブジェクトについて",
     "text": "オブジェクトについて\nこれだけでは何も返ってこない。\n変数の内容を確認するには、コンソールにその変数の名前を打てば良い：\n\n\nage\n\n[1] 20"
   },
   {
     "objectID": "day2/index.html#オブジェクトについて-2",
     "href": "day2/index.html#オブジェクトについて-2",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オブジェクトについて",
     "text": "オブジェクトについて\nまた、「Environment」（環境）パネルを見ると、オブジェクトの確認ができる"
   },
   {
     "objectID": "day2/index.html#オブジェクトについて-3",
     "href": "day2/index.html#オブジェクトについて-3",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オブジェクトについて",
     "text": "オブジェクトについて\nオブジェクトの上書きもできます。\n\n\nage &lt;- 40\n\n\nageはいくつになりましたか？"
   },
   {
     "objectID": "day2/index.html#関数とは",
     "href": "day2/index.html#関数とは",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "関数とは",
     "text": "関数とは\n何かの値（インプット）を受けて、処理して、計算結果（アウトプット）を返すもの\n\n\n\nhttps://manamina.valuesccg.com/articles/756"
   },
   {
     "objectID": "day2/index.html#関数とは-1",
     "href": "day2/index.html#関数とは-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "関数とは",
     "text": "関数とは\n関数の書き方：\n\n関数名(引数)\n\n例えば\n\n\nround(3.1415, digits = 1)\n\n[1] 3.1"
   },
   {
     "objectID": "day2/index.html#関数とは-2",
     "href": "day2/index.html#関数とは-2",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "関数とは",
     "text": "関数とは\n関数の使い方を確認したい時は?関数名と打って、ヘルプファイルを参照すれば良い\n\n\n?round"
   },
   {
     "objectID": "day2/index.html#パッケージとは",
     "href": "day2/index.html#パッケージとは",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "パッケージとは",
     "text": "パッケージとは\n\nRパッケージとは、Rが出来ることを大幅に増やす「追加」のソフト（関数のまとまり）\n\n現在、２万近くのパッケージがある！"
   },
   {
     "objectID": "day2/index.html#パッケージのインストール",
     "href": "day2/index.html#パッケージのインストール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "パッケージのインストール",
     "text": "パッケージのインストール\nRパッケージのインストールを行うには、install.packages()を使う：\n\ninstall.packages(\"ggplot2\")\n\n一回インストールしたら、次回からはしなくて良いので、これはコードとして保存しない"
   },
   {
     "objectID": "day2/index.html#パッケージのロード",
     "href": "day2/index.html#パッケージのロード",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "パッケージのロード",
     "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態するにはロードすることが必要\n\nインストールは一回でいい\nロードは毎回必要\n\n\nlibrary()関数でロードする：\n\n\nlibrary(ggplot2)"
   },
   {
     "objectID": "day2/index.html#tidyverse",
     "href": "day2/index.html#tidyverse",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "tidyverse",
     "text": "tidyverse\n\ntidyverseはデータサイエンス用パッケージの集まりのパッケージ\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールしましょう。一気に出来るから、楽。\n\ninstall.packages(\"tidyverse\")"
   },
   {
     "objectID": "day2/index.html#install.packagesとlibraryの違い",
     "href": "day2/index.html#install.packagesとlibraryの違い",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "install.packages()とlibrary()の違い",
     "text": "install.packages()とlibrary()の違い\n\ninstall.packages()は一回だけで良い（パソコンにパッケージをダウンロードする）\nlibrary()はRを使う毎にしないといけない（パッケージを今回のRのセッションで使えるようにする）"
   },
   {
     "objectID": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",
     "href": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？",
     "text": "みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？\n\n\n\n私はよく使っています\nデータサイエンスのみならず、様々な場面において大事なツール\nでも、そもそもAIが何をしているのか、分かりますか？\n\n\n\nhttps://chat.openai.com/"
   },
   {
     "objectID": "on-demand/index.html#artificial-intelligenceという名前は嘘",
     "href": "on-demand/index.html#artificial-intelligenceという名前は嘘",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "Artificial Intelligenceという名前は嘘",
     "text": "Artificial Intelligenceという名前は嘘\n\n\n\nAI ＝ Artificial Intelligence （人工知能）\n・・でも、AIは何も考えていない！\n\n真偽を知らない！\n\n\n\n\n\n\n\n\nChatGPTによる画像"
   },
   {
     "objectID": "on-demand/index.html#llmは言葉を予測するモデルである",
     "href": "on-demand/index.html#llmは言葉を予測するモデルである",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "LLMは言葉を予測するモデルである",
     "text": "LLMは言葉を予測するモデルである\n\nChatGPTはLarge Language Model（LLM）の一種である\n\nChat = 喋る\n言葉を予測するモデル\n莫大的な量のデータ（インターネットの大部分）を使っている\n\nLLMは入力された言葉に対して、最も確率の高い次に来る言葉を返す"
   },
   {
     "objectID": "on-demand/index.html#llmは言葉を予測するモデルである-1",
     "href": "on-demand/index.html#llmは言葉を予測するモデルである-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "LLMは言葉を予測するモデルである",
     "text": "LLMは言葉を予測するモデルである\n\nhttps://perplexity.vercel.app/"
   },
   {
     "objectID": "on-demand/index.html#llmは必ずもっともらしい言葉を自信満々で返す",
     "href": "on-demand/index.html#llmは必ずもっともらしい言葉を自信満々で返す",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "LLMは必ず「もっともらしい」言葉を自信満々で返す",
     "text": "LLMは必ず「もっともらしい」言葉を自信満々で返す\n・・けど、それが正解とは限らない\n\n平気な顔で嘘をつく"
   },
   {
     "objectID": "on-demand/index.html#llmは妄想しがち",
     "href": "on-demand/index.html#llmは妄想しがち",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "LLMは「妄想」しがち",
     "text": "LLMは「妄想」しがち\n\nhttps://chat.openai.com/share/dcee3278-0f51-4bc2-8051-849ef1b0b072"
   },
   {
     "objectID": "on-demand/index.html#llmは妄想しがち-1",
     "href": "on-demand/index.html#llmは妄想しがち-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "LLMは「妄想」しがち",
     "text": "LLMは「妄想」しがち\n\nLLMが返した言葉を信用できるかどうか判断するのがあなたの責任"
   },
   {
     "objectID": "on-demand/index.html#chatgptに入れた情報はプラベートではない",
     "href": "on-demand/index.html#chatgptに入れた情報はプラベートではない",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "ChatGPTに入れた情報はプラベートではない",
     "text": "ChatGPTに入れた情報はプラベートではない\n\nChatGPTに入力した文章はOpenAI社のサーバーに送られる\nつまり、OpenAI社にとってあなたのデータ（入力）は新しいモデルを作る材料となっている\n\nこれを「オフ」にする設定もあるが、データが向こうに送られるのは変わらない\n\n公開したくないなら、ChatGPTに入れない方がいい"
   },
   {
     "objectID": "on-demand/index.html#どうやって使ったら良いのか",
     "href": "on-demand/index.html#どうやって使ったら良いのか",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "どうやって使ったら良いのか？",
     "text": "どうやって使ったら良いのか？\n\nまずは簡単な質問をして、どう答えるのかを自分で確かめる\n\nこの講義の最後の出てくる資料にアカウント作成の方法がある\n\n返ってきた答えを確かめる\n\nコードを走らせてみる\n内容を他のソースで確認する\n裏付けとなっている文献を出すように指示する\n\n必ず批判的なスタンスを持つこと"
   },
   {
     "objectID": "on-demand/index.html#コピペしないこと",
     "href": "on-demand/index.html#コピペしないこと",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "コピペしないこと",
     "text": "コピペしないこと\n\n大学とは自分で考えることを身につける場である\nLLMは「言葉の計算機」だと思えば良い\n\n計算機があるからといって、算数を全く勉強しなくていいわけではない\n\nLLMは色々な作業を手伝う（よく嘘をつく）アシスタントであるが、自分の代わりに考えるものではない！"
   },
   {
     "objectID": "on-demand/index.html#課題",
     "href": "on-demand/index.html#課題",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "課題",
     "text": "課題\n\n中部大学「データサイエンス」の「ChatGPT」を全部（「詳細」まで）読んでください\n\nhttps://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html"
   },
   {
     "objectID": "on-demand/index.html#課題-1",
     "href": "on-demand/index.html#課題-1",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "課題",
     "text": "課題\n\nMoodleに宿題がある。締め切りまでに完成させてください。"
   }
