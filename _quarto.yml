@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "データサイエンス"
+  title: "情報処理演習"
   navbar:
     left:
       - href: index.qmd
