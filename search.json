@@ -32,7 +32,7 @@
     "href": "day1/index.html#教科書",
     "title": "データサイエンス",
     "section": "教科書",
-    "text": "教科書\n\n\n\nR for Data Science (2nd edition)\n\n英語版はオンラインで無料 https://r4ds.hadley.nz/\n日本語版はアマゾンなどから（図書館に頼んである）\nPDFを配る"
+    "text": "教科書\n\n\n\nR for Data Science (2nd edition)\n\n英語版はオンラインで無料 https://r4ds.hadley.nz/\n日本語版はアマゾンなど（図書館に頼んである）\nPDFを配る"
   },
   {
     "objectID": "day1/index.html#リーディング",
@@ -219,44 +219,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "",
-    "text": "千葉大学 総合国際学位プログラムの授業\n担当教員：ニッタ ジョエル"
+    "text": "千葉大学 国際教養学部\n担当教員：ニッタ ジョエル"
   },
   {
     "objectID": "index.html#概要",
     "href": "index.html#概要",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "概要",
     "text": "概要\n近年、我々の生活のあらゆる場面において「データ」が活用されるようになっている。 したがって、データをうまく整理し、データの中に潜んでいるメッセージを読み解くスキルが現代社会において必須となってきている。 本授業では、データ構造の基本とデータ解析に必要なスキルを「R」というプログラミング言語を通して学ぶ。 また、生成AIの原理と正しい使い方について学ぶ。"
   },
   {
     "objectID": "index.html#教科書",
     "href": "index.html#教科書",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "教科書",
-    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\nアマゾンに日本語版がある\n\n授業中にプリントを配る"
+    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n英語版はオンラインで無料 https://r4ds.hadley.nz/\n日本語版はアマゾンなど\n\n授業中にプリントを配る"
+  },
+  {
+    "objectID": "index.html#教室",
+    "href": "index.html#教室",
+    "title": "情報処理演習",
+    "section": "教室",
+    "text": "教室\nG1-501 情報処理演習室"
   },
   {
     "objectID": "index.html#スケジュール",
     "href": "index.html#スケジュール",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングを講義の前に読んでください。\n（全ての講義の録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング\n\nR4DS Introduction\n\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\n\nR4DS Chapter 2 (Workflow: Basics)\n\n\nオンデマンド回\n\nスライド"
+    "text": "スケジュール\n毎週のリーディングを講義の前に読んでください。\n（全ての講義の録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング\n\nR4DS Introduction\n\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\n\nR4DS Chapter 2 (Workflow: Basics)\n\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n第４回（2024-10-29）: データの整理（１）\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド"
   },
   {
     "objectID": "index.html#オフィスアワー",
     "href": "index.html#オフィスアワー",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "オフィスアワー",
     "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応いたします。"
   },
   {
     "objectID": "index.html#リンク",
     "href": "index.html#リンク",
-    "title": "データサイエンス",
+    "title": "情報処理演習",
     "section": "リンク",
-    "text": "リンク\n\nシラバス"
+    "text": "リンク\n\nシラバス\nMoodle"
   },
   {
     "objectID": "day2/index.html#スケジュール",
