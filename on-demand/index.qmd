@@ -14,7 +14,7 @@ execute:
 :::: {.columns}
 
 ::: {.column}
-- 私も使っています
+- 私はよく使っています
 
 - データサイエンスのみならず、様々な場面において大事なツール
 
@@ -34,7 +34,7 @@ execute:
 ::: {.columns}
 ::: {.column}
 
-- AI ＝「人工知能」
+- AI ＝ **A**rtificial **I**ntelligence （人工知能）
 
 - ・・でも、AIは何も**考えて**いない！
   - 真偽を知らない！
@@ -52,6 +52,7 @@ ChatGPTによる画像
 ## LLMは言葉を予測するモデルである
 
 - ChatGPTは**Large Language Model**（LLM）の一種である
+  - Chat = 喋る
   - **言葉を予測する**モデル
   - 莫大的な量のデータ（インターネットの大部分）を使っている
 
@@ -88,7 +89,10 @@ ChatGPTによる画像
 
 - 公開したくないなら、ChatGPTに入れない方がいい
 
-## じゃ、どうやって使ったら良いのか？
+## どうやって使ったら良いのか？
+
+- まずは簡単な質問をして、どう答えるのかを自分で確かめる
+  - この講義の最後の出てくる資料にアカウント作成の方法がある
 
 - 返ってきた答えを**確かめる**
   - コードを走らせてみる
@@ -107,5 +111,33 @@ ChatGPTによる画像
 ## 課題
 
 - 中部大学「データサイエンス」の[「ChatGPT」](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)を**全部**（「詳細」まで）読んでください
+
+---
+
+![](../images/chubu_chatgpt.png)
+
+::: {.aside}
+<https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html>
+:::
+
+---
+
+![](../images/chubu_chatgpt-2_annotated.png)
+
+::: {.aside}
+<https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html>
+:::
+
+---
+
+![](../images/chubu_chatgpt-3.png)
+
+::: {.aside}
+<https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html>
+:::
+
+---
+
+## 課題
 
 - Moodleに宿題がある。締め切りまでに完成させてください。
