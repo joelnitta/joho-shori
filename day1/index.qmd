@@ -19,8 +19,10 @@ execute:
 
 ::: {.column}
 - 研究テーマその１：**シダ植物の進化と生態学**
+  - [Biodiversity and Japan](https://syllabus.gs.chiba-u.jp/2024/401001000000000/G15N945001/en_US)
 
 - 研究テーマその２：**データサイエンス**用ソフトの開発
+  - [Reproducible Data Analysis](https://syllabus.gs.chiba-u.jp/2024/101101101076000/Z011531301/en_US)
 
 - <https://www.joelnitta.com>
 :::
@@ -73,11 +75,11 @@ execute:
 
 PDFをMoodleからダウンロードして、毎週のリーディングを講義の**前に**読んでください。
 
-今週：「はじめに」
+- 今週：「はじめに」
   - 「何を学ぶのか」（vi-vii）
   - 「準備するもの」（ix-xi）
 
-来週：２章「ワークフロー：基本」（27~32）
+- 来週：２章「ワークフロー：基本」（27~32）
 
 ## 課題と評価
 
@@ -137,7 +139,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ![](../images/data-sci-cycle.png)
 
----
+## データ解析の循環
 
 ![](../images/data-sci-cycle-annotated.png)
 
@@ -263,9 +265,11 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 - 早速試してみましょう（今回は成績に影響しない）
 
+<https://joelnitta.shinyapps.io/00-learnr/>
+
 ---
 
-<https://joelnitta.shinyapps.io/01_R-Intro>
+![](../images/tutorial-screenshot.png)
 
 ## クイズのやり方
 
