@@ -18,21 +18,21 @@
     "href": "day1/index.html#サイト",
     "title": "情報処理演習",
     "section": "サイト",
-    "text": "サイト\nhttps://joelnita.github.io/joho-shori\nスライドと動画のリンクが掲載されている"
+    "text": "サイト\nhttps://joelnita.github.io/joho-shori\nスライドと動画のリンクを掲載しています"
   },
   {
     "objectID": "day1/index.html#オフィスアワー",
     "href": "day1/index.html#オフィスアワー",
     "title": "情報処理演習",
     "section": "オフィスアワー",
-    "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応いたします。"
+    "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応します。"
   },
   {
     "objectID": "day1/index.html#教科書",
     "href": "day1/index.html#教科書",
     "title": "情報処理演習",
     "section": "教科書",
-    "text": "教科書\n\n\n\nR for Data Science (2nd edition)\n\n英語版はオンラインで無料 https://r4ds.hadley.nz/\n日本語版はアマゾンなど（図書館に頼んである）\nPDFを配る"
+    "text": "教科書\n\n\n\nR for Data Science (2nd edition)\n\n英語版はオンラインで無料公開 https://r4ds.hadley.nz/\n日本語版はアマゾンなどで購入可能（千葉大学図書館でも閲覧可能）\n本授業では本書の全てはカバーできません\n課題範囲（毎週のリーディング）のみPDFをMoodleで配布予定"
   },
   {
     "objectID": "day1/index.html#リーディング",
@@ -46,7 +46,7 @@
     "href": "day1/index.html#課題と評価",
     "title": "情報処理演習",
     "section": "課題と評価",
-    "text": "課題と評価\n\n宿題（50%）\n\nブラウザーで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n全７回"
+    "text": "課題と評価\n\n宿題（50%）\n\nブラウザで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n全７回"
   },
   {
     "objectID": "day1/index.html#課題と評価-1",
@@ -60,7 +60,7 @@
     "href": "day1/index.html#欠席ポリシー",
     "title": "情報処理演習",
     "section": "欠席ポリシー",
-    "text": "欠席ポリシー\n\n出席は取らない　\nどんな理由があっても、遅れた提出・クイズの再実施は認めない\nそのかわり、成績にはもっとも低い宿題・クイズ一件を使わない"
+    "text": "欠席ポリシー\n\n出席は取りません　\nどんな理由があっても、遅れた提出・クイズの再実施は認めません\nそのかわり、成績にはもっとも低い点数の宿題・クイズ一件分は使いません"
   },
   {
     "objectID": "day1/index.html#データサイエンスとは-1",
@@ -74,21 +74,21 @@
     "href": "day1/index.html#データサイエンスとは-2",
     "title": "情報処理演習",
     "section": "データサイエンスとは？",
-    "text": "データサイエンスとは？\n\n他の特徴\n\n大量のデータを扱う（「ビッグデータ」）\n\n統計学を使う\n\nプログラミングを使う（python、R、など）\n様々な用がある（学術研究、治療、産業、など）"
+    "text": "データサイエンスとは？\n\n他の特徴\n\n大量のデータを扱う（「ビッグデータ」）\n\n統計学を使う\n\nプログラミングを使う（python、R、など）\n様々な用途がある（学術研究、治療、産業、など）"
   },
   {
-    "objectID": "day1/index.html#なぜデータサイエンスを勉強する",
-    "href": "day1/index.html#なぜデータサイエンスを勉強する",
+    "objectID": "day1/index.html#なぜデータサイエンスを勉強するのか",
+    "href": "day1/index.html#なぜデータサイエンスを勉強するのか",
     "title": "情報処理演習",
-    "section": "なぜデータサイエンスを勉強する？",
-    "text": "なぜデータサイエンスを勉強する？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため"
+    "section": "なぜデータサイエンスを勉強するのか？",
+    "text": "なぜデータサイエンスを勉強するのか？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため"
   },
   {
     "objectID": "day1/index.html#本授業の目的",
     "href": "day1/index.html#本授業の目的",
     "title": "情報処理演習",
     "section": "本授業の目的",
-    "text": "本授業の目的\n\n以下のことができるようになる：\n\nRプログラミング言語の基本的な操作\nデータの読み込み\nデータの整理\nデータの可視化\n\n\nこのスキルを他の授業で使えるようになること"
+    "text": "本授業の目的\n\n以下のことができるようになる：\n\nRプログラミング言語の基本的な操作\nデータの読み込み\nデータの整理\nデータの可視化\n\n\nこれらのスキルを他の授業で使えるようになること"
   },
   {
     "objectID": "day1/index.html#データ解析の循環",
@@ -119,18 +119,18 @@
     "text": "再現可能にするには・・\n\nコードが必要\n\n自分が何をやったのか、記録が残る\n将来、同じ解析ができる\n\nコードとして残らない方法はよろしくない"
   },
   {
-    "objectID": "day1/index.html#本授業ではrを使う",
-    "href": "day1/index.html#本授業ではrを使う",
+    "objectID": "day1/index.html#本授業ではrを使用",
+    "href": "day1/index.html#本授業ではrを使用",
     "title": "情報処理演習",
-    "section": "本授業では、Rを使う",
-    "text": "本授業では、Rを使う\n\n\n\n無料\nデータ解析の機能が豊富\n多様なニーズに応えるパッケージ\nコミュニティー\n\n\n\nhttps://www.linkedin.com/pulse/why-r-4-reason-learn-programming-language-business-corporate"
+    "section": "本授業では、Rを使用",
+    "text": "本授業では、Rを使用\n\n\n\n無料\nデータ解析の機能が豊富\n多様なニーズに応えるパッケージ\nコミュニティ\n\n\n\nhttps://www.linkedin.com/pulse/why-r-4-reason-learn-programming-language-business-corporate"
   },
   {
     "objectID": "day1/index.html#他のプログラミング言語もある",
     "href": "day1/index.html#他のプログラミング言語もある",
     "title": "情報処理演習",
     "section": "他のプログラミング言語もある",
-    "text": "他のプログラミング言語もある\n\n特に、PythonはRと同様（あるいはもっと）人気がある\n大事なのは、プログラミングの基本を抑えること"
+    "text": "他のプログラミング言語もある\n\n特に、PythonはRと同様（あるいはもっと）人気がある\n大事なのは、プログラミングの基本を押さえること"
   },
   {
     "objectID": "day1/index.html#rとrstudioについて",
@@ -165,7 +165,7 @@
     "href": "day1/index.html#ライブコーディング",
     "title": "情報処理演習",
     "section": "ライブコーディング",
-    "text": "ライブコーディング\n\n本授業では、「ライブコーディング」を実施する\n先生が打ったコードを自分のパソコンで打ってください\n\n自分が何をしているのか、理解するのが大事\n\n何か分からなかったら、質問してください"
+    "text": "ライブコーディング\n\n本授業では、「ライブコーディング」を実施する\n先生が打ったコードを自分のパソコンで打ってください\n\n自分が何をしているのか、理解するのが大事\n\n何か分からなかったら、赤い付箋をつけてください"
   },
   {
     "objectID": "day1/index.html#rstudioの基本的な使い方",
@@ -193,7 +193,7 @@
     "href": "day1/index.html#宿題のやり方-1",
     "title": "情報処理演習",
     "section": "宿題のやり方",
-    "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しない）\n\nhttps://joelnitta.shinyapps.io/00-learnr/"
+    "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しません）\n\nhttps://joelnitta.shinyapps.io/00-learnr/"
   },
   {
     "objectID": "day1/index.html#クイズのやり方",
@@ -207,7 +207,7 @@
     "href": "day1/index.html#クイズのやり方-1",
     "title": "情報処理演習",
     "section": "クイズのやり方",
-    "text": "クイズのやり方\n\n早速試してみましょう（今回は成績に影響しない）"
+    "text": "クイズのやり方\n\n早速試してみましょう（今回は成績に影響しません）"
   },
   {
     "objectID": "day1/index.html#クイズについて",
@@ -354,14 +354,14 @@
     "href": "day2/index.html#パッケージのロード",
     "title": "情報処理演習",
     "section": "パッケージのロード",
-    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態するにはロードすることが必要\n\nインストールは一回でいい\nロードは毎回必要\n\n\nlibrary()関数でロードする：\n\n\nlibrary(ggplot2)"
+    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするにはロードすることが必要\n\nインストールは一回でいい\nロードは毎回必要\n\n\nlibrary()関数でロードする：\n\n\nlibrary(ggplot2)"
   },
   {
     "objectID": "day2/index.html#tidyverse",
     "href": "day2/index.html#tidyverse",
     "title": "情報処理演習",
     "section": "tidyverse",
-    "text": "tidyverse\n\ntidyverseはデータサイエンス用パッケージの集まりのパッケージ\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールしましょう。一気に出来るから、楽。\n\ninstall.packages(\"tidyverse\")"
+    "text": "tidyverse\n\ntidyverseはデータサイエンス用パッケージの集まりのパッケージ\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールしましょう。\n\ninstall.packages(\"tidyverse\")"
   },
   {
     "objectID": "day2/index.html#install.packagesとlibraryの違い",
@@ -420,11 +420,11 @@
     "text": "LLMは「妄想」しがち\n\nLLMが返した言葉を信用できるかどうか判断するのがあなたの責任"
   },
   {
-    "objectID": "on-demand/index.html#chatgptに入れた情報はプラベートではない",
-    "href": "on-demand/index.html#chatgptに入れた情報はプラベートではない",
+    "objectID": "on-demand/index.html#chatgptに入れた情報はプライベートではない",
+    "href": "on-demand/index.html#chatgptに入れた情報はプライベートではない",
     "title": "情報処理演習",
-    "section": "ChatGPTに入れた情報はプラベートではない",
-    "text": "ChatGPTに入れた情報はプラベートではない\n\nChatGPTに入力した文章はOpenAI社のサーバーに送られる\nつまり、OpenAI社にとってあなたのデータ（入力）は新しいモデルを作る材料となっている\n\nこれを「オフ」にする設定もあるが、データが向こうに送られるのは変わらない\n\n公開したくないなら、ChatGPTに入れない方がいい"
+    "section": "ChatGPTに入れた情報はプライベートではない",
+    "text": "ChatGPTに入れた情報はプライベートではない\n\nChatGPTに入力した文章はOpenAI社のサーバーに送られる\nつまり、OpenAI社にとってあなたのデータ（入力）は新しいモデルを作る材料となっている\n\nこれを「オフ」にする設定もあるが、データが向こうに送られるのは変わらない\n\n公開したくないなら、ChatGPTに入れない方がいい"
   },
   {
     "objectID": "on-demand/index.html#どうやって使ったら良いのか",
