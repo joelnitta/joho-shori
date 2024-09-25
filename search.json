@@ -4,7 +4,7 @@
     "href": "day1/index.html#ニッタ-ジョエル",
     "title": "情報処理演習",
     "section": "ニッタ ジョエル",
-    "text": "ニッタ ジョエル\n\n\n\n研究テーマその１：シダ植物の進化と生態学\n研究テーマその２：データサイエンス用ソフトの開発\nhttps://www.joelnitta.com"
+    "text": "ニッタ ジョエル\n\n\n\n研究テーマその１：シダ植物の進化と生態学\n\nBiodiversity and Japan\n\n研究テーマその２：データサイエンス用ソフトの開発\n\nReproducible Data Analysis\n\nhttps://www.joelnitta.com"
   },
   {
     "objectID": "day1/index.html#スケジュール",
@@ -39,7 +39,7 @@
     "href": "day1/index.html#リーディング",
     "title": "情報処理演習",
     "section": "リーディング",
-    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n今週：「はじめに」 - 「何を学ぶのか」（vi-vii） - 「準備するもの」（ix-xi）\n来週：２章「ワークフロー：基本」（27~32）"
+    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n\n今週：「はじめに」\n\n「何を学ぶのか」（vi-vii）\n「準備するもの」（ix-xi）\n\n来週：２章「ワークフロー：基本」（27~32）"
   },
   {
     "objectID": "day1/index.html#課題と評価",
@@ -93,6 +93,13 @@
   {
     "objectID": "day1/index.html#データ解析の循環",
     "href": "day1/index.html#データ解析の循環",
+    "title": "情報処理演習",
+    "section": "データ解析の循環",
+    "text": "データ解析の循環"
+  },
+  {
+    "objectID": "day1/index.html#データ解析の循環-1",
+    "href": "day1/index.html#データ解析の循環-1",
     "title": "情報処理演習",
     "section": "データ解析の循環",
     "text": "データ解析の循環"
@@ -186,7 +193,7 @@
     "href": "day1/index.html#宿題のやり方-1",
     "title": "情報処理演習",
     "section": "宿題のやり方",
-    "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しない）"
+    "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しない）\n\nhttps://joelnitta.shinyapps.io/00-learnr/"
   },
   {
     "objectID": "day1/index.html#クイズのやり方",
