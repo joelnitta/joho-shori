@@ -39,7 +39,7 @@
     "href": "day1/index.html#リーディング",
     "title": "データサイエンス",
     "section": "リーディング",
-    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n今週：Introduction（）\n来週："
+    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n今週：「はじめに」 - 「何を学ぶのか」（vi-vii） - 「準備するもの」（ix-xi）\n来週：２章「ワークフロー：基本」（27~32）"
   },
   {
     "objectID": "day1/index.html#課題と評価",
@@ -235,7 +235,7 @@
     "href": "index.html#教科書",
     "title": "データサイエンス",
     "section": "教科書",
-    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\nアマゾンには翻訳がある\n\n授業中にプリントを配る"
+    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\nアマゾンに日本語版がある\n\n授業中にプリントを配る"
   },
   {
     "objectID": "index.html#スケジュール",
@@ -431,7 +431,7 @@
     "href": "on-demand/index.html#課題",
     "title": "データサイエンス",
     "section": "課題",
-    "text": "課題\n\n中部大学「データサイエンス」の「ChatGPT」を全部（「詳細」まで）読んでください"
+    "text": "課題\n\n中部大学「データサイエンス」の「ChatGPT」を全部（「詳細」まで）読んでください\n\nhttps://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html"
   },
   {
     "objectID": "on-demand/index.html#課題-1",
