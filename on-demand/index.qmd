@@ -9,6 +9,10 @@ execute:
 
 # 生成AIの基本
 
+オンデマンド
+
+<https://joelnita.github.io/joho-shori/on-demand/>
+
 ## みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？
 
 :::: {.columns}
@@ -111,6 +115,8 @@ ChatGPTによる画像
 ## 課題
 
 - 中部大学「データサイエンス」の[「ChatGPT」](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)を**全部**（「詳細」まで）読んでください
+
+<https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html>
 
 ---
 

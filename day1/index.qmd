@@ -9,8 +9,6 @@ execute:
 
 # 第１回：ガイダンス、RとRStudioの紹介
 
-2024-10-01
-
 <https://joelnita.github.io/joho-shori/day1/>
 
 # ガイダンス
@@ -75,9 +73,11 @@ execute:
 
 PDFをMoodleからダウンロードして、毎週のリーディングを講義の**前に**読んでください。
 
-今週：Introduction（）
+今週：「はじめに」
+  - 「何を学ぶのか」（vi-vii）
+  - 「準備するもの」（ix-xi）
 
-来週：
+来週：２章「ワークフロー：基本」（27~32）
 
 ## 課題と評価
 

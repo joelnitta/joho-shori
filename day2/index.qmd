@@ -9,8 +9,6 @@ execute:
 
 # 第２回：R入門（２）
 
-2024-10-08
-
 <https://data-science-chiba-2024.github.io/day2/>
 
 ## スケジュール {.smaller}
