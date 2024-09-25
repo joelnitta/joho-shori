@@ -48,11 +48,11 @@ execute:
 
 <https://joelnita.github.io/joho-shori>
 
-スライドと動画のリンクが掲載されている
+スライドと動画のリンクを掲載しています
 
 ## オフィスアワー
 
-予約制（<joelnitta@chiba-u.jp>までメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応いたします。
+予約制（<joelnitta@chiba-u.jp>までメールにて連絡ください）。対面・非対面での相談、ご希望とご都合に合わせて対応します。
 
 ## 教科書
 
@@ -60,9 +60,10 @@ execute:
 
 ::: {.column width="50%"}
 - R for Data Science (2nd edition)
-  - 英語版はオンラインで無料 [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
-  - 日本語版は[アマゾン](https://www.amazon.co.jp/R%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9-%E7%AC%AC2%E7%89%88-Hadley-Wickham/dp/4814400772/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38I6KDKKIV16O&dib=eyJ2IjoiMSJ9.GGF0L1q-Erx9HU27rscRki94Ao9GXZ5y2HVFdEev4zxG1OTnzPpbg-mjmrzdKgeFzt1hC_NBl3doKyAasQaPGTZCi-OU_aKSZ92B_Jb5wmua9KFy3v5UPz0PQAMonejSVV660k3GOmLZo2il--e6dr0xcuhnABRob_ZQ_SP4i89KX-EtaiytgmFSsGyZfjLCHe4mhXgpnc3kl4yXZSFvx-WwDLOGM4BBrxDULLWvVHbiFXTbdFKKoyTHnGHMo2b-2gH-pJtvNNrbvyfapYofa71PdrY0p6HPWpZ2_HI2Gn0.jtDTN8tC0wccGCgPGCZmNMKsX0PRN3vXFMTo4JbMnWw&dib_tag=se&keywords=R+for+Data+Science+%282nd+Edition%29&qid=1725332552&sprefix=r+for+data+science+2nd+edition+%2Caps%2C255&sr=8-2)など（図書館に頼んである） 
-  - PDFを配る
+  - 英語版はオンラインで無料公開 [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
+  - 日本語版は[アマゾン](https://www.amazon.co.jp/R%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9-%E7%AC%AC2%E7%89%88-Hadley-Wickham/dp/4814400772/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38I6KDKKIV16O&dib=eyJ2IjoiMSJ9.GGF0L1q-Erx9HU27rscRki94Ao9GXZ5y2HVFdEev4zxG1OTnzPpbg-mjmrzdKgeFzt1hC_NBl3doKyAasQaPGTZCi-OU_aKSZ92B_Jb5wmua9KFy3v5UPz0PQAMonejSVV660k3GOmLZo2il--e6dr0xcuhnABRob_ZQ_SP4i89KX-EtaiytgmFSsGyZfjLCHe4mhXgpnc3kl4yXZSFvx-WwDLOGM4BBrxDULLWvVHbiFXTbdFKKoyTHnGHMo2b-2gH-pJtvNNrbvyfapYofa71PdrY0p6HPWpZ2_HI2Gn0.jtDTN8tC0wccGCgPGCZmNMKsX0PRN3vXFMTo4JbMnWw&dib_tag=se&keywords=R+for+Data+Science+%282nd+Edition%29&qid=1725332552&sprefix=r+for+data+science+2nd+edition+%2Caps%2C255&sr=8-2)などで購入可能（千葉大学図書館でも閲覧可能） 
+  - 本授業では本書の全てはカバーできません 
+  - 課題範囲（毎週のリーディング）のみPDFをMoodleで配布予定
 :::
 
 ::: {.column width="50%"}
@@ -84,7 +85,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 ## 課題と評価
 
 - 宿題（50%）
-  - ブラウザーで受ける（チュートリアル式）
+  - ブラウザで受ける（チュートリアル式）
   - Moodleで提出
   - 締め切り：次の週の授業まで
   - 全７回
@@ -99,11 +100,11 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## 欠席ポリシー
 
-- 出席は取らない　
+- 出席は取りません　
 
-- どんな理由があっても、遅れた提出・クイズの再実施は認めない
+- どんな理由があっても、遅れた提出・クイズの再実施は認めません
 
-- そのかわり、成績にはもっとも低い宿題・クイズ一件を使わない
+- そのかわり、成績にはもっとも低い点数の宿題・クイズ一件分は使いません
 
 # データサイエンスとは？
 
@@ -117,9 +118,9 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
   - 大量のデータを扱う（**「ビッグデータ」**）
     - **統計学**を使う
   - **プログラミング**を使う（python、R、など）
-  - 様々な用がある（学術研究、治療、産業、など）
+  - 様々な用途がある（学術研究、治療、産業、など）
 
-## なぜデータサイエンスを勉強する？
+## なぜデータサイエンスを勉強するのか？
 
 - 毎日の生活のため
 - キャリアのため
@@ -133,7 +134,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
   - データの整理
   - データの可視化
 
-このスキルを**他の授業で使えるようになること**
+これらのスキルを**他の授業で使えるようになること**
 
 ## データ解析の循環
 
@@ -162,7 +163,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 - コードとして残らない方法はよろしくない
 
-## 本授業では、Rを使う
+## 本授業では、Rを使用
 
 :::: {.columns}
 
@@ -170,7 +171,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 - 無料
 - データ解析の機能が豊富
 - 多様なニーズに応えるパッケージ
-- コミュニティー
+- コミュニティ
 :::
 
 ::: {.column width="50%"}
@@ -184,7 +185,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 ## 他のプログラミング言語もある
 
 - 特に、PythonはRと同様（あるいはもっと）人気がある
-- 大事なのは、**プログラミングの基本**を抑えること
+- 大事なのは、**プログラミングの基本**を押さえること
 
 ## RとRStudioについて
 
@@ -231,7 +232,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 - 先生が打ったコードを**自分のパソコンで打ってください**
   - 自分が何をしているのか、理解するのが大事
 
-- 何か分からなかったら、**質問してください**
+- 何か分からなかったら、**赤い付箋をつけてください**
 
 ## RStudioの基本的な使い方
 
@@ -263,7 +264,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## 宿題のやり方
 
-- 早速試してみましょう（今回は成績に影響しない）
+- 早速試してみましょう（今回は成績に影響しません）
 
 <https://joelnitta.shinyapps.io/00-learnr/>
 
@@ -281,7 +282,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## クイズのやり方
 
-- 早速試してみましょう（今回は成績に影響しない）
+- 早速試してみましょう（今回は成績に影響しません）
 
 ---
 
