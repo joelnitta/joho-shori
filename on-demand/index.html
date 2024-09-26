@@ -342,10 +342,25 @@
 <li><p>でも、<strong>そもそもAIが何をしている</strong>のか、分かりますか？</p></li>
 </ul>
 </div><div class="column">
-<p><img data-src="../images/chatgpt.png"></p>
+<p><img data-src="../images/chatgpt-demo.gif"></p>
 <p><a href="https://chat.openai.com/" class="uri">https://chat.openai.com/</a></p>
 </div>
 </div>
+<aside class="notes">
+<p>みなさん、ChatGPTとか、DeepLといった、いわゆる「生成AI」を使ったことがありますか？ 私はよく使っています。</p>
+<p>ChatGPTに何か質問すると、まるで何でも知っているすごく頭のいい人みたいなペラペラな答えが返ってきます。本当にすごいのです。</p>
+<p>生成AIはデータサイエンスだけでなく、様々な場面においてとても大事なツールですからね。 私は特にプログラミングやメールの文章のチェックに使っています。 でも、生成AIを使う前に、それが何をしているのか、ちゃんと理解する必要があります。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="artificial-intelligenceという名前は嘘" class="slide level2">
 <h2>Artificial Intelligenceという名前は嘘</h2>
@@ -363,6 +378,22 @@
 </div>
 </div>
 
+<aside class="notes">
+<p>そもそも「AI」は何を意味しているのでしょうか？</p>
+<p>AはArtificial(人工的)でIはIntelligence（知能）ですね。</p>
+<p>でも、この名前に騙（だ）されないでください！確かに人工的ではありますが、知能は全く関係ありませんから。</p>
+<p>AIは知能を持っていなければ、真偽も知りません。では、何で「すごく頭のいい人」のように答えることができるのでしょうか？</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <aside><div>
 <p>ChatGPTによる画像</p>
 </div></aside></section>
@@ -373,15 +404,64 @@
 <ul>
 <li>Chat = 喋る</li>
 <li><strong>言葉を予測する</strong>モデル</li>
-<li>莫大的な量のデータ（インターネットの大部分）を使っている</li>
+<li>莫大な量のデータ（インターネットの大部分）を使っている</li>
 </ul></li>
 <li>LLMは入力された言葉に対して、最も確率の高い次に来る言葉を返す</li>
 </ul>
+<aside class="notes">
+<p>そもそも、あたかも人間のように会話できるChatGPTはLarge Language Model（LLM）の一種です。 要するに、言葉を予測する数理モデルです。何かの入力を引き受けて、処理して、出力を返すものです。 「Large」が名前に入っている理由は、このモデルは非常に大きいからです。モデルを作るためにWEB上にある言葉の大部分を使っているからです。 このようなモデルは昔からありましたが、最近いきなりこんなに上手になった理由は、大規模なデータでモデルを訓練させる技術ができたからです。</p>
+<p>で、このLLMは入力された言葉に対して、最も確率の高い次に来る言葉を返すわけです。この動作にはロジックや知能は関係していません。次に「来そうな」言葉を返しているだけです。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="llmは言葉を予測するモデルである-1" class="slide level2">
 <h2>LLMは言葉を予測するモデルである</h2>
 
 <img data-src="../images/perplexity.png" class="r-stretch"><p><a href="https://perplexity.vercel.app/" class="uri">https://perplexity.vercel.app/</a></p>
+<aside class="notes">
+<p>このサイトではLLMが何をしているのか、実際に目で確かめることができます。</p>
+<p>この言葉についている色はモデルがどれくらいの確率でその言葉を予測できたのかを表しています。</p>
+<p>緑色は確率が高い、黄色はまあまあ、赤色は低いことを表しています。</p>
+<p>例えば、一から始めて１０まで数えると、次に出てくる言葉は予測しやすいので、数え始めたらほとんど緑色ですね。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="llmは言葉を予測するモデルである-2" class="slide level2">
+<h2>LLMは言葉を予測するモデルである</h2>
+
+<img data-src="../images/perplexity-2.png" class="r-stretch"><p><a href="https://perplexity.vercel.app/" class="uri">https://perplexity.vercel.app/</a></p>
+<aside class="notes">
+<p>しかし、普通一緒に言わない言葉を連続で打つと、モデルは次に来る言葉をなかなか予測できません。この辺は赤ですね。</p>
+<p>このスライドに出ている例は英語ですが、皆さんもこのサイトに行けば自分で確かめることができます。日本語でもできます。やってみてくださいね。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="llmは必ずもっともらしい言葉を自信満々で返す" class="slide level2">
 <h2>LLMは必ず「もっともらしい」言葉を自信満々で返す</h2>
@@ -389,17 +469,65 @@
 <ul>
 <li>平気な顔で<strong>嘘をつく</strong></li>
 </ul>
+<aside class="notes">
+<p>というわけで、LLMは「人間が言いそうな言葉」を返すのが非常にお上手です。「もっともらしい」言葉を自信満々で返します。</p>
+<p>しかし、それが正解だと限りません。</p>
+<p>平気な顔で嘘をつくこともよくあります。</p>
+<p>例えば、ChatGPT　に「となりのトトロ」について聞いてみましょう・・</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="llmは妄想しがち" class="slide level2">
 <h2>LLMは「妄想」しがち</h2>
 
 <img data-src="../images/mei.png" class="r-stretch"><p><a href="https://chat.openai.com/share/dcee3278-0f51-4bc2-8051-849ef1b0b072" class="uri">https://chat.openai.com/share/dcee3278-0f51-4bc2-8051-849ef1b0b072</a></p>
+<aside class="notes">
+<p>私が<br>
+「となりのトトロ」のめいちゃんのおばあちゃんの名前は何でしょうか？<br>
+と聞いたら、</p>
+<p>ChatGPTは<br>
+「となりのトトロ」のめいちゃんのおばあちゃんの名前は「くま」です。<br>
+と答えました。</p>
+<p>日本語として完璧、見事な答えですね。しかし、「となりのトトロ」を見たことのある方には、この答えがおかしいことに気がついたはずです。なぜならば、めいちゃんのおばあちゃんという登場人物が存在していません！つまり、ChatGPTは「となりのトトロ」についての知識を使って考えたわけではなく、そのような質問に対するもっともらしい言葉を予測しただけです。意図的な嘘ではないから、「妄想」というように呼ばれることもありますが、とにかく覚えてほしいのは、ChatGPTの出力が必ずしも正解ではない、ということです。しかも、「本当にありそうな」ことを言うので、注意がとても必要です。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="llmは妄想しがち-1" class="slide level2">
 <h2>LLMは「妄想」しがち</h2>
 <ul>
 <li>LLMが返した言葉を信用できるかどうか判断するのが<strong>あなたの責任</strong></li>
 </ul>
+<aside class="notes">
+<p>というわけで、ChatGPTなど、LLMを使うときは、それが返した言葉を信用できるかどうか判断するのがあなたの責任です。必ず確かめる必要があります。確かめなかったが嘘だったときにはChatGPTに責任があるわけではなく、あなたに責任があります。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="chatgptに入れた情報はプライベートではない" class="slide level2">
 <h2>ChatGPTに入れた情報はプライベートではない</h2>
@@ -411,6 +539,22 @@
 </ul></li>
 <li><p>公開したくないなら、ChatGPTに入れない方がいい</p></li>
 </ul>
+<aside class="notes">
+<p>それから、もう一つ注意しないといけないことについて説明したいと思います。</p>
+<p>ChatGPTと話していると、なんとなく、プライベート（個人と個人の間）の会話になっているような気がするかもしれませんが、あなたが入力した言葉はもちろん、全てChatGPTを作った会社、OpenAI社に送られています。</p>
+<p>あなたのデータをOpenAI社がどのように使うかについては、OpenAI社が決めるわけですね。例えば、デフォルト設定では、次のモデルを作るためにあなたのデータが使われます。</p>
+<p>というわけで、公開したくない内容を含むことはChatGPTに入れない方がいいでしょう。もちろん、パスワードや個人情報は絶対に入れないように気を付けましょう。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="どうやって使ったら良いのか" class="slide level2">
 <h2>どうやって使ったら良いのか？</h2>
@@ -427,6 +571,25 @@
 </ul></li>
 <li><strong>必ず批判的なスタンスを持つこと</strong></li>
 </ul>
+<aside class="notes">
+<p>では、色々と注意点があることが分かりましたが、どうやって使ったらいいでしょうか？</p>
+<p>まずは、自分で色々な質問に対してどう答えるのか、試してみてください。chatgpt.comからアクセスすると、アカウントなしでも使えます。</p>
+<p>それから、ChatGPTの答えは絶対に確かめる必要があります。</p>
+<p>例えば、RやPythonのコードの書き方を教えてもらったら、それを実際に走らせて、予想通りの結果になるかどうかを確かめてください。</p>
+<p>それから、事実に関する答えは他のソース（信頼できるウェブサイトや本など）で確かめてください。</p>
+<p>ChatGPTに裏付けとなっている文献を出すように指示することもできます。</p>
+<p>つまり、いつでも嘘をつかれることがあることを念頭に置いて、常に批判的なスタンスを持つことが大事です。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="コピペしないこと" class="slide level2">
 <h2>コピペしないこと</h2>
@@ -438,13 +601,42 @@
 </ul></li>
 <li>LLMは色々な作業を手伝う（よく嘘をつく）アシスタントであるが、自分の代わりに考えるものではない！</li>
 </ul>
-</section>
-<section id="課題" class="slide level2">
-<h2>課題</h2>
+<aside class="notes">
+<p>今までの話を聞いたら、これは当たり前だと思うでしょうが、ChatGPTの答えを確かめずにそのままコピペすることはもちろんダメです。</p>
+<p>嘘になっている可能性があることを別にして、そもそもあなたたちがこの大学にパソコンのテキストをコピペしに来たわけではないからだと思います。</p>
+<p>大学とは自分で考えることを身につける場所であるはずです。</p>
+<p>LLMは「言葉の計算機」だと思ってください。計算機があるからといって、算数を全く勉強しなくていいわけではありません。</p>
+<p>LLMは色々な作業を手伝う（よく嘘をつく）アシスタントではありますが、自分の代わりに考えるものではありません。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>##課題</p>
 <ul>
 <li>中部大学「データサイエンス」の<a href="https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html">「ChatGPT」</a>を<strong>全部</strong>（「詳細」まで）読んでください</li>
 </ul>
 <p><a href="https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html" class="uri">https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html</a></p>
+<aside class="notes">
+<p>最後に、オンデマンド回の課題について説明したいと思います。</p>
+<p>この中部大学のデータサイエンスの授業には、ChatGPTについて非常にわかりやすい説明があるので、ぜひ読んでほしいと思います。中に「詳細」というところがありますが、これも必ず読んでください。ChatGPTの会話の例です。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2">
 
@@ -467,11 +659,24 @@
 <aside><div>
 <p><a href="https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html" class="uri">https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html</a></p>
 </div></aside></section>
-<section id="課題-1" class="slide level2">
+<section id="課題" class="slide level2">
 <h2>課題</h2>
 <ul>
-<li>Moodleに宿題がある。締め切りまでに完成させてください。</li>
+<li>Moodleにクイズがある。締め切りまでに完成させてください。</li>
 </ul>
+<aside class="notes">
+<p>中部大学の資料を読んでから、Moodleにクイズがあるので、締め切りまでに完成させてください。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
