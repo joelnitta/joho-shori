@@ -117,7 +117,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## オンデマンド回：生成AIの基本
 
-- Moodle -> [「オンデマンド回」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=37946#section-3)
+- Moodle -> [「オンデマンド回」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=37946#section-8)
   - オンデマンド講義（[YouTubeからアケセス](https://www.youtube.com/watch?v=ok837FBoEI8)、10分）
   - 中部大学の「[ChatGPTについて](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)」の資料
   - クイズ
@@ -355,6 +355,21 @@ Digital Humanities
 
 - 次のプロンプトで、別のコマンドを試してみましょう
 
+## コメントについて
+
+- `#`の後に書いた言葉は「コメント」です
+
+- Rはコメントを無視するので、何を書いてもエラーになりません
+
+- 自分用のメモとして使う
+  - 日本語で書いても大丈夫
+
+```{r}
+# これはコメントです
+# 3 % 9
+3 * 9
+```
+
 ## チャレンジ
 
 - まずは任意の数を選んでください
@@ -383,9 +398,16 @@ x <- 10
 
 - オブジェクトの中身を確認したいときはオブジェクト名を打つか、右上の「Environment」パネルで確認
 
+```{r}
+x
+```
+
+## オブジェクトの確認
+
 - 同じ名前で再度データを保存すると注意なしで上書きされる
 
 ```{r}
+x <- 100
 x
 ```
 
