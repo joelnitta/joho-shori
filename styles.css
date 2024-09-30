@@ -41,3 +41,8 @@
 .right {
   float: right;
 }
+
+/* change font size of code chunks (not inline code) */
+pre > code {
+  font-size: 160%;
+}
