@@ -41,3 +41,10 @@
 .right {
   float: right;
 }
+
+/* change font size of code chunks (not inline code) */
+pre > code {
+  font-size: 160%;
+  line-height: 1.5; /* Optional: Improves readability */
+  font-family: Consolas, "Courier New", monospace; /* Optional: Sets a monospace font */
+}

@@ -81,21 +81,28 @@
     "href": "day1/index.html#データサイエンスとは-1",
     "title": "情報処理演習",
     "section": "データサイエンスとは？",
-    "text": "データサイエンスとは？\n\nデータから洞察（インサイト）を得ること"
+    "text": "データサイエンスとは？\n\nデータから洞察（インサイト）を得ること\n\n\n\n\nhttps://digital4africa.com/whats-big-deal-data/"
   },
   {
-    "objectID": "day1/index.html#データサイエンスとは-2",
-    "href": "day1/index.html#データサイエンスとは-2",
+    "objectID": "day1/index.html#データサイエンスの特徴",
+    "href": "day1/index.html#データサイエンスの特徴",
     "title": "情報処理演習",
-    "section": "データサイエンスとは？",
-    "text": "データサイエンスとは？\n\n他の特徴\n\n大量のデータを扱う（「ビッグデータ」）\n\n統計学を使う\n\nプログラミングを使う（python、R、など）\n様々な用途がある（学術研究、治療、産業、など）"
+    "section": "データサイエンスの特徴",
+    "text": "データサイエンスの特徴\n\n大量のデータを扱う（「ビッグデータ」）\n\n統計学を使う\n\nプログラミングを使う（python、R、など）\n様々な用途がある（学術研究、治療、産業、など）\n\n\n理系のみの話ではない"
+  },
+  {
+    "objectID": "day1/index.html#文系のデータサイエンス",
+    "href": "day1/index.html#文系のデータサイエンス",
+    "title": "情報処理演習",
+    "section": "文系のデータサイエンス",
+    "text": "文系のデータサイエンス\nDigital Humanities"
   },
   {
     "objectID": "day1/index.html#なぜデータサイエンスを勉強するのか",
     "href": "day1/index.html#なぜデータサイエンスを勉強するのか",
     "title": "情報処理演習",
     "section": "なぜデータサイエンスを勉強するのか？",
-    "text": "なぜデータサイエンスを勉強するのか？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため"
+    "text": "なぜデータサイエンスを勉強するのか？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため\n\nシラバス検索の結果\n\n「データサイエンス」：71件\n「プログラミング」：166件"
   },
   {
     "objectID": "day1/index.html#本授業の目的",
@@ -123,7 +130,14 @@
     "href": "day1/index.html#再現性とは-1",
     "title": "情報処理演習",
     "section": "再現性とは？",
-    "text": "再現性とは？\n\n他の人（将来の自分を含めて）があなたの解析を再度行って、同じ結果を得ることができること\nデータサイエンスにおいて、とても重要。再現性がなければ、「サイエンス」にならない！"
+    "text": "再現性とは？\n\n他の人があなたの解析を再度行って、同じ結果を得ること\n\n\n\n\nhttps://jhudatascience.org/Reproducibility_in_Cancer_Informatics/defining-reproducibility.html"
+  },
+  {
+    "objectID": "day1/index.html#再現性とは-2",
+    "href": "day1/index.html#再現性とは-2",
+    "title": "情報処理演習",
+    "section": "再現性とは？",
+    "text": "再現性とは？\n\n\n\n再現性がなければ、「サイエンス」にはならない！\n\n\n\n\n\n\n\nhttps://www.drugdesigntech.com/how-maximize-the-reproducibility-of-your-research/"
   },
   {
     "objectID": "day1/index.html#再現可能にするには",
@@ -194,6 +208,62 @@
     "title": "情報処理演習",
     "section": "RStudioの基本的な使い方",
     "text": "RStudioの基本的な使い方\n\nコンソールにRコードを打って、出力を確認する\nまずは電卓として使ってみる"
+  },
+  {
+    "objectID": "day1/index.html#電卓として使う",
+    "href": "day1/index.html#電卓として使う",
+    "title": "情報処理演習",
+    "section": "電卓として使う",
+    "text": "電卓として使う\n\n+ 足し算\n- 引き算\n* 掛け算\n\\割り算\n()で演算の順次を変える"
+  },
+  {
+    "objectID": "day1/index.html#エラーについて",
+    "href": "day1/index.html#エラーについて",
+    "title": "情報処理演習",
+    "section": "エラーについて",
+    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError in parse(text = input): &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
+  },
+  {
+    "objectID": "day1/index.html#エラーについて-1",
+    "href": "day1/index.html#エラーについて-1",
+    "title": "情報処理演習",
+    "section": "エラーについて",
+    "text": "エラーについて\n\nもしエラーメッセージが表示されても、慌てないでください\nこれは、コンピュータが指示された内容を理解できなかったか、実行できなかったという意味です\n次のプロンプトで、別のコマンドを試してみましょう"
+  },
+  {
+    "objectID": "day1/index.html#チャレンジ",
+    "href": "day1/index.html#チャレンジ",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\nまずは任意の数を選んでください\n\n次に 2 を足す\n次に 3 を掛ける\n次に 6 を引く\n最後に 3 で割る\n\n最初と最後の数を比べてください"
+  },
+  {
+    "objectID": "day1/index.html#オブジェクトについて",
+    "href": "day1/index.html#オブジェクトについて",
+    "title": "情報処理演習",
+    "section": "オブジェクトについて",
+    "text": "オブジェクトについて\n\n計算結果を「オブジェクト」という入れ物に入れることができる\n\nやり方：\n\nx &lt;- 10\n\n\nxというオブジェクトに10が入りました\n&lt;-を「代入文」または「割り当て文」と呼ぶ"
+  },
+  {
+    "objectID": "day1/index.html#オブジェクトの確認",
+    "href": "day1/index.html#オブジェクトの確認",
+    "title": "情報処理演習",
+    "section": "オブジェクトの確認",
+    "text": "オブジェクトの確認\n\nオブジェクトの中身を確認したいときはオブジェクト名を打つか、右上の「Environment」パネルで確認\n同じ名前で再度データを保存すると注意なしで上書きされる\n\n\nx\n\n[1] 10"
+  },
+  {
+    "objectID": "day1/index.html#オブジェクトの名前",
+    "href": "day1/index.html#オブジェクトの名前",
+    "title": "情報処理演習",
+    "section": "オブジェクトの名前",
+    "text": "オブジェクトの名前\nオブジェクトの名前は以下のルールがある：\n\n文字から始めないといけない\n文字、数字、_、.のみ使用できる"
+  },
+  {
+    "objectID": "day1/index.html#オブジェクトの名前-1",
+    "href": "day1/index.html#オブジェクトの名前-1",
+    "title": "情報処理演習",
+    "section": "オブジェクトの名前",
+    "text": "オブジェクトの名前\n分かりやすい（使いやすい）名前のおすすめ：\n\n文字化けを防ぐために英字を使う\nRは大文字と小文字を区別するため、一貫性を持たせる（大文字と小文字を混在させない）\nTabキーによる自動補完機能があるので、名前の長さを気にしなくて良い"
   },
   {
     "objectID": "day1/index.html#宿題のやり方",
