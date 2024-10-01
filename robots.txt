@@ -1,1 +1,1 @@
-Sitemap: https://joelnitta.github.io/joho-shori/sitemap.xml
+Sitemap: git@github.com:joelnitta/joho-shori/sitemap.xml
