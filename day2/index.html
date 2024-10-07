@@ -406,65 +406,239 @@
 <li>データの整理（２）</li>
 <li>データの可視化（１）</li>
 <li>データの可視化（２）</li>
-<li>e-learning（オンデマンド）</li>
+<li>オンデマンド講義とe-learning</li>
 </ol>
 </section>
-<section id="rを計算機として使う" class="slide level2">
-<h2>Rを計算機として使う</h2>
-<ul>
-<li>RStudioのコンソール（左下のパネル）にカーソルを置いて、簡単な計算をしてみましょう：</li>
-</ul>
-<div class="large">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 20</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="オブジェクトについて" class="slide level2">
-<h2>オブジェクトについて</h2>
-<ul>
-<li>次に、Rの中のデータを変数（Rでは、「オブジェクト Object」と呼ぶ）として保存しよう：</li>
-</ul>
-<div class="large">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>age <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="オブジェクトについて-1" class="slide level2">
-<h2>オブジェクトについて</h2>
-<p>これだけでは何も返ってこない。</p>
-<p>変数の内容を確認するには、コンソールにその変数の名前を打てば良い：</p>
-<div class="large">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 20</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="オブジェクトについて-2" class="slide level2">
-<h2>オブジェクトについて</h2>
-<p>また、「Environment」（環境）パネルを見ると、オブジェクトの確認ができる</p>
+<section id="クイズ" class="slide level2">
+<h2>クイズ</h2>
 
-<img data-src="../images/environment.jpg" class="r-stretch"></section>
-<section id="オブジェクトについて-3" class="slide level2">
-<h2>オブジェクトについて</h2>
-<p>オブジェクトの上書きもできます。</p>
-<div class="large">
+<img data-src="../images/joho2024-qr-code.png" class="r-stretch"><p>あるいは、<a href="https://gosocrative.com">gosocrative.com</a> で joho2024を入力</p>
+</section>
+<section id="コメントについて" class="slide level2">
+<h2>コメントについて</h2>
+<!-- FIXME: remove this section after lecture -->
+<ul>
+<li><code>#</code>の後に書いた文は「コメント」です</li>
+<li>Rはコメントを無視するので、何を書いてもエラーになりません</li>
+<li>自分用のメモとして使う
+<ul>
+<li>日本語で書いても大丈夫</li>
+</ul></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>age <span class="ot">&lt;-</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># これはコメントです</span></span>
+<span id="cb1-2"><a></a><span class="co"># 3 % 9</span></span>
+<span id="cb1-3"><a></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 27</code></pre>
 </div>
 </div>
-<p><code>age</code>はいくつになりましたか？</p>
+</section>
+<section id="ベクトルについて" class="slide level2">
+<h2>ベクトルについて</h2>
+<ul>
+<li>今までは、数を一つずつ扱ってきた（<code>4 + 5</code> など）</li>
+<li>しかし、Rでは一気に複数の数を扱うことができます</li>
+<li>例えば、1から10までの数：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+</div>
+<ul>
+<li>このようなデータの集まりを<strong>「ベクトル」</strong>と呼びます</li>
+</ul>
+</section>
+<section id="ベクトルについて-1" class="slide level2">
+<h2>ベクトルについて</h2>
+<ul>
+<li><code>1</code>から<code>10</code>までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます</li>
+<li>例えば、一気に全ての値を2で割る：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>x <span class="sc">/</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+</div>
+</div>
+</section>
+<section id="ベクトルについて-2" class="slide level2">
+<h2>ベクトルについて</h2>
+<ul>
+<li>もう一つのベクトルの作り方があります：<code>c</code>
+<ul>
+<li><code>c</code> は <strong>combine</strong>（結合する）という意味</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+</div>
+</section>
+<section id="チャレンジ" class="slide level2">
+<h2>チャレンジ</h2>
+<ul>
+<li><p><code>40</code>から<code>50</code>までのベクトルを作る</p></li>
+<li><p><code>40</code>, <code>42</code>, <code>46</code> を含むベクトルを作る</p></li>
+</ul>
+</section>
+<section id="データ型について" class="slide level2">
+<h2>データ型について</h2>
+<ul>
+<li>今までは数（数字）しか扱ってきませんでしたが、Rには他のデータの種類もあります
+<ul>
+<li><strong>データ型</strong>と呼びます</li>
+</ul></li>
+<li>文字データ：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>menu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ramen"</span>, <span class="st">"edamame"</span>, <span class="st">"gyoza"</span>)</span>
+<span id="cb9-2"><a></a>menu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ramen"   "edamame" "gyoza"  </code></pre>
+</div>
+</div>
+<ul>
+<li>文字は必ず <code>"</code> で囲まないといけません</li>
+</ul>
+</section>
+<section id="データ型について-1" class="slide level2">
+<h2>データ型について</h2>
+<ul>
+<li>論理データ：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>coin_flip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb11-2"><a></a>coin_flip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li>論理データは <code>TRUE</code> または <code>FALSE</code> しかありません。また、 <code>"</code> を使いません。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>論理データは値の比較によく使います：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">40</span>, <span class="dv">21</span>)</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a>ages <span class="sc">&gt;</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE  TRUE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="データ型について-2" class="slide level2">
+<h2>データ型について</h2>
+<ul>
+<li>あるベクトルには一つのデータ型しか持てません。
+<ul>
+<li>異なるデータ型を結合すると、強制的に同じになります。</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">c</span>(<span class="st">"ramen"</span>, <span class="st">"gyoza"</span>, <span class="dv">10</span>, <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ramen" "gyoza" "10"    "11"   </code></pre>
+</div>
+</div>
+<ul>
+<li><code>"</code> は文字を表します。つまり、Rにとって <code>"10"</code> は数ではなく、文字です。</li>
+</ul>
+</section>
+<section id="データ型について-3" class="slide level2">
+<h2>データ型について</h2>
+<ul>
+<li>データ型を確認したい時には <code>typeof()</code> を使います</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>menu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ramen"   "edamame" "gyoza"  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">typeof</span>(menu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>coin_flip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">typeof</span>(coin_flip)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "logical"</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>ages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 19 40 21</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">typeof</span>(ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+</div>
+<ul>
+<li>Rでは、“double” は「数値」という意味を持っています。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>この授業で扱う主なRのデータ型：</p>
+<ul>
+<li>文字（character）</li>
+<li>論理（logical）</li>
+<li>数字（numeric, “double”）</li>
+</ul>
+</section>
+<section id="データ型が大事な理由" class="slide level2">
+<h2>データ型が大事な理由</h2>
+<ul>
+<li>データ型が一致していないと、エラーになってしまうことがあります。</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="dv">10</span> <span class="sc">+</span> <span class="st">"20"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in 10 + "20": non-numeric argument to binary operator</code></pre>
+</div>
+</div>
+<ul>
+<li>特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。</li>
+</ul>
+</section>
+<section id="チャレンジ-1" class="slide level2">
+<h2>チャレンジ</h2>
+<p>以下のコードを実行すると、結果のデータ型はどれでしょうか？</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">40</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">c</span>(menu, ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="関数とは" class="slide level2">
 <h2>関数とは</h2>
-<p>何かの値（インプット）を受けて、処理して、計算結果（アウトプット）を返すもの</p>
+<p>何かの値（インプット）を受けて、処理し、計算結果（アウトプット）を返すもの</p>
 <div class="center-x">
 <p><img src="https://manamina.valuesccg.com/uploads/content/image/12292/__.png" alt="drawing" height="100"></p>
 <div class="small">
@@ -476,64 +650,218 @@
 <h2>関数とは</h2>
 <p>関数の書き方：</p>
 <ul>
-<li>関数名(引数)</li>
+<li><code>関数名(入力)</code>
+<ul>
+<li>必ず関数名を書いた後に、入力を括弧の中に書きます</li>
+</ul></li>
 </ul>
-<p>例えば</p>
-<div class="large">
+<p>例えば、<code>sum()</code> は数の合計を計算する関数です：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">round</span>(<span class="fl">3.1415</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>ages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.1</code></pre>
+<pre><code>[1] 19 40 21</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">sum</span>(ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 80</code></pre>
 </div>
 </div>
 </section>
 <section id="関数とは-2" class="slide level2">
 <h2>関数とは</h2>
-<p>関数の使い方を確認したい時は<code>?関数名</code>と打って、ヘルプファイルを参照すれば良い</p>
-<div class="large">
+<ul>
+<li><code>round()</code> は少数を四捨五入する関数です：</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>?round</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.141593</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">round</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
 </div>
 </div>
+<ul>
+<li>（Rには <code>pi</code> 𝜋 が元々含まれています）</li>
+</ul>
+</section>
+<section id="ヘルプファイル" class="slide level2">
+<h2>ヘルプファイル</h2>
+<p>関数の使い方を確認したい時は <code>?関数名</code> と入力して、ヘルプファイルを参照します</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>?round</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="引数について" class="slide level2">
+<h2>引数について</h2>
+<ul>
+<li>ヘルプファイルの中に、こう書いてあります：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">round</span>(x, <span class="at">digits =</span> <span class="dv">0</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>x</code> と <code>digits</code> は <strong>引数</strong> の名前です
+<ul>
+<li>引数とは、関数の <strong>入力や設定</strong> のことです
+<ul>
+<li><code>x</code>: 四捨五入する数値</li>
+<li><code>digits</code>: 残す小数の桁数の指定</li>
+</ul></li>
+<li>引数が複数ある場合は、必ず <code>,</code> で区切ります</li>
+<li>(<code>...</code> は上級な話なので、この授業では扱いません)</li>
+</ul></li>
+</ul>
+</section>
+<section id="引数について-1" class="slide level2">
+<h2>引数について</h2>
+<p>つまり、さっきは</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">round</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>と書きましたが、</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">round</span>(<span class="at">x =</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<p>とでも書けるわけです。</p>
+</section>
+<section id="引数について-2" class="slide level2">
+<h2>引数について</h2>
+<ul>
+<li>ヘルプファイルでは、<code>digits = 0</code> と書いてあります
+<ul>
+<li>これは、デフォルトの設定では残す小数の桁数はゼロ、という意味です</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">round</span>(<span class="at">x =</span> pi, <span class="at">digits =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>異なる数を設定することもできます：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">round</span>(<span class="at">x =</span> pi, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>しかし、<code>x</code> のデフォルト設定がないので、<code>x</code> を指定しないとエラーになってしまいます：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: argument "x" is missing, with no default</code></pre>
+</div>
+</div>
+<ul>
+<li>つまり、<code>round()</code> にとって、<code>x</code> は必須です
+<ul>
+<li><code>digits</code> は任意です</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><p>Rは引数を <strong>名前</strong> からでも、 <strong>位置</strong> からでも認識できます</p></li>
+<li><p><code>round()</code> の最初の引数が <code>x</code>、その次が <code>digits</code> なので、このようにも書けます：</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">round</span>(pi, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>あるいは、名前を使えば、位置を変えることができます：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>, <span class="at">x =</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>おすすめは、<strong>任意の引数名を使う</strong>ことです：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14</code></pre>
+</div>
+</div>
+</section>
+<section id="チャレンジ-2" class="slide level2">
+<h2>チャレンジ</h2>
+<ul>
+<li><code>sort()</code> は入力を並び替える関数です。
+<ul>
+<li>引数は <code>x</code>（ベクトル）と <code>decreasing</code>（論理）</li>
+</ul></li>
+</ul>
+<p>今まで扱ったデータを以下のように並び替えてください：</p>
+<ol type="1">
+<li><code>ages</code> を小さい順から大きい順に</li>
+<li><code>ages</code> を大きい順から小さい順に</li>
+<li><code>menu</code> をAからZまでの順に</li>
+<li><code>menu</code> をZからAまでの順に</li>
+</ol>
 </section>
 <section id="パッケージとは" class="slide level2">
 <h2>パッケージとは</h2>
 <ul>
-<li>Rパッケージとは、Rが出来ることを大幅に増やす「追加」のソフト（関数のまとまり）
+<li>Rパッケージとは、Rができることを大幅に増やす「追加」のソフト（関数のまとまり）です
 <ul>
-<li>現在、<strong>２万</strong>近くのパッケージがある！</li>
+<li>現在、<strong>2万</strong>近くのパッケージがあります！</li>
 </ul></li>
 </ul>
 </section>
 <section id="パッケージのインストール" class="slide level2">
 <h2>パッケージのインストール</h2>
-<p>Rパッケージのインストールを行うには、<code>install.packages()</code>を使う：</p>
+<p>Rパッケージのインストールを行うには、<code>install.packages()</code> を使います：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>一回インストールしたら、次回からはしなくて良いので、これはコードとして保存しない</p>
+<p>一度インストールしたら、次回からはインストールする必要はありません*</p>
 </section>
 <section id="パッケージのロード" class="slide level2">
 <h2>パッケージのロード</h2>
 <ul>
-<li>パッケージをインストールしたら、使える状態にするにはロードすることが必要
+<li>パッケージをインストールしたら、使える状態にするためにロードする必要があります
 <ul>
-<li>インストールは一回でいい</li>
-<li>ロードは毎回必要</li>
+<li>インストールは一度で十分です</li>
+<li>ロードは毎回必要です</li>
 </ul></li>
 </ul>
-<p><code>library()</code>関数でロードする：</p>
-<div class="large">
+<p><code>library()</code> 関数でロードします：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="tidyverse" class="slide level2">
 <h2>tidyverse</h2>
 <ul>
-<li><code>tidyverse</code>はデータサイエンス用パッケー<strong>ジの集まり</strong>のパッケージ
+<li><code>tidyverse</code> はデータサイエンス用パッケージの集まりです
 <ul>
 <li><code>ggplot2</code>（可視化）</li>
 <li><code>dplyr</code>（データの整理）</li>
@@ -542,16 +870,58 @@
 </ul></li>
 </ul>
 <p>これからよく使うので、インストールしましょう。</p>
+</section>
+<section class="slide level2">
+
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>（実は、<code>tidyverse</code> は教室のパソコンに既にインストールされているのでインストールは不要ですが、自分のパソコンを使用している場合は必要です）</p>
 </section>
 <section id="install.packagesとlibraryの違い" class="slide level2">
 <h2><code>install.packages()</code>と<code>library()</code>の違い</h2>
 <ul>
-<li><p><code>install.packages()</code>は一回だけで良い（パソコンにパッケージをダウンロードする）</p></li>
-<li><p><code>library()</code>はRを使う毎にしないといけない（パッケージを今回のRのセッションで使えるようにする）</p></li>
+<li><code>install.packages()</code> は一度だけで良いです（パソコンにパッケージをダウンロードします）</li>
+<li><code>library()</code> はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）</li>
 </ul>
+</section>
+<section id="情報処理演習室の注意点" class="slide level2">
+<h2>情報処理演習室の注意点</h2>
+<blockquote>
+<p><code>install.packages()</code> は一度だけで良い</p>
+</blockquote>
+<p>と説明しましたが、この教室のパソコンからログアウトすると<strong>パッケージを含む</strong>あなたのデータ<strong>が全て消去されてしまいます</strong>。</p>
+<p>そのため、この教室のパソコンに新しくインストールするパッケージは<strong>毎回インストールが必要</strong>です。</p>
+</section>
+<section id="今後の宿題について" class="slide level2">
+<h2>今後の宿題について</h2>
+<ul>
+<li>宿題は今まで通りオンラインで受けることも可能です
+<ul>
+<li>混雑している時間帯には接続できない可能性があります</li>
+<li>しばらく使用しないとリセットされてしまいます</li>
+</ul></li>
+<li>これからは、教室内のパソコンにインストールして、ここで受けることも可能になりました（この教室のパソコンを使う度に必要）：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">library</span>(remotes)</span>
+<span id="cb61-2"><a></a><span class="fu">install_github</span>(<span class="st">"joelnitta/joholearnr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>インストールが完了したら、右上の「環境」パネルに新しい「Tutorial」タブが表示されます(1)</li>
+<li>受けたい宿題を探します（2）</li>
+<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
+<section id="質問" class="slide level2">
+<h2>質問</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

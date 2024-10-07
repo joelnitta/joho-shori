@@ -382,98 +382,203 @@
     "href": "day2/index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）\ne-learning（オンデマンド）"
+    "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）\nオンデマンド講義とe-learning"
   },
   {
-    "objectID": "day2/index.html#rを計算機として使う",
-    "href": "day2/index.html#rを計算機として使う",
+    "objectID": "day2/index.html#クイズ",
+    "href": "day2/index.html#クイズ",
     "title": "情報処理演習",
-    "section": "Rを計算機として使う",
-    "text": "Rを計算機として使う\n\nRStudioのコンソール（左下のパネル）にカーソルを置いて、簡単な計算をしてみましょう：\n\n\n\n2 * 10\n\n[1] 20"
+    "section": "クイズ",
+    "text": "クイズ\n\nあるいは、gosocrative.com で joho2024を入力"
   },
   {
-    "objectID": "day2/index.html#オブジェクトについて",
-    "href": "day2/index.html#オブジェクトについて",
+    "objectID": "day2/index.html#コメントについて",
+    "href": "day2/index.html#コメントについて",
     "title": "情報処理演習",
-    "section": "オブジェクトについて",
-    "text": "オブジェクトについて\n\n次に、Rの中のデータを変数（Rでは、「オブジェクト Object」と呼ぶ）として保存しよう：\n\n\n\nage &lt;- 2 * 10"
+    "section": "コメントについて",
+    "text": "コメントについて\n\n\n#の後に書いた文は「コメント」です\nRはコメントを無視するので、何を書いてもエラーになりません\n自分用のメモとして使う\n\n日本語で書いても大丈夫\n\n\n\n# これはコメントです\n# 3 % 9\n3 * 9\n\n[1] 27"
   },
   {
-    "objectID": "day2/index.html#オブジェクトについて-1",
-    "href": "day2/index.html#オブジェクトについて-1",
+    "objectID": "day2/index.html#ベクトルについて",
+    "href": "day2/index.html#ベクトルについて",
     "title": "情報処理演習",
-    "section": "オブジェクトについて",
-    "text": "オブジェクトについて\nこれだけでは何も返ってこない。\n変数の内容を確認するには、コンソールにその変数の名前を打てば良い：\n\n\nage\n\n[1] 20"
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\n今までは、数を一つずつ扱ってきた（4 + 5 など）\nしかし、Rでは一気に複数の数を扱うことができます\n例えば、1から10までの数：\n\n\n1:10\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nこのようなデータの集まりを「ベクトル」と呼びます"
   },
   {
-    "objectID": "day2/index.html#オブジェクトについて-2",
-    "href": "day2/index.html#オブジェクトについて-2",
+    "objectID": "day2/index.html#ベクトルについて-1",
+    "href": "day2/index.html#ベクトルについて-1",
     "title": "情報処理演習",
-    "section": "オブジェクトについて",
-    "text": "オブジェクトについて\nまた、「Environment」（環境）パネルを見ると、オブジェクトの確認ができる"
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\n1から10までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます\n例えば、一気に全ての値を2で割る：\n\n\nx &lt;- 1:10\n\nx / 2\n\n [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0"
   },
   {
-    "objectID": "day2/index.html#オブジェクトについて-3",
-    "href": "day2/index.html#オブジェクトについて-3",
+    "objectID": "day2/index.html#ベクトルについて-2",
+    "href": "day2/index.html#ベクトルについて-2",
     "title": "情報処理演習",
-    "section": "オブジェクトについて",
-    "text": "オブジェクトについて\nオブジェクトの上書きもできます。\n\n\nage &lt;- 40\n\n\nageはいくつになりましたか？"
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\nもう一つのベクトルの作り方があります：c\n\nc は combine（結合する）という意味\n\n\n\nc(1, 2, 3)\n\n[1] 1 2 3"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ",
+    "href": "day2/index.html#チャレンジ",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\n40から50までのベクトルを作る\n40, 42, 46 を含むベクトルを作る"
+  },
+  {
+    "objectID": "day2/index.html#データ型について",
+    "href": "day2/index.html#データ型について",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\n今までは数（数字）しか扱ってきませんでしたが、Rには他のデータの種類もあります\n\nデータ型と呼びます\n\n文字データ：\n\n\nmenu &lt;- c(\"ramen\", \"edamame\", \"gyoza\")\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\n\n\n文字は必ず \" で囲まないといけません"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-1",
+    "href": "day2/index.html#データ型について-1",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\n論理データ：\n\n\ncoin_flip &lt;- c(TRUE, FALSE, TRUE)\ncoin_flip\n\n[1]  TRUE FALSE  TRUE\n\n\n\n論理データは TRUE または FALSE しかありません。また、 \" を使いません。"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-2",
+    "href": "day2/index.html#データ型について-2",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\nあるベクトルには一つのデータ型しか持てません。\n\n異なるデータ型を結合すると、強制的に同じになります。\n\n\n\nc(\"ramen\", \"gyoza\", 10, 11)\n\n[1] \"ramen\" \"gyoza\" \"10\"    \"11\"   \n\n\n\n\" は文字を表します。つまり、Rにとって \"10\" は数ではなく、文字です。"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-3",
+    "href": "day2/index.html#データ型について-3",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\nデータ型を確認したい時には typeof() を使います\n\n\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\ntypeof(menu)\n\n[1] \"character\""
+  },
+  {
+    "objectID": "day2/index.html#データ型が大事な理由",
+    "href": "day2/index.html#データ型が大事な理由",
+    "title": "情報処理演習",
+    "section": "データ型が大事な理由",
+    "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in 10 + \"20\": non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ-1",
+    "href": "day2/index.html#チャレンジ-1",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n以下のコードを実行すると、結果のデータ型はどれでしょうか？\n\nc(19, 21, 40, TRUE, TRUE, FALSE)\n\n\n\nc(menu, ages)"
   },
   {
     "objectID": "day2/index.html#関数とは",
     "href": "day2/index.html#関数とは",
     "title": "情報処理演習",
     "section": "関数とは",
-    "text": "関数とは\n何かの値（インプット）を受けて、処理して、計算結果（アウトプット）を返すもの\n\n\n\nhttps://manamina.valuesccg.com/articles/756"
+    "text": "関数とは\n何かの値（インプット）を受けて、処理し、計算結果（アウトプット）を返すもの\n\n\n\nhttps://manamina.valuesccg.com/articles/756"
   },
   {
     "objectID": "day2/index.html#関数とは-1",
     "href": "day2/index.html#関数とは-1",
     "title": "情報処理演習",
     "section": "関数とは",
-    "text": "関数とは\n関数の書き方：\n\n関数名(引数)\n\n例えば\n\n\nround(3.1415, digits = 1)\n\n[1] 3.1"
+    "text": "関数とは\n関数の書き方：\n\n関数名(入力)\n\n必ず関数名を書いた後に、入力を括弧の中に書きます\n\n\n例えば、sum() は数の合計を計算する関数です：\n\nages\n\n[1] 19 40 21\n\nsum(ages)\n\n[1] 80"
   },
   {
     "objectID": "day2/index.html#関数とは-2",
     "href": "day2/index.html#関数とは-2",
     "title": "情報処理演習",
     "section": "関数とは",
-    "text": "関数とは\n関数の使い方を確認したい時は?関数名と打って、ヘルプファイルを参照すれば良い\n\n\n?round"
+    "text": "関数とは\n\nround() は少数を四捨五入する関数です：\n\n\npi\n\n[1] 3.141593\n\nround(pi)\n\n[1] 3\n\n\n\n（Rには pi 𝜋 が元々含まれています）"
+  },
+  {
+    "objectID": "day2/index.html#ヘルプファイル",
+    "href": "day2/index.html#ヘルプファイル",
+    "title": "情報処理演習",
+    "section": "ヘルプファイル",
+    "text": "ヘルプファイル\n関数の使い方を確認したい時は ?関数名 と入力して、ヘルプファイルを参照します\n\n?round"
+  },
+  {
+    "objectID": "day2/index.html#引数について",
+    "href": "day2/index.html#引数について",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\n\nヘルプファイルの中に、こう書いてあります：\n\n\nround(x, digits = 0, ...)\n\n\nx と digits は 引数 の名前です\n\n引数とは、関数の 入力や設定 のことです\n\nx: 四捨五入する数値\ndigits: 残す小数の桁数の指定\n\n引数が複数ある場合は、必ず , で区切ります\n(... は上級な話なので、この授業では扱いません)"
+  },
+  {
+    "objectID": "day2/index.html#引数について-1",
+    "href": "day2/index.html#引数について-1",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\nつまり、さっきは\n\nround(pi)\n\nと書きましたが、\n\nround(x = pi)\n\n[1] 3\n\n\nとでも書けるわけです。"
+  },
+  {
+    "objectID": "day2/index.html#引数について-2",
+    "href": "day2/index.html#引数について-2",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\n\nヘルプファイルでは、digits = 0 と書いてあります\n\nこれは、デフォルトの設定では残す小数の桁数はゼロ、という意味です\n\n\n\nround(x = pi, digits = 0)\n\n[1] 3"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ-2",
+    "href": "day2/index.html#チャレンジ-2",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\nsort() は入力を並び替える関数です。\n\n引数は x（ベクトル）と decreasing（論理）\n\n\n今まで扱ったデータを以下のように並び替えてください：\n\nages を小さい順から大きい順に\nages を大きい順から小さい順に\nmenu をAからZまでの順に\nmenu をZからAまでの順に"
   },
   {
     "objectID": "day2/index.html#パッケージとは",
     "href": "day2/index.html#パッケージとは",
     "title": "情報処理演習",
     "section": "パッケージとは",
-    "text": "パッケージとは\n\nRパッケージとは、Rが出来ることを大幅に増やす「追加」のソフト（関数のまとまり）\n\n現在、２万近くのパッケージがある！"
+    "text": "パッケージとは\n\nRパッケージとは、Rができることを大幅に増やす「追加」のソフト（関数のまとまり）です\n\n現在、2万近くのパッケージがあります！"
   },
   {
     "objectID": "day2/index.html#パッケージのインストール",
     "href": "day2/index.html#パッケージのインストール",
     "title": "情報処理演習",
     "section": "パッケージのインストール",
-    "text": "パッケージのインストール\nRパッケージのインストールを行うには、install.packages()を使う：\n\ninstall.packages(\"ggplot2\")\n\n一回インストールしたら、次回からはしなくて良いので、これはコードとして保存しない"
+    "text": "パッケージのインストール\nRパッケージのインストールを行うには、install.packages() を使います：\n\ninstall.packages(\"ggplot2\")\n\n一度インストールしたら、次回からはインストールする必要はありません*"
   },
   {
     "objectID": "day2/index.html#パッケージのロード",
     "href": "day2/index.html#パッケージのロード",
     "title": "情報処理演習",
     "section": "パッケージのロード",
-    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするにはロードすることが必要\n\nインストールは一回でいい\nロードは毎回必要\n\n\nlibrary()関数でロードする：\n\n\nlibrary(ggplot2)"
+    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするためにロードする必要があります\n\nインストールは一度で十分です\nロードは毎回必要です\n\n\nlibrary() 関数でロードします：\n\nlibrary(ggplot2)"
   },
   {
     "objectID": "day2/index.html#tidyverse",
     "href": "day2/index.html#tidyverse",
     "title": "情報処理演習",
     "section": "tidyverse",
-    "text": "tidyverse\n\ntidyverseはデータサイエンス用パッケージの集まりのパッケージ\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールしましょう。\n\ninstall.packages(\"tidyverse\")"
+    "text": "tidyverse\n\ntidyverse はデータサイエンス用パッケージの集まりです\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールしましょう。"
   },
   {
     "objectID": "day2/index.html#install.packagesとlibraryの違い",
     "href": "day2/index.html#install.packagesとlibraryの違い",
     "title": "情報処理演習",
     "section": "install.packages()とlibrary()の違い",
-    "text": "install.packages()とlibrary()の違い\n\ninstall.packages()は一回だけで良い（パソコンにパッケージをダウンロードする）\nlibrary()はRを使う毎にしないといけない（パッケージを今回のRのセッションで使えるようにする）"
+    "text": "install.packages()とlibrary()の違い\n\ninstall.packages() は一度だけで良いです（パソコンにパッケージをダウンロードします）\nlibrary() はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）"
+  },
+  {
+    "objectID": "day2/index.html#情報処理演習室の注意点",
+    "href": "day2/index.html#情報処理演習室の注意点",
+    "title": "情報処理演習",
+    "section": "情報処理演習室の注意点",
+    "text": "情報処理演習室の注意点\n\ninstall.packages() は一度だけで良い\n\nと説明しましたが、この教室のパソコンからログアウトするとパッケージを含むあなたのデータが全て消去されてしまいます。\nそのため、この教室のパソコンに新しくインストールするパッケージは毎回インストールが必要です。"
+  },
+  {
+    "objectID": "day2/index.html#今後の宿題について",
+    "href": "day2/index.html#今後の宿題について",
+    "title": "情報処理演習",
+    "section": "今後の宿題について",
+    "text": "今後の宿題について\n\n宿題は今まで通りオンラインで受けることも可能です\n\n混雑している時間帯には接続できない可能性があります\nしばらく使用しないとリセットされてしまいます\n\nこれからは、教室内のパソコンにインストールして、ここで受けることも可能になりました（この教室のパソコンを使う度に必要）：\n\n\nlibrary(remotes)\ninstall_github(\"joelnitta/joholearnr\")"
+  },
+  {
+    "objectID": "day2/index.html#質問",
+    "href": "day2/index.html#質問",
+    "title": "情報処理演習",
+    "section": "質問",
+    "text": "質問"
   },
   {
     "objectID": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",
