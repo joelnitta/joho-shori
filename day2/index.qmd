@@ -402,24 +402,32 @@ install.packages("tidyverse")
   - 混雑している時間帯には接続できない可能性があります
   - しばらく使用しないとリセットされてしまいます
 
-- これからは、教室内のパソコンにインストールして、ここで受けることも可能になりました（この教室のパソコンを使う度に必要）：
+## 今後の宿題について
+
+- 実は、オンラインで受けてきた宿題は**Rパッケージ**「 `joholearnr`」でもあります
+
+- 教室内のパソコンに宿題がインストールされまたので、**ここで**受けることも可能になりました：
+  - 右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)
+  - 受けたい宿題を探します（2）
+  - 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
+
+---
+
+![](../images/tutorial-rstudio-screenshot.png)
+
+---
+
+- リストに今週の宿題が入っていない場合は、パッケージのアップデート（再インストール）が必要です。
+  - このようにインストールを行なってください：
 
 ```{r}
-#| label: install-joholearnr
+#| label: install-joholearnr-2
 #| echo: true
 #| eval: false
 library(remotes)
 install_github("joelnitta/joholearnr")
 ```
 
----
-
-- インストールが完了したら、右上の「環境」パネルに新しい「Tutorial」タブが表示されます(1)
-- 受けたい宿題を探します（2）
-- 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
-
----
-
-![](../images/tutorial-rstudio-screenshot.png)
+- `install_github()`は、カスタムなRパッケージをインストールする関数です
 
 ## 質問
