@@ -470,4 +470,8 @@ install_github("joelnitta/joholearnr")
 
 - `install_github()`は、カスタムなRパッケージをインストールする関数です
 
-## 質問
+## 連絡事項
+
+- 来週（10月15日）は休みです
+
+- 次回は10月22日です
