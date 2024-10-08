@@ -932,48 +932,45 @@
 </blockquote>
 <p>と説明しましたが、この教室のパソコンからログアウトすると<strong>パッケージを含む</strong>あなたのデータ<strong>が全て消去されてしまいます</strong>。</p>
 <p>そのため、この教室のパソコンに新しくインストールするパッケージは<strong>毎回インストールが必要</strong>です。</p>
-</section>
-<section id="今後の宿題について" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li>宿題は今まで通りオンラインで受けることも可能です
-<ul>
-<li>混雑している時間帯には接続できない可能性があります</li>
-<li>しばらく使用しないとリセットされてしまいます</li>
-</ul></li>
-</ul>
-</section>
-<section id="今後の宿題について-1" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li><p>実は、オンラインで受けてきた宿題は<strong>Rパッケージ</strong>「 <code>joholearnr</code>」でもあります</p></li>
-<li><p>教室内のパソコンに宿題がインストールされまたので、<strong>ここで</strong>受けることも可能になりました：</p>
-<ul>
-<li>右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)</li>
-<li>受けたい宿題を探します（2）</li>
-<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
+<!-- 
+
+## 今後の宿題について
+
+- 宿題は今まで通りオンラインで受けることも可能です
+  - 混雑している時間帯には接続できない可能性があります
+  - しばらく使用しないとリセットされてしまいます
+
+## 今後の宿題について
+
+- 実は、オンラインで受けてきた宿題は**Rパッケージ**「 `joholearnr`」でもあります
+
+- 教室内のパソコンに宿題がインストールされまたので、**ここで**受けることも可能になりました：
+  - 右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)
+  - 受けたい宿題を探します（2）
+  - 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
+
+---
+
+![](../images/tutorial-rstudio-screenshot.png)
+
+---
+
+- リストに今週の宿題が入っていない場合は、パッケージのアップデート（再インストール）が必要です。
+  - このようにインストールを行なってください：
 
 
-<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
-<section class="slide level2">
+::: {.cell}
 
-<ul>
-<li>リストに今週の宿題が入っていない場合は、パッケージのアップデート（再インストール）が必要です。
-<ul>
-<li>このようにインストールを行なってください：</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">library</span>(remotes)</span>
-<span id="cb62-2"><a href="#cb62-2"></a><span class="fu">install_github</span>(<span class="st">"joelnitta/joholearnr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><code>install_github()</code>は、カスタムなRパッケージをインストールする関数です</li>
-</ul>
+```{.r .cell-code}
+library(remotes)
+install_github("joelnitta/joholearnr")
+```
+:::
+
+
+- `install_github()`は、カスタムなRパッケージをインストールする関数です
+
+-->
 </section>
 <section id="連絡事項" class="slide level2">
 <h2>連絡事項</h2>
