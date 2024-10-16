@@ -1,0 +1,251 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 第3回：プロジェクトの整理とデータの読み込み
+
+<https://data-science-chiba-2024.github.io/day2/>
+
+## クイズ
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/joho2024-qr-code.png)
+:::
+
+::: {.column width="50%"}
+**注意：**質問は複数選択です。**すべて**の正しい答えを選択してください。
+:::
+
+::::
+
+あるいは、[gosocrative.com](https://gosocrative.com) で joho2024を入力
+
+## アウトライン
+
+- プロジェクトの整理とデータの読み込み
+  - データフレーム
+  - スクリプト
+  - プロジェクトの作成
+  - ファイルとフォルダー
+
+## データフレームについて
+
+- データフレームは最もよく使うデータ形式です
+  - 行と列から出来ている２次元データ
+  - エクセルのSpreadsheetと同じような物
+
+---
+
+![](../images/students-excel-view.png)
+
+## 初データの読み込み
+
+- 練習として、教科書に出ている`students.csv`ファイルをRに読み込みます
+
+- まず、このリンクから`students.csv`をデスクトップにダウンロードしてください:
+  - <https://pos.it/r4ds-students-csv>
+
+---
+
+![](../images/firefox-save-csv.png)
+
+## `.csv`ファイルについて
+
+- `.csv`は、**C**omma-**s**eparated **v**aluesの略
+  - データはコンマ（`,`）で区切られている
+
+- エクセルの`.xslx`ファイルとの違い
+  - `.csv`の中身は単純文字列なので、直接中身を確認することができます。
+  - `.xslx`（または`.xsl`）ファイルは**エクセルのみ**に対応している
+  - `.xslx`はエクセルを持っていない方にとって使いずらいので、**`.csv`を推薦**
+
+## `.csv`ファイルの中身を確認する
+
+- RStudioの「ファイル」パネルから`students.csv`を開いて、中身を確認することができます
+
+---
+
+![](../images/rstudio-file-open-annotated.png)
+
+## `.csv`ファイルをRに読み込む
+
+- これから使う関数は`tidyverse`パッケージに入っているので、まずは`tidyverse`をロードしましょう
+
+- （普通は`install.packages("tidyverse")`を以前に行っていたら、`library(tidyverse)`をすぐに使えるはずですが、この教室のパソコンは新しくログインした際に`install.packages("tidyverse")`が必要です）
+
+---
+
+```{r}
+#| eval: false
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+---
+
+```{r}
+#| eval: false
+students <- read_csv("students.csv")
+students
+```
+
+```{r}
+#| echo: false
+students <- read_csv("https://pos.it/r4ds-students-csv")
+students
+```
+
+---
+
+## `.csv`ファイルをRに読み込む
+
+- これでRに`.csv`ファイルのデータを読み込むことができました。
+
+- しかし、データの読み込みからデータの解析の最後まで、全部の作業を一回で終わることは現実的ではありません。
+
+- ここで一旦作業を停止して、RStudioを閉じましょう
+
+---
+
+## 作業の再開
+
+- またRStudioを開きましょう
+
+- 今までの成果はどうなっているのでしょうか？
+  - また全部一からやり直す必要がある
+
+- もっといいやり方があるはず・・
+
+## スクリプト
+
+- 今まではRのコマンドを直接コンソールに打ちました
+  - 同じ作業を再度行う時は効率が悪い
+
+- スクリプト（テキストファイル）にコマンドを保存すると、後々楽になります
+
+- 「File」 → 「New File」 → 「RScript」
+
+---
+
+![](../images/rstudio-new-script.png)
+
+## スクリプトの編集
+
+- スクリプトに今で書いたコードを入れましょう：
+
+```{r}
+#| eval: false
+library(tidyverse)
+students <- read_csv("students.csv")
+students
+```
+
+## スクリプトの保存
+
+- スクリプトを保存しましょう：
+
+- 「File」 → 「Save As」 → 場所とファイル名を決めて、保存する
+
+- 今回は`students.R`としましょう
+  - Rスクリプトは`.r`もしくは`.R`のファイル拡張を使います
+
+## スクリプトとコンソールの違い
+
+- スクリプトに入っているRコードは「これから実行するコマンドのリスト」みたいな物です（レシピをイメージしてください）
+
+- Rにそのコマンドを実行するように支持する必要があります
+
+## スクリプトからのコマンドの実行
+
+- まずはカーソルを実行したい行におきます（矢印キーかマウスを使えば良い）
+
+- 「Run」アイコンをクリックします
+
+- あるは、ショートカットを使います（おすすめ）
+  - Mac: `⌘`と`enter`を同時に押す
+  - Windows: `ctrl`と`enter`を同時に押す
+
+## チャレンジ
+
+RStudioを閉じてから、またスクリプトを開いて、コマンドを実行してください
+
+. . .
+
+一々コマンドを打つよりは便利でしょう？
+
+## プロジェクトについて
+
+- スクリプトを書くことによって、データ解析の作業をだいぶ楽にしましたが、次には**ファイルを整理する**必要があります
+
+- ファイルの整理には、RStudio の**プロジェクト**機能を使います
+
+---
+
+![](https://www.luminoso-kawasaki.org/wp-content/uploads/2020/08/ob07_2%E9%9A%8E%E5%B1%A4%E5%8C%96-01-scaled.jpg)
+
+::: {.aside}
+https://www.luminoso-kawasaki.org/wp-content/uploads/2020/08/ob07_2%E9%9A%8E%E5%B1%A4%E5%8C%96-01-scaled.jpg
+:::
+
+## プロジェクトについて
+
+- RStudio のプロジェクトというのは、データ解析に使うフォルダーのことです
+
+- このフォルダーの中に、あるデータ解析プロジェクトに必要なファイルを入れます
+
+## プロジェクトの作り方
+
+- 「File」 → 「New Project...」 → 「New Directory」→「New Project」
+
+---
+
+![](../images/rstudio-new-project-1.png)
+
+---
+
+![](../images/rstudio-new-project-2.png)
+
+---
+
+![](../images/rstudio-new-project-3.png)
+
+---
+
+![](../images/rstudio-new-project-4.png)
+
+## プロジェクトの作り方
+
+- プロジェクトを作ったら、`students.csv`を`students_project`に移動してください
+
+- 右下のファイルパネルに、`students.csv`が入っていることが確認できます
+
+## プロジェクトの開き方
+
+- RStudioを一旦閉じましょう
+
+- 今度は、アプリ一覧からではなく、**プロジェクトから**RStudioを開きましょう
+
+- `students_project`フォルダーを開いてから、中の`students_project.Rproj`ファイルをダブルクリックしてください
+
+- ・・すると、RStudioはそのプロジェクトに入った状態で出てきます
+  - ファイルパネル（右下）に今までの`students.csv`や`students.R`が出ていることを確認してください
+
+---
+
+![](../images/desktop-open-project-annotated.png)
+
+---
+
+![](../images/rstudio-students-project.png)

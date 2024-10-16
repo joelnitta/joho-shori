@@ -27,7 +27,7 @@ execute:
 
 あるいは、[gosocrative.com](https://gosocrative.com) で joho2024を入力
 
-## メニュー
+## アウトライン
 
 - **R入門（２）**: Rの基本的な要素を学ぶ
   - ベクトル
