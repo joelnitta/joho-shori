@@ -36,9 +36,12 @@ G1-501 情報処理演習室
   - [スライド](day2/index.qmd)
   - リーディング: [R4DS Chapter 2 (Workflow: Basics)](https://r4ds.hadley.nz/workflow-basics)
 - 第３回（2024-10-22）: **プロジェクトの整理とデータの読み込み**
-    - [スライド](day3/index.qmd)
-    - リーディング: [R4DS Chapter 3 (Data transformation)](https://r4ds.hadley.nz/data-transform)
+  - [スライド](day3/index.qmd)
+  - リーディング
+    - [R4DS Chapter 6 (Workflow: Scripts and projects)](https://r4ds.hadley.nz/workflow-scripts)
+    - [R4DS Chapter 7 (Data Import)](https://r4ds.hadley.nz/data-import)
 - 第４回（2024-10-29）: **データの整理（１）**
+  - リーディング: [R4DS Chapter 3 (Data transformation)](https://r4ds.hadley.nz/data-transform)
 - 第５回（2024-11-05）: **データの整理（２）**
 - 第６回（2024-11-12）: **データの可視化（１）**
 - 第７回（2024-11-19）: **データの可視化（２）**

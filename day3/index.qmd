@@ -27,6 +27,59 @@ execute:
 
 あるいは、[gosocrative.com](https://gosocrative.com) で joho2024を入力
 
+## 今後の宿題について
+
+- 宿題は今まで通りオンラインで受けることも可能です
+  - 混雑している時間帯には接続できない可能性があります
+  - しばらく使用しないとリセットされてしまいます
+
+## 今後の宿題について
+
+- オンラインで受けてきた宿題は**Rパッケージ**「 `joholearnr`」でもあります
+
+- 教室内のパソコンに宿題がインストールされまたので、**ここで**受けることも可能になりました：
+  - 右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)
+  - 受けたい宿題を探します（2）
+  - 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
+
+---
+
+![](../images/tutorial-rstudio-screenshot.png)
+
+---
+
+- 終わったら、「Stop」ボタンをクリックしてください
+
+![](../images/tutorial-stop.png)
+---
+
+- リストに今週の宿題が入っていない場合は、パッケージのアップデート（再インストール）が必要です。
+  - このようにインストールを行なってください：
+
+```{r}
+#| label: install-joholearnr-2
+#| echo: true
+#| eval: false
+library(remotes)
+install_github("joelnitta/joholearnr")
+```
+
+- `install_github()`は、カスタムなRパッケージをインストールする関数です
+
+---
+
+- もし以下のメッセージが出たら：
+
+```
+These packages have more recent versions available.
+It is recommended to update all of them
+Which would you like to update?
+```
+
+`3`を押してからエンターキーを押してください（他のパッケージをアップデートしない）。
+
+- `install_github()`をしてもチュートリアルが出ない場合は、一旦RStudioを閉じてからもう一度開いてください。そうすると、新しいチュートリアル（宿題）が出ているはずです。
+
 ## アウトライン
 
 - プロジェクトの整理とデータの読み込み
@@ -52,12 +105,21 @@ execute:
 ## データフレームについて
 
 - データフレームは最もよく使うデータ形式です
-  - 行と列から出来ている２次元データ
+  - 行と列から出来ている２次元データ（表形式データ）
   - エクセルのSpreadsheetと同じような物
 
 ---
 
 ![](../images/students-excel-view.png)
+
+## データフレームについて
+
+- エクセルとの大きな違い：各列は同じデータ型を持たなければならない
+  - つまり、かく**列がベクトルである**
+
+- tidyverseでは、「tibble」と呼ばれる
+
+![](https://swcarpentry-ja.github.io/2021-04-02-todai-slides/images/dataframe-example.png)
 
 ## 初データの読み込み
 
@@ -80,13 +142,11 @@ execute:
   - `.xslx`（または`.xsl`）ファイルは**エクセルのみ**に対応している
   - `.xslx`はエクセルを持っていない方にとって使いずらいので、**`.csv`を推薦**
 
-## `.csv`ファイルの中身を確認する
-
-- RStudioの「ファイル」パネルから`students.csv`を開いて、中身を確認することができます
-
 ---
 
-![](../images/rstudio-file-open-annotated.png)
+![](../images/firefox-csv.png){height=300px}
+
+![](../images/students-excel-view.png){height=300px}
 
 ## `.csv`ファイルをRに読み込む
 
@@ -100,6 +160,12 @@ library(tidyverse)
 
 ---
 
+- `.csv`ファイルを読み込む関数は`read_csv()`です
+
+---
+
+::: {.medsmall}
+
 ```{r}
 #| eval: false
 students <- read_csv("Z:/Desktop/students.csv")
@@ -111,6 +177,8 @@ students
 students <- read_csv("../data/students.csv")
 students
 ```
+
+:::
 
 ---
 
@@ -241,7 +309,7 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 
 ---
 
-![](../images/rstudio-new-project-1.png)
+![](../images/rstudio-new-project-1.png){height=500px}
 
 ---
 
@@ -253,7 +321,7 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 
 ---
 
-![](../images/rstudio-new-project-4.png)
+![](../images/rstudio-new-project-4.png){height=500px}
 
 ## プロジェクトの作り方
 
@@ -279,6 +347,12 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 - 今度は、アプリ一覧からではなく、**プロジェクトから**RStudioを開きましょう
 
 - `students_project`フォルダーを開いてから、中の`students_project.Rproj`ファイルをダブルクリックしてください
+
+---
+
+![](../images/students_rproject.png)
+
+---
 
 - ・・すると、RStudioはそのプロジェクトに入った状態で出てきます
   - ファイルパネル（右下）に今までの`data`や`students.R`が出ていることを確認してください
@@ -315,6 +389,12 @@ students <- read_csv("Z:/Desktop/students.csv")
 
 - このコードをどうやって変えれば`students.csv`を読むことができるのでしょうか？
 
+```{r}
+#| eval: false
+# Load data
+students <- read_csv("Z:/Desktop/students.csv")
+```
+
 ## 絶対パス
 
 - 一つの解決方法は**絶対パス**を指定することです：
@@ -344,7 +424,7 @@ getwd()
 
 ---
 
-- 今、Rは`Z:/Desktop/students_analysis/`に入っていることが分かりました。
+- 今、Rは`Desktop/students_analysis/`に入っていることが分かりました。
 
 - なので、このようにデータを読み込むことができます：
 
@@ -370,3 +450,52 @@ students <- read_csv("data/students.csv")
 
 - `penguins_analysis`と言うプロジェクトをDesktopに作って、開いてください。終わったらまた`students_analysis`を開いてください。
   - （`penguins`は別の教科書のデータセットです） 
+
+## データフレームのデータ型
+
+- 今回読み込んだデータをよく見てみましょう
+  - `AGE`という列のデータ型は？
+
+## データフレームのデータ型
+
+- `AGE`は数字（`dbl`）ではなく、文字（`chr`）として読み込まれた
+  - なぜでしょう？
+
+## データフレームのデータ型
+
+- `AGE`の中に、`"five"`が入っていたため、全部が文字として認識されてしまったようです。
+  - 自動的なデータ型の感知がうまく行きませんでした
+
+- このような場合は、自分でデータ型を指定する必要があります
+
+## データフレームのデータ型の指定
+
+- `read_csv()`の`col_types`引数を使う
+
+```{r}
+#| eval: false
+col_types = list(列名 = col_何ちゃら())
+```
+
+```{r}
+#| eval: false
+col_types = list(AGE = col_double())
+```
+
+---
+
+::: {.medsmall}
+
+```{r}
+#| eval: false
+students <- read_csv("Z:/Desktop/students.csv", col_types = list(AGE = col_double()))
+students
+```
+
+```{r}
+#| echo: false
+students <- read_csv("../data/students.csv", col_types = list(AGE = col_double()))
+students
+```
+
+:::
