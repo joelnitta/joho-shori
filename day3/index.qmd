@@ -499,3 +499,9 @@ students
 ```
 
 :::
+
+## 他のデータ型
+
+- `col_character()` 文字
+- `col_logical()` 論理
+- `col_double()` 数字
