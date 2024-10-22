@@ -391,9 +391,9 @@
 
 
 <section>
-<section id="第２回r入門２" class="title-slide slide level1 center">
-<h1>第２回：R入門（２）</h1>
-<p><a href="https://data-science-chiba-2024.github.io/day2/" class="uri">https://data-science-chiba-2024.github.io/day2/</a></p>
+<section id="第3回プロジェクトの整理とデータの読み込み" class="title-slide slide level1 center">
+<h1>第3回：プロジェクトの整理とデータの読み込み</h1>
+<p><a href="https://data-science-chiba-2024.github.io/day3/" class="uri">https://data-science-chiba-2024.github.io/day3/</a></p>
 </section>
 <section id="クイズ" class="slide level2">
 <h2>クイズ</h2>
@@ -401,583 +401,579 @@
 <div class="column" style="width:50%;">
 <p><img data-src="../images/joho2024-qr-code.png"></p>
 </div><div class="column" style="width:50%;">
-<p><strong>注意：</strong>質問は複数選択です。<strong>すべて</strong>の正しい答えを選択してください。</p>
+<p><strong>注意：</strong> 質問は複数選択です。<strong>すべて</strong>の正しい答えを選んでください。</p>
 </div>
 </div>
-<p>あるいは、<a href="https://gosocrative.com">gosocrative.com</a> で joho2024を入力</p>
+<p>または、<a href="https://gosocrative.com">gosocrative.com</a> で joho2024を入力</p>
+</section>
+<section id="今後の宿題について" class="slide level2">
+<h2>今後の宿題について</h2>
+<ul>
+<li>宿題はこれまで通りオンラインで受けることも可能です。
+<ul>
+<li>混雑している時間帯には接続できない可能性があります。</li>
+<li>しばらく使用しないとリセットされてしまいます。</li>
+</ul></li>
+</ul>
+</section>
+<section id="今後の宿題について-1" class="slide level2">
+<h2>今後の宿題について</h2>
+<ul>
+<li><p>オンラインで受けてきた宿題は<strong>Rパッケージ</strong>「 <code>joholearnr</code>」でもあります</p></li>
+<li><p>教室内のパソコンに宿題がインストールされているので、<strong>ここで</strong>受けることも可能になりました：</p>
+<ul>
+<li>右上の「環境」パネルで「Tutorial」タブをクリック（1）</li>
+<li>受けたい宿題を探します（2）</li>
+<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>終わったら、「Stop」ボタンをクリックしてください。</li>
+</ul>
+
+<img data-src="../images/tutorial-stop.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>リストに今週の宿題が表示されていない場合は、パッケージのアップデート（再インストール）が必要です。
+<ul>
+<li>以下のようにインストールを行ってください：</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(remotes)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">install_github</span>(<span class="st">"joelnitta/joholearnr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>install_github()</code>はカスタムなRパッケージをインストールする関数です。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>もし以下のメッセージが表示されたら：</li>
+</ul>
+<pre><code>These packages have more recent versions available.
+It is recommended to update all of them
+Which would you like to update?</code></pre>
+<p><code>3</code>を押してからエンターキーを押してください（他のパッケージをアップデートしない）。</p>
+<ul>
+<li><code>install_github()</code>を実行してもチュートリアルが表示されない場合は、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されるはずです。</li>
+</ul>
 </section>
 <section id="アウトライン" class="slide level2">
 <h2>アウトライン</h2>
 <ul>
-<li><strong>R入門（２）</strong>: Rの基本的な要素を学ぶ
+<li>プロジェクトの整理とデータの読み込み
 <ul>
-<li>ベクトル</li>
-<li>データ型</li>
-<li>関数</li>
-<li>パッケージ</li>
+<li>ファイルとフォルダー</li>
+<li>データフレーム</li>
+<li>スクリプト</li>
+<li>プロジェクトの作成</li>
 </ul></li>
 </ul>
 </section>
-<section id="コメントについて" class="slide level2">
-<h2>コメントについて</h2>
-<!-- FIXME: remove this section after lecture -->
+<section id="rstudioの設定の変更" class="slide level2">
+<h2>RStudioの設定の変更</h2>
 <ul>
-<li><code>#</code>の後に書いた文は「コメント」です</li>
-<li>Rはコメントを無視するので、何を書いてもエラーになりません</li>
-<li>自分用のメモとして使う
+<li><p>再現性を担保するために、RStudioの設定を変更する必要があります。</p></li>
+<li><p>そうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。</p></li>
+<li><p>「Tools」→「Global Options」→「Workspace」</p>
 <ul>
-<li>日本語で書いても大丈夫</li>
+<li>「Restore .RData into workspace at startup」→ <strong>外す</strong></li>
+<li>「Save workspace to .RData on exit」→ <strong>「Never」</strong></li>
 </ul></li>
 </ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/settings_change.png" class="r-stretch"></section>
+<section id="データフレームについて" class="slide level2">
+<h2>データフレームについて</h2>
+<ul>
+<li>データフレームは最もよく使われるデータ形式です。
+<ul>
+<li>行と列から構成される2次元データ（表形式データ）</li>
+<li>エクセルのスプレッドシートと同じようなもの</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/students-excel-view.png" class="r-stretch"></section>
+<section id="データフレームについて-1" class="slide level2">
+<h2>データフレームについて</h2>
+<ul>
+<li>エクセルとの大きな違い：各列は同じデータ型を持たなければなりません。
+<ul>
+<li>つまり、各<strong>列がベクトルである</strong>ということです。</li>
+</ul></li>
+<li>tidyverseでは、「tibble」と呼ばれます。</li>
+</ul>
+
+<img data-src="https://swcarpentry-ja.github.io/2021-04-02-todai-slides/images/dataframe-example.png" class="r-stretch"></section>
+<section id="初データの読み込み" class="slide level2">
+<h2>初データの読み込み</h2>
+<ul>
+<li><p>練習として、教科書に掲載されている<code>students.csv</code>ファイルをRに読み込みます。</p></li>
+<li><p>まず、このリンクから<code>students.csv</code>を<strong>デスクトップ</strong>にダウンロードしてください：</p>
+<ul>
+<li><a href="https://pos.it/r4ds-students-csv" class="uri">https://pos.it/r4ds-students-csv</a></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/firefox-save-csv.png" class="r-stretch"></section>
+<section id="csvファイルについて" class="slide level2">
+<h2><code>.csv</code>ファイルについて</h2>
+<ul>
+<li><code>.csv</code>は、<strong>C</strong>omma-<strong>s</strong>eparated <strong>v</strong>aluesの略です。
+<ul>
+<li>データはコンマ（<code>,</code>）で区切られています。</li>
+</ul></li>
+<li>エクセルの<code>.xlsx</code>ファイルとの違い
+<ul>
+<li><code>.csv</code>の中身は単純な文字列なので、直接中身を確認することができます。</li>
+<li><code>.xlsx</code>（または<code>.xls</code>）ファイルは<strong>エクセルのみ</strong>に対応しています。</li>
+<li><code>.xlsx</code>はエクセルを持っていない方にとって使いにくいので、<strong><code>.csv</code>を推奨</strong>します。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img data-src="../images/firefox-csv.png" height="300"></p>
+<p><img data-src="../images/students-excel-view.png" height="300"></p>
+</section>
+<section id="csvファイルをrに読み込む" class="slide level2">
+<h2><code>.csv</code>ファイルをRに読み込む</h2>
+<ul>
+<li>これから使用する関数は<code>tidyverse</code>パッケージに含まれているので、まずは<code>tidyverse</code>をロードしましょう。</li>
+</ul>
+</section>
+<section class="slide level2">
+
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># これはコメントです</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># 3 % 9</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><code>.csv</code>ファイルを読み込む関数は<code>read_csv()</code>です。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="medsmall">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 27</code></pre>
+<pre><code># A tibble: 6 × 5
+  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
+         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2            2 Barclay Lynn     French fries       Lunch only          5    
+3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    
+4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6            6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
+</div>
 </div>
 </div>
 </section>
-<section id="宿題のした線について" class="slide level2">
-<h2>宿題のした線について</h2>
-<p>宿題にこのようなところがあります：</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># 計算</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>y <span class="ot">&lt;-</span> ____</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># 計算結果の確認</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="フォルダ構造について" class="slide level2">
+<h2>フォルダ構造について</h2>
 <ul>
-<li><code>____</code>を<strong>消してから</strong>、コードを書いてください
+<li><code>Z:/Desktop/students.csv</code>は<code>students.csv</code>のパス、つまりそのファイルがどこにあるのかを示す情報です。
 <ul>
-<li>下線が残っているとエラーになってしまいます</li>
+<li>パスはコンピューター内の<strong>住所のようなもの</strong>です。</li>
 </ul></li>
 </ul>
 </section>
-<section id="ベクトルについて" class="slide level2">
-<h2>ベクトルについて</h2>
+<section class="slide level2">
+
 <ul>
-<li>今までは、数を一つずつ扱ってきた（<code>4 + 5</code> など）</li>
-<li>しかし、Rでは一気に複数の数を扱うことができます</li>
-<li>例えば、1から10までの数：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-</div>
-</div>
+<li>コンピューターのデータはすべて<strong>ファイル</strong>と<strong>フォルダー</strong>で整理されています。
 <ul>
-<li>このようなデータの集まりを<strong>「ベクトル」</strong>と呼びます
-<ul>
-<li>ベクトル：一連のデータの集まり</li>
+<li>ファイル：データ</li>
+<li>フォルダー：ファイルの入れ物</li>
+<li>パスの<code>/</code>は日本語の「の」と同じような意味です。</li>
 </ul></li>
 </ul>
 </section>
-<section id="ベクトルについて-1" class="slide level2">
-<h2>ベクトルについて</h2>
+<section class="slide level2">
+
+
+<img data-src="../images/file_hierarchy_1.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/file_hierarchy_2.png" class="r-stretch"></section>
+<section id="csvファイルをrに読み込む-1" class="slide level2">
+<h2><code>.csv</code>ファイルをRに読み込む</h2>
 <ul>
-<li><code>1</code>から<code>10</code>までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます</li>
-<li>例えば、一気に全ての値を2で割る：</li>
+<li><p>これでRに<code>.csv</code>ファイルのデータを読み込むことができました。</p></li>
+<li><p>しかし、データの読み込みからデータの解析の最後まで、すべての作業を一度で終わらせることは現実的ではありません。</p></li>
+<li><p>ここで一旦作業を停止して、RStudioを閉じましょう。</p></li>
+</ul>
+</section>
+<section id="作業の再開" class="slide level2">
+<h2>作業の再開</h2>
+<ul>
+<li><p>再度RStudioを開きましょう。</p></li>
+<li><p>今までの成果はどうなっているのでしょうか？</p>
+<ul>
+<li>またすべて一からやり直す必要があります。</li>
+</ul></li>
+<li><p>もっと良いやり方があるはずです…。</p></li>
+</ul>
+</section>
+<section id="スクリプト" class="slide level2">
+<h2>スクリプト</h2>
+<ul>
+<li><p>これまではRのコマンドを直接コンソールに入力していました。</p>
+<ul>
+<li>同じ作業を再度行うときは効率が悪いです。</li>
+</ul></li>
+<li><p>スクリプト（テキストファイル）にコマンドを保存すると、後々楽になります。</p></li>
+<li><p>「File」 → 「New File」 → 「RScript」</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-new-script.png" class="r-stretch"></section>
+<section id="スクリプトの編集" class="slide level2">
+<h2>スクリプトの編集</h2>
+<ul>
+<li>スクリプトにこれまで書いたコードを入れましょう：
+<ul>
+<li>コメントを入れることで、自分にこのコードが何をしているのかをメモしておきましょう。</li>
+</ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a>x <span class="sc">/</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
-</div>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Load data</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="ベクトルについて-2" class="slide level2">
-<h2>ベクトルについて</h2>
+<section id="スクリプトの保存" class="slide level2">
+<h2>スクリプトの保存</h2>
 <ul>
-<li>もう一つのベクトルの作り方があります：<code>c</code>
+<li><p>スクリプトを保存しましょう。</p></li>
+<li><p>「File」 → 「Save As」 → 場所とファイル名を決めて保存します。</p></li>
+<li><p>今回は<code>students.R</code>としましょう。</p>
 <ul>
-<li><code>c</code> は <strong>combine</strong>（結合する）という意味</li>
+<li>Rスクリプトは<code>.r</code>もしくは<code>.R</code>のファイル拡張子を使用します。</li>
 </ul></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 2 3</code></pre>
-</div>
-</div>
 </section>
-<section id="チャレンジ" class="slide level2">
-<h2>チャレンジ</h2>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-save-script.png" class="r-stretch"></section>
+<section id="スクリプトとコンソールの違い" class="slide level2">
+<h2>スクリプトとコンソールの違い</h2>
 <ul>
-<li><p><code>40</code>から<code>50</code>までのベクトルを作る</p></li>
-<li><p><code>40</code>, <code>42</code>, <code>46</code> を含むベクトルを作る</p></li>
+<li><p>スクリプトに記述されているRコードは「これから実行するコマンドのリスト」のようなものです（レシピをイメージしてください）。</p></li>
+<li><p>Rにそのコマンドを実行するように指示する必要があります。</p></li>
 </ul>
 </section>
-<section id="データ型について" class="slide level2">
-<h2>データ型について</h2>
+<section id="スクリプトからのコマンドの実行" class="slide level2">
+<h2>スクリプトからのコマンドの実行</h2>
 <ul>
-<li>今までは数（数字）しか扱ってきませんでしたが、Rには他のデータの種類もあります
+<li><p>まずはカーソルを実行したい行に置きます（矢印キーかマウスを使ってください）。</p></li>
+<li><p>「Run」アイコンをクリックします。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-run.png" class="r-stretch"></section>
+<section class="slide level2">
+
 <ul>
-<li><strong>データ型</strong>と呼びます</li>
+<li>または、ショートカットを使います（<strong>おすすめ</strong>）。
+<ul>
+<li>Mac: <code>⌘</code>と<code>Enter</code>を同時に押す</li>
+<li>Windows: <code>Ctrl</code>と<code>Enter</code>を同時に押す</li>
 </ul></li>
 </ul>
+</section>
+<section id="チャレンジ-①" class="slide level2">
+<h2>チャレンジ ①</h2>
+<p>RStudioを閉じてから、再度スクリプトを開いてコマンドを実行してください。</p>
 <div class="fragment">
-<ul>
-<li>文字データ：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>menu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ramen"</span>, <span class="st">"edamame"</span>, <span class="st">"gyoza"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2"></a>menu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "ramen"   "edamame" "gyoza"  </code></pre>
-</div>
-</div>
-<ul>
-<li>文字は必ず <code>"</code> で囲まないといけません</li>
-</ul>
+<p>一々コマンドを入力するよりは便利でしょう？</p>
 </div>
 </section>
-<section id="データ型について-1" class="slide level2">
-<h2>データ型について</h2>
+<section id="プロジェクトについて" class="slide level2">
+<h2>プロジェクトについて</h2>
 <ul>
-<li>論理データ：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>coin_flip <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb12-2"><a href="#cb12-2"></a>coin_flip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
-</div>
-</div>
-<ul>
-<li>論理データは <code>TRUE</code> または <code>FALSE</code> しかありません。また、 <code>"</code> を使いません。</li>
+<li><p>スクリプトを書くことでデータ解析の作業をかなり楽にしましたが、次には<strong>ファイルを整理する</strong>必要があります。</p></li>
+<li><p>ファイルの整理には、RStudioの<strong>プロジェクト</strong>機能を使用します。</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
+<section id="プロジェクトについて-1" class="slide level2">
+<h2>プロジェクトについて</h2>
 <ul>
-<li>論理データは値の比較によく使います：</li>
+<li><p>RStudioのプロジェクトとは、<strong>データ解析に使用するフォルダー</strong>のことです。</p></li>
+<li><p>このフォルダー内に、特定の<strong>データ解析プロジェクトに必要なファイル</strong>を配置します。</p></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">40</span>, <span class="dv">21</span>)</span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a>ages <span class="sc">&gt;</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE  TRUE  TRUE</code></pre>
-</div>
-</div>
 </section>
-<section id="データ型について-2" class="slide level2">
-<h2>データ型について</h2>
+<section id="プロジェクトの作り方" class="slide level2">
+<h2>プロジェクトの作り方</h2>
 <ul>
-<li>あるベクトルには一つのデータ型しか持てません。
+<li><p>「File」 → 「New Project…」 → 「New Directory」 → 「New Project」</p></li>
+<li><p>今回のプロジェクトは<code>students_analysis</code>と名付け、デスクトップに配置しましょう。</p>
 <ul>
-<li>異なるデータ型を結合すると、強制的に同じになります。</li>
+<li>この教室のコンピューターはデスクトップ以外の場所にプロジェクトを置くと、ログアウト時に消去されます。</li>
 </ul></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">c</span>(<span class="st">"ramen"</span>, <span class="st">"gyoza"</span>, <span class="dv">10</span>, <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "ramen" "gyoza" "10"    "11"   </code></pre>
-</div>
-</div>
-<ul>
-<li><code>"</code> は文字を表します。つまり、Rにとって <code>"10"</code> は数ではなく、文字です。</li>
-</ul>
-</section>
-<section id="データ型について-3" class="slide level2">
-<h2>データ型について</h2>
-<ul>
-<li>データ型を確認したい時には <code>typeof()</code> を使います</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>menu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "ramen"   "edamame" "gyoza"  </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">typeof</span>(menu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "character"</code></pre>
-</div>
-</div>
 </section>
 <section class="slide level2">
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>coin_flip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">typeof</span>(coin_flip)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "logical"</code></pre>
-</div>
-</div>
+<p><img data-src="../images/rstudio-new-project-1.png" height="500"></p>
 </section>
 <section class="slide level2">
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>ages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 19 40 21</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">typeof</span>(ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "double"</code></pre>
-</div>
-</div>
+
+<img data-src="../images/rstudio-new-project-2.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-new-project-3.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<p><img data-src="../images/rstudio-new-project-4.png" height="500"></p>
+</section>
+<section id="プロジェクトの作り方-1" class="slide level2">
+<h2>プロジェクトの作り方</h2>
 <ul>
-<li>Rでは、“double” は「数値」という意味を持っています。</li>
+<li><code>students_analysis</code>プロジェクトを作成したら、その中に<code>data</code>というフォルダーを作成し、<code>students.csv</code>を<code>data</code>に移動してください。
+<ul>
+<li>「Files」パネルで<strong>フォルダーアイコン</strong>をクリックします。</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p>この授業で扱う主なRのデータ型：</p>
+
+<img data-src="../images/new_folder.png" class="r-stretch"></section>
+<section class="slide level2">
+
 <ul>
-<li>文字（character）</li>
-<li>論理（logical）</li>
-<li>数字（numeric, “double”）</li>
+<li>右下のファイルパネルに<code>data</code>が含まれていることを確認できます。</li>
 </ul>
 </section>
-<section id="データ型が大事な理由" class="slide level2">
-<h2>データ型が大事な理由</h2>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-project-data-folder.png" class="r-stretch"></section>
+<section id="プロジェクトの開き方" class="slide level2">
+<h2>プロジェクトの開き方</h2>
 <ul>
-<li>データ型が一致していないと、エラーになってしまうことがあります。</li>
+<li><p>RStudioを一旦閉じましょう。</p></li>
+<li><p>今度は、アプリ一覧からではなく、<strong>プロジェクトから</strong>RStudioを開きましょう。</p></li>
+<li><p><code>students_project</code>フォルダーを開き、その中の<code>students_project.Rproj</code>ファイルをダブルクリックしてください。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/students_rproject.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>すると、RStudioはそのプロジェクトに入った状態で起動します。
+<ul>
+<li>ファイルパネル（右下）にこれまでの<code>data</code>や<code>students.R</code>が表示されていることを確認してください。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/rstudio-students-project.png" class="r-stretch"></section>
+<section id="パスについて" class="slide level2">
+<h2>パスについて</h2>
+<ul>
+<li>プロジェクトを開いた後、スクリプトを使ってもう一度<code>students.csv</code>を読み込みましょう：</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="dv">10</span> <span class="sc">+</span> <span class="st">"20"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Load data</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in 10 + "20": non-numeric argument to binary operator</code></pre>
+<pre><code>Error: 'Z:/Desktop/students.csv' does not exist.</code></pre>
 </div>
 </div>
-<ul>
-<li>特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。</li>
-</ul>
-</section>
-<section id="チャレンジ-1" class="slide level2">
-<h2>チャレンジ</h2>
-<p>以下のコードを実行すると、結果のデータ型はどれでしょうか？</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">40</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">c</span>(menu, ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="関数とは" class="slide level2">
-<h2>関数とは</h2>
-<p>何かの値（インプット）を受けて、処理し、計算結果（アウトプット）を返すもの</p>
-<div class="center-x">
-<p><img src="https://manamina.valuesccg.com/uploads/content/image/12292/__.png" alt="drawing" height="100"></p>
-<div class="small">
-<p><a href="https://manamina.valuesccg.com/articles/756" class="uri">https://manamina.valuesccg.com/articles/756</a></p>
-</div>
-</div>
-</section>
-<section id="関数とは-1" class="slide level2">
-<h2>関数とは</h2>
-<p>関数の書き方：</p>
-<ul>
-<li><code>関数名(入力)</code>
-<ul>
-<li>必ず関数名を書いた後に、入力を括弧の中に書きます</li>
-</ul></li>
-</ul>
-<p>例えば、<code>sum()</code> は数の合計を計算する関数です：</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>ages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 19 40 21</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">sum</span>(ages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 80</code></pre>
-</div>
-</div>
-</section>
-<section id="関数とは-2" class="slide level2">
-<h2>関数とは</h2>
-<ul>
-<li><code>round()</code> は少数を四捨五入する関数です：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.141593</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">round</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
-<ul>
-<li>（Rには <code>pi</code> 𝜋 が元々含まれています）</li>
-</ul>
-</section>
-<section id="ヘルプファイル" class="slide level2">
-<h2>ヘルプファイル</h2>
-<p>関数の使い方を確認したい時は <code>?関数名</code> と入力して、ヘルプファイルを参照します</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>?round</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="引数について" class="slide level2">
-<h2>引数について</h2>
-<ul>
-<li>ヘルプファイルの中に、こう書いてあります：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">round</span>(x, <span class="at">digits =</span> <span class="dv">0</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><code>x</code> と <code>digits</code> は <strong>引数</strong> の名前です
-<ul>
-<li>引数とは、関数の <strong>入力や設定</strong> のことです
-<ul>
-<li><code>x</code>: 四捨五入する数値</li>
-<li><code>digits</code>: 残す小数の桁数の指定</li>
-</ul></li>
-<li>引数が複数ある場合は、必ず <code>,</code> で区切ります</li>
-<li>(<code>...</code> は上級な話なので、この授業では扱いません)</li>
-</ul></li>
-</ul>
-</section>
-<section id="引数について-1" class="slide level2">
-<h2>引数について</h2>
-<p>つまり、さっきは</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">round</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>と書きましたが、</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">round</span>(<span class="at">x =</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
-<p>とでも書けるわけです。</p>
-</section>
-<section id="引数について-2" class="slide level2">
-<h2>引数について</h2>
-<ul>
-<li>ヘルプファイルでは、<code>digits = 0</code> と書いてあります
-<ul>
-<li>これは、デフォルトの設定では残す小数の桁数はゼロ、という意味です</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">round</span>(<span class="at">x =</span> pi, <span class="at">digits =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
+<div class="fragment">
+<p>今度はうまくいかない。なぜでしょう？</p>
 </div>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>異なる数を設定することもできます：</li>
+<li>先ほど、<code>students.csv</code>を<code>students_project</code>に移動しました。つまり、もう<code>Desktop</code>には置いていないため、<code>Desktop</code>内を探しても見つかりません。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/student_path_changed.png" class="r-stretch"></section>
+<section id="チャレンジ-②" class="slide level2">
+<h2>チャレンジ ②</h2>
+<ul>
+<li>このコードをどのように変更すれば<code>students.csv</code>を読み込むことができるでしょうか？</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">round</span>(<span class="at">x =</span> pi, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Load data</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="絶対パス" class="slide level2">
+<h2>絶対パス</h2>
+<ul>
+<li>一つの解決方法は<strong>絶対パス</strong>を指定することです：
+<ul>
+<li>コンピューターの最上位ディレクトリ（教室のパソコンでは<code>Z:</code>）から始まります。
+<ul>
+<li>Macの場合は<code>/</code>から始まります。</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Load data</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students_project/data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>しかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。</li>
+</ul>
+</section>
+<section id="相対パス" class="slide level2">
+<h2>相対パス</h2>
+<ul>
+<li><p>もう一つの方法は「相対パス」と呼ばれるものです。</p></li>
+<li><p>つまり、Rの<strong>作業ディレクトリ</strong>（Rが現在入っているフォルダー）<strong>から見たパス</strong>です。</p></li>
+<li><p><code>getwd()</code>でRの作業ディレクトリを確認できます：</p>
+<ul>
+<li>“Get working directory”</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>しかし、<code>x</code> のデフォルト設定がないので、<code>x</code> を指定しないとエラーになってしまいます：</li>
+<li><p>現在、Rは<code>Desktop/students_analysis/</code>に入っていることがわかりました。</p></li>
+<li><p>したがって、以下のようにデータを読み込むことができます：</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in eval(expr, envir, enclos): argument "x" is missing, with no default</code></pre>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Load data</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+</section>
+<section class="slide level2">
+
 <ul>
-<li>つまり、<code>round()</code> にとって、<code>x</code> は必須です
+<li><p>RStudioのプロジェクト機能を使うと、<strong>.Rprojファイルが含まれるフォルダーが作業ディレクトリ</strong>になります。</p></li>
+<li><p>ファイルの場所がすぐにわかり、プロジェクトを別の場所に移動してもコードを変更する必要がありません。</p></li>
+<li><p>相対パスをおすすめします！</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/working_dir_paths.png" class="r-stretch"></section>
+<section id="チャレンジ-③" class="slide level2">
+<h2>チャレンジ ③</h2>
 <ul>
-<li><code>digits</code> は任意です</li>
+<li><code>penguins_analysis</code>というプロジェクトをデスクトップに作成して開いてください。終わったら、再度<code>students_analysis</code>を開いてください。
+<ul>
+<li>（<code>penguins</code>は別の教科書のデータセットです）</li>
 </ul></li>
 </ul>
 </section>
-<section class="slide level2">
-
+<section id="データフレームのデータ型" class="slide level2">
+<h2>データフレームのデータ型</h2>
 <ul>
-<li><p>Rは引数を <strong>名前</strong> からでも、 <strong>位置</strong> からでも認識できます</p></li>
-<li><p><code>round()</code> の最初の引数が <code>x</code>、その次が <code>digits</code> なので、このようにも書けます：</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">round</span>(pi, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
+<li>今回読み込んだデータをよく見てみましょう。
 <ul>
-<li>あるいは、名前を使えば、位置を変えることができます：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>, <span class="at">x =</span> pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>おすすめは、<strong>任意の引数名を使う</strong>ことです：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
-</div>
-</div>
-</section>
-<section id="チャレンジ-2" class="slide level2">
-<h2>チャレンジ</h2>
-<ul>
-<li><code>sort()</code> は入力を並び替える関数です。
-<ul>
-<li>引数は <code>x</code>（ベクトル）と <code>decreasing</code>（論理）</li>
-</ul></li>
-</ul>
-<p>今まで扱ったデータを以下のように並び替えてください：</p>
-<ol type="1">
-<li><code>ages</code> を小さい順から大きい順に</li>
-<li><code>ages</code> を大きい順から小さい順に</li>
-<li><code>menu</code> をAからZまでの順に</li>
-<li><code>menu</code> をZからAまでの順に</li>
-</ol>
-</section>
-<section id="パッケージとは" class="slide level2">
-<h2>パッケージとは</h2>
-<ul>
-<li>Rパッケージとは、Rができることを大幅に増やす「追加」のソフト（関数のまとまり）です
-<ul>
-<li>現在、<strong>2万</strong>近くのパッケージがあります！</li>
+<li><code>AGE</code>という列のデータ型は？</li>
 </ul></li>
 </ul>
 </section>
-<section id="パッケージのインストール" class="slide level2">
-<h2>パッケージのインストール</h2>
-<p>Rパッケージのインストールを行うには、<code>install.packages()</code> を使います：</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="パッケージのインストール-1" class="slide level2">
-<h2>パッケージのインストール</h2>
+<section id="データフレームのデータ型-1" class="slide level2">
+<h2>データフレームのデータ型</h2>
 <ul>
-<li><p>一度インストールしたら、次回からはインストールする必要はありません*</p></li>
-<li><p>パッケージをアップデートしたい時に再インストールすれば良い</p></li>
-<li><p>パッケージのインストールしただけでは、まだ使える状態になっていません</p></li>
-</ul>
-</section>
-<section id="パッケージのロード" class="slide level2">
-<h2>パッケージのロード</h2>
+<li><code>AGE</code>は数値（<code>dbl</code>）ではなく、文字（<code>chr</code>）として読み込まれています。
 <ul>
-<li>パッケージをインストールしたら、使える状態にするためにロードする必要があります</li>
-</ul>
-<p><code>library()</code> 関数でロードします：</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="install.packagesとlibraryの違い" class="slide level2">
-<h2><code>install.packages()</code>と<code>library()</code>の違い</h2>
-<ul>
-<li><p><code>install.packages()</code> は一度だけで良いです（パソコンにパッケージをダウンロードします）*</p></li>
-<li><p><code>library()</code> はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）</p></li>
-<li><p><code>install.packages()</code> はパッケージ名を引用符で囲む</p></li>
-<li><p><code>library</code> はパッケージ名を引用符で囲まない</p></li>
-</ul>
-</section>
-<section id="チャレンジ-3" class="slide level2">
-<h2>チャレンジ</h2>
-<ul>
-<li><code>emoji</code>というパッケージをインストールしてから、ロードしてください</li>
-<li><code>emoji("smile")</code>というコマンドを実行してください</li>
-</ul>
-</section>
-<section id="tidyverse" class="slide level2">
-<h2>tidyverse</h2>
-<ul>
-<li><code>tidyverse</code> はデータサイエンス用パッケージの集まりです
-<ul>
-<li><code>ggplot2</code>（可視化）</li>
-<li><code>dplyr</code>（データの整理）</li>
-<li><code>stringr</code>（文字データを扱う）</li>
-<li>など</li>
+<li>なぜでしょう？</li>
 </ul></li>
 </ul>
-<p>これからよく使うので、インストールとロードをしましょう。</p>
+</section>
+<section id="データフレームのデータ型-2" class="slide level2">
+<h2>データフレームのデータ型</h2>
+<ul>
+<li><code>AGE</code>の中に<code>"five"</code>が含まれていたため、すべてが文字として認識されてしまったようです。
+<ul>
+<li>自動的なデータ型の検出がうまく機能しませんでした。</li>
+</ul></li>
+<li>このような場合は、自分でデータ型を指定する必要があります。</li>
+</ul>
+</section>
+<section id="データフレームのデータ型の指定" class="slide level2">
+<h2>データフレームのデータ型の指定</h2>
+<ul>
+<li><code>read_csv()</code>の<code>col_types</code>引数を使用します。</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>col_types <span class="ot">=</span> <span class="fu">list</span>(列名 <span class="ot">=</span> col_何ちゃら())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>col_types <span class="ot">=</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="medsmall">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb61-2"><a href="#cb61-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>, <span class="at">col_types =</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>()))</span>
+<span id="cb15-2"><a href="#cb15-2"></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>（実は、<code>tidyverse</code> は教室のパソコンに既にインストールされているのでインストールは不要ですが、自分のパソコンを使用している場合は必要です）</p>
-</section>
-<section id="情報処理演習室の注意点" class="slide level2">
-<h2>情報処理演習室の注意点</h2>
-<blockquote>
-<p><code>install.packages()</code> は一度だけで良い</p>
-</blockquote>
-<p>と説明しましたが、この教室のパソコンからログアウトすると<strong>パッケージを含む</strong>あなたのデータ<strong>が全て消去されてしまいます</strong>。</p>
-<p>そのため、この教室のパソコンに新しくインストールするパッケージは<strong>毎回インストールが必要</strong>です。</p>
-<!-- 
-
-## 今後の宿題について
-
-- 宿題は今まで通りオンラインで受けることも可能です
-  - 混雑している時間帯には接続できない可能性があります
-  - しばらく使用しないとリセットされてしまいます
-
-## 今後の宿題について
-
-- 実は、オンラインで受けてきた宿題は**Rパッケージ**「 `joholearnr`」でもあります
-
-- 教室内のパソコンに宿題がインストールされまたので、**ここで**受けることも可能になりました：
-  - 右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)
-  - 受けたい宿題を探します（2）
-  - 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
-
----
-
-![](../images/tutorial-rstudio-screenshot.png)
-
----
-
-- リストに今週の宿題が入っていない場合は、パッケージのアップデート（再インストール）が必要です。
-  - このようにインストールを行なってください：
-
-
-::: {.cell}
-
-```{.r .cell-code}
-library(remotes)
-install_github("joelnitta/joholearnr")
-```
-:::
-
-
-- `install_github()`は、カスタムなRパッケージをインストールする関数です
-
--->
-</section>
-<section id="連絡事項" class="slide level2">
-<h2>連絡事項</h2>
-<ul>
-<li><p>来週（10月15日）は休みです</p></li>
-<li><p>次回は10月22日です</p></li>
-</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  `Student ID` `Full Name`      favourite.food     mealPlan              AGE
+         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1            1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
+2            2 Barclay Lynn     French fries       Lunch only              5
+3            3 Jayendra Lyne    N/A                Breakfast and lunch     7
+4            4 Leon Rossini     Anchovies          Lunch only             NA
+5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
+6            6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
+</div>
+</div>
+</div>
 
 <div class="footer footer-default">
 

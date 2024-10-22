@@ -361,7 +361,7 @@
     "href": "index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n第４回（2024-10-29）: データの整理（１）\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
   },
   {
     "objectID": "index.html#オフィスアワー",
@@ -378,6 +378,237 @@
     "text": "リンク\n\nシラバス\nMoodle"
   },
   {
+    "objectID": "day3/index.html#クイズ",
+    "href": "day3/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+  },
+  {
+    "objectID": "day3/index.html#今後の宿題について",
+    "href": "day3/index.html#今後の宿題について",
+    "title": "情報処理演習",
+    "section": "今後の宿題について",
+    "text": "今後の宿題について\n\n宿題はこれまで通りオンラインで受けることも可能です。\n\n混雑している時間帯には接続できない可能性があります。\nしばらく使用しないとリセットされてしまいます。"
+  },
+  {
+    "objectID": "day3/index.html#今後の宿題について-1",
+    "href": "day3/index.html#今後の宿題について-1",
+    "title": "情報処理演習",
+    "section": "今後の宿題について",
+    "text": "今後の宿題について\n\nオンラインで受けてきた宿題はRパッケージ「 joholearnr」でもあります\n教室内のパソコンに宿題がインストールされているので、ここで受けることも可能になりました：\n\n右上の「環境」パネルで「Tutorial」タブをクリック（1）\n受けたい宿題を探します（2）\n「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）"
+  },
+  {
+    "objectID": "day3/index.html#アウトライン",
+    "href": "day3/index.html#アウトライン",
+    "title": "情報処理演習",
+    "section": "アウトライン",
+    "text": "アウトライン\n\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
+  },
+  {
+    "objectID": "day3/index.html#rstudioの設定の変更",
+    "href": "day3/index.html#rstudioの設定の変更",
+    "title": "情報処理演習",
+    "section": "RStudioの設定の変更",
+    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
+  },
+  {
+    "objectID": "day3/index.html#データフレームについて",
+    "href": "day3/index.html#データフレームについて",
+    "title": "情報処理演習",
+    "section": "データフレームについて",
+    "text": "データフレームについて\n\nデータフレームは最もよく使われるデータ形式です。\n\n行と列から構成される2次元データ（表形式データ）\nエクセルのスプレッドシートと同じようなもの"
+  },
+  {
+    "objectID": "day3/index.html#データフレームについて-1",
+    "href": "day3/index.html#データフレームについて-1",
+    "title": "情報処理演習",
+    "section": "データフレームについて",
+    "text": "データフレームについて\n\nエクセルとの大きな違い：各列は同じデータ型を持たなければなりません。\n\nつまり、各列がベクトルであるということです。\n\ntidyverseでは、「tibble」と呼ばれます。"
+  },
+  {
+    "objectID": "day3/index.html#初データの読み込み",
+    "href": "day3/index.html#初データの読み込み",
+    "title": "情報処理演習",
+    "section": "初データの読み込み",
+    "text": "初データの読み込み\n\n練習として、教科書に掲載されているstudents.csvファイルをRに読み込みます。\nまず、このリンクからstudents.csvをデスクトップにダウンロードしてください：\n\nhttps://pos.it/r4ds-students-csv"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルについて",
+    "href": "day3/index.html#csvファイルについて",
+    "title": "情報処理演習",
+    "section": ".csvファイルについて",
+    "text": ".csvファイルについて\n\n.csvは、Comma-separated valuesの略です。\n\nデータはコンマ（,）で区切られています。\n\nエクセルの.xlsxファイルとの違い\n\n.csvの中身は単純な文字列なので、直接中身を確認することができます。\n.xlsx（または.xls）ファイルはエクセルのみに対応しています。\n.xlsxはエクセルを持っていない方にとって使いにくいので、.csvを推奨します。"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルをrに読み込む",
+    "href": "day3/index.html#csvファイルをrに読み込む",
+    "title": "情報処理演習",
+    "section": ".csvファイルをRに読み込む",
+    "text": ".csvファイルをRに読み込む\n\nこれから使用する関数はtidyverseパッケージに含まれているので、まずはtidyverseをロードしましょう。"
+  },
+  {
+    "objectID": "day3/index.html#フォルダ構造について",
+    "href": "day3/index.html#フォルダ構造について",
+    "title": "情報処理演習",
+    "section": "フォルダ構造について",
+    "text": "フォルダ構造について\n\nZ:/Desktop/students.csvはstudents.csvのパス、つまりそのファイルがどこにあるのかを示す情報です。\n\nパスはコンピューター内の住所のようなものです。"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルをrに読み込む-1",
+    "href": "day3/index.html#csvファイルをrに読み込む-1",
+    "title": "情報処理演習",
+    "section": ".csvファイルをRに読み込む",
+    "text": ".csvファイルをRに読み込む\n\nこれでRに.csvファイルのデータを読み込むことができました。\nしかし、データの読み込みからデータの解析の最後まで、すべての作業を一度で終わらせることは現実的ではありません。\nここで一旦作業を停止して、RStudioを閉じましょう。"
+  },
+  {
+    "objectID": "day3/index.html#作業の再開",
+    "href": "day3/index.html#作業の再開",
+    "title": "情報処理演習",
+    "section": "作業の再開",
+    "text": "作業の再開\n\n再度RStudioを開きましょう。\n今までの成果はどうなっているのでしょうか？\n\nまたすべて一からやり直す必要があります。\n\nもっと良いやり方があるはずです…。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプト",
+    "href": "day3/index.html#スクリプト",
+    "title": "情報処理演習",
+    "section": "スクリプト",
+    "text": "スクリプト\n\nこれまではRのコマンドを直接コンソールに入力していました。\n\n同じ作業を再度行うときは効率が悪いです。\n\nスクリプト（テキストファイル）にコマンドを保存すると、後々楽になります。\n「File」 → 「New File」 → 「RScript」"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトの編集",
+    "href": "day3/index.html#スクリプトの編集",
+    "title": "情報処理演習",
+    "section": "スクリプトの編集",
+    "text": "スクリプトの編集\n\nスクリプトにこれまで書いたコードを入れましょう：\n\nコメントを入れることで、自分にこのコードが何をしているのかをメモしておきましょう。\n\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトの保存",
+    "href": "day3/index.html#スクリプトの保存",
+    "title": "情報処理演習",
+    "section": "スクリプトの保存",
+    "text": "スクリプトの保存\n\nスクリプトを保存しましょう。\n「File」 → 「Save As」 → 場所とファイル名を決めて保存します。\n今回はstudents.Rとしましょう。\n\nRスクリプトは.rもしくは.Rのファイル拡張子を使用します。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトとコンソールの違い",
+    "href": "day3/index.html#スクリプトとコンソールの違い",
+    "title": "情報処理演習",
+    "section": "スクリプトとコンソールの違い",
+    "text": "スクリプトとコンソールの違い\n\nスクリプトに記述されているRコードは「これから実行するコマンドのリスト」のようなものです（レシピをイメージしてください）。\nRにそのコマンドを実行するように指示する必要があります。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトからのコマンドの実行",
+    "href": "day3/index.html#スクリプトからのコマンドの実行",
+    "title": "情報処理演習",
+    "section": "スクリプトからのコマンドの実行",
+    "text": "スクリプトからのコマンドの実行\n\nまずはカーソルを実行したい行に置きます（矢印キーかマウスを使ってください）。\n「Run」アイコンをクリックします。"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-①",
+    "href": "day3/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\nRStudioを閉じてから、再度スクリプトを開いてコマンドを実行してください。\n\n一々コマンドを入力するよりは便利でしょう？"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトについて",
+    "href": "day3/index.html#プロジェクトについて",
+    "title": "情報処理演習",
+    "section": "プロジェクトについて",
+    "text": "プロジェクトについて\n\nスクリプトを書くことでデータ解析の作業をかなり楽にしましたが、次にはファイルを整理する必要があります。\nファイルの整理には、RStudioのプロジェクト機能を使用します。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトについて-1",
+    "href": "day3/index.html#プロジェクトについて-1",
+    "title": "情報処理演習",
+    "section": "プロジェクトについて",
+    "text": "プロジェクトについて\n\nRStudioのプロジェクトとは、データ解析に使用するフォルダーのことです。\nこのフォルダー内に、特定のデータ解析プロジェクトに必要なファイルを配置します。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの作り方",
+    "href": "day3/index.html#プロジェクトの作り方",
+    "title": "情報処理演習",
+    "section": "プロジェクトの作り方",
+    "text": "プロジェクトの作り方\n\n「File」 → 「New Project…」 → 「New Directory」 → 「New Project」\n今回のプロジェクトはstudents_analysisと名付け、デスクトップに配置しましょう。\n\nこの教室のコンピューターはデスクトップ以外の場所にプロジェクトを置くと、ログアウト時に消去されます。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの作り方-1",
+    "href": "day3/index.html#プロジェクトの作り方-1",
+    "title": "情報処理演習",
+    "section": "プロジェクトの作り方",
+    "text": "プロジェクトの作り方\n\nstudents_analysisプロジェクトを作成したら、その中にdataというフォルダーを作成し、students.csvをdataに移動してください。\n\n「Files」パネルでフォルダーアイコンをクリックします。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの開き方",
+    "href": "day3/index.html#プロジェクトの開き方",
+    "title": "情報処理演習",
+    "section": "プロジェクトの開き方",
+    "text": "プロジェクトの開き方\n\nRStudioを一旦閉じましょう。\n今度は、アプリ一覧からではなく、プロジェクトからRStudioを開きましょう。\nstudents_projectフォルダーを開き、その中のstudents_project.Rprojファイルをダブルクリックしてください。"
+  },
+  {
+    "objectID": "day3/index.html#パスについて",
+    "href": "day3/index.html#パスについて",
+    "title": "情報処理演習",
+    "section": "パスについて",
+    "text": "パスについて\n\nプロジェクトを開いた後、スクリプトを使ってもう一度students.csvを読み込みましょう：\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")\n\nError: 'Z:/Desktop/students.csv' does not exist.\n\n\n\n今度はうまくいかない。なぜでしょう？"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-②",
+    "href": "day3/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\n\nこのコードをどのように変更すればstudents.csvを読み込むことができるでしょうか？\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
+  },
+  {
+    "objectID": "day3/index.html#絶対パス",
+    "href": "day3/index.html#絶対パス",
+    "title": "情報処理演習",
+    "section": "絶対パス",
+    "text": "絶対パス\n\n一つの解決方法は絶対パスを指定することです：\n\nコンピューターの最上位ディレクトリ（教室のパソコンではZ:）から始まります。\n\nMacの場合は/から始まります。\n\n\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students_project/data/students.csv\")\n\n\nしかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。"
+  },
+  {
+    "objectID": "day3/index.html#相対パス",
+    "href": "day3/index.html#相対パス",
+    "title": "情報処理演習",
+    "section": "相対パス",
+    "text": "相対パス\n\nもう一つの方法は「相対パス」と呼ばれるものです。\nつまり、Rの作業ディレクトリ（Rが現在入っているフォルダー）から見たパスです。\ngetwd()でRの作業ディレクトリを確認できます：\n\n“Get working directory”\n\n\n\ngetwd()"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-③",
+    "href": "day3/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\n\npenguins_analysisというプロジェクトをデスクトップに作成して開いてください。終わったら、再度students_analysisを開いてください。\n\n（penguinsは別の教科書のデータセットです）"
+  },
+  {
+    "objectID": "day3/index.html#データフレームのデータ型",
+    "href": "day3/index.html#データフレームのデータ型",
+    "title": "情報処理演習",
+    "section": "データフレームのデータ型",
+    "text": "データフレームのデータ型\n\n今回読み込んだデータをよく見てみましょう。\n\nAGEという列のデータ型は？"
+  },
+  {
+    "objectID": "day3/index.html#データフレームのデータ型-1",
+    "href": "day3/index.html#データフレームのデータ型-1",
+    "title": "情報処理演習",
+    "section": "データフレームのデータ型",
+    "text": "データフレームのデータ型\n\nAGEは数値（dbl）ではなく、文字（chr）として読み込まれています。\n\nなぜでしょう？"
+  },
+  {
+    "objectID": "day3/index.html#データフレームのデータ型-2",
+    "href": "day3/index.html#データフレームのデータ型-2",
+    "title": "情報処理演習",
+    "section": "データフレームのデータ型",
+    "text": "データフレームのデータ型\n\nAGEの中に\"five\"が含まれていたため、すべてが文字として認識されてしまったようです。\n\n自動的なデータ型の検出がうまく機能しませんでした。\n\nこのような場合は、自分でデータ型を指定する必要があります。"
+  },
+  {
+    "objectID": "day3/index.html#データフレームのデータ型の指定",
+    "href": "day3/index.html#データフレームのデータ型の指定",
+    "title": "情報処理演習",
+    "section": "データフレームのデータ型の指定",
+    "text": "データフレームのデータ型の指定\n\nread_csv()のcol_types引数を使用します。\n\n\ncol_types = list(列名 = col_何ちゃら())\n\n\ncol_types = list(AGE = col_double())"
+  },
+  {
     "objectID": "day2/index.html#クイズ",
     "href": "day2/index.html#クイズ",
     "title": "情報処理演習",
@@ -385,11 +616,11 @@
     "text": "クイズ\n\n\n\n\n注意：質問は複数選択です。すべての正しい答えを選択してください。\n\n\nあるいは、gosocrative.com で joho2024を入力"
   },
   {
-    "objectID": "day2/index.html#メニュー",
-    "href": "day2/index.html#メニュー",
+    "objectID": "day2/index.html#アウトライン",
+    "href": "day2/index.html#アウトライン",
     "title": "情報処理演習",
-    "section": "メニュー",
-    "text": "メニュー\n\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
+    "section": "アウトライン",
+    "text": "アウトライン\n\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
   },
   {
     "objectID": "day2/index.html#コメントについて",
