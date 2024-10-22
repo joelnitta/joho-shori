@@ -609,6 +609,13 @@
     "text": "データフレームのデータ型の指定\n\nread_csv()のcol_types引数を使用します。\n\n\ncol_types = list(列名 = col_何ちゃら())\n\n\ncol_types = list(AGE = col_double())"
   },
   {
+    "objectID": "day3/index.html#他のデータ型",
+    "href": "day3/index.html#他のデータ型",
+    "title": "情報処理演習",
+    "section": "他のデータ型",
+    "text": "他のデータ型\n\ncol_character() 文字\ncol_logical() 論理\ncol_double() 数字"
+  },
+  {
     "objectID": "day2/index.html#クイズ",
     "href": "day2/index.html#クイズ",
     "title": "情報処理演習",
