@@ -11,7 +11,7 @@ execute:
 
 <https://data-science-chiba-2024.github.io/day3/>
 
-## 連絡事情
+## 連絡事項
 
 - 第２回の宿題の締め切りを10月25日（金曜日） 23:59まで延長しました
 
