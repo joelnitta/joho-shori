@@ -30,10 +30,24 @@ execute:
 ## アウトライン
 
 - プロジェクトの整理とデータの読み込み
+  - ファイルとフォルダー
   - データフレーム
   - スクリプト
   - プロジェクトの作成
-  - ファイルとフォルダー
+
+## RStudioの設定の変更
+
+- 再現性を担保するために、RStudio の設定の変更を変える必要があります。
+
+- こうしないと、予想外の（自分が書いたコードに依らない）結果があります
+
+- 「Tools」→「Global Options」→「Workspace」
+  - 「Restore .RData into workspace at startup」→ **外す**
+  - 「Save workspace to .RData on exit」→ **「Never」**
+
+---
+
+![](../images/settings_change.png)
 
 ## データフレームについて
 
@@ -94,28 +108,31 @@ students
 
 ```{r}
 #| echo: false
-students <- read_csv("https://pos.it/r4ds-students-csv")
+students <- read_csv("../data/students.csv")
 students
 ```
 
 ---
 
-## パスについて
+## フォルダ構造について
 
 - `Z:/Desktop/students.csv`は`students.csv`のパスです、つまり、そのファイルがどこにあるのか、と言う情報です。
-  - パスはコンピューターの中の住所みたいなものです
+  - パスはコンピューターの中の**住所みたいなもの**です
+
+---
 
 - コンピューターのデータは全て**ファイル**と**フォルダー**で整理されています。
   - ファイル: データ
   - フォルダー: ファイルの入れ物
+  - パスの`/`は日本語の「の」と同じような意味。 
 
 ---
 
-![](https://www.luminoso-kawasaki.org/wp-content/uploads/2020/08/ob07_2%E9%9A%8E%E5%B1%A4%E5%8C%96-01-scaled.jpg)
+![](../images/file_hierarchy_1.png)
 
-::: {.aside}
-https://www.luminoso-kawasaki.org/wp-content/uploads/2020/08/ob07_2%E9%9A%8E%E5%B1%A4%E5%8C%96-01-scaled.jpg
-:::
+---
+
+![](../images/file_hierarchy_2.png)
 
 ## `.csv`ファイルをRに読み込む
 
@@ -149,7 +166,8 @@ https://www.luminoso-kawasaki.org/wp-content/uploads/2020/08/ob07_2%E9%9A%8E%E5%
 
 ## スクリプトの編集
 
-- スクリプトに今で書いたコードを入れましょう：
+- スクリプトに今まで書いたコードを入れましょう：
+  - コメントを入れることによって、自分にこのコードが何をしているのか、メモっておきましょう
 
 ```{r}
 #| eval: false
@@ -157,7 +175,6 @@ library(tidyverse)
 
 # Load data
 students <- read_csv("Z:/Desktop/students.csv")
-students
 ```
 
 ## スクリプトの保存
@@ -169,11 +186,15 @@ students
 - 今回は`students.R`としましょう
   - Rスクリプトは`.r`もしくは`.R`のファイル拡張を使います
 
+---
+
+![](../images/rstudio-save-script.png)
+
 ## スクリプトとコンソールの違い
 
 - スクリプトに入っているRコードは「これから実行するコマンドのリスト」みたいな物です（レシピをイメージしてください）
 
-- Rにそのコマンドを実行するように支持する必要があります
+- Rにそのコマンドを実行するように指示する必要があります
 
 ## スクリプトからのコマンドの実行
 
@@ -181,11 +202,17 @@ students
 
 - 「Run」アイコンをクリックします
 
-- あるは、ショートカットを使います（おすすめ）
+---
+
+![](../images/rstudio-run.png)
+
+---
+
+- あるいは、ショートカットを使います（**おすすめ**）
   - Mac: `⌘`と`enter`を同時に押す
   - Windows: `ctrl`と`enter`を同時に押す
 
-## チャレンジ
+## チャレンジ ①
 
 RStudioを閉じてから、またスクリプトを開いて、コマンドを実行してください
 
@@ -201,13 +228,16 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 
 ## プロジェクトについて
 
-- RStudio のプロジェクトというのは、データ解析に使うフォルダーのことです
+- RStudio のプロジェクトというのは、**データ解析に使うフォルダー**のことです
 
-- このフォルダーの中に、あるデータ解析プロジェクトに必要なファイルを入れます
+- このフォルダーの中に、ある**データ解析プロジェクトに必要なファイル**を入れます
 
 ## プロジェクトの作り方
 
 - 「File」 → 「New Project...」 → 「New Directory」→「New Project」
+
+- 今回のプロジェクトは`students_analysis`と呼んで、デスクトップに置きましょう
+  - この教室のコンピューターはデスクトップ以外の場所に置くと、ログアウトする際に消されます
 
 ---
 
@@ -227,9 +257,20 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 
 ## プロジェクトの作り方
 
-- プロジェクトを作ったら、`students.csv`を`students_project`に移動してください
+- `students_analysis`プロジェクトを作ったら、その中に`data`と言うフォルダーを作って、`students.csv`を`data`に移動してください
+  - 「File」パネルで**フォルダーアイコン**をクリック
 
-- 右下のファイルパネルに、`students.csv`が入っていることが確認できます
+---
+
+![](../images/new_folder.png)
+
+---
+
+- 右下のファイルパネルに、`data`が入っていることが確認できます
+
+---
+
+![](../images/rstudio-project-data-folder.png)
 
 ## プロジェクトの開き方
 
@@ -240,11 +281,7 @@ RStudioを閉じてから、またスクリプトを開いて、コマンドを�
 - `students_project`フォルダーを開いてから、中の`students_project.Rproj`ファイルをダブルクリックしてください
 
 - ・・すると、RStudioはそのプロジェクトに入った状態で出てきます
-  - ファイルパネル（右下）に今までの`students.csv`や`students.R`が出ていることを確認してください
-
----
-
-![](../images/desktop-open-project-annotated.png)
+  - ファイルパネル（右下）に今までの`data`や`students.R`が出ていることを確認してください
 
 ---
 
@@ -270,20 +307,24 @@ students <- read_csv("Z:/Desktop/students.csv")
 
 - さっき、`students.csv`を`students_project`に移動しました。つまり、もう`Desktop`においていないので、`Desktop`の中を探しても出て来ません。
 
-- どうやって治せばいいでしょう？
+---
 
-## チャレンジ
+![](../images/student_path_changed.png)
+
+## チャレンジ ②
 
 - このコードをどうやって変えれば`students.csv`を読むことができるのでしょうか？
 
 ## 絶対パス
 
-- 一つの解決方法は絶対パスを指定することです：
+- 一つの解決方法は**絶対パス**を指定することです：
+  - パソコンの最も基部になっているディレクトリ（教室のパソコンでは`Z:`）から始まる
+    - Macの場合は`/`から始まる
 
 ```{r}
 #| eval: false
 # Load data
-students <- read_csv("Z:/Desktop/students_project/students.csv")
+students <- read_csv("Z:/Desktop/students_project/data/students.csv")
 ```
 
 - でも、もしこのプロジェクトをまた移動したら、また同じような問題が起こりますね。
@@ -292,10 +333,10 @@ students <- read_csv("Z:/Desktop/students_project/students.csv")
 
 - もう一つの方法は、「相対パス」と呼びます
 
-- つまり、R の作業ディレクトリ（R が今入っているフォルダー）から見たパスです。
+- つまり、R の**作業ディレクトリ**（R が今入っているフォルダー）**から見たパス**です。
 
-- R の作業ディレクトリを確認しましょう：
-
+- `getwd()`でR の作業ディレクトリを確認することができます：
+  - "Get working directory"
 ```{r}
 #| eval: false
 getwd()
@@ -303,20 +344,29 @@ getwd()
 
 ---
 
-- 今、Rは`Z:/Desktop/students_project/`に入っていることが分かりました。
+- 今、Rは`Z:/Desktop/students_analysis/`に入っていることが分かりました。
 
 - なので、このようにデータを読み込むことができます：
 
 ```{r}
 #| eval: false
 # Load data
-students <- read_csv("students.csv")
+students <- read_csv("data/students.csv")
 ```
 
 ---
 
-- RStudioのProject機能を使うと、必ず.Rprojファイルが入っているフォルダーが作業ディレクトリになります。
+- RStudioのProject機能を使うと、必ず**.Rprojファイルが入っているフォルダーが作業ディレクトリになります**。
 
-- なので、ファイルの場所がすぐに分かり、プロジェクトを別の場所に移動しても、コードを変える必要がありません。
+- ファイルの場所がすぐに分かり、プロジェクトを別の場所に移動しても、コードを変える必要がありません。
 
-- と言うことで、相対パスがおすすめです！
+- 相対パスがおすすめです！
+
+---
+
+![](../images/working_dir_paths.png)
+
+## チャレンジ ③
+
+- `penguins_analysis`と言うプロジェクトをDesktopに作って、開いてください。終わったらまた`students_analysis`を開いてください。
+  - （`penguins`は別の教科書のデータセットです） 
