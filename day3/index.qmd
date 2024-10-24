@@ -52,23 +52,31 @@ execute:
 
 ---
 
-- 終わったら、「Stop」ボタンをクリックしてください。
+- チュートリアルが終わったら（完成コードを提出したら）、「Stop」ボタンをクリックしてください。
 
 ![](../images/tutorial-stop.png)
+
+- 注意：完成コードを提出する前に「Stop」ボタンをクリックすると、**今までの答えが消去される**ので気をつけてください。
+
 ---
 
 - リストに今週の宿題が表示されていない場合は、パッケージのアップデート（再インストール）が必要です。
   - 以下のようにインストールを行ってください：
 
+:::{.medsmall}
 ```{r}
 #| label: install-joholearnr-2
 #| echo: true
 #| eval: false
-library(remotes)
-install_github("joelnitta/joholearnr")
+install.packages(
+  "joholearnr",
+  repos = c("https://joelnitta.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
+:::
 
-- `install_github()`はカスタムなRパッケージをインストールする関数です。
+- コードが長いので、コピーペーストがおすすめです。
+  - 上のテキストの上にマウスを置くと、その右上に小さなクリップボードのアイコンが出ます。アイコンをクリックするとコードがコピーされます。
 
 ---
 
@@ -82,7 +90,7 @@ Which would you like to update?
 
 `3`を押してからエンターキーを押してください（他のパッケージをアップデートしない）。
 
-- `install_github()`を実行してもチュートリアルが表示されない場合は、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されるはずです。
+- `install()`を実行したら、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されます。
 
 ## アウトライン
 
