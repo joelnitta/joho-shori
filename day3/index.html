@@ -441,10 +441,13 @@
 <section class="slide level2">
 
 <ul>
-<li>終わったら、「Stop」ボタンをクリックしてください。</li>
+<li>チュートリアルが終わったら（完成コードを提出したら）、「Stop」ボタンをクリックしてください。</li>
 </ul>
 
-<img data-src="../images/tutorial-stop.png" class="r-stretch"></section>
+<img data-src="../images/tutorial-stop.png" class="r-stretch"><ul>
+<li>注意：完成コードを提出する前に「Stop」ボタンをクリックすると、<strong>今までの答えが消去される</strong>ので気をつけてください。</li>
+</ul>
+</section>
 <section class="slide level2">
 
 <ul>
@@ -453,12 +456,19 @@
 <li>以下のようにインストールを行ってください：</li>
 </ul></li>
 </ul>
+<div class="medsmall">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(remotes)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">install_github</span>(<span class="st">"joelnitta/joholearnr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="st">"joholearnr"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://joelnitta.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <ul>
-<li><code>install_github()</code>はカスタムなRパッケージをインストールする関数です。</li>
+<li>コードが長いので、コピーペーストがおすすめです。
+<ul>
+<li>上のテキストの上にマウスを置くと、その右上に小さなクリップボードのアイコンが出ます。アイコンをクリックするとコードがコピーされます。</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -471,7 +481,7 @@ It is recommended to update all of them
 Which would you like to update?</code></pre>
 <p><code>3</code>を押してからエンターキーを押してください（他のパッケージをアップデートしない）。</p>
 <ul>
-<li><code>install_github()</code>を実行してもチュートリアルが表示されない場合は、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されるはずです。</li>
+<li><code>install()</code>を実行したら、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されます。</li>
 </ul>
 </section>
 <section id="アウトライン" class="slide level2">
