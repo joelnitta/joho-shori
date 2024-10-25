@@ -1,0 +1,316 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 第4回：データの整理（１）
+
+<https://data-science-chiba-2024.github.io/day4/>
+
+
+## データの整理（Data Wrangling）
+
+- データが手に入る時、まだ解析に使いえない状態が多い
+
+- データの整理（「wrangling」）は**解析に使えるように整えるプロセス**
+  - 元々はカウボーイが**牛を扱う技術**から来る
+
+---
+
+![Getty Images](https://media.istockphoto.com/id/172342607/photo/cattle-drive.jpg?s=612x612&w=0&k=20&c=Fz--vTqe2gMWKxbHvgdLCgfUveH_Y3-k0js5H1m9Snc=)
+
+---
+
+![Image by Allison Horst](https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png){fig-alt="data wrangling monsters"}
+
+## 準備
+
+- `students_analysis`プロジェクトを再度開きます。
+
+. . .
+
+- でも、新しいコマンドの勉強に進む前に、今までのスクリプトを少し変えたいと思います。
+
+- 先のスライドで説明しましたように、データ解析をする前にデータの整理が必要なケースが多いです。
+
+- 今回の`students.csv`に入っているデータもそうです。
+
+---
+
+- なので、`students.csv`から読み込む時はとりあえず`students_raw`という名前にしましょう。`raw`はこれが**生データ**（読み込んだデータのまま、何もまだ手をつけていない状態）を示す：
+
+```{r}
+#| filename: students.R
+#| eval: false
+library(tidyverse)
+
+# Load raw data
+students_raw <- read_csv("data/students.csv")
+```
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+
+students_raw <- read_csv("../data/students.csv")
+```
+
+## データ整理の関数
+
+これから学ぶ関数の共通点：
+
+- データフレームをインプットとし、データフレームを返す
+- 最初の引数がインプットのデータフレーム
+- 他の引数は詳細（行の名前に引用符を使わない）
+
+`関数(データフレーム, 他の設定)` ➞ `データフレーム`
+
+## データの整理：列名を整える
+
+- データフレームの列名は任意ですが、使いやすい名前は以下の特徴があります：
+  - 打ちやすい
+  - 覚えやすい
+
+- `` `Full Name` ``は打ちづらい。`` ` `` もありますし、スペースも入っています。
+
+- **おすすめ**：小文字だけ、スペースの代わりに`_`を使う
+
+## `rename()`で列名を変える
+
+- `rename()`は列名を変える関数です。
+  - `新しいい名前 = 前の名前`と指定します
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+rename(students_raw, full_name = `Full Name`)
+``` 
+
+---
+
+![](../images/rename_annotated.png)
+
+---
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+rename(students_raw, full_name = `Full Name`)
+``` 
+
+- 注意：このようにしただけでは、元のデータは**変わっていません**。`<-`を使わない限り、関数の結果は保存されません。
+
+## チャレンジ ①
+
+`` `Student ID` ``という列を使いやすい列名に変えてください
+
+## `rename()`で列名を変える
+
+- 複数の列名を変える際は、コンマで区切って書きます：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+rename(
+  students_raw,
+  full_name = `Full Name`,
+  student_id = `Student ID`
+  )
+``` 
+
+## 一気に列名を扱いやすくする
+
+- 名前を一個ずつ全部変更するのがめんどくさいですね。
+
+- `clean_names()`という関数が列名を一気にきれいにしてくれます。
+  - この関数は`tidyverse`に含まれていないパッケージ、`janitor`に入っているので、まずは`janitor`をロードする必要があります。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+library(janitor)
+clean_names(students_raw)
+``` 
+
+---
+
+これを`students`として保存しましょう：
+
+```{r}
+students <- clean_names(students_raw)
+``` 
+
+- データが扱いやすくなりましたので、`students`を使って他の関数を覚えましょう
+
+## `arrange()`で行を並び替える
+
+- `arrange()`は行の順を並び替える関数です。
+  - 食事（「`meal_plan`」）の順に並び替えましょう。
+
+---
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+arrange(students, meal_plan)
+``` 
+
+---
+
+![](../images/arrange_annotated.png){height=300px}
+
+## `arrange()`で行を並び替える
+
+- デフォルト設定では、`arrange()`は小さい方から大きい方へと並び替えます。
+
+- 逆の順にするには、列名を`desc()`の中に書きます：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+arrange(students, desc(meal_plan))
+``` 
+
+## チャレンジ ②
+
+学生の**名前の順**に並び替えてください
+
+## `filter()`で行を絞り込む
+
+- 生データが必要以上に多い場合がよくある（特に、「ビッグデータ」を扱っているとき）
+
+- `filter()`で条件を定めて、その行だけに絞り込む
+
+---
+
+```{r}
+filter(students, student_id < 4)
+```
+
+- 行の数がどれくらい変わった？
+
+## データの比較
+
+データの比較を行う主な記号：
+
+- `>` より大きい
+- `<` より小さい
+- `==` イコール （`=`ではない！）
+- `|` あるいは
+- `&` そして（複数条件の指定）
+
+比較の記号のアウトプットは**論理ベクトル**
+
+---
+
+```{r}
+11 > 10
+```
+
+---
+
+```{r}
+c(1, 2, 3, 4, 5, 6) > 4
+```
+
+---
+
+```{r}
+11 == 11
+```
+
+---
+
+```{r}
+#| error: TRUE
+11 = 11
+```
+
+## チャレンジ ③
+
+`students`の中から食事プランが"Lunch only"になっている学生に絞ってから、名前をZからAの順で並び替えてください。
+
+## パイプについて
+
+- チャレンジ ③では、条件で絞ったデータ一を一旦保存してから、次のステップ（列の並び替え）をしました。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students_lunch <- filter(students, meal_plan == "Lunch only")
+arrange(students_lunch, desc(full_name))
+``` 
+
+## パイプについて
+
+- これは解析が短い場合は大丈夫かもしれませんが、長くなると、**大変です**。
+
+- **パイプ**というものがこの問題を解決します。
+
+## パイプの使い方
+
+- まずはパイプ（`|>`）の基本的な使い方を覚えましょう。
+  - 以前は`%>%`と書きましたが、最近のRでは`|>`と書きます
+
+- `arrange(データ, 列名)`というような書き方をしてきたが、パイプを使うとこのように書きます：
+
+`データ |> arrange(列名)`
+
+---
+
+- つまり、`|>` は**左の方から右の方へ渡す**機能があります
+
+使ってみましょう：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |> arrange(meal_plan)
+``` 
+
+---
+
+- 繰り返しになりますが、
+
+`students |> arrange(meal_plan)`
+
+と
+
+`arrange(students, meal_plan)`
+
+は**同じです**
+
+---
+
+- パイプの便利なところは、**途中結果を保存することなく**解析のステップを次から次へと進むことができます：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |> filter(meal_plan == "Lunch only") |> arrange(full_name)
+``` 
+
+---
+
+- Rは改行があっても構いませんので、改行入れいるともっと読みやすくなります：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(meal_plan == "Lunch only") |>
+  arrange(full_name)
+``` 
+
+---
+
+```{r}
+#| eval: false
+students |>
+  filter(meal_plan == "Lunch only") |>
+  arrange(full_name)
+``` 
+
+`|>`を見たら、「それから」という意味で読みます：
+
+*`students`から始めて、**それから**食事プランが"Lunch only"となっている学生に絞って、**それから**学生の名前順に並び替える*
+
+---
+
+- これからは基本的にパイプを使ってコードを書きます
+  - 最初はおかしいように見えるかもしれませんが、すぐに慣れるでしょう
