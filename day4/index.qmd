@@ -33,9 +33,9 @@ execute:
 
 . . .
 
-- でも、新しいコマンドの勉強に進む前に、今までのスクリプトを少し変えたいと思います。
+- 新しいコマンドの勉強に進む前に、今までのスクリプトを少し変えたいと思います。
 
-- 先のスライドで説明しましたように、データ解析をする前にデータの整理が必要なケースが多いです。
+- 先のスライドで説明しましたように、データ解析をする前に**データの整理が必要**なケースが多いです。
 
 - 今回の`students.csv`に入っているデータもそうです。
 
@@ -127,6 +127,8 @@ rename(
 - `clean_names()`という関数が列名を一気にきれいにしてくれます。
   - この関数は`tidyverse`に含まれていないパッケージ、`janitor`に入っているので、まずは`janitor`をロードする必要があります。
 
+---
+
 ```{r}
 #| attr-output: "style='font-size: 0.3em'"
 library(janitor)
@@ -135,18 +137,71 @@ clean_names(students_raw)
 
 ---
 
-これを`students`として保存しましょう：
+これを`students_renamed`として保存しましょう：
 
 ```{r}
-students <- clean_names(students_raw)
+students_renamed <- clean_names(students_raw)
 ``` 
 
-- データが扱いやすくなりましたので、`students`を使って他の関数を覚えましょう
+## `mutate()`で列の中身を変える
+
+- 「mutate」は「変化させる」という意味です。
+
+- `age`は数字のはずですが、文字として読み込まれてしまいました。直しましょう：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+mutate(students_renamed, age = parse_number(age))
+```
+
+---
+
+- `parse_number()`は文字列を数字に変換する関数です
+
+- 注意が出ました。これは、データの中にうまく数字に変換できなかった値があったことを意味しています。
+
+- 本当は直した方がいいですが、ちょっと上級な話になりますので飛ばします。知りたい方は教科書を読んでいただくか、講義の後に聞いてください。
+
+---
+
+## きれいなデータを保存する
+
+- これでデータが（ほとんど）整いましたので、`students`として保存します：
+
+::: {.medsmall}
+
+```{r}
+#| filename: students.R
+#| eval: false
+library(tidyverse)
+library(janitor)
+
+# Load raw data
+students_raw <- read_csv("data/students.csv")
+
+# Clean names
+students_renamed <- clean_names(students_raw)
+
+# Convert age to numeric
+students <- mutate(students_renamed, age = parse_number(age))
+```
+
+:::
+
+```{r}
+#| echo: false
+
+# Clean names
+students_renamed <- clean_names(students_raw)
+
+# Convert age to numeric
+students <- mutate(students_renamed, age = parse_number(age))
+```
 
 ## `arrange()`で行を並び替える
 
 - `arrange()`は行の順を並び替える関数です。
-  - 食事（「`meal_plan`」）の順に並び替えましょう。
+  - 食事プラン（「`meal_plan`」）の順に並び替えましょう。
 
 ---
 
@@ -183,10 +238,11 @@ arrange(students, desc(meal_plan))
 ---
 
 ```{r}
+#| attr-output: "style='font-size: 0.3em'"
 filter(students, student_id < 4)
 ```
 
-- 行の数がどれくらい変わった？
+- 行の数が変わったことを確認できますか？
 
 ## データの比較
 
@@ -227,7 +283,7 @@ c(1, 2, 3, 4, 5, 6) > 4
 
 ## チャレンジ ③
 
-`students`の中から食事プランが"Lunch only"になっている学生に絞ってから、名前をZからAの順で並び替えてください。
+`students`の中から食事プランが`"Lunch only"`になっている学生に絞ってから、名前をZからAの順で並び替えてください。
 
 ## パイプについて
 
@@ -256,7 +312,7 @@ arrange(students_lunch, desc(full_name))
 
 ---
 
-- つまり、`|>` は**左の方から右の方へ渡す**機能があります
+- つまり、`|>` は**左の方の物を右の方へ渡す**機能があります
 
 使ってみましょう：
 
@@ -281,10 +337,13 @@ students |> arrange(meal_plan)
 
 - パイプの便利なところは、**途中結果を保存することなく**解析のステップを次から次へと進むことができます：
 
+::: {.medsmall}
+
 ```{r}
-#| attr-output: "style='font-size: 0.3em'"
 students |> filter(meal_plan == "Lunch only") |> arrange(full_name)
 ``` 
+
+:::
 
 ---
 
@@ -306,7 +365,7 @@ students |>
   arrange(full_name)
 ``` 
 
-`|>`を見たら、「それから」という意味で読みます：
+`|>` を見たら、「それから」と読みます：
 
 *`students`から始めて、**それから**食事プランが"Lunch only"となっている学生に絞って、**それから**学生の名前順に並び替える*
 
@@ -314,3 +373,70 @@ students |>
 
 - これからは基本的にパイプを使ってコードを書きます
   - 最初はおかしいように見えるかもしれませんが、すぐに慣れるでしょう
+
+## 欠測データについて
+
+- `age`には`NA`という値が入っています。
+
+- `NA`は英語で「Not Applicable」(「該当しない」)という意味です。
+  - つまり、そのデータは該当しないか、あるいは欠損となっている、という意味です。
+  - `age`の場合は何らかな理由でその人の歳が分からない、ということです。
+  - （一つはうまく数字への変換が出来なかったためですが、もう一つは元々そうなっていました）
+
+## 欠測データを省く方法
+
+- 欠測データがデータフレームに入っていると、エラーの元になることが多いです。
+  - 解析をする前にそれを省く必要がよくあります
+  - `is.na()`関数はその値が`NA`になっているかどうかを教えてくれる。
+
+- 例えば：
+
+```{r}
+is.na(c(1, 2, NA, 3))
+```
+
+---
+
+では、使ってみましょう：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(is.na(age))
+```
+
+あらら。これはちょっとまずいですね。欠測データ**だけ**に絞られてしまいした。
+
+私たちが欲しいのは、その**逆**です。
+
+---
+
+- `!`は論理ベクトルを**反対**にします。
+  - つまり、`TRUE`を`FALSE`にして、`FALSE`を`TRUE`にします。「否」と読めば良い。
+
+```{r}
+!is.na(c(1, 2, NA, 3))
+```
+
+---
+
+- `!`で`NA`**ではない**データだけに絞りましょう：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(!is.na(age))
+```
+
+## チャレンジ ④
+
+`students`から`age`が`NA`になっている行を外してから、`favorite_food`の順で並び替えてください。（パイプを使ってください）
+
+## まとめ
+
+- データを読み込んでから、整える必要があります
+- `rename()`は列の名前を変える
+- `arrange()`は行を並び替える
+- `mutate()`は行の中身を変える
+- `filter()`は行を絞る
+- `|>`（パイプ）を使うと、複数の動作を連続で行える
