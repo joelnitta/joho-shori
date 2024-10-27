@@ -392,215 +392,93 @@
 
 
 <section>
-<section id="第3回プロジェクトの整理とデータの読み込み" class="title-slide slide level1 center">
-<h1>第3回：プロジェクトの整理とデータの読み込み</h1>
-<p><a href="https://data-science-chiba-2024.github.io/day3/" class="uri">https://data-science-chiba-2024.github.io/day3/</a></p>
+<section id="第4回データの整理１" class="title-slide slide level1 center">
+<h1>第4回：データの整理（１）</h1>
+<p><a href="https://data-science-chiba-2024.github.io/day4/" class="uri">https://data-science-chiba-2024.github.io/day4/</a></p>
 </section>
-<section id="連絡事項" class="slide level2">
-<h2>連絡事項</h2>
+<section id="データの整理data-wrangling" class="slide level2">
+<h2>データの整理（Data Wrangling）</h2>
 <ul>
-<li>第２回の宿題の締め切りを10月25日（金曜日） 23:59まで延長しました</li>
+<li><p>データが手に入ると、まだ解析に使えない状態であることが多いです。</p></li>
+<li><p>データの整理（「wrangling」）は<strong>解析に使えるように整えるプロセス</strong>です。</p>
+<ul>
+<li>元々はカウボーイが<strong>牛を扱う技術</strong>から来ています。</li>
+</ul></li>
 </ul>
 </section>
-<section id="クイズ" class="slide level2">
-<h2>クイズ</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="../images/joho2024-qr-code.png"></p>
-</div><div class="column" style="width:50%;">
-<p><strong>注意：</strong> 質問は複数選択です。<strong>すべて</strong>の正しい答えを選んでください。</p>
+<section class="slide level2">
+
+
+<img data-src="https://media.istockphoto.com/id/172342607/photo/cattle-drive.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=Fz--vTqe2gMWKxbHvgdLCgfUveH_Y3-k0js5H1m9Snc=" class="r-stretch quarto-figure-center"><p class="caption">Getty Images</p></section>
+<section class="slide level2">
+
+
+<img data-src="https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png" alt="data wrangling monsters" class="r-stretch quarto-figure-center"><p class="caption">Image by Allison Horst</p></section>
+<section id="準備" class="slide level2">
+<h2>準備</h2>
+<ul>
+<li><code>students_analysis</code>プロジェクトを再度開きます。</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p>新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。</p></li>
+<li><p>先のスライドで説明したように、データ解析を行う前に<strong>データの整理が必要</strong>なケースが多いです。</p></li>
+<li><p>今回の<code>students.csv</code>に入っているデータもその一例です。</p></li>
+</ul>
 </div>
-</div>
-<p>または、<a href="https://gosocrative.com">gosocrative.com</a> で joho2024を入力</p>
-</section>
-<section id="今後の宿題について" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li>宿題はこれまで通りオンラインで受けることも可能です。
-<ul>
-<li>混雑している時間帯には接続できない可能性があります。</li>
-<li>しばらく使用しないとリセットされてしまいます。</li>
-</ul></li>
-</ul>
-</section>
-<section id="今後の宿題について-1" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li><p>オンラインで受けてきた宿題は<strong>Rパッケージ</strong>「 <code>joholearnr</code>」でもあります</p></li>
-<li><p>教室内のパソコンに宿題がインストールされているので、<strong>ここで</strong>受けることも可能になりました：</p>
-<ul>
-<li>右上の「環境」パネルで「Tutorial」タブをクリック（1）</li>
-<li>受けたい宿題を探します（2）</li>
-<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<ul>
-<li>チュートリアルが終わったら（完成コードを提出したら）、「Stop」ボタンをクリックしてください。</li>
-</ul>
-
-<img data-src="../images/tutorial-stop.png" class="r-stretch"><ul>
-<li>注意：完成コードを提出する前に「Stop」ボタンをクリックすると、<strong>今までの答えが消去される</strong>ので気をつけてください。</li>
-</ul>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>リストに今週の宿題が表示されていない場合は、パッケージのアップデート（再インストール）が必要です。
-<ul>
-<li>以下のようにインストールを行ってください：</li>
-</ul></li>
+<li>そこで、<code>students.csv</code>を読み込む際には、まず<code>students_raw</code>という名前にしましょう。<code>raw</code>はこれが<strong>生データ</strong>（読み込んだデータのまま、何も手を加えていない状態）を示します。</li>
 </ul>
-<div class="medsmall">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(</span>
-<span id="cb1-2"><a></a>  <span class="st">"joholearnr"</span>,</span>
-<span id="cb1-3"><a></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://joelnitta.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span>)</span>
-<span id="cb1-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>students.R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb1-4"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</section>
+<section id="データ整理の関数" class="slide level2">
+<h2>データ整理の関数</h2>
+<p>これから学ぶ関数の共通点：</p>
 <ul>
-<li>コードが長いので、コピーペーストがおすすめです。
+<li>データフレームを入力とし、データフレームを返す</li>
+<li>最初の引数が入力のデータフレーム</li>
+<li>他の引数は詳細（引数名に引用符を使わない）</li>
+</ul>
+<p><code>関数(データフレーム, 他の設定)</code> ➞ <code>データフレーム</code></p>
+</section>
+<section id="データの整理列名を整える" class="slide level2">
+<h2>データの整理：列名を整える</h2>
 <ul>
-<li>上のテキストの上にマウスを置くと、その右上に小さなクリップボードのアイコンが出ます。アイコンをクリックするとコードがコピーされます。</li>
+<li><p>データフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：</p>
+<ul>
+<li>打ちやすい</li>
+<li>覚えやすい</li>
+</ul></li>
+<li><p><code>`Full Name`</code>は打ちづらいです。<code>`</code>もありますし、スペースも入っています。</p></li>
+<li><p><strong>おすすめ</strong>：小文字のみを使用し、スペースの代わりに<code>_</code>を使う</p></li>
+</ul>
+</section>
+<section id="renameで列名を変える" class="slide level2">
+<h2><code>rename()</code>で列名を変える</h2>
+<ul>
+<li><code>rename()</code>は列名を変更する関数です。
+<ul>
+<li><code>新しい名前 = 前の名前</code>と指定します。</li>
 </ul></li>
 </ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>もし以下のメッセージが表示されたら：</li>
-</ul>
-<pre><code>These packages have more recent versions available.
-It is recommended to update all of them
-Which would you like to update?</code></pre>
-<p><code>3</code>を押してからエンターキーを押してください（他のパッケージをアップデートしない）。</p>
-<ul>
-<li><code>install()</code>を実行したら、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されます。</li>
-</ul>
-</section>
-<section id="アウトライン" class="slide level2">
-<h2>アウトライン</h2>
-<ul>
-<li>プロジェクトの整理とデータの読み込み
-<ul>
-<li>ファイルとフォルダー</li>
-<li>データフレーム</li>
-<li>スクリプト</li>
-<li>プロジェクトの作成</li>
-</ul></li>
-</ul>
-</section>
-<section id="rstudioの設定の変更" class="slide level2">
-<h2>RStudioの設定の変更</h2>
-<ul>
-<li><p>再現性を担保するために、RStudioの設定を変更する必要があります。</p></li>
-<li><p>そうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。</p></li>
-<li><p>「Tools」→「Global Options」→「Workspace」</p>
-<ul>
-<li>「Restore .RData into workspace at startup」→ <strong>外す</strong></li>
-<li>「Save workspace to .RData on exit」→ <strong>「Never」</strong></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/settings_change.png" class="r-stretch"></section>
-<section id="データフレームについて" class="slide level2">
-<h2>データフレームについて</h2>
-<ul>
-<li>データフレームは最もよく使われるデータ形式です。
-<ul>
-<li>行と列から構成される2次元データ（表形式データ）</li>
-<li>エクセルのスプレッドシートと同じようなもの</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/students-excel-view.png" class="r-stretch"></section>
-<section id="データフレームについて-1" class="slide level2">
-<h2>データフレームについて</h2>
-<ul>
-<li>エクセルとの大きな違い：各列は同じデータ型を持たなければなりません。
-<ul>
-<li>つまり、各<strong>列がベクトルである</strong>ということです。</li>
-</ul></li>
-<li>tidyverseでは、「tibble」と呼ばれます。</li>
-</ul>
-
-<img data-src="https://swcarpentry-ja.github.io/2021-04-02-todai-slides/images/dataframe-example.png" class="r-stretch"></section>
-<section id="初データの読み込み" class="slide level2">
-<h2>初データの読み込み</h2>
-<ul>
-<li><p>練習として、教科書に掲載されている<code>students.csv</code>ファイルをRに読み込みます。</p></li>
-<li><p>まず、このリンクから<code>students.csv</code>を<strong>デスクトップ</strong>にダウンロードしてください：</p>
-<ul>
-<li><a href="https://pos.it/r4ds-students-csv" class="uri">https://pos.it/r4ds-students-csv</a></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/firefox-save-csv.png" class="r-stretch"></section>
-<section id="csvファイルについて" class="slide level2">
-<h2><code>.csv</code>ファイルについて</h2>
-<ul>
-<li><code>.csv</code>は、<strong>C</strong>omma-<strong>s</strong>eparated <strong>v</strong>aluesの略です。
-<ul>
-<li>データはコンマ（<code>,</code>）で区切られています。</li>
-</ul></li>
-<li>エクセルの<code>.xlsx</code>ファイルとの違い
-<ul>
-<li><code>.csv</code>の中身は単純な文字列なので、直接中身を確認することができます。</li>
-<li><code>.xlsx</code>（または<code>.xls</code>）ファイルは<strong>エクセルのみ</strong>に対応しています。</li>
-<li><code>.xlsx</code>はエクセルを持っていない方にとって使いにくいので、<strong><code>.csv</code>を推奨</strong>します。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><img data-src="../images/firefox-csv.png" height="300"></p>
-<p><img data-src="../images/students-excel-view.png" height="300"></p>
-</section>
-<section id="csvファイルをrに読み込む" class="slide level2">
-<h2><code>.csv</code>ファイルをRに読み込む</h2>
-<ul>
-<li>これから使用する関数は<code>tidyverse</code>パッケージに含まれているので、まずは<code>tidyverse</code>をロードしましょう。</li>
-</ul>
-</section>
-<section class="slide level2">
-
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><code>.csv</code>ファイルを読み込む関数は<code>read_csv()</code>です。</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<div class="medsmall">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span>
-<span id="cb4-2"><a></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  `Student ID` full_name        favourite.food     mealPlan            AGE  
          &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
 1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
 2            2 Barclay Lynn     French fries       Lunch only          5    
@@ -610,394 +488,515 @@ Which would you like to update?</code></pre>
 6            6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
 </div>
 </div>
-</div>
-</section>
-<section id="フォルダ構造について" class="slide level2">
-<h2>フォルダ構造について</h2>
-<ul>
-<li><code>Z:/Desktop/students.csv</code>は<code>students.csv</code>のパス、つまりそのファイルがどこにあるのかを示す情報です。
-<ul>
-<li>パスはコンピューター内の<strong>住所のようなもの</strong>です。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>コンピューターのデータはすべて<strong>ファイル</strong>と<strong>フォルダー</strong>で整理されています。
-<ul>
-<li>ファイル：データ</li>
-<li>フォルダー：ファイルの入れ物</li>
-<li>パスの<code>/</code>は日本語の「の」と同じような意味です。</li>
-</ul></li>
-</ul>
 </section>
 <section class="slide level2">
 
 
-<img data-src="../images/file_hierarchy_1.png" class="r-stretch"></section>
+<img data-src="../images/rename_annotated.png" class="r-stretch"></section>
 <section class="slide level2">
 
-
-<img data-src="../images/file_hierarchy_2.png" class="r-stretch"></section>
-<section id="csvファイルをrに読み込む-1" class="slide level2">
-<h2><code>.csv</code>ファイルをRに読み込む</h2>
-<ul>
-<li><p>これでRに<code>.csv</code>ファイルのデータを読み込むことができました。</p></li>
-<li><p>しかし、データの読み込みからデータの解析の最後まで、すべての作業を一度で終わらせることは現実的ではありません。</p></li>
-<li><p>ここで一旦作業を停止して、RStudioを閉じましょう。</p></li>
-</ul>
-</section>
-<section id="作業の再開" class="slide level2">
-<h2>作業の再開</h2>
-<ul>
-<li><p>再度RStudioを開きましょう。</p></li>
-<li><p>今までの成果はどうなっているのでしょうか？</p>
-<ul>
-<li>またすべて一からやり直す必要があります。</li>
-</ul></li>
-<li><p>もっと良いやり方があるはずです…。</p></li>
-</ul>
-</section>
-<section id="スクリプト" class="slide level2">
-<h2>スクリプト</h2>
-<ul>
-<li><p>これまではRのコマンドを直接コンソールに入力していました。</p>
-<ul>
-<li>同じ作業を再度行うときは効率が悪いです。</li>
-</ul></li>
-<li><p>スクリプト（テキストファイル）にコマンドを保存すると、後々楽になります。</p></li>
-<li><p>「File」 → 「New File」 → 「RScript」</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-new-script.png" class="r-stretch"></section>
-<section id="スクリプトの編集" class="slide level2">
-<h2>スクリプトの編集</h2>
-<ul>
-<li>スクリプトにこれまで書いたコードを入れましょう：
-<ul>
-<li>コメントを入れることで、自分にこのコードが何をしているのかをメモしておきましょう。</li>
-</ul></li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="co"># Load data</span></span>
-<span id="cb6-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  `Student ID` full_name        favourite.food     mealPlan            AGE  
+         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2            2 Barclay Lynn     French fries       Lunch only          5    
+3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    
+4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6            6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
 </div>
-</section>
-<section id="スクリプトの保存" class="slide level2">
-<h2>スクリプトの保存</h2>
+</div>
 <ul>
-<li><p>スクリプトを保存しましょう。</p></li>
-<li><p>「File」 → 「Save As」 → 場所とファイル名を決めて保存します。</p></li>
-<li><p>今回は<code>students.R</code>としましょう。</p>
-<ul>
-<li>Rスクリプトは<code>.r</code>もしくは<code>.R</code>のファイル拡張子を使用します。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-save-script.png" class="r-stretch"></section>
-<section id="スクリプトとコンソールの違い" class="slide level2">
-<h2>スクリプトとコンソールの違い</h2>
-<ul>
-<li><p>スクリプトに記述されているRコードは「これから実行するコマンドのリスト」のようなものです（レシピをイメージしてください）。</p></li>
-<li><p>Rにそのコマンドを実行するように指示する必要があります。</p></li>
-</ul>
-</section>
-<section id="スクリプトからのコマンドの実行" class="slide level2">
-<h2>スクリプトからのコマンドの実行</h2>
-<ul>
-<li><p>まずはカーソルを実行したい行に置きます（矢印キーかマウスを使ってください）。</p></li>
-<li><p>「Run」アイコンをクリックします。</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-run.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<ul>
-<li>または、ショートカットを使います（<strong>おすすめ</strong>）。
-<ul>
-<li>Mac: <code>⌘</code>と<code>Enter</code>を同時に押す</li>
-<li>Windows: <code>Ctrl</code>と<code>Enter</code>を同時に押す</li>
-</ul></li>
+<li>注意：このようにしただけでは、元のデータは<strong>変わっていません</strong>。<code>&lt;-</code>を使わない限り、関数の結果は保存されません。</li>
 </ul>
 </section>
 <section id="チャレンジ-①" class="slide level2">
 <h2>チャレンジ ①</h2>
-<p>RStudioを閉じてから、再度スクリプトを開いてコマンドを実行してください。</p>
-<div class="fragment">
-<p>一々コマンドを入力するよりは便利でしょう？</p>
+<p><code>`Student ID`</code>という列を使いやすい列名に変更してください。</p>
+</section>
+<section id="renameで列名を変える-1" class="slide level2">
+<h2><code>rename()</code>で列名を変える</h2>
+<ul>
+<li>複数の列名を変更する際は、コンマで区切って書きます。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">rename</span>(</span>
+<span id="cb6-2"><a></a>  students_raw,</span>
+<span id="cb6-3"><a></a>  <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>,</span>
+<span id="cb6-4"><a></a>  <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span></span>
+<span id="cb6-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite.food     mealPlan            AGE  
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1          1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2          2 Barclay Lynn     French fries       Lunch only          5    
+3          3 Jayendra Lyne    N/A                Breakfast and lunch 7    
+4          4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6          6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
+</div>
 </div>
 </section>
-<section id="プロジェクトについて" class="slide level2">
-<h2>プロジェクトについて</h2>
+<section id="一気に列名を扱いやすくする" class="slide level2">
+<h2>一気に列名を扱いやすくする</h2>
 <ul>
-<li><p>スクリプトを書くことでデータ解析の作業をかなり楽にしましたが、次には<strong>ファイルを整理する</strong>必要があります。</p></li>
-<li><p>ファイルの整理には、RStudioの<strong>プロジェクト</strong>機能を使用します。</p></li>
-</ul>
-</section>
-<section id="プロジェクトについて-1" class="slide level2">
-<h2>プロジェクトについて</h2>
+<li><p>名前を一つずつ変更するのは手間がかかります。</p></li>
+<li><p><code>clean_names()</code>という関数が列名を<strong>一気に</strong>きれいにしてくれます。</p>
 <ul>
-<li><p>RStudioのプロジェクトとは、<strong>データ解析に使用するフォルダー</strong>のことです。</p></li>
-<li><p>このフォルダー内に、特定の<strong>データ解析プロジェクトに必要なファイル</strong>を配置します。</p></li>
-</ul>
-</section>
-<section id="プロジェクトの作り方" class="slide level2">
-<h2>プロジェクトの作り方</h2>
-<ul>
-<li><p>「File」 → 「New Project…」 → 「New Directory」 → 「New Project」</p></li>
-<li><p>今回のプロジェクトは<code>students_analysis</code>と名付け、デスクトップに配置しましょう。</p>
-<ul>
-<li>この教室のコンピューターはデスクトップ以外の場所にプロジェクトを置くと、ログアウト時に消去されます。</li>
+<li>この関数は<code>tidyverse</code>に含まれていないパッケージ、<code>janitor</code>に入っているため、まずは<code>janitor</code>をロードする必要があります。</li>
 </ul></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p><img data-src="../images/rstudio-new-project-1.png" height="500"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb8-2"><a></a><span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite_food     meal_plan           age  
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1          1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2          2 Barclay Lynn     French fries       Lunch only          5    
+3          3 Jayendra Lyne    N/A                Breakfast and lunch 7    
+4          4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6          6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-
-<img data-src="../images/rstudio-new-project-2.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-new-project-3.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<p><img data-src="../images/rstudio-new-project-4.png" height="500"></p>
+<p>これを<code>students_renamed</code>として保存しましょう。</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>students.R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb10-5"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="co"># Rename columns</span></span>
+<span id="cb10-8"><a></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="プロジェクトの作り方-1" class="slide level2">
-<h2>プロジェクトの作り方</h2>
+<section id="mutateで列の中身を変える" class="slide level2">
+<h2><code>mutate()</code>で列の中身を変える</h2>
 <ul>
-<li><code>students_analysis</code>プロジェクトを作成したら、その中に<code>data</code>というフォルダーを作成し、<code>students.csv</code>を<code>data</code>に移動してください。
-<ul>
-<li>「Files」パネルで<strong>フォルダーアイコン</strong>をクリックします。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/new_folder.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<ul>
-<li>右下のファイルパネルに<code>data</code>が含まれていることを確認できます。</li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-project-data-folder.png" class="r-stretch"></section>
-<section id="プロジェクトの開き方" class="slide level2">
-<h2>プロジェクトの開き方</h2>
-<ul>
-<li><p>RStudioを一旦閉じましょう。</p></li>
-<li><p>今度は、アプリ一覧からではなく、<strong>プロジェクトから</strong>RStudioを開きましょう。</p></li>
-<li><p><code>students_project</code>フォルダーを開き、その中の<code>students_project.Rproj</code>ファイルをダブルクリックしてください。</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/students_rproject.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<ul>
-<li>すると、RStudioはそのプロジェクトに入った状態で起動します。
-<ul>
-<li>ファイルパネル（右下）にこれまでの<code>data</code>や<code>students.R</code>が表示されていることを確認してください。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/rstudio-students-project.png" class="r-stretch"></section>
-<section id="パスについて" class="slide level2">
-<h2>パスについて</h2>
-<ul>
-<li>プロジェクトを開いた後、スクリプトを使ってもう一度<code>students.csv</code>を読み込みましょう：</li>
+<li><p>「mutate」は「変化させる」という意味です。</p></li>
+<li><p><code>age</code>は数字のはずですが、文字として読み込まれてしまいました。修正しましょう。</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="co"># Load data</span></span>
-<span id="cb7-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error: 'Z:/Desktop/students.csv' does not exist.</code></pre>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
+2          2 Barclay Lynn     French fries       Lunch only              5
+3          3 Jayendra Lyne    N/A                Breakfast and lunch     7
+4          4 Leon Rossini     Anchovies          Lunch only             NA
+5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
+6          6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
 </div>
-</div>
-<div class="fragment">
-<p>今度はうまくいかない。なぜでしょう？</p>
 </div>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>先ほど、<code>students.csv</code>を<code>students_project</code>に移動しました。つまり、もう<code>Desktop</code>には置いていないため、<code>Desktop</code>内を探しても見つかりません。</li>
+<li><p><code>parse_number()</code>は文字列を数字に変換する関数です。</p></li>
+<li><p><code>Warning: 1 parsing failure</code>という注意が出ました。これは、データの中にうまく数字に変換できなかった値があったことを意味しています。</p></li>
+<li><p>本当は修正した方が良いですが、少し上級な話になりますので今回は飛ばします。詳しく知りたい方は教科書を読んでいただくか、講義後に質問してください。</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
-
-<img data-src="../images/student_path_changed.png" class="r-stretch"></section>
-<section id="チャレンジ-②" class="slide level2">
-<h2>チャレンジ ②</h2>
+<section id="きれいなデータを保存する" class="slide level2">
+<h2>きれいなデータを保存する</h2>
 <ul>
-<li>このコードをどのように変更すれば<code>students.csv</code>を読み込むことができるでしょうか？</li>
+<li>これでデータが（ほとんど）整いましたので、<code>students</code>として保存します。</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb9-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="絶対パス" class="slide level2">
-<h2>絶対パス</h2>
-<ul>
-<li>一つの解決方法は<strong>絶対パス</strong>を指定することです：
-<ul>
-<li>コンピューターの最上位ディレクトリ（教室のパソコンでは<code>Z:</code>）から始まります。
-<ul>
-<li>Macの場合は<code>/</code>から始まります。</li>
-</ul></li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb10-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students_project/data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>しかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。</li>
-</ul>
-</section>
-<section id="相対パス" class="slide level2">
-<h2>相対パス</h2>
-<ul>
-<li><p>もう一つの方法は「相対パス」と呼ばれるものです。</p></li>
-<li><p>つまり、Rの<strong>作業ディレクトリ</strong>（Rが現在入っているフォルダー）<strong>から見たパス</strong>です。</p></li>
-<li><p><code>getwd()</code>でRの作業ディレクトリを確認できます：</p>
-<ul>
-<li>“Get working directory”</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><p>現在、Rは<code>Desktop/students_analysis/</code>に入っていることがわかりました。</p></li>
-<li><p>したがって、以下のようにデータを読み込むことができます：</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb12-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><p>RStudioのプロジェクト機能を使うと、<strong>.Rprojファイルが含まれるフォルダーが作業ディレクトリ</strong>になります。</p></li>
-<li><p>ファイルの場所がすぐにわかり、プロジェクトを別の場所に移動してもコードを変更する必要がありません。</p></li>
-<li><p>相対パスをおすすめします！</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/working_dir_paths.png" class="r-stretch"></section>
-<section id="チャレンジ-③" class="slide level2">
-<h2>チャレンジ ③</h2>
-<ul>
-<li><code>penguins_analysis</code>というプロジェクトをデスクトップに作成して開いてください。終わったら、再度<code>students_analysis</code>を開いてください。
-<ul>
-<li>（<code>penguins</code>は別の教科書のデータセットです）</li>
-</ul></li>
-</ul>
-</section>
-<section id="データフレームのデータ型" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li>今回読み込んだデータをよく見てみましょう。
-<ul>
-<li><code>AGE</code>という列のデータ型は？</li>
-</ul></li>
-</ul>
-</section>
-<section id="データフレームのデータ型-1" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li><code>AGE</code>は数値（<code>dbl</code>）ではなく、文字（<code>chr</code>）として読み込まれています。
-<ul>
-<li>なぜでしょう？</li>
-</ul></li>
-</ul>
-</section>
-<section id="データフレームのデータ型-2" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li><code>AGE</code>の中に<code>"five"</code>が含まれていたため、すべてが文字として認識されてしまったようです。
-<ul>
-<li>自動的なデータ型の検出がうまく機能しませんでした。</li>
-</ul></li>
-<li>このような場合は、自分でデータ型を指定する必要があります。</li>
-</ul>
-</section>
-<section id="データフレームのデータ型の指定" class="slide level2">
-<h2>データフレームのデータ型の指定</h2>
-<ul>
-<li><code>read_csv()</code>の<code>col_types</code>引数を使用します。</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>col_types <span class="ot">=</span> <span class="fu">list</span>(列名 <span class="ot">=</span> col_何ちゃら())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>col_types <span class="ot">=</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
 <div class="medsmall">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>, <span class="at">col_types =</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>()))</span>
-<span id="cb15-2"><a></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>students.R</strong></pre>
 </div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  `Student ID` `Full Name`      favourite.food     mealPlan              AGE
-         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
-1            1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
-2            2 Barclay Lynn     French fries       Lunch only              5
-3            3 Jayendra Lyne    N/A                Breakfast and lunch     7
-4            4 Leon Rossini     Anchovies          Lunch only             NA
-5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
-6            6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb13-5"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a><span class="co"># Rename columns</span></span>
+<span id="cb13-8"><a></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span>
+<span id="cb13-9"><a></a></span>
+<span id="cb13-10"><a></a><span class="co"># Convert age to numeric</span></span>
+<span id="cb13-11"><a></a>students <span class="ot">&lt;-</span> <span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="他のデータ型" class="slide level2">
-<h2>他のデータ型</h2>
+<section id="arrangeで行を並び替える" class="slide level2">
+<h2><code>arrange()</code>で行を並び替える</h2>
 <ul>
-<li><code>col_character()</code> 文字</li>
-<li><code>col_logical()</code> 論理</li>
-<li><code>col_double()</code> 数字</li>
+<li><code>arrange()</code>は行の順序を並び替える関数です。
+<ul>
+<li>食事プラン（「<code>meal_plan</code>」）の順に並び替えましょう。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">arrange</span>(students, meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          3 Jayendra Lyne    N/A                Breakfast and lunch     7
+2          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
+3          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
+4          2 Barclay Lynn     French fries       Lunch only              5
+5          4 Leon Rossini     Anchovies          Lunch only             NA
+6          6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><img data-src="../images/arrange_annotated.png" height="300"></p>
+</section>
+<section id="arrangeで行を並び替える-1" class="slide level2">
+<h2><code>arrange()</code>で行を並び替える</h2>
+<ul>
+<li><p>デフォルト設定では、<code>arrange()</code>は小さい方から大きい方へと並び替えます。</p></li>
+<li><p>逆の順にするには、列名を<code>desc()</code>の中に書きます。</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">arrange</span>(students, <span class="fu">desc</span>(meal_plan))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
+2          2 Barclay Lynn     French fries       Lunch only              5
+3          4 Leon Rossini     Anchovies          Lunch only             NA
+4          6 Güvenç Attila    Ice cream          Lunch only              6
+5          3 Jayendra Lyne    N/A                Breakfast and lunch     7
+6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA</code></pre>
+</div>
+</div>
+</section>
+<section id="チャレンジ-②" class="slide level2">
+<h2>チャレンジ ②</h2>
+<p>学生の<strong>名前の順</strong>に並び替えてください。</p>
+</section>
+<section id="filterで行を絞り込む" class="slide level2">
+<h2><code>filter()</code>で行を絞り込む</h2>
+<ul>
+<li><p>生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。</p></li>
+<li><p><code>filter()</code>で条件を設定し、その行だけに絞り込みます。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">filter</span>(students, student_id <span class="sc">&lt;</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 3 × 5
+  student_id full_name      favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          1 Sunil Huffmann Strawberry yoghurt Lunch only              4
+2          2 Barclay Lynn   French fries       Lunch only              5
+3          3 Jayendra Lyne  N/A                Breakfast and lunch     7</code></pre>
+</div>
+</div>
+<ul>
+<li>行の数が変わったことを確認できますか？</li>
+</ul>
+</section>
+<section id="データの比較" class="slide level2">
+<h2>データの比較</h2>
+<p>データの比較を行う主な記号：</p>
+<ul>
+<li><code>&gt;</code> より大きい</li>
+<li><code>&lt;</code> より小さい</li>
+<li><code>==</code> イコール（<code>=</code>ではありません！）</li>
+<li><code>|</code> あるいは</li>
+<li><code>&amp;</code> そして（複数条件の指定）</li>
+</ul>
+<p>比較の記号のアウトプットは<strong>論理ベクトル</strong>です。</p>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="dv">11</span> <span class="sc">&gt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) <span class="sc">&gt;</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="dv">11</span> <span class="sc">==</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="dv">11</span> <span class="ot">=</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in 11 = 11: invalid (do_set) left-hand side to assignment</code></pre>
+</div>
+</div>
+</section>
+<section id="チャレンジ-③" class="slide level2">
+<h2>チャレンジ ③</h2>
+<p><code>students</code>の中から食事プランが<code>"Lunch only"</code>になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。</p>
+</section>
+<section id="パイプについて" class="slide level2">
+<h2>パイプについて</h2>
+<ul>
+<li>チャレンジ ③では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>students_lunch <span class="ot">&lt;-</span> <span class="fu">filter</span>(students, meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>)</span>
+<span id="cb28-2"><a></a><span class="fu">arrange</span>(students_lunch, <span class="fu">desc</span>(full_name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
+  student_id full_name      favourite_food     meal_plan    age
+       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
+1          1 Sunil Huffmann Strawberry yoghurt Lunch only     4
+2          4 Leon Rossini   Anchovies          Lunch only    NA
+3          6 Güvenç Attila  Ice cream          Lunch only     6
+4          2 Barclay Lynn   French fries       Lunch only     5</code></pre>
+</div>
+</div>
+</section>
+<section id="パイプについて-1" class="slide level2">
+<h2>パイプについて</h2>
+<ul>
+<li><p>これは解析が短い場合は大丈夫かもしれませんが、長くなると<strong>大変です</strong>。</p></li>
+<li><p><strong>パイプ</strong>というものがこの問題を解決します。</p></li>
+</ul>
+</section>
+<section id="パイプの使い方" class="slide level2">
+<h2>パイプの使い方</h2>
+<ul>
+<li>まずはパイプ（<code>|&gt;</code>）の基本的な使い方を覚えましょう。
+<ul>
+<li>以前は<code>%&gt;%</code>と書きましたが、最近のRでは<code>|&gt;</code>と書きます。</li>
+</ul></li>
+<li><code>arrange(データ, 列名)</code>というような書き方をしてきましたが、パイプを使うとこのように書きます：</li>
+</ul>
+<p><code>データ |&gt; arrange(列名)</code></p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>つまり、<code>|&gt;</code>は<strong>左側のものを右側へ渡す</strong>機能があります。</li>
+</ul>
+<p>使ってみましょう。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>students <span class="sc">|&gt;</span> <span class="fu">arrange</span>(meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
+  student_id full_name        favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          3 Jayendra Lyne    N/A                Breakfast and lunch     7
+2          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
+3          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
+4          2 Barclay Lynn     French fries       Lunch only              5
+5          4 Leon Rossini     Anchovies          Lunch only             NA
+6          6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>繰り返しになりますが、</li>
+</ul>
+<p><code>students |&gt; arrange(meal_plan)</code></p>
+<p>と</p>
+<p><code>arrange(students, meal_plan)</code></p>
+<p>は<strong>同じです</strong>。</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>パイプの便利な点は、<strong>途中結果を保存することなく</strong>解析のステップを次から次へと進めることができる点です。</li>
+</ul>
+<div class="medsmall">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>students <span class="sc">|&gt;</span> <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  student_id full_name      favourite_food     meal_plan    age
+       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
+1          2 Barclay Lynn   French fries       Lunch only     5
+2          6 Güvenç Attila  Ice cream          Lunch only     6
+3          4 Leon Rossini   Anchovies          Lunch only    NA
+4          1 Sunil Huffmann Strawberry yoghurt Lunch only     4</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Rは改行があっても構いませんので、改行を入れるともっと読みやすくなります。</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>students <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a></a>  <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
+  student_id full_name      favourite_food     meal_plan    age
+       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
+1          2 Barclay Lynn   French fries       Lunch only     5
+2          6 Güvenç Attila  Ice cream          Lunch only     6
+3          4 Leon Rossini   Anchovies          Lunch only    NA
+4          1 Sunil Huffmann Strawberry yoghurt Lunch only     4</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>students <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a></a>  <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>|&gt;</code> を見たら、「それから」と読みます：</p>
+<p><em><code>students</code>から始めて、<strong>それから</strong>食事プランが”Lunch only”となっている学生に絞り込んで、<strong>それから</strong>学生の名前順に並び替える</em></p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>これからは基本的にパイプを使ってコードを書きます。
+<ul>
+<li>最初は違和感があるかもしれませんが、すぐに慣れるでしょう。</li>
+</ul></li>
+</ul>
+</section>
+<section id="欠測データについて" class="slide level2">
+<h2>欠測データについて</h2>
+<ul>
+<li><p><code>age</code>には<code>NA</code>という値が入っています。</p></li>
+<li><p><code>NA</code>は英語で「Not Applicable」（「該当しない」）という意味です。</p>
+<ul>
+<li>つまり、そのデータは該当しないか、あるいは欠損しているという意味です。</li>
+<li><code>age</code>の場合は何らかの理由でその人の年齢が分からないということです。</li>
+<li>（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）</li>
+</ul></li>
+</ul>
+</section>
+<section id="欠測データを省く方法" class="slide level2">
+<h2>欠測データを省く方法</h2>
+<ul>
+<li>欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。
+<ul>
+<li>解析を行う前にそれを除外する必要があります。</li>
+<li><code>is.na()</code>関数はその値が<code>NA</code>であるかどうかを教えてくれます。</li>
+</ul></li>
+<li>例えば：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE  TRUE FALSE</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>では、使ってみましょう。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>students <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 2 × 5
+  student_id full_name        favourite_food meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;               &lt;dbl&gt;
+1          4 Leon Rossini     Anchovies      Lunch only             NA
+2          5 Chidiegwu Dunkel Pizza          Breakfast and lunch    NA</code></pre>
+</div>
+</div>
+<p>あらら。これはちょっとまずいですね。欠測データ<strong>だけ</strong>に絞られてしまいました。</p>
+<p>私たちが欲しいのは、その<strong>逆</strong>です。</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><code>!</code>は論理ベクトルを<strong>反転</strong>させます。
+<ul>
+<li>つまり、<code>TRUE</code>を<code>FALSE</code>に、<code>FALSE</code>を<code>TRUE</code>にします。「否」と読めば良いです。</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><code>!</code>を使って<code>NA</code><strong>ではない</strong>データだけに絞り込みましょう。</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>students <span class="sc">|&gt;</span></span>
+<span id="cb43-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
+  student_id full_name      favourite_food     meal_plan             age
+       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+1          1 Sunil Huffmann Strawberry yoghurt Lunch only              4
+2          2 Barclay Lynn   French fries       Lunch only              5
+3          3 Jayendra Lyne  N/A                Breakfast and lunch     7
+4          6 Güvenç Attila  Ice cream          Lunch only              6</code></pre>
+</div>
+</div>
+</section>
+<section id="チャレンジ-④" class="slide level2">
+<h2>チャレンジ ④</h2>
+<p><code>students</code>から<code>age</code>が<code>NA</code>になっている行を除外してから、<code>favorite_food</code>の順で並び替えてください。（パイプを使ってください）</p>
+</section>
+<section id="まとめ" class="slide level2">
+<h2>まとめ</h2>
+<ul>
+<li>データを読み込んだ後、整える必要があります。</li>
+<li><code>rename()</code>は列の名前を変更する。</li>
+<li><code>arrange()</code>は行を並び替える。</li>
+<li><code>mutate()</code>は列の中身を変える。</li>
+<li><code>filter()</code>は行を絞り込む。</li>
+<li><code>|&gt;</code>（パイプ）を使うと、複数の操作を連続して行うことができます。</li>
 </ul>
 
 <div class="quarto-auto-generated-content">

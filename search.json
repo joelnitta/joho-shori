@@ -221,7 +221,7 @@
     "href": "day1/index.html#エラーについて",
     "title": "情報処理演習",
     "section": "エラーについて",
-    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError: &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
+    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError in parse(text = input): &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
   },
   {
     "objectID": "day1/index.html#エラーについて-1",
@@ -361,7 +361,7 @@
     "href": "index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
   },
   {
     "objectID": "index.html#オフィスアワー",
@@ -621,6 +621,167 @@
     "title": "情報処理演習",
     "section": "他のデータ型",
     "text": "他のデータ型\n\ncol_character() 文字\ncol_logical() 論理\ncol_double() 数字"
+  },
+  {
+    "objectID": "day4/index.html#データの整理data-wrangling",
+    "href": "day4/index.html#データの整理data-wrangling",
+    "title": "情報処理演習",
+    "section": "データの整理（Data Wrangling）",
+    "text": "データの整理（Data Wrangling）\n\nデータが手に入ると、まだ解析に使えない状態であることが多いです。\nデータの整理（「wrangling」）は解析に使えるように整えるプロセスです。\n\n元々はカウボーイが牛を扱う技術から来ています。"
+  },
+  {
+    "objectID": "day4/index.html#準備",
+    "href": "day4/index.html#準備",
+    "title": "情報処理演習",
+    "section": "準備",
+    "text": "準備\n\nstudents_analysisプロジェクトを再度開きます。\n\n\n\n新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。\n先のスライドで説明したように、データ解析を行う前にデータの整理が必要なケースが多いです。\n今回のstudents.csvに入っているデータもその一例です。"
+  },
+  {
+    "objectID": "day4/index.html#データ整理の関数",
+    "href": "day4/index.html#データ整理の関数",
+    "title": "情報処理演習",
+    "section": "データ整理の関数",
+    "text": "データ整理の関数\nこれから学ぶ関数の共通点：\n\nデータフレームを入力とし、データフレームを返す\n最初の引数が入力のデータフレーム\n他の引数は詳細（引数名に引用符を使わない）\n\n関数(データフレーム, 他の設定) ➞ データフレーム"
+  },
+  {
+    "objectID": "day4/index.html#データの整理列名を整える",
+    "href": "day4/index.html#データの整理列名を整える",
+    "title": "情報処理演習",
+    "section": "データの整理：列名を整える",
+    "text": "データの整理：列名を整える\n\nデータフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：\n\n打ちやすい\n覚えやすい\n\n`Full Name`は打ちづらいです。`もありますし、スペースも入っています。\nおすすめ：小文字のみを使用し、スペースの代わりに_を使う"
+  },
+  {
+    "objectID": "day4/index.html#renameで列名を変える",
+    "href": "day4/index.html#renameで列名を変える",
+    "title": "情報処理演習",
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\nrename()は列名を変更する関数です。\n\n新しい名前 = 前の名前と指定します。\n\n\n\nrename(students_raw, full_name = `Full Name`)\n\n# A tibble: 6 × 5\n  `Student ID` full_name        favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-①",
+    "href": "day4/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\n`Student ID`という列を使いやすい列名に変更してください。"
+  },
+  {
+    "objectID": "day4/index.html#renameで列名を変える-1",
+    "href": "day4/index.html#renameで列名を変える-1",
+    "title": "情報処理演習",
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\n複数の列名を変更する際は、コンマで区切って書きます。"
+  },
+  {
+    "objectID": "day4/index.html#一気に列名を扱いやすくする",
+    "href": "day4/index.html#一気に列名を扱いやすくする",
+    "title": "情報処理演習",
+    "section": "一気に列名を扱いやすくする",
+    "text": "一気に列名を扱いやすくする\n\n名前を一つずつ変更するのは手間がかかります。\nclean_names()という関数が列名を一気にきれいにしてくれます。\n\nこの関数はtidyverseに含まれていないパッケージ、janitorに入っているため、まずはjanitorをロードする必要があります。"
+  },
+  {
+    "objectID": "day4/index.html#mutateで列の中身を変える",
+    "href": "day4/index.html#mutateで列の中身を変える",
+    "title": "情報処理演習",
+    "section": "mutate()で列の中身を変える",
+    "text": "mutate()で列の中身を変える\n\n「mutate」は「変化させる」という意味です。\nageは数字のはずですが、文字として読み込まれてしまいました。修正しましょう。\n\n\nmutate(students_renamed, age = parse_number(age))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n4          4 Leon Rossini     Anchovies          Lunch only             NA\n5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA\n6          6 Güvenç Attila    Ice cream          Lunch only              6"
+  },
+  {
+    "objectID": "day4/index.html#きれいなデータを保存する",
+    "href": "day4/index.html#きれいなデータを保存する",
+    "title": "情報処理演習",
+    "section": "きれいなデータを保存する",
+    "text": "きれいなデータを保存する\n\nこれでデータが（ほとんど）整いましたので、studentsとして保存します。\n\n\n\n\n\nstudents.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\nstudents_raw &lt;- read_csv(\"data/students.csv\")\n\n# Rename columns\nstudents_renamed &lt;- clean_names(students_raw)\n\n# Convert age to numeric\nstudents &lt;- mutate(students_renamed, age = parse_number(age))"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える",
+    "href": "day4/index.html#arrangeで行を並び替える",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\narrange()は行の順序を並び替える関数です。\n\n食事プラン（「meal_plan」）の順に並び替えましょう。"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える-1",
+    "href": "day4/index.html#arrangeで行を並び替える-1",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\nデフォルト設定では、arrange()は小さい方から大きい方へと並び替えます。\n逆の順にするには、列名をdesc()の中に書きます。\n\n\narrange(students, desc(meal_plan))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          4 Leon Rossini     Anchovies          Lunch only             NA\n4          6 Güvenç Attila    Ice cream          Lunch only              6\n5          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-②",
+    "href": "day4/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\n学生の名前の順に並び替えてください。"
+  },
+  {
+    "objectID": "day4/index.html#filterで行を絞り込む",
+    "href": "day4/index.html#filterで行を絞り込む",
+    "title": "情報処理演習",
+    "section": "filter()で行を絞り込む",
+    "text": "filter()で行を絞り込む\n\n生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。\nfilter()で条件を設定し、その行だけに絞り込みます。"
+  },
+  {
+    "objectID": "day4/index.html#データの比較",
+    "href": "day4/index.html#データの比較",
+    "title": "情報処理演習",
+    "section": "データの比較",
+    "text": "データの比較\nデータの比較を行う主な記号：\n\n&gt; より大きい\n&lt; より小さい\n== イコール（=ではありません！）\n| あるいは\n& そして（複数条件の指定）\n\n比較の記号のアウトプットは論理ベクトルです。"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-③",
+    "href": "day4/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\nstudentsの中から食事プランが\"Lunch only\"になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。"
+  },
+  {
+    "objectID": "day4/index.html#パイプについて",
+    "href": "day4/index.html#パイプについて",
+    "title": "情報処理演習",
+    "section": "パイプについて",
+    "text": "パイプについて\n\nチャレンジ ③では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。\n\n\nstudents_lunch &lt;- filter(students, meal_plan == \"Lunch only\")\narrange(students_lunch, desc(full_name))\n\n# A tibble: 4 × 5\n  student_id full_name      favourite_food     meal_plan    age\n       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;\n1          1 Sunil Huffmann Strawberry yoghurt Lunch only     4\n2          4 Leon Rossini   Anchovies          Lunch only    NA\n3          6 Güvenç Attila  Ice cream          Lunch only     6\n4          2 Barclay Lynn   French fries       Lunch only     5"
+  },
+  {
+    "objectID": "day4/index.html#パイプについて-1",
+    "href": "day4/index.html#パイプについて-1",
+    "title": "情報処理演習",
+    "section": "パイプについて",
+    "text": "パイプについて\n\nこれは解析が短い場合は大丈夫かもしれませんが、長くなると大変です。\nパイプというものがこの問題を解決します。"
+  },
+  {
+    "objectID": "day4/index.html#パイプの使い方",
+    "href": "day4/index.html#パイプの使い方",
+    "title": "情報処理演習",
+    "section": "パイプの使い方",
+    "text": "パイプの使い方\n\nまずはパイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書きましたが、最近のRでは|&gt;と書きます。\n\narrange(データ, 列名)というような書き方をしてきましたが、パイプを使うとこのように書きます：\n\nデータ |&gt; arrange(列名)"
+  },
+  {
+    "objectID": "day4/index.html#欠測データについて",
+    "href": "day4/index.html#欠測データについて",
+    "title": "情報処理演習",
+    "section": "欠測データについて",
+    "text": "欠測データについて\n\nageにはNAという値が入っています。\nNAは英語で「Not Applicable」（「該当しない」）という意味です。\n\nつまり、そのデータは該当しないか、あるいは欠損しているという意味です。\nageの場合は何らかの理由でその人の年齢が分からないということです。\n（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）"
+  },
+  {
+    "objectID": "day4/index.html#欠測データを省く方法",
+    "href": "day4/index.html#欠測データを省く方法",
+    "title": "情報処理演習",
+    "section": "欠測データを省く方法",
+    "text": "欠測データを省く方法\n\n欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれを除外する必要があります。\nis.na()関数はその値がNAであるかどうかを教えてくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-④",
+    "href": "day4/index.html#チャレンジ-④",
+    "title": "情報処理演習",
+    "section": "チャレンジ ④",
+    "text": "チャレンジ ④\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
+  },
+  {
+    "objectID": "day4/index.html#まとめ",
+    "href": "day4/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nデータを読み込んだ後、整える必要があります。\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。\n|&gt;（パイプ）を使うと、複数の操作を連続して行うことができます。"
   },
   {
     "objectID": "day2/index.html#クイズ",
