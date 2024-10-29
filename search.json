@@ -221,7 +221,7 @@
     "href": "day1/index.html#エラーについて",
     "title": "情報処理演習",
     "section": "エラーについて",
-    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError in parse(text = input): &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
+    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError: &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
   },
   {
     "objectID": "day1/index.html#エラーについて-1",
@@ -621,6 +621,20 @@
     "title": "情報処理演習",
     "section": "他のデータ型",
     "text": "他のデータ型\n\ncol_character() 文字\ncol_logical() 論理\ncol_double() 数字"
+  },
+  {
+    "objectID": "day4/index.html#連絡事項",
+    "href": "day4/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。\n宿題のウエブサイトの容量を増やしました。\n宿題のパッケージをインストールするコードをアップデートしました。"
+  },
+  {
+    "objectID": "day4/index.html#クイズ",
+    "href": "day4/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
   },
   {
     "objectID": "day4/index.html#データの整理data-wrangling",
