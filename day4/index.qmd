@@ -11,6 +11,29 @@ execute:
 
 <https://data-science-chiba-2024.github.io/day4/>
 
+## 連絡事項
+
+- 第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。
+
+- 宿題のウエブサイトの容量を増やしました。
+
+- 宿題のパッケージを[インストールするコード](https://joelnitta.github.io/joho-shori/day3/#/0/7)をアップデートしました。
+
+## クイズ
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/joho2024-qr-code.png)
+:::
+
+::: {.column width="50%"}
+**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
+:::
+
+::::
+
+または、[gosocrative.com](https://gosocrative.com) で joho2024を入力
 
 ## データの整理（Data Wrangling）
 
