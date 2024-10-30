@@ -1,0 +1,234 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 第5回：データの整理（2）
+
+<https://data-science-chiba-2024.github.io/day5/>
+
+## クイズ
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/joho2024-qr-code.png)
+:::
+
+::: {.column width="50%"}
+**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
+
+クイズの間、スマートフォンを利用してクイズに答えてください。他の行為（スライドを見ることや、RStudioの操作など）は**禁止**です。
+:::
+
+::::
+
+または、[gosocrative.com](https://gosocrative.com) で joho2024を入力
+
+## おさらい
+
+- 前回は以下のデータ処理に必要な関数を学びました：
+  - `rename()`は列の名前を変更する。
+  - `arrange()`は行を並び替える。
+  - `mutate()`は列の中身を変える。
+  - `filter()`は行を絞り込む。
+
+## 準備
+
+- 前回休んでいた方は、Moodleから第5回にある`students_analysis.zip`をダウンロードして、デスクトップで開いてください。
+
+- デスクトップにある`students_analysis`フォルダーの中に入っている`students_analysis.Rproj`をダブルクリックすることによって、プロジェクトを開いてください。
+
+- `students.R`のコードを実行することによってデータを読み込んで、整えてください。
+
+---
+
+```{r}
+#| filename: students.R
+#| eval: false
+library(tidyverse)
+library(janitor)
+
+# Load raw data
+students_raw <- read_csv("data/students.csv")
+
+# Rename columns
+students_renamed <- clean_names(students_raw)
+
+# Convert age to numeric
+students <- mutate(students_renamed, age = parse_number(age))
+```
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(janitor)
+
+# Load raw data
+students_raw <- read_csv("../data/students.csv")
+
+# Rename columns
+students_renamed <- clean_names(students_raw)
+
+# Convert age to numeric
+students <- mutate(students_renamed, age = parse_number(age))
+```
+
+## チャレンジ ①
+
+早速チャレンジです。
+
+`students`の中から食事プランが`"Lunch only"`になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。
+
+## パイプについて
+
+- チャレンジ ①では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+#| eval: false
+#| include: false
+students_lunch <- filter(students, meal_plan == "Lunch only")
+arrange(students_lunch, desc(full_name))
+``` 
+
+## パイプについて
+
+- これは解析が短い場合は大丈夫かもしれませんが、長くなると**大変です**。
+
+- **パイプ**というものがこの問題を解決します。
+
+## パイプの使い方
+
+- まずはパイプ（`|>`）の基本的な使い方を覚えましょう。
+  - 以前は`%>%`と書きましたが、最近のRでは`|>`と書きます。
+
+- `arrange(データ, 列名)`というような書き方をしてきましたが、パイプを使うとこのように書きます：
+
+`データ |> arrange(列名)`
+
+---
+
+- つまり、`|>`は**左側のものを右側へ渡す**機能があります。
+
+使ってみましょう。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |> arrange(meal_plan)
+``` 
+
+---
+
+- 繰り返しになりますが、
+
+`students |> arrange(meal_plan)`
+
+と
+
+`arrange(students, meal_plan)`
+
+は**同じです**。
+
+---
+
+- パイプの便利な点は、**途中結果を保存することなく**解析のステップを次から次へと進めることができる点です。
+
+::: {.medsmall}
+
+```{r}
+students |> filter(meal_plan == "Lunch only") |> arrange(full_name)
+``` 
+
+:::
+
+---
+
+- Rは改行があっても構いませんので、改行を入れるともっと読みやすくなります。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(meal_plan == "Lunch only") |>
+  arrange(full_name)
+``` 
+
+---
+
+```{r}
+#| eval: false
+students |>
+  filter(meal_plan == "Lunch only") |>
+  arrange(full_name)
+``` 
+
+`|>` を見たら、「それから」と読みます：
+
+*`students`から始めて、**それから**食事プランが"Lunch only"となっている学生に絞り込んで、**それから**学生の名前順に並び替える*
+
+---
+
+- これからは基本的にパイプを使ってコードを書きます。
+  - 最初は違和感があるかもしれませんが、すぐに慣れるでしょう。
+
+## 欠測データについて
+
+- `age`には`NA`という値が入っています。
+
+- `NA`は英語で「Not Applicable」（「該当しない」）という意味です。
+  - つまり、そのデータは該当しないか、あるいは欠損しているという意味です。
+  - `age`の場合は何らかの理由でその人の年齢が分からないということです。
+  - （一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）
+
+## 欠測データを省く方法
+
+- 欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。
+  - 解析を行う前にそれを除外する必要があります。
+  - `is.na()`関数はその値が`NA`であるかどうかを教えてくれます。
+
+- 例えば：
+
+```{r}
+is.na(c(1, 2, NA, 3))
+```
+
+---
+
+では、使ってみましょう。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(is.na(age))
+```
+
+あらら。これはちょっとまずいですね。欠測データ**だけ**に絞られてしまいました。
+
+私たちが欲しいのは、その**逆**です。
+
+---
+
+- `!`は論理ベクトルを**反転**させます。
+  - つまり、`TRUE`を`FALSE`に、`FALSE`を`TRUE`にします。「否」と読めば良いです。
+
+```{r}
+!is.na(c(1, 2, NA, 3))
+```
+
+---
+
+- `!`を使って`NA`**ではない**データだけに絞り込みましょう。
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  filter(!is.na(age))
+```
+
+## チャレンジ ②
+
+`students`から`age`が`NA`になっている行を除外してから、`favorite_food`の順で並び替えてください。（パイプを使ってください）
