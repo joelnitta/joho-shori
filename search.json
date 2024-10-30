@@ -221,7 +221,7 @@
     "href": "day1/index.html#エラーについて",
     "title": "情報処理演習",
     "section": "エラーについて",
-    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError: &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
+    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError in parse(text = input): &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
   },
   {
     "objectID": "day1/index.html#エラーについて-1",
@@ -376,6 +376,349 @@
     "title": "情報処理演習",
     "section": "リンク",
     "text": "リンク\n\nシラバス\nMoodle"
+  },
+  {
+    "objectID": "day2/index.html#クイズ",
+    "href": "day2/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意：質問は複数選択です。すべての正しい答えを選択してください。\n\n\nあるいは、gosocrative.com で joho2024を入力"
+  },
+  {
+    "objectID": "day2/index.html#アウトライン",
+    "href": "day2/index.html#アウトライン",
+    "title": "情報処理演習",
+    "section": "アウトライン",
+    "text": "アウトライン\n\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
+  },
+  {
+    "objectID": "day2/index.html#コメントについて",
+    "href": "day2/index.html#コメントについて",
+    "title": "情報処理演習",
+    "section": "コメントについて",
+    "text": "コメントについて\n\n\n#の後に書いた文は「コメント」です\nRはコメントを無視するので、何を書いてもエラーになりません\n自分用のメモとして使う\n\n日本語で書いても大丈夫\n\n\n\n# これはコメントです\n# 3 % 9\n3 * 9\n\n[1] 27"
+  },
+  {
+    "objectID": "day2/index.html#宿題のした線について",
+    "href": "day2/index.html#宿題のした線について",
+    "title": "情報処理演習",
+    "section": "宿題のした線について",
+    "text": "宿題のした線について\n宿題にこのようなところがあります：\n\n# 計算\ny &lt;- ____\n# 計算結果の確認\ny\n\n\n____を消してから、コードを書いてください\n\n下線が残っているとエラーになってしまいます"
+  },
+  {
+    "objectID": "day2/index.html#ベクトルについて",
+    "href": "day2/index.html#ベクトルについて",
+    "title": "情報処理演習",
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\n今までは、数を一つずつ扱ってきた（4 + 5 など）\nしかし、Rでは一気に複数の数を扱うことができます\n例えば、1から10までの数：\n\n\n1:10\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nこのようなデータの集まりを「ベクトル」と呼びます\n\nベクトル：一連のデータの集まり"
+  },
+  {
+    "objectID": "day2/index.html#ベクトルについて-1",
+    "href": "day2/index.html#ベクトルについて-1",
+    "title": "情報処理演習",
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\n1から10までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます\n例えば、一気に全ての値を2で割る：\n\n\nx &lt;- 1:10\n\nx / 2\n\n [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0"
+  },
+  {
+    "objectID": "day2/index.html#ベクトルについて-2",
+    "href": "day2/index.html#ベクトルについて-2",
+    "title": "情報処理演習",
+    "section": "ベクトルについて",
+    "text": "ベクトルについて\n\nもう一つのベクトルの作り方があります：c\n\nc は combine（結合する）という意味\n\n\n\nc(1, 2, 3)\n\n[1] 1 2 3"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ",
+    "href": "day2/index.html#チャレンジ",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\n40から50までのベクトルを作る\n40, 42, 46 を含むベクトルを作る"
+  },
+  {
+    "objectID": "day2/index.html#データ型について",
+    "href": "day2/index.html#データ型について",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\n今までは数（数字）しか扱ってきませんでしたが、Rには他のデータの種類もあります\n\nデータ型と呼びます\n\n\n\n\n文字データ：\n\n\nmenu &lt;- c(\"ramen\", \"edamame\", \"gyoza\")\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\n\n\n文字は必ず \" で囲まないといけません"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-1",
+    "href": "day2/index.html#データ型について-1",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\n論理データ：\n\n\ncoin_flip &lt;- c(TRUE, FALSE, TRUE)\ncoin_flip\n\n[1]  TRUE FALSE  TRUE\n\n\n\n論理データは TRUE または FALSE しかありません。また、 \" を使いません。"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-2",
+    "href": "day2/index.html#データ型について-2",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\nあるベクトルには一つのデータ型しか持てません。\n\n異なるデータ型を結合すると、強制的に同じになります。\n\n\n\nc(\"ramen\", \"gyoza\", 10, 11)\n\n[1] \"ramen\" \"gyoza\" \"10\"    \"11\"   \n\n\n\n\" は文字を表します。つまり、Rにとって \"10\" は数ではなく、文字です。"
+  },
+  {
+    "objectID": "day2/index.html#データ型について-3",
+    "href": "day2/index.html#データ型について-3",
+    "title": "情報処理演習",
+    "section": "データ型について",
+    "text": "データ型について\n\nデータ型を確認したい時には typeof() を使います\n\n\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\ntypeof(menu)\n\n[1] \"character\""
+  },
+  {
+    "objectID": "day2/index.html#データ型が大事な理由",
+    "href": "day2/index.html#データ型が大事な理由",
+    "title": "情報処理演習",
+    "section": "データ型が大事な理由",
+    "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in 10 + \"20\": non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ-1",
+    "href": "day2/index.html#チャレンジ-1",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n以下のコードを実行すると、結果のデータ型はどれでしょうか？\n\nc(19, 21, 40, TRUE, TRUE, FALSE)\n\n\n\nc(menu, ages)"
+  },
+  {
+    "objectID": "day2/index.html#関数とは",
+    "href": "day2/index.html#関数とは",
+    "title": "情報処理演習",
+    "section": "関数とは",
+    "text": "関数とは\n何かの値（インプット）を受けて、処理し、計算結果（アウトプット）を返すもの\n\n\n\nhttps://manamina.valuesccg.com/articles/756"
+  },
+  {
+    "objectID": "day2/index.html#関数とは-1",
+    "href": "day2/index.html#関数とは-1",
+    "title": "情報処理演習",
+    "section": "関数とは",
+    "text": "関数とは\n関数の書き方：\n\n関数名(入力)\n\n必ず関数名を書いた後に、入力を括弧の中に書きます\n\n\n例えば、sum() は数の合計を計算する関数です：\n\nages\n\n[1] 19 40 21\n\nsum(ages)\n\n[1] 80"
+  },
+  {
+    "objectID": "day2/index.html#関数とは-2",
+    "href": "day2/index.html#関数とは-2",
+    "title": "情報処理演習",
+    "section": "関数とは",
+    "text": "関数とは\n\nround() は少数を四捨五入する関数です：\n\n\npi\n\n[1] 3.141593\n\nround(pi)\n\n[1] 3\n\n\n\n（Rには pi 𝜋 が元々含まれています）"
+  },
+  {
+    "objectID": "day2/index.html#ヘルプファイル",
+    "href": "day2/index.html#ヘルプファイル",
+    "title": "情報処理演習",
+    "section": "ヘルプファイル",
+    "text": "ヘルプファイル\n関数の使い方を確認したい時は ?関数名 と入力して、ヘルプファイルを参照します\n\n?round"
+  },
+  {
+    "objectID": "day2/index.html#引数について",
+    "href": "day2/index.html#引数について",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\n\nヘルプファイルの中に、こう書いてあります：\n\n\nround(x, digits = 0, ...)\n\n\nx と digits は 引数 の名前です\n\n引数とは、関数の 入力や設定 のことです\n\nx: 四捨五入する数値\ndigits: 残す小数の桁数の指定\n\n引数が複数ある場合は、必ず , で区切ります\n(... は上級な話なので、この授業では扱いません)"
+  },
+  {
+    "objectID": "day2/index.html#引数について-1",
+    "href": "day2/index.html#引数について-1",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\nつまり、さっきは\n\nround(pi)\n\nと書きましたが、\n\nround(x = pi)\n\n[1] 3\n\n\nとでも書けるわけです。"
+  },
+  {
+    "objectID": "day2/index.html#引数について-2",
+    "href": "day2/index.html#引数について-2",
+    "title": "情報処理演習",
+    "section": "引数について",
+    "text": "引数について\n\nヘルプファイルでは、digits = 0 と書いてあります\n\nこれは、デフォルトの設定では残す小数の桁数はゼロ、という意味です\n\n\n\nround(x = pi, digits = 0)\n\n[1] 3"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ-2",
+    "href": "day2/index.html#チャレンジ-2",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\nsort() は入力を並び替える関数です。\n\n引数は x（ベクトル）と decreasing（論理）\n\n\n今まで扱ったデータを以下のように並び替えてください：\n\nages を小さい順から大きい順に\nages を大きい順から小さい順に\nmenu をAからZまでの順に\nmenu をZからAまでの順に"
+  },
+  {
+    "objectID": "day2/index.html#パッケージとは",
+    "href": "day2/index.html#パッケージとは",
+    "title": "情報処理演習",
+    "section": "パッケージとは",
+    "text": "パッケージとは\n\nRパッケージとは、Rができることを大幅に増やす「追加」のソフト（関数のまとまり）です\n\n現在、2万近くのパッケージがあります！"
+  },
+  {
+    "objectID": "day2/index.html#パッケージのインストール",
+    "href": "day2/index.html#パッケージのインストール",
+    "title": "情報処理演習",
+    "section": "パッケージのインストール",
+    "text": "パッケージのインストール\nRパッケージのインストールを行うには、install.packages() を使います：\n\ninstall.packages(\"ggplot2\")"
+  },
+  {
+    "objectID": "day2/index.html#パッケージのインストール-1",
+    "href": "day2/index.html#パッケージのインストール-1",
+    "title": "情報処理演習",
+    "section": "パッケージのインストール",
+    "text": "パッケージのインストール\n\n一度インストールしたら、次回からはインストールする必要はありません*\nパッケージをアップデートしたい時に再インストールすれば良い\nパッケージのインストールしただけでは、まだ使える状態になっていません"
+  },
+  {
+    "objectID": "day2/index.html#パッケージのロード",
+    "href": "day2/index.html#パッケージのロード",
+    "title": "情報処理演習",
+    "section": "パッケージのロード",
+    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするためにロードする必要があります\n\nlibrary() 関数でロードします：\n\nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "day2/index.html#install.packagesとlibraryの違い",
+    "href": "day2/index.html#install.packagesとlibraryの違い",
+    "title": "情報処理演習",
+    "section": "install.packages()とlibrary()の違い",
+    "text": "install.packages()とlibrary()の違い\n\ninstall.packages() は一度だけで良いです（パソコンにパッケージをダウンロードします）*\nlibrary() はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）\ninstall.packages() はパッケージ名を引用符で囲む\nlibrary はパッケージ名を引用符で囲まない"
+  },
+  {
+    "objectID": "day2/index.html#チャレンジ-3",
+    "href": "day2/index.html#チャレンジ-3",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n\nemojiというパッケージをインストールしてから、ロードしてください\nemoji(\"smile\")というコマンドを実行してください"
+  },
+  {
+    "objectID": "day2/index.html#tidyverse",
+    "href": "day2/index.html#tidyverse",
+    "title": "情報処理演習",
+    "section": "tidyverse",
+    "text": "tidyverse\n\ntidyverse はデータサイエンス用パッケージの集まりです\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールとロードをしましょう。"
+  },
+  {
+    "objectID": "day2/index.html#情報処理演習室の注意点",
+    "href": "day2/index.html#情報処理演習室の注意点",
+    "title": "情報処理演習",
+    "section": "情報処理演習室の注意点",
+    "text": "情報処理演習室の注意点\n\ninstall.packages() は一度だけで良い\n\nと説明しましたが、この教室のパソコンからログアウトするとパッケージを含むあなたのデータが全て消去されてしまいます。\nそのため、この教室のパソコンに新しくインストールするパッケージは毎回インストールが必要です。"
+  },
+  {
+    "objectID": "day2/index.html#連絡事項",
+    "href": "day2/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n来週（10月15日）は休みです\n次回は10月22日です"
+  },
+  {
+    "objectID": "day4/index.html#連絡事項",
+    "href": "day4/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。\n宿題のウエブサイトの容量を増やしました。\n宿題のパッケージをインストールするコードをアップデートしました。"
+  },
+  {
+    "objectID": "day4/index.html#クイズ",
+    "href": "day4/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+  },
+  {
+    "objectID": "day4/index.html#データの整理data-wrangling",
+    "href": "day4/index.html#データの整理data-wrangling",
+    "title": "情報処理演習",
+    "section": "データの整理（Data Wrangling）",
+    "text": "データの整理（Data Wrangling）\n\nデータが手に入ると、まだ解析に使えない状態であることが多いです。\nデータの整理（「wrangling」）は解析に使えるように整えるプロセスです。\n\n元々はカウボーイが牛を扱う技術から来ています。"
+  },
+  {
+    "objectID": "day4/index.html#準備",
+    "href": "day4/index.html#準備",
+    "title": "情報処理演習",
+    "section": "準備",
+    "text": "準備\n\nstudents_analysisプロジェクトを再度開きます。\n\n\n\n新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。\n先のスライドで説明したように、データ解析を行う前にデータの整理が必要なケースが多いです。\n今回のstudents.csvに入っているデータもその一例です。"
+  },
+  {
+    "objectID": "day4/index.html#データ整理の関数",
+    "href": "day4/index.html#データ整理の関数",
+    "title": "情報処理演習",
+    "section": "データ整理の関数",
+    "text": "データ整理の関数\nこれから学ぶ関数の共通点：\n\nデータフレームを入力とし、データフレームを返す\n最初の引数が入力のデータフレーム\n他の引数は詳細（引数名に引用符を使わない）\n\n関数(データフレーム, 他の設定) ➞ データフレーム"
+  },
+  {
+    "objectID": "day4/index.html#データの整理列名を整える",
+    "href": "day4/index.html#データの整理列名を整える",
+    "title": "情報処理演習",
+    "section": "データの整理：列名を整える",
+    "text": "データの整理：列名を整える\n\nデータフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：\n\n打ちやすい\n覚えやすい\n\n`Full Name`は打ちづらいです。`もありますし、スペースも入っています。\nおすすめ：小文字のみを使用し、スペースの代わりに_を使う"
+  },
+  {
+    "objectID": "day4/index.html#renameで列名を変える",
+    "href": "day4/index.html#renameで列名を変える",
+    "title": "情報処理演習",
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\nrename()は列名を変更する関数です。\n\n新しい名前 = 前の名前と指定します。\n\n\n\nrename(students_raw, full_name = `Full Name`)\n\n# A tibble: 6 × 5\n  `Student ID` full_name        favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-①",
+    "href": "day4/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\n`Student ID`という列を使いやすい列名に変更してください。"
+  },
+  {
+    "objectID": "day4/index.html#renameで列名を変える-1",
+    "href": "day4/index.html#renameで列名を変える-1",
+    "title": "情報処理演習",
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\n複数の列名を変更する際は、コンマで区切って書きます。"
+  },
+  {
+    "objectID": "day4/index.html#一気に列名を扱いやすくする",
+    "href": "day4/index.html#一気に列名を扱いやすくする",
+    "title": "情報処理演習",
+    "section": "一気に列名を扱いやすくする",
+    "text": "一気に列名を扱いやすくする\n\n名前を一つずつ変更するのは手間がかかります。\nclean_names()という関数が列名を一気にきれいにしてくれます。\n\nこの関数はtidyverseに含まれていないパッケージ、janitorに入っているため、まずはjanitorをロードする必要があります。"
+  },
+  {
+    "objectID": "day4/index.html#mutateで列の中身を変える",
+    "href": "day4/index.html#mutateで列の中身を変える",
+    "title": "情報処理演習",
+    "section": "mutate()で列の中身を変える",
+    "text": "mutate()で列の中身を変える\n\n「mutate」は「変化させる」という意味です。\nageは数字のはずですが、文字として読み込まれてしまいました。修正しましょう。\n\n\nmutate(students_renamed, age = parse_number(age))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n4          4 Leon Rossini     Anchovies          Lunch only             NA\n5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA\n6          6 Güvenç Attila    Ice cream          Lunch only              6"
+  },
+  {
+    "objectID": "day4/index.html#きれいなデータを保存する",
+    "href": "day4/index.html#きれいなデータを保存する",
+    "title": "情報処理演習",
+    "section": "きれいなデータを保存する",
+    "text": "きれいなデータを保存する\n\nこれでデータが（ほとんど）整いましたので、studentsとして保存します。\n\n\n\n\n\nstudents.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\nstudents_raw &lt;- read_csv(\"data/students.csv\")\n\n# Rename columns\nstudents_renamed &lt;- clean_names(students_raw)\n\n# Convert age to numeric\nstudents &lt;- mutate(students_renamed, age = parse_number(age))"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える",
+    "href": "day4/index.html#arrangeで行を並び替える",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\narrange()は行の順序を並び替える関数です。\n\n食事プラン（「meal_plan」）の順に並び替えましょう。"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える-1",
+    "href": "day4/index.html#arrangeで行を並び替える-1",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\nデフォルト設定では、arrange()は小さい方から大きい方へと並び替えます。\n逆の順にするには、列名をdesc()の中に書きます。\n\n\narrange(students, desc(meal_plan))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          4 Leon Rossini     Anchovies          Lunch only             NA\n4          6 Güvenç Attila    Ice cream          Lunch only              6\n5          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-②",
+    "href": "day4/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\n学生の名前の順に並び替えてください。"
+  },
+  {
+    "objectID": "day4/index.html#filterで行を絞り込む",
+    "href": "day4/index.html#filterで行を絞り込む",
+    "title": "情報処理演習",
+    "section": "filter()で行を絞り込む",
+    "text": "filter()で行を絞り込む\n\n生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。\nfilter()で条件を設定し、その行だけに絞り込みます。"
+  },
+  {
+    "objectID": "day4/index.html#データの比較",
+    "href": "day4/index.html#データの比較",
+    "title": "情報処理演習",
+    "section": "データの比較",
+    "text": "データの比較\nデータの比較を行う主な記号：\n\n&gt; より大きい\n&lt; より小さい\n== イコール（=ではありません！）\n| あるいは\n& そして（複数条件の指定）\n\n比較の記号のアウトプットは論理ベクトルです。"
+  },
+  {
+    "objectID": "day4/index.html#まとめ",
+    "href": "day4/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nデータを読み込んだ後、整える必要があります。\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。"
   },
   {
     "objectID": "day3/index.html#連絡事項",
@@ -623,396 +966,74 @@
     "text": "他のデータ型\n\ncol_character() 文字\ncol_logical() 論理\ncol_double() 数字"
   },
   {
-    "objectID": "day4/index.html#連絡事項",
-    "href": "day4/index.html#連絡事項",
-    "title": "情報処理演習",
-    "section": "連絡事項",
-    "text": "連絡事項\n\n第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。\n宿題のウエブサイトの容量を増やしました。\n宿題のパッケージをインストールするコードをアップデートしました。"
-  },
-  {
-    "objectID": "day4/index.html#クイズ",
-    "href": "day4/index.html#クイズ",
+    "objectID": "day5/index.html#クイズ",
+    "href": "day5/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\nクイズの間、スマートフォンを利用してクイズに答えてください。他の行為（スライドを見ることや、RStudioの操作など）は禁止です。\n\n\nまたは、gosocrative.com で joho2024を入力"
   },
   {
-    "objectID": "day4/index.html#データの整理data-wrangling",
-    "href": "day4/index.html#データの整理data-wrangling",
+    "objectID": "day5/index.html#おさらい",
+    "href": "day5/index.html#おさらい",
     "title": "情報処理演習",
-    "section": "データの整理（Data Wrangling）",
-    "text": "データの整理（Data Wrangling）\n\nデータが手に入ると、まだ解析に使えない状態であることが多いです。\nデータの整理（「wrangling」）は解析に使えるように整えるプロセスです。\n\n元々はカウボーイが牛を扱う技術から来ています。"
+    "section": "おさらい",
+    "text": "おさらい\n\n前回は以下のデータ処理に必要な関数を学びました：\n\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。"
   },
   {
-    "objectID": "day4/index.html#準備",
-    "href": "day4/index.html#準備",
+    "objectID": "day5/index.html#準備",
+    "href": "day5/index.html#準備",
     "title": "情報処理演習",
     "section": "準備",
-    "text": "準備\n\nstudents_analysisプロジェクトを再度開きます。\n\n\n\n新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。\n先のスライドで説明したように、データ解析を行う前にデータの整理が必要なケースが多いです。\n今回のstudents.csvに入っているデータもその一例です。"
+    "text": "準備\n\n前回休んでいた方は、Moodleから第5回にあるstudents_analysis.zipをダウンロードして、デスクトップで開いてください。\nデスクトップにあるstudents_analysisフォルダーの中に入っているstudents_analysis.Rprojをダブルクリックすることによって、プロジェクトを開いてください。\nstudents.Rのコードを実行することによってデータを読み込んで、整えてください。"
   },
   {
-    "objectID": "day4/index.html#データ整理の関数",
-    "href": "day4/index.html#データ整理の関数",
-    "title": "情報処理演習",
-    "section": "データ整理の関数",
-    "text": "データ整理の関数\nこれから学ぶ関数の共通点：\n\nデータフレームを入力とし、データフレームを返す\n最初の引数が入力のデータフレーム\n他の引数は詳細（引数名に引用符を使わない）\n\n関数(データフレーム, 他の設定) ➞ データフレーム"
-  },
-  {
-    "objectID": "day4/index.html#データの整理列名を整える",
-    "href": "day4/index.html#データの整理列名を整える",
-    "title": "情報処理演習",
-    "section": "データの整理：列名を整える",
-    "text": "データの整理：列名を整える\n\nデータフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：\n\n打ちやすい\n覚えやすい\n\n`Full Name`は打ちづらいです。`もありますし、スペースも入っています。\nおすすめ：小文字のみを使用し、スペースの代わりに_を使う"
-  },
-  {
-    "objectID": "day4/index.html#renameで列名を変える",
-    "href": "day4/index.html#renameで列名を変える",
-    "title": "情報処理演習",
-    "section": "rename()で列名を変える",
-    "text": "rename()で列名を変える\n\nrename()は列名を変更する関数です。\n\n新しい名前 = 前の名前と指定します。\n\n\n\nrename(students_raw, full_name = `Full Name`)\n\n# A tibble: 6 × 5\n  `Student ID` full_name        favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
-  },
-  {
-    "objectID": "day4/index.html#チャレンジ-①",
-    "href": "day4/index.html#チャレンジ-①",
+    "objectID": "day5/index.html#チャレンジ-①",
+    "href": "day5/index.html#チャレンジ-①",
     "title": "情報処理演習",
     "section": "チャレンジ ①",
-    "text": "チャレンジ ①\n`Student ID`という列を使いやすい列名に変更してください。"
+    "text": "チャレンジ ①\n早速チャレンジです。\nstudentsの中から食事プランが\"Lunch only\"になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。"
   },
   {
-    "objectID": "day4/index.html#renameで列名を変える-1",
-    "href": "day4/index.html#renameで列名を変える-1",
-    "title": "情報処理演習",
-    "section": "rename()で列名を変える",
-    "text": "rename()で列名を変える\n\n複数の列名を変更する際は、コンマで区切って書きます。"
-  },
-  {
-    "objectID": "day4/index.html#一気に列名を扱いやすくする",
-    "href": "day4/index.html#一気に列名を扱いやすくする",
-    "title": "情報処理演習",
-    "section": "一気に列名を扱いやすくする",
-    "text": "一気に列名を扱いやすくする\n\n名前を一つずつ変更するのは手間がかかります。\nclean_names()という関数が列名を一気にきれいにしてくれます。\n\nこの関数はtidyverseに含まれていないパッケージ、janitorに入っているため、まずはjanitorをロードする必要があります。"
-  },
-  {
-    "objectID": "day4/index.html#mutateで列の中身を変える",
-    "href": "day4/index.html#mutateで列の中身を変える",
-    "title": "情報処理演習",
-    "section": "mutate()で列の中身を変える",
-    "text": "mutate()で列の中身を変える\n\n「mutate」は「変化させる」という意味です。\nageは数字のはずですが、文字として読み込まれてしまいました。修正しましょう。\n\n\nmutate(students_renamed, age = parse_number(age))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n4          4 Leon Rossini     Anchovies          Lunch only             NA\n5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA\n6          6 Güvenç Attila    Ice cream          Lunch only              6"
-  },
-  {
-    "objectID": "day4/index.html#きれいなデータを保存する",
-    "href": "day4/index.html#きれいなデータを保存する",
-    "title": "情報処理演習",
-    "section": "きれいなデータを保存する",
-    "text": "きれいなデータを保存する\n\nこれでデータが（ほとんど）整いましたので、studentsとして保存します。\n\n\n\n\n\nstudents.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\nstudents_raw &lt;- read_csv(\"data/students.csv\")\n\n# Rename columns\nstudents_renamed &lt;- clean_names(students_raw)\n\n# Convert age to numeric\nstudents &lt;- mutate(students_renamed, age = parse_number(age))"
-  },
-  {
-    "objectID": "day4/index.html#arrangeで行を並び替える",
-    "href": "day4/index.html#arrangeで行を並び替える",
-    "title": "情報処理演習",
-    "section": "arrange()で行を並び替える",
-    "text": "arrange()で行を並び替える\n\narrange()は行の順序を並び替える関数です。\n\n食事プラン（「meal_plan」）の順に並び替えましょう。"
-  },
-  {
-    "objectID": "day4/index.html#arrangeで行を並び替える-1",
-    "href": "day4/index.html#arrangeで行を並び替える-1",
-    "title": "情報処理演習",
-    "section": "arrange()で行を並び替える",
-    "text": "arrange()で行を並び替える\n\nデフォルト設定では、arrange()は小さい方から大きい方へと並び替えます。\n逆の順にするには、列名をdesc()の中に書きます。\n\n\narrange(students, desc(meal_plan))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          4 Leon Rossini     Anchovies          Lunch only             NA\n4          6 Güvenç Attila    Ice cream          Lunch only              6\n5          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA"
-  },
-  {
-    "objectID": "day4/index.html#チャレンジ-②",
-    "href": "day4/index.html#チャレンジ-②",
-    "title": "情報処理演習",
-    "section": "チャレンジ ②",
-    "text": "チャレンジ ②\n学生の名前の順に並び替えてください。"
-  },
-  {
-    "objectID": "day4/index.html#filterで行を絞り込む",
-    "href": "day4/index.html#filterで行を絞り込む",
-    "title": "情報処理演習",
-    "section": "filter()で行を絞り込む",
-    "text": "filter()で行を絞り込む\n\n生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。\nfilter()で条件を設定し、その行だけに絞り込みます。"
-  },
-  {
-    "objectID": "day4/index.html#データの比較",
-    "href": "day4/index.html#データの比較",
-    "title": "情報処理演習",
-    "section": "データの比較",
-    "text": "データの比較\nデータの比較を行う主な記号：\n\n&gt; より大きい\n&lt; より小さい\n== イコール（=ではありません！）\n| あるいは\n& そして（複数条件の指定）\n\n比較の記号のアウトプットは論理ベクトルです。"
-  },
-  {
-    "objectID": "day4/index.html#チャレンジ-③",
-    "href": "day4/index.html#チャレンジ-③",
-    "title": "情報処理演習",
-    "section": "チャレンジ ③",
-    "text": "チャレンジ ③\nstudentsの中から食事プランが\"Lunch only\"になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。"
-  },
-  {
-    "objectID": "day4/index.html#パイプについて",
-    "href": "day4/index.html#パイプについて",
+    "objectID": "day5/index.html#パイプについて",
+    "href": "day5/index.html#パイプについて",
     "title": "情報処理演習",
     "section": "パイプについて",
-    "text": "パイプについて\n\nチャレンジ ③では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。\n\n\nstudents_lunch &lt;- filter(students, meal_plan == \"Lunch only\")\narrange(students_lunch, desc(full_name))\n\n# A tibble: 4 × 5\n  student_id full_name      favourite_food     meal_plan    age\n       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;\n1          1 Sunil Huffmann Strawberry yoghurt Lunch only     4\n2          4 Leon Rossini   Anchovies          Lunch only    NA\n3          6 Güvenç Attila  Ice cream          Lunch only     6\n4          2 Barclay Lynn   French fries       Lunch only     5"
+    "text": "パイプについて\n\nチャレンジ ①では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。"
   },
   {
-    "objectID": "day4/index.html#パイプについて-1",
-    "href": "day4/index.html#パイプについて-1",
+    "objectID": "day5/index.html#パイプについて-1",
+    "href": "day5/index.html#パイプについて-1",
     "title": "情報処理演習",
     "section": "パイプについて",
     "text": "パイプについて\n\nこれは解析が短い場合は大丈夫かもしれませんが、長くなると大変です。\nパイプというものがこの問題を解決します。"
   },
   {
-    "objectID": "day4/index.html#パイプの使い方",
-    "href": "day4/index.html#パイプの使い方",
+    "objectID": "day5/index.html#パイプの使い方",
+    "href": "day5/index.html#パイプの使い方",
     "title": "情報処理演習",
     "section": "パイプの使い方",
     "text": "パイプの使い方\n\nまずはパイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書きましたが、最近のRでは|&gt;と書きます。\n\narrange(データ, 列名)というような書き方をしてきましたが、パイプを使うとこのように書きます：\n\nデータ |&gt; arrange(列名)"
   },
   {
-    "objectID": "day4/index.html#欠測データについて",
-    "href": "day4/index.html#欠測データについて",
+    "objectID": "day5/index.html#欠測データについて",
+    "href": "day5/index.html#欠測データについて",
     "title": "情報処理演習",
     "section": "欠測データについて",
     "text": "欠測データについて\n\nageにはNAという値が入っています。\nNAは英語で「Not Applicable」（「該当しない」）という意味です。\n\nつまり、そのデータは該当しないか、あるいは欠損しているという意味です。\nageの場合は何らかの理由でその人の年齢が分からないということです。\n（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）"
   },
   {
-    "objectID": "day4/index.html#欠測データを省く方法",
-    "href": "day4/index.html#欠測データを省く方法",
+    "objectID": "day5/index.html#欠測データを省く方法",
+    "href": "day5/index.html#欠測データを省く方法",
     "title": "情報処理演習",
     "section": "欠測データを省く方法",
     "text": "欠測データを省く方法\n\n欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれを除外する必要があります。\nis.na()関数はその値がNAであるかどうかを教えてくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
   },
   {
-    "objectID": "day4/index.html#チャレンジ-④",
-    "href": "day4/index.html#チャレンジ-④",
+    "objectID": "day5/index.html#チャレンジ-②",
+    "href": "day5/index.html#チャレンジ-②",
     "title": "情報処理演習",
-    "section": "チャレンジ ④",
-    "text": "チャレンジ ④\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
-  },
-  {
-    "objectID": "day4/index.html#まとめ",
-    "href": "day4/index.html#まとめ",
-    "title": "情報処理演習",
-    "section": "まとめ",
-    "text": "まとめ\n\nデータを読み込んだ後、整える必要があります。\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。\n|&gt;（パイプ）を使うと、複数の操作を連続して行うことができます。"
-  },
-  {
-    "objectID": "day2/index.html#クイズ",
-    "href": "day2/index.html#クイズ",
-    "title": "情報処理演習",
-    "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意：質問は複数選択です。すべての正しい答えを選択してください。\n\n\nあるいは、gosocrative.com で joho2024を入力"
-  },
-  {
-    "objectID": "day2/index.html#アウトライン",
-    "href": "day2/index.html#アウトライン",
-    "title": "情報処理演習",
-    "section": "アウトライン",
-    "text": "アウトライン\n\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
-  },
-  {
-    "objectID": "day2/index.html#コメントについて",
-    "href": "day2/index.html#コメントについて",
-    "title": "情報処理演習",
-    "section": "コメントについて",
-    "text": "コメントについて\n\n\n#の後に書いた文は「コメント」です\nRはコメントを無視するので、何を書いてもエラーになりません\n自分用のメモとして使う\n\n日本語で書いても大丈夫\n\n\n\n# これはコメントです\n# 3 % 9\n3 * 9\n\n[1] 27"
-  },
-  {
-    "objectID": "day2/index.html#宿題のした線について",
-    "href": "day2/index.html#宿題のした線について",
-    "title": "情報処理演習",
-    "section": "宿題のした線について",
-    "text": "宿題のした線について\n宿題にこのようなところがあります：\n\n# 計算\ny &lt;- ____\n# 計算結果の確認\ny\n\n\n____を消してから、コードを書いてください\n\n下線が残っているとエラーになってしまいます"
-  },
-  {
-    "objectID": "day2/index.html#ベクトルについて",
-    "href": "day2/index.html#ベクトルについて",
-    "title": "情報処理演習",
-    "section": "ベクトルについて",
-    "text": "ベクトルについて\n\n今までは、数を一つずつ扱ってきた（4 + 5 など）\nしかし、Rでは一気に複数の数を扱うことができます\n例えば、1から10までの数：\n\n\n1:10\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nこのようなデータの集まりを「ベクトル」と呼びます\n\nベクトル：一連のデータの集まり"
-  },
-  {
-    "objectID": "day2/index.html#ベクトルについて-1",
-    "href": "day2/index.html#ベクトルについて-1",
-    "title": "情報処理演習",
-    "section": "ベクトルについて",
-    "text": "ベクトルについて\n\n1から10までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます\n例えば、一気に全ての値を2で割る：\n\n\nx &lt;- 1:10\n\nx / 2\n\n [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0"
-  },
-  {
-    "objectID": "day2/index.html#ベクトルについて-2",
-    "href": "day2/index.html#ベクトルについて-2",
-    "title": "情報処理演習",
-    "section": "ベクトルについて",
-    "text": "ベクトルについて\n\nもう一つのベクトルの作り方があります：c\n\nc は combine（結合する）という意味\n\n\n\nc(1, 2, 3)\n\n[1] 1 2 3"
-  },
-  {
-    "objectID": "day2/index.html#チャレンジ",
-    "href": "day2/index.html#チャレンジ",
-    "title": "情報処理演習",
-    "section": "チャレンジ",
-    "text": "チャレンジ\n\n40から50までのベクトルを作る\n40, 42, 46 を含むベクトルを作る"
-  },
-  {
-    "objectID": "day2/index.html#データ型について",
-    "href": "day2/index.html#データ型について",
-    "title": "情報処理演習",
-    "section": "データ型について",
-    "text": "データ型について\n\n今までは数（数字）しか扱ってきませんでしたが、Rには他のデータの種類もあります\n\nデータ型と呼びます\n\n\n\n\n文字データ：\n\n\nmenu &lt;- c(\"ramen\", \"edamame\", \"gyoza\")\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\n\n\n文字は必ず \" で囲まないといけません"
-  },
-  {
-    "objectID": "day2/index.html#データ型について-1",
-    "href": "day2/index.html#データ型について-1",
-    "title": "情報処理演習",
-    "section": "データ型について",
-    "text": "データ型について\n\n論理データ：\n\n\ncoin_flip &lt;- c(TRUE, FALSE, TRUE)\ncoin_flip\n\n[1]  TRUE FALSE  TRUE\n\n\n\n論理データは TRUE または FALSE しかありません。また、 \" を使いません。"
-  },
-  {
-    "objectID": "day2/index.html#データ型について-2",
-    "href": "day2/index.html#データ型について-2",
-    "title": "情報処理演習",
-    "section": "データ型について",
-    "text": "データ型について\n\nあるベクトルには一つのデータ型しか持てません。\n\n異なるデータ型を結合すると、強制的に同じになります。\n\n\n\nc(\"ramen\", \"gyoza\", 10, 11)\n\n[1] \"ramen\" \"gyoza\" \"10\"    \"11\"   \n\n\n\n\" は文字を表します。つまり、Rにとって \"10\" は数ではなく、文字です。"
-  },
-  {
-    "objectID": "day2/index.html#データ型について-3",
-    "href": "day2/index.html#データ型について-3",
-    "title": "情報処理演習",
-    "section": "データ型について",
-    "text": "データ型について\n\nデータ型を確認したい時には typeof() を使います\n\n\nmenu\n\n[1] \"ramen\"   \"edamame\" \"gyoza\"  \n\ntypeof(menu)\n\n[1] \"character\""
-  },
-  {
-    "objectID": "day2/index.html#データ型が大事な理由",
-    "href": "day2/index.html#データ型が大事な理由",
-    "title": "情報処理演習",
-    "section": "データ型が大事な理由",
-    "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in 10 + \"20\": non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
-  },
-  {
-    "objectID": "day2/index.html#チャレンジ-1",
-    "href": "day2/index.html#チャレンジ-1",
-    "title": "情報処理演習",
-    "section": "チャレンジ",
-    "text": "チャレンジ\n以下のコードを実行すると、結果のデータ型はどれでしょうか？\n\nc(19, 21, 40, TRUE, TRUE, FALSE)\n\n\n\nc(menu, ages)"
-  },
-  {
-    "objectID": "day2/index.html#関数とは",
-    "href": "day2/index.html#関数とは",
-    "title": "情報処理演習",
-    "section": "関数とは",
-    "text": "関数とは\n何かの値（インプット）を受けて、処理し、計算結果（アウトプット）を返すもの\n\n\n\nhttps://manamina.valuesccg.com/articles/756"
-  },
-  {
-    "objectID": "day2/index.html#関数とは-1",
-    "href": "day2/index.html#関数とは-1",
-    "title": "情報処理演習",
-    "section": "関数とは",
-    "text": "関数とは\n関数の書き方：\n\n関数名(入力)\n\n必ず関数名を書いた後に、入力を括弧の中に書きます\n\n\n例えば、sum() は数の合計を計算する関数です：\n\nages\n\n[1] 19 40 21\n\nsum(ages)\n\n[1] 80"
-  },
-  {
-    "objectID": "day2/index.html#関数とは-2",
-    "href": "day2/index.html#関数とは-2",
-    "title": "情報処理演習",
-    "section": "関数とは",
-    "text": "関数とは\n\nround() は少数を四捨五入する関数です：\n\n\npi\n\n[1] 3.141593\n\nround(pi)\n\n[1] 3\n\n\n\n（Rには pi 𝜋 が元々含まれています）"
-  },
-  {
-    "objectID": "day2/index.html#ヘルプファイル",
-    "href": "day2/index.html#ヘルプファイル",
-    "title": "情報処理演習",
-    "section": "ヘルプファイル",
-    "text": "ヘルプファイル\n関数の使い方を確認したい時は ?関数名 と入力して、ヘルプファイルを参照します\n\n?round"
-  },
-  {
-    "objectID": "day2/index.html#引数について",
-    "href": "day2/index.html#引数について",
-    "title": "情報処理演習",
-    "section": "引数について",
-    "text": "引数について\n\nヘルプファイルの中に、こう書いてあります：\n\n\nround(x, digits = 0, ...)\n\n\nx と digits は 引数 の名前です\n\n引数とは、関数の 入力や設定 のことです\n\nx: 四捨五入する数値\ndigits: 残す小数の桁数の指定\n\n引数が複数ある場合は、必ず , で区切ります\n(... は上級な話なので、この授業では扱いません)"
-  },
-  {
-    "objectID": "day2/index.html#引数について-1",
-    "href": "day2/index.html#引数について-1",
-    "title": "情報処理演習",
-    "section": "引数について",
-    "text": "引数について\nつまり、さっきは\n\nround(pi)\n\nと書きましたが、\n\nround(x = pi)\n\n[1] 3\n\n\nとでも書けるわけです。"
-  },
-  {
-    "objectID": "day2/index.html#引数について-2",
-    "href": "day2/index.html#引数について-2",
-    "title": "情報処理演習",
-    "section": "引数について",
-    "text": "引数について\n\nヘルプファイルでは、digits = 0 と書いてあります\n\nこれは、デフォルトの設定では残す小数の桁数はゼロ、という意味です\n\n\n\nround(x = pi, digits = 0)\n\n[1] 3"
-  },
-  {
-    "objectID": "day2/index.html#チャレンジ-2",
-    "href": "day2/index.html#チャレンジ-2",
-    "title": "情報処理演習",
-    "section": "チャレンジ",
-    "text": "チャレンジ\n\nsort() は入力を並び替える関数です。\n\n引数は x（ベクトル）と decreasing（論理）\n\n\n今まで扱ったデータを以下のように並び替えてください：\n\nages を小さい順から大きい順に\nages を大きい順から小さい順に\nmenu をAからZまでの順に\nmenu をZからAまでの順に"
-  },
-  {
-    "objectID": "day2/index.html#パッケージとは",
-    "href": "day2/index.html#パッケージとは",
-    "title": "情報処理演習",
-    "section": "パッケージとは",
-    "text": "パッケージとは\n\nRパッケージとは、Rができることを大幅に増やす「追加」のソフト（関数のまとまり）です\n\n現在、2万近くのパッケージがあります！"
-  },
-  {
-    "objectID": "day2/index.html#パッケージのインストール",
-    "href": "day2/index.html#パッケージのインストール",
-    "title": "情報処理演習",
-    "section": "パッケージのインストール",
-    "text": "パッケージのインストール\nRパッケージのインストールを行うには、install.packages() を使います：\n\ninstall.packages(\"ggplot2\")"
-  },
-  {
-    "objectID": "day2/index.html#パッケージのインストール-1",
-    "href": "day2/index.html#パッケージのインストール-1",
-    "title": "情報処理演習",
-    "section": "パッケージのインストール",
-    "text": "パッケージのインストール\n\n一度インストールしたら、次回からはインストールする必要はありません*\nパッケージをアップデートしたい時に再インストールすれば良い\nパッケージのインストールしただけでは、まだ使える状態になっていません"
-  },
-  {
-    "objectID": "day2/index.html#パッケージのロード",
-    "href": "day2/index.html#パッケージのロード",
-    "title": "情報処理演習",
-    "section": "パッケージのロード",
-    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするためにロードする必要があります\n\nlibrary() 関数でロードします：\n\nlibrary(ggplot2)"
-  },
-  {
-    "objectID": "day2/index.html#install.packagesとlibraryの違い",
-    "href": "day2/index.html#install.packagesとlibraryの違い",
-    "title": "情報処理演習",
-    "section": "install.packages()とlibrary()の違い",
-    "text": "install.packages()とlibrary()の違い\n\ninstall.packages() は一度だけで良いです（パソコンにパッケージをダウンロードします）*\nlibrary() はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）\ninstall.packages() はパッケージ名を引用符で囲む\nlibrary はパッケージ名を引用符で囲まない"
-  },
-  {
-    "objectID": "day2/index.html#チャレンジ-3",
-    "href": "day2/index.html#チャレンジ-3",
-    "title": "情報処理演習",
-    "section": "チャレンジ",
-    "text": "チャレンジ\n\nemojiというパッケージをインストールしてから、ロードしてください\nemoji(\"smile\")というコマンドを実行してください"
-  },
-  {
-    "objectID": "day2/index.html#tidyverse",
-    "href": "day2/index.html#tidyverse",
-    "title": "情報処理演習",
-    "section": "tidyverse",
-    "text": "tidyverse\n\ntidyverse はデータサイエンス用パッケージの集まりです\n\nggplot2（可視化）\ndplyr（データの整理）\nstringr（文字データを扱う）\nなど\n\n\nこれからよく使うので、インストールとロードをしましょう。"
-  },
-  {
-    "objectID": "day2/index.html#情報処理演習室の注意点",
-    "href": "day2/index.html#情報処理演習室の注意点",
-    "title": "情報処理演習",
-    "section": "情報処理演習室の注意点",
-    "text": "情報処理演習室の注意点\n\ninstall.packages() は一度だけで良い\n\nと説明しましたが、この教室のパソコンからログアウトするとパッケージを含むあなたのデータが全て消去されてしまいます。\nそのため、この教室のパソコンに新しくインストールするパッケージは毎回インストールが必要です。"
-  },
-  {
-    "objectID": "day2/index.html#連絡事項",
-    "href": "day2/index.html#連絡事項",
-    "title": "情報処理演習",
-    "section": "連絡事項",
-    "text": "連絡事項\n\n来週（10月15日）は休みです\n次回は10月22日です"
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
   },
   {
     "objectID": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",

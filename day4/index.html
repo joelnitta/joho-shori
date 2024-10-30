@@ -8,9 +8,9 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
-  <title>情報処理演習 – index</title>
+  <title>情報処理演習</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -455,10 +456,10 @@
 <div class="code-with-filename-file">
 <pre><strong>students.R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Load raw data</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb1-4"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -493,7 +494,7 @@
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   `Student ID` full_name        favourite.food     mealPlan            AGE  
@@ -514,7 +515,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">rename</span>(students_raw, <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   `Student ID` full_name        favourite.food     mealPlan            AGE  
@@ -544,11 +545,11 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">rename</span>(</span>
-<span id="cb6-2"><a href="#cb6-2"></a>  students_raw,</span>
-<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>,</span>
-<span id="cb6-4"><a href="#cb6-4"></a>  <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">rename</span>(</span>
+<span id="cb6-2"><a></a>  students_raw,</span>
+<span id="cb6-3"><a></a>  <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>,</span>
+<span id="cb6-4"><a></a>  <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span></span>
+<span id="cb6-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   student_id full_name        favourite.food     mealPlan            AGE  
@@ -575,8 +576,8 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb8-2"><a></a><span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   student_id full_name        favourite_food     meal_plan           age  
@@ -598,14 +599,14 @@
 <div class="code-with-filename-file">
 <pre><strong>students.R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># Load raw data</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
-<span id="cb10-6"><a href="#cb10-6"></a></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="co"># Rename columns</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb10-5"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="co"># Rename columns</span></span>
+<span id="cb10-8"><a></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -616,7 +617,7 @@
 <li><p><code>age</code>は数字のはずですが、文字として読み込まれてしまいました。修正しましょう。</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   student_id full_name        favourite_food     meal_plan             age
@@ -649,17 +650,17 @@
 <div class="code-with-filename-file">
 <pre><strong>students.R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co"># Load raw data</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a><span class="co"># Rename columns</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span>
-<span id="cb13-9"><a href="#cb13-9"></a></span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="co"># Convert age to numeric</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>students <span class="ot">&lt;-</span> <span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb13-5"><a></a>students_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a><span class="co"># Rename columns</span></span>
+<span id="cb13-8"><a></a>students_renamed <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(students_raw)</span>
+<span id="cb13-9"><a></a></span>
+<span id="cb13-10"><a></a><span class="co"># Convert age to numeric</span></span>
+<span id="cb13-11"><a></a>students <span class="ot">&lt;-</span> <span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -676,7 +677,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">arrange</span>(students, meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">arrange</span>(students, meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   student_id full_name        favourite_food     meal_plan             age
@@ -701,7 +702,7 @@
 <li><p>逆の順にするには、列名を<code>desc()</code>の中に書きます。</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">arrange</span>(students, <span class="fu">desc</span>(meal_plan))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">arrange</span>(students, <span class="fu">desc</span>(meal_plan))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 6 × 5
   student_id full_name        favourite_food     meal_plan             age
@@ -729,7 +730,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">filter</span>(students, student_id <span class="sc">&lt;</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">filter</span>(students, student_id <span class="sc">&lt;</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre style="font-size: 0.3em"><code># A tibble: 3 × 5
   student_id full_name      favourite_food     meal_plan             age
@@ -758,7 +759,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="dv">11</span> <span class="sc">&gt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="dv">11</span> <span class="sc">&gt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -767,7 +768,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) <span class="sc">&gt;</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) <span class="sc">&gt;</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
 </div>
@@ -776,7 +777,7 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="dv">11</span> <span class="sc">==</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="dv">11</span> <span class="sc">==</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -785,226 +786,11 @@
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="dv">11</span> <span class="ot">=</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="dv">11</span> <span class="ot">=</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in 11 = 11: invalid (do_set) left-hand side to assignment</code></pre>
 </div>
 </div>
-</section>
-<section id="チャレンジ-③" class="slide level2">
-<h2>チャレンジ ③</h2>
-<p><code>students</code>の中から食事プランが<code>"Lunch only"</code>になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。</p>
-</section>
-<section id="パイプについて" class="slide level2">
-<h2>パイプについて</h2>
-<ul>
-<li>チャレンジ ③では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>students_lunch <span class="ot">&lt;-</span> <span class="fu">filter</span>(students, meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">arrange</span>(students_lunch, <span class="fu">desc</span>(full_name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
-  student_id full_name      favourite_food     meal_plan    age
-       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
-1          1 Sunil Huffmann Strawberry yoghurt Lunch only     4
-2          4 Leon Rossini   Anchovies          Lunch only    NA
-3          6 Güvenç Attila  Ice cream          Lunch only     6
-4          2 Barclay Lynn   French fries       Lunch only     5</code></pre>
-</div>
-</div>
-</section>
-<section id="パイプについて-1" class="slide level2">
-<h2>パイプについて</h2>
-<ul>
-<li><p>これは解析が短い場合は大丈夫かもしれませんが、長くなると<strong>大変です</strong>。</p></li>
-<li><p><strong>パイプ</strong>というものがこの問題を解決します。</p></li>
-</ul>
-</section>
-<section id="パイプの使い方" class="slide level2">
-<h2>パイプの使い方</h2>
-<ul>
-<li>まずはパイプ（<code>|&gt;</code>）の基本的な使い方を覚えましょう。
-<ul>
-<li>以前は<code>%&gt;%</code>と書きましたが、最近のRでは<code>|&gt;</code>と書きます。</li>
-</ul></li>
-<li><code>arrange(データ, 列名)</code>というような書き方をしてきましたが、パイプを使うとこのように書きます：</li>
-</ul>
-<p><code>データ |&gt; arrange(列名)</code></p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>つまり、<code>|&gt;</code>は<strong>左側のものを右側へ渡す</strong>機能があります。</li>
-</ul>
-<p>使ってみましょう。</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>students <span class="sc">|&gt;</span> <span class="fu">arrange</span>(meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre style="font-size: 0.3em"><code># A tibble: 6 × 5
-  student_id full_name        favourite_food     meal_plan             age
-       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
-1          3 Jayendra Lyne    N/A                Breakfast and lunch     7
-2          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
-3          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
-4          2 Barclay Lynn     French fries       Lunch only              5
-5          4 Leon Rossini     Anchovies          Lunch only             NA
-6          6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>繰り返しになりますが、</li>
-</ul>
-<p><code>students |&gt; arrange(meal_plan)</code></p>
-<p>と</p>
-<p><code>arrange(students, meal_plan)</code></p>
-<p>は<strong>同じです</strong>。</p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>パイプの便利な点は、<strong>途中結果を保存することなく</strong>解析のステップを次から次へと進めることができる点です。</li>
-</ul>
-<div class="medsmall">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>students <span class="sc">|&gt;</span> <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 5
-  student_id full_name      favourite_food     meal_plan    age
-       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
-1          2 Barclay Lynn   French fries       Lunch only     5
-2          6 Güvenç Attila  Ice cream          Lunch only     6
-3          4 Leon Rossini   Anchovies          Lunch only    NA
-4          1 Sunil Huffmann Strawberry yoghurt Lunch only     4</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Rは改行があっても構いませんので、改行を入れるともっと読みやすくなります。</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>students <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
-  student_id full_name      favourite_food     meal_plan    age
-       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;      &lt;dbl&gt;
-1          2 Barclay Lynn   French fries       Lunch only     5
-2          6 Güvenç Attila  Ice cream          Lunch only     6
-3          4 Leon Rossini   Anchovies          Lunch only    NA
-4          1 Sunil Huffmann Strawberry yoghurt Lunch only     4</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>students <span class="sc">|&gt;</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb36-3"><a href="#cb36-3"></a>  <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>|&gt;</code> を見たら、「それから」と読みます：</p>
-<p><em><code>students</code>から始めて、<strong>それから</strong>食事プランが”Lunch only”となっている学生に絞り込んで、<strong>それから</strong>学生の名前順に並び替える</em></p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>これからは基本的にパイプを使ってコードを書きます。
-<ul>
-<li>最初は違和感があるかもしれませんが、すぐに慣れるでしょう。</li>
-</ul></li>
-</ul>
-</section>
-<section id="欠測データについて" class="slide level2">
-<h2>欠測データについて</h2>
-<ul>
-<li><p><code>age</code>には<code>NA</code>という値が入っています。</p></li>
-<li><p><code>NA</code>は英語で「Not Applicable」（「該当しない」）という意味です。</p>
-<ul>
-<li>つまり、そのデータは該当しないか、あるいは欠損しているという意味です。</li>
-<li><code>age</code>の場合は何らかの理由でその人の年齢が分からないということです。</li>
-<li>（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）</li>
-</ul></li>
-</ul>
-</section>
-<section id="欠測データを省く方法" class="slide level2">
-<h2>欠測データを省く方法</h2>
-<ul>
-<li>欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。
-<ul>
-<li>解析を行う前にそれを除外する必要があります。</li>
-<li><code>is.na()</code>関数はその値が<code>NA</code>であるかどうかを教えてくれます。</li>
-</ul></li>
-<li>例えば：</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE FALSE  TRUE FALSE</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<p>では、使ってみましょう。</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>students <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre style="font-size: 0.3em"><code># A tibble: 2 × 5
-  student_id full_name        favourite_food meal_plan             age
-       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;               &lt;dbl&gt;
-1          4 Leon Rossini     Anchovies      Lunch only             NA
-2          5 Chidiegwu Dunkel Pizza          Breakfast and lunch    NA</code></pre>
-</div>
-</div>
-<p>あらら。これはちょっとまずいですね。欠測データ<strong>だけ</strong>に絞られてしまいました。</p>
-<p>私たちが欲しいのは、その<strong>逆</strong>です。</p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><code>!</code>は論理ベクトルを<strong>反転</strong>させます。
-<ul>
-<li>つまり、<code>TRUE</code>を<code>FALSE</code>に、<code>FALSE</code>を<code>TRUE</code>にします。「否」と読めば良いです。</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE  TRUE FALSE  TRUE</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><code>!</code>を使って<code>NA</code><strong>ではない</strong>データだけに絞り込みましょう。</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>students <span class="sc">|&gt;</span></span>
-<span id="cb43-2"><a href="#cb43-2"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre style="font-size: 0.3em"><code># A tibble: 4 × 5
-  student_id full_name      favourite_food     meal_plan             age
-       &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
-1          1 Sunil Huffmann Strawberry yoghurt Lunch only              4
-2          2 Barclay Lynn   French fries       Lunch only              5
-3          3 Jayendra Lyne  N/A                Breakfast and lunch     7
-4          6 Güvenç Attila  Ice cream          Lunch only              6</code></pre>
-</div>
-</div>
-</section>
-<section id="チャレンジ-④" class="slide level2">
-<h2>チャレンジ ④</h2>
-<p><code>students</code>から<code>age</code>が<code>NA</code>になっている行を除外してから、<code>favorite_food</code>の順で並び替えてください。（パイプを使ってください）</p>
 </section>
 <section id="まとめ" class="slide level2">
 <h2>まとめ</h2>
@@ -1014,11 +800,12 @@
 <li><code>arrange()</code>は行を並び替える。</li>
 <li><code>mutate()</code>は列の中身を変える。</li>
 <li><code>filter()</code>は行を絞り込む。</li>
-<li><code>|&gt;</code>（パイプ）を使うと、複数の操作を連続して行うことができます。</li>
 </ul>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1047,7 +834,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1346,10 +1132,9 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1359,8 +1144,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
