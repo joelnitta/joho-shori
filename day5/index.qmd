@@ -33,19 +33,46 @@ execute:
 
 - 前回は以下のデータ処理に必要な関数を学びました：
   - `rename()`は列の名前を変更する。
-  - `arrange()`は行を並び替える。
   - `mutate()`は列の中身を変える。
+  - `arrange()`は行を並び替える。
   - `filter()`は行を絞り込む。
 
 ## 準備
 
-- 前回休んでいた方は、Moodleから第5回にある`students_analysis.zip`をダウンロードして、デスクトップで開いてください。
+- 前回休んでいた方は、[Moodle](<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295207>)から第5回にある`students_analysis.zip`をダウンロードして、デスクトップで開いてください。
+  - 後ほどMoodleから別のファイルをダウンロードする必要があるので、**今のうちにMoodleにログインしてください（全員）**
 
 - デスクトップにある`students_analysis`フォルダーの中に入っている`students_analysis.Rproj`をダブルクリックすることによって、プロジェクトを開いてください。
 
-- `students.R`のコードを実行することによってデータを読み込んで、整えてください。
+---
+
+![](../images/download-project-1.png)
 
 ---
+
+![](../images/download-project-2_annotated.png)
+
+---
+
+![](../images/download-project-3_annotated.png)
+
+---
+
+![](../images/download-project-5_annotated.png)
+
+---
+
+![](../images/download-project-6.png)
+
+---
+
+![](../images/download-project-7_annotated.png)
+
+---
+
+- `students.R`のコードを実行することによってデータを読み込んで、整えてください。
+
+::: {.medsmall}
 
 ```{r}
 #| filename: students.R
@@ -77,6 +104,8 @@ students_renamed <- clean_names(students_raw)
 # Convert age to numeric
 students <- mutate(students_renamed, age = parse_number(age))
 ```
+
+:::
 
 ## チャレンジ ①
 
@@ -175,6 +204,10 @@ students |>
 - これからは基本的にパイプを使ってコードを書きます。
   - 最初は違和感があるかもしれませんが、すぐに慣れるでしょう。
 
+## チャレンジ ②
+
+パイプを使って`students`の中から`student_id`が2より大きいな行だけに絞ってから、`favourite_food`の順で並び替えてください。
+
 ## 欠測データについて
 
 - `age`には`NA`という値が入っています。
@@ -229,6 +262,110 @@ students |>
   filter(!is.na(age))
 ```
 
-## チャレンジ ②
+## チャレンジ ③
 
 `students`から`age`が`NA`になっている行を除外してから、`favorite_food`の順で並び替えてください。（パイプを使ってください）
+
+## 列を選ぶ
+
+- 特にデータが大きい場合は解析に必要ではない列がある場合があります。
+
+- 必要な列だけに絞ることによって解析がやりやすくなります。
+
+---
+
+- 列を選ぶ関数は`select()`です。例えば、`student_id`、`full_name`、`meal_plan`を選択します：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+students |>
+  select(student_id, full_name, meal_plan)
+```
+
+## 列や行を扱う関数
+
+- 前回は以下のデータ処理に必要な関数を学びました：
+  - `rename()`は列の名前を変更する。
+  - `mutate()`は列の中身を変える。
+  - `select()`は列を選択する。
+  - `arrange()`は行を並び替える。
+  - `filter()`は行を絞り込む。
+
+## 新しいプロジェクト：`gapminder`
+
+- これから教える関数はもっと大きなデータに使うので、**新しいプロジェクト**を作ります。
+
+- このプロジェクトでは`gapminder`というデータセットを使います。1952年〜2007まで、各国の経済的なデータが入っています（第4回の宿題にも使っています。
+
+## `gapminder`プロジェクトの作成
+
+1. デスクトップに`gapminder_analysis`というプロジェクトを作って、そのプロジェクトを開いてください。
+  - プロジェクトの作り方については、[第3回のスライド](https://joelnitta.github.io/joho-shori/day3/#/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9)を参照してください。
+
+## `gapminder`プロジェクトの作成
+
+2. データをMoodleからダウンロードして、`gapminder_analysis`の中においてください：
+
+<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476>
+
+## `gapminder`プロジェクトの作成
+
+3. 新しいプロジェクトの中に、`gapminder.R`というRファイルを作成して、`gapminder`というデータセットをロードするコードを書きます：
+
+```{r}
+#| filename: gapminder.R
+#| eval: false
+library(tidyverse)
+library(janitor)
+
+# Load raw data
+gapminder_raw <- read_csv("gapminder.csv")
+
+# Fix column names
+gapminder <- clean_names(gapminder_raw)
+```
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(janitor)
+gapminder_raw <- read_csv(here::here("data/gapminder_data.csv"))
+gapminder <- clean_names(gapminder_raw)
+```
+
+## データの集計
+
+- 今までの関数はデータフレームの値を個別に扱いました（主に**列**か**行**を扱う関数を使ってきました）。
+
+- でも、データフレームに入っている値の平均や合計を**計算したい場合**は、それでは足りません。
+
+## データの合計を`count()`で数える
+
+- データの全貌を捉えるためにまず便利なのは、数えることです。
+
+- 例えば、`gapminder`に幾つの国が入っているでしょうか？
+  - **注意**：`count()`のような集約の関数の結果は、入力の結果と大幅に形が違います！
+
+---
+
+```{r}
+gapminder |> count(country)
+```
+
+## データの平均などを計算するためには`summarize()`を使う
+
+- `summarize()`（「集計する」）の使い方は`mutate()`と似ています。
+
+- `summarize(データ, 新しい列名 = コマンド)`
+  - コマンドには、新しい列の作り方を指定します
+
+---
+
+- 例えば、全国の寿命の平均を計算しましょう：
+
+```{r}
+gapminder |>
+  summarize(mean_life_exp = mean(life_exp))
+```
+
+- `mean()`は平均を計算する関数です。

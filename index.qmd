@@ -44,6 +44,10 @@ G1-501 情報処理演習室
   - [スライド](day4/index.qmd)
   - リーディング: [R4DS Chapter 3 (Data transformation)](https://r4ds.hadley.nz/data-transform)
 - 第５回（2024-11-05）: **データの整理（２）**
+  - [スライド](day5/index.qmd)
+  - リーディング
+    - [R4DS Chapter 3 (Data transformation: Groups)](https://r4ds.hadley.nz/data-transform#groups)
+    - [R4DS Chapter 19 (Joins: 19.1 - 19.4)](https://r4ds.hadley.nz/joins)
 - 第６回（2024-11-12）: **データの可視化（１）**
 - 第７回（2024-11-19）: **データの可視化（２）**
 - オンデマンド回
