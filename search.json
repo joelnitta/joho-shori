@@ -1106,6 +1106,13 @@
     "text": "データの平均などを計算するためにsummarize()を使う\n\nsummarize()（「集計する」）の使い方はmutate()と似ています。\nsummarize(データ, 新しい列名 = コマンド)\n\nコマンドには、新しい列の生成方法を指定します\n新しい列名の設定は任意であり、わかりやすい名前を指定します。"
   },
   {
+    "objectID": "day5/index.html#summarizeによく使う計算のコマンド",
+    "href": "day5/index.html#summarizeによく使う計算のコマンド",
+    "title": "情報処理演習",
+    "section": "summarize()によく使う計算のコマンド",
+    "text": "summarize()によく使う計算のコマンド\n集計をする際、以下の関数を覚えておくと便利です：\n\nmax()：最大値を計算する\nmin()：最小値を計算する\nmean()：平均値を計算する\nsd()：標準偏差を計算する\nn()：それぞれのグループごとのデータの数（行数）を数える"
+  },
+  {
     "objectID": "day5/index.html#グループ化",
     "href": "day5/index.html#グループ化",
     "title": "情報処理演習",
