@@ -293,7 +293,7 @@ students |>
 
 ## 新しいプロジェクト：`gapminder`
 
-- これから教える関数はもっと大きなデータに使うので、**新しいプロジェクト**を作ります。
+- これから学ぶ関数はもっと大きなデータに使うので、**新しいプロジェクト**を作ります。
 
 - このプロジェクトでは`gapminder`というデータセットを使います。1952年〜2007まで、各国の経済的なデータが入っています（第4回の宿題にも使っています。
 
@@ -311,6 +311,8 @@ students |>
 ## `gapminder`プロジェクトの作成
 
 3. 新しいプロジェクトの中に、`gapminder.R`というRファイルを作成して、`gapminder`というデータセットをロードするコードを書きます：
+
+::: {.medsmall}
 
 ```{r}
 #| filename: gapminder.R
@@ -333,11 +335,13 @@ gapminder_raw <- read_csv(here::here("data/gapminder_data.csv"))
 gapminder <- clean_names(gapminder_raw)
 ```
 
+:::
+
 ## データの集計
 
 - 今までの関数はデータフレームの値を個別に扱いました（主に**列**か**行**を扱う関数を使ってきました）。
 
-- でも、データフレームに入っている値の平均や合計を**計算したい場合**は、それでは足りません。
+- でも、データフレームに入っている値の**平均や合計を計算したい場合**は、それでは足りません。
 
 ## データの合計を`count()`で数える
 
@@ -358,6 +362,7 @@ gapminder |> count(country)
 
 - `summarize(データ, 新しい列名 = コマンド)`
   - コマンドには、新しい列の作り方を指定します
+  - 新しい列名の設定は**任意です**。自分にとって分かりやすい名前にしましょう。
 
 ---
 
@@ -369,3 +374,132 @@ gapminder |>
 ```
 
 - `mean()`は平均を計算する関数です。
+
+---
+
+- あるいは、もっとも短い寿命を検出します：
+
+```{r}
+gapminder |>
+  summarize(min_life_exp = min(life_exp))
+```
+
+- `min()`はもっとも小さい値を返す関数です。
+
+## グループ化
+
+- しかし、**全体の**平均や最小値を検出するだけではあまり役に立ちません。
+
+- それよりも知りたいのは**国ごと**の値なのです。
+
+- 何か**毎に**計算するには、**グループ化**を使います。
+
+---
+
+- グループを指定する関数は`group_by()`です：
+
+```{r}
+#| attr-output: "style='font-size: 0.3em'"
+gapminder |>
+  group_by(country)
+```
+
+これで国毎のグループが出来ました
+
+---
+
+![](../images/groups_annotated.png)
+
+---
+
+- でも、グループ化しただけでは計算まだ出来ていません。
+
+- グループ化の次に`summarize()`で計算します：
+
+---
+
+::: {.medsmall}
+
+```{r}
+gapminder |>
+  group_by(country) |>
+  summarize(
+    mean_life_exp = mean(life_exp)
+  )
+```
+
+:::
+
+## チャレンジ ④
+
+- 国毎に寿命の最小値を求めてください。
+
+## グループ化
+
+- 同時に複数の計算もできます
+  - それぞれの新しい列をカンマで区切ります
+
+- 例えば、平均と標準偏差：
+
+---
+
+::: {.medsmall}
+
+```{r}
+#| eval: false
+gapminder |>
+  group_by(country) |>
+  summarize(
+    mean_life_exp = mean(life_exp),
+    sd_life_exp = sd(life_exp)
+  )
+```
+
+```{r}
+#| echo: false
+gapminder |>
+  group_by(country) |>
+  summarize(
+    mean_life_exp = mean(life_exp),
+    sd_life_exp = sd(life_exp)
+  ) |>
+  print(n = 6)
+```
+
+:::
+
+- `sd()`（「standard deviation」）は標準偏差を計算する関数です。
+
+## チャレンジ ⑤
+
+- 国毎の一人当たり総生産の平均と標準偏差を計算してください
+
+## パイプライン
+
+- パイプの説明にも出ましたが、パイプとコマンドを組み込むことによって、複雑なデータ処理を簡単に行うことができます。
+
+- 例えば、アジアの国だけに絞ってから、国毎の計算もできます：
+
+---
+
+::: {.medsmall}
+
+```{r}
+gapminder |>
+  filter(continent == "Asia") |>
+  group_by(country) |>
+  summarize(
+    mean_life_exp = mean(life_exp),
+    sd_life_exp = sd(life_exp)
+  )
+```
+
+:::
+
+## まとめ
+
+- グループ化することによってグループ毎の集計ができます
+  - `group_by`はグループを定義する
+  - `summarize()`はグループ毎の計算を行う
+
+- パイプ（`|>`）で複数のデータ処理作業を繋ぐことによって、複雑なデータ処理パイプラインを組むことができます
