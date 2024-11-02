@@ -361,7 +361,7 @@
     "href": "index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2024-11-12）: データの可視化（１）\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
   },
   {
     "objectID": "index.html#オフィスアワー",
@@ -970,70 +970,182 @@
     "href": "day5/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\nクイズの間、スマートフォンを利用してクイズに答えてください。他の行為（スライドを見ることや、RStudioの操作など）は禁止です。\n\n\nまたは、gosocrative.com で joho2024を入力"
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\nクイズの際はスマートフォンを利用して回答してください。他の行為（スライドを閲覧することやRStudioの操作など）は禁止です。\n\n\nまたは、gosocrative.com で「joho2024」を入力"
   },
   {
     "objectID": "day5/index.html#おさらい",
     "href": "day5/index.html#おさらい",
     "title": "情報処理演習",
     "section": "おさらい",
-    "text": "おさらい\n\n前回は以下のデータ処理に必要な関数を学びました：\n\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。"
+    "text": "おさらい\n\n前回は以下のデータ処理に必要な関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の中身を変える\narrange()で行を並び替える\nfilter()で行を絞り込む"
   },
   {
     "objectID": "day5/index.html#準備",
     "href": "day5/index.html#準備",
     "title": "情報処理演習",
     "section": "準備",
-    "text": "準備\n\n前回休んでいた方は、Moodleから第5回にあるstudents_analysis.zipをダウンロードして、デスクトップで開いてください。\nデスクトップにあるstudents_analysisフォルダーの中に入っているstudents_analysis.Rprojをダブルクリックすることによって、プロジェクトを開いてください。\nstudents.Rのコードを実行することによってデータを読み込んで、整えてください。"
+    "text": "準備\n\n前回欠席した方は、Moodleから第5回のstudents_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\n後ほどMoodleから別のファイルをダウンロードする必要があるため、今のうちに全員Moodleにログインしてください\n\nデスクトップにあるstudents_analysisフォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。"
   },
   {
     "objectID": "day5/index.html#チャレンジ-①",
     "href": "day5/index.html#チャレンジ-①",
     "title": "情報処理演習",
     "section": "チャレンジ ①",
-    "text": "チャレンジ ①\n早速チャレンジです。\nstudentsの中から食事プランが\"Lunch only\"になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。"
+    "text": "チャレンジ ①\n早速チャレンジに取り組みましょう。\nstudentsから食事プランが\"Lunch only\"の学生を抽出し、名前をZからAの順に並べ替えてください。"
   },
   {
     "objectID": "day5/index.html#パイプについて",
     "href": "day5/index.html#パイプについて",
     "title": "情報処理演習",
     "section": "パイプについて",
-    "text": "パイプについて\n\nチャレンジ ①では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。"
+    "text": "パイプについて\n\nチャレンジ①では、まず条件で絞り込んだデータを一時保存してから、次のステップ（列の並び替え）を行いました。"
   },
   {
     "objectID": "day5/index.html#パイプについて-1",
     "href": "day5/index.html#パイプについて-1",
     "title": "情報処理演習",
     "section": "パイプについて",
-    "text": "パイプについて\n\nこれは解析が短い場合は大丈夫かもしれませんが、長くなると大変です。\nパイプというものがこの問題を解決します。"
+    "text": "パイプについて\n\nこの方法でも解析が短い場合は問題ありませんが、長くなると大変です。\nパイプを使うとこの問題を解決できます。"
   },
   {
     "objectID": "day5/index.html#パイプの使い方",
     "href": "day5/index.html#パイプの使い方",
     "title": "情報処理演習",
     "section": "パイプの使い方",
-    "text": "パイプの使い方\n\nまずはパイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書きましたが、最近のRでは|&gt;と書きます。\n\narrange(データ, 列名)というような書き方をしてきましたが、パイプを使うとこのように書きます：\n\nデータ |&gt; arrange(列名)"
-  },
-  {
-    "objectID": "day5/index.html#欠測データについて",
-    "href": "day5/index.html#欠測データについて",
-    "title": "情報処理演習",
-    "section": "欠測データについて",
-    "text": "欠測データについて\n\nageにはNAという値が入っています。\nNAは英語で「Not Applicable」（「該当しない」）という意味です。\n\nつまり、そのデータは該当しないか、あるいは欠損しているという意味です。\nageの場合は何らかの理由でその人の年齢が分からないということです。\n（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）"
-  },
-  {
-    "objectID": "day5/index.html#欠測データを省く方法",
-    "href": "day5/index.html#欠測データを省く方法",
-    "title": "情報処理演習",
-    "section": "欠測データを省く方法",
-    "text": "欠測データを省く方法\n\n欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれを除外する必要があります。\nis.na()関数はその値がNAであるかどうかを教えてくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
+    "text": "パイプの使い方\n\nまず、パイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書いていましたが、最近のRでは|&gt;が使われます。\n\n例えば、arrange(データ, 列名)のように書いてきましたが、パイプを使うと次のように書けます：\n\nデータ |&gt; arrange(列名)"
   },
   {
     "objectID": "day5/index.html#チャレンジ-②",
     "href": "day5/index.html#チャレンジ-②",
     "title": "情報処理演習",
     "section": "チャレンジ ②",
-    "text": "チャレンジ ②\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
+    "text": "チャレンジ ②\nパイプを使ってstudentsからstudent_idが2より大きい行だけに絞り、favourite_foodの順で並び替えてください。"
+  },
+  {
+    "objectID": "day5/index.html#欠測データについて",
+    "href": "day5/index.html#欠測データについて",
+    "title": "情報処理演習",
+    "section": "欠測データについて",
+    "text": "欠測データについて\n\nageにはNAという値が含まれています。\nNAは「Not Applicable」（「該当しない」）を意味します。\n\nこの値は、データが該当しないか、または欠損していることを示します。\nageの場合、何らかの理由でその人の年齢がわからないことを意味します。\n（一部はうまく数字に変換できなかったためですが、もう一つは元々そうなっていました）"
+  },
+  {
+    "objectID": "day5/index.html#欠測データを省く方法",
+    "href": "day5/index.html#欠測データを省く方法",
+    "title": "情報処理演習",
+    "section": "欠測データを省く方法",
+    "text": "欠測データを省く方法\n\nデータフレームに欠測データが含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれらを除外する必要があります。\nis.na()関数は、その値がNAであるかを確認してくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-③",
+    "href": "day5/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
+  },
+  {
+    "objectID": "day5/index.html#列を選ぶ",
+    "href": "day5/index.html#列を選ぶ",
+    "title": "情報処理演習",
+    "section": "列を選ぶ",
+    "text": "列を選ぶ\n\n特にデータが大きい場合、解析に不要な列があることがあります。\n必要な列だけに絞ることで、解析がやりやすくなります。"
+  },
+  {
+    "objectID": "day5/index.html#列や行を扱う関数",
+    "href": "day5/index.html#列や行を扱う関数",
+    "title": "情報処理演習",
+    "section": "列や行を扱う関数",
+    "text": "列や行を扱う関数\n\n前回は以下のデータ処理に使用する関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の内容を変更する\nselect()で列を選択する\narrange()で行を並び替える\nfilter()で行を絞り込む"
+  },
+  {
+    "objectID": "day5/index.html#新しいプロジェクトgapminder",
+    "href": "day5/index.html#新しいプロジェクトgapminder",
+    "title": "情報処理演習",
+    "section": "新しいプロジェクト：gapminder",
+    "text": "新しいプロジェクト：gapminder\n\nこれから学ぶ関数はもっと大きなデータで使用するため、新しいプロジェクトを作成します。\nこのプロジェクトではgapminderというデータセットを使用します。1952年から2007年までの各国の経済データが含まれています（第4回の課題でも使用しました）。"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成",
+    "href": "day5/index.html#gapminderプロジェクトの作成",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\nデスクトップにgapminder_analysisというプロジェクトを作成し、そのプロジェクトを開いてください。\n\n\nプロジェクトの作成方法については、第3回のスライドを参照してください。"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成-1",
+    "href": "day5/index.html#gapminderプロジェクトの作成-1",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成-2",
+    "href": "day5/index.html#gapminderプロジェクトの作成-2",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\n新しいプロジェクト内にgapminder.RというRファイルを作成し、gapminderというデータセットを読み込むコードを書きます：\n\n\n\n\n\ngapminder.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\ngapminder_raw &lt;- read_csv(\"gapminder.csv\")\n\n# Fix column names\ngapminder &lt;- clean_names(gapminder_raw)"
+  },
+  {
+    "objectID": "day5/index.html#データの集計",
+    "href": "day5/index.html#データの集計",
+    "title": "情報処理演習",
+    "section": "データの集計",
+    "text": "データの集計\n\n今まで学んだ関数はデータフレームの値を個別に扱いました（主に列か行に対する処理を行ってきました）。\nしかし、データフレームに含まれる値の平均や合計を計算したい場合には、さらに操作が必要です。"
+  },
+  {
+    "objectID": "day5/index.html#データの合計をcountで数える",
+    "href": "day5/index.html#データの合計をcountで数える",
+    "title": "情報処理演習",
+    "section": "データの合計をcount()で数える",
+    "text": "データの合計をcount()で数える\n\nデータの全体像を掴むために、まず数を数えることは有効です。\n例えば、gapminderにいくつの国が含まれているかを数えます。\n\n注意：count()のような集計関数の結果は、入力のデータと大きく異なります！"
+  },
+  {
+    "objectID": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
+    "href": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
+    "title": "情報処理演習",
+    "section": "データの平均などを計算するためにsummarize()を使う",
+    "text": "データの平均などを計算するためにsummarize()を使う\n\nsummarize()（「集計する」）の使い方はmutate()と似ています。\nsummarize(データ, 新しい列名 = コマンド)\n\nコマンドには、新しい列の生成方法を指定します\n新しい列名の設定は任意であり、わかりやすい名前を指定します。"
+  },
+  {
+    "objectID": "day5/index.html#グループ化",
+    "href": "day5/index.html#グループ化",
+    "title": "情報処理演習",
+    "section": "グループ化",
+    "text": "グループ化\n\nしかし、全体の平均や最小値だけでは役立ちません。\n代わりに、国ごとの値が知りたい場合があります。\nそのように「何かごと」に計算するには、グループ化を使用します。"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-④",
+    "href": "day5/index.html#チャレンジ-④",
+    "title": "情報処理演習",
+    "section": "チャレンジ ④",
+    "text": "チャレンジ ④\n\n国ごとに寿命の最小値を求めてください。"
+  },
+  {
+    "objectID": "day5/index.html#グループ化-1",
+    "href": "day5/index.html#グループ化-1",
+    "title": "情報処理演習",
+    "section": "グループ化",
+    "text": "グループ化\n\n同時に複数の計算も可能です。\n\n各新しい列をカンマで区切ります\n\n例えば、平均と標準偏差："
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-⑤",
+    "href": "day5/index.html#チャレンジ-⑤",
+    "title": "情報処理演習",
+    "section": "チャレンジ ⑤",
+    "text": "チャレンジ ⑤\n\n国ごとの一人当たり総生産の平均と標準偏差を計算してください。"
+  },
+  {
+    "objectID": "day5/index.html#パイプライン",
+    "href": "day5/index.html#パイプライン",
+    "title": "情報処理演習",
+    "section": "パイプライン",
+    "text": "パイプライン\n\nパイプとコマンドを組み合わせることで、複雑なデータ処理を簡単に行うことができます。\n例えば、アジアの国だけに絞ってから、国ごとの計算も可能です："
+  },
+  {
+    "objectID": "day5/index.html#まとめ",
+    "href": "day5/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nグループ化により、グループごとの集計が可能です。\n\ngroup_byでグループを定義\nsummarize()でグループごとの計算を実行\n\nパイプ（|&gt;）で複数のデータ処理操作をつなぐことで、複雑なデータ処理パイプラインが構築できます。"
   },
   {
     "objectID": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",

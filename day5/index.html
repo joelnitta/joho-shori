@@ -403,33 +403,63 @@
 <p><img data-src="../images/joho2024-qr-code.png"></p>
 </div><div class="column" style="width:50%;">
 <p><strong>注意：</strong> 質問は複数選択です。<strong>すべて</strong>の正しい答えを選んでください。</p>
-<p>クイズの間、スマートフォンを利用してクイズに答えてください。他の行為（スライドを見ることや、RStudioの操作など）は<strong>禁止</strong>です。</p>
+<p>クイズの際はスマートフォンを利用して回答してください。他の行為（スライドを閲覧することやRStudioの操作など）は<strong>禁止</strong>です。</p>
 </div>
 </div>
-<p>または、<a href="https://gosocrative.com">gosocrative.com</a> で joho2024を入力</p>
+<p>または、<a href="https://gosocrative.com">gosocrative.com</a> で「joho2024」を入力</p>
 </section>
 <section id="おさらい" class="slide level2">
 <h2>おさらい</h2>
 <ul>
 <li>前回は以下のデータ処理に必要な関数を学びました：
 <ul>
-<li><code>rename()</code>は列の名前を変更する。</li>
-<li><code>arrange()</code>は行を並び替える。</li>
-<li><code>mutate()</code>は列の中身を変える。</li>
-<li><code>filter()</code>は行を絞り込む。</li>
+<li><code>rename()</code>で列の名前を変更する</li>
+<li><code>mutate()</code>で列の中身を変える</li>
+<li><code>arrange()</code>で行を並び替える</li>
+<li><code>filter()</code>で行を絞り込む</li>
 </ul></li>
 </ul>
 </section>
 <section id="準備" class="slide level2">
 <h2>準備</h2>
 <ul>
-<li><p>前回休んでいた方は、Moodleから第5回にある<code>students_analysis.zip</code>をダウンロードして、デスクトップで開いてください。</p></li>
-<li><p>デスクトップにある<code>students_analysis</code>フォルダーの中に入っている<code>students_analysis.Rproj</code>をダブルクリックすることによって、プロジェクトを開いてください。</p></li>
-<li><p><code>students.R</code>のコードを実行することによってデータを読み込んで、整えてください。</p></li>
+<li>前回欠席した方は、<a href="https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295207">Moodle</a>から第5回の<code>students_analysis.zip</code>をダウンロードして、デスクトップで解凍してください。
+<ul>
+<li>後ほどMoodleから別のファイルをダウンロードする必要があるため、<strong>今のうちに全員Moodleにログインしてください</strong></li>
+</ul></li>
+<li>デスクトップにある<code>students_analysis</code>フォルダー内の<code>students_analysis.Rproj</code>をダブルクリックして、プロジェクトを開いてください。</li>
 </ul>
 </section>
 <section class="slide level2">
 
+
+<img data-src="../images/download-project-1.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/download-project-2_annotated.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/download-project-3_annotated.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/download-project-5_annotated.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/download-project-6.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/download-project-7_annotated.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li><code>students.R</code>のコードを実行してデータを読み込み、整理してください。</li>
+</ul>
+<div class="medsmall">
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -448,33 +478,34 @@
 <span id="cb1-11"><a></a>students <span class="ot">&lt;-</span> <span class="fu">mutate</span>(students_renamed, <span class="at">age =</span> <span class="fu">parse_number</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
 </section>
 <section id="チャレンジ-①" class="slide level2">
 <h2>チャレンジ ①</h2>
-<p>早速チャレンジです。</p>
-<p><code>students</code>の中から食事プランが<code>"Lunch only"</code>になっている学生に絞り込んでから、名前をZからAの順で並び替えてください。</p>
+<p>早速チャレンジに取り組みましょう。</p>
+<p><code>students</code>から食事プランが<code>"Lunch only"</code>の学生を抽出し、名前をZからAの順に並べ替えてください。</p>
 </section>
 <section id="パイプについて" class="slide level2">
 <h2>パイプについて</h2>
 <ul>
-<li>チャレンジ ①では、条件で絞ったデータを一旦保存してから、次のステップ（列の並び替え）を行いました。</li>
+<li>チャレンジ①では、まず条件で絞り込んだデータを一時保存してから、次のステップ（列の並び替え）を行いました。</li>
 </ul>
 </section>
 <section id="パイプについて-1" class="slide level2">
 <h2>パイプについて</h2>
 <ul>
-<li><p>これは解析が短い場合は大丈夫かもしれませんが、長くなると<strong>大変です</strong>。</p></li>
-<li><p><strong>パイプ</strong>というものがこの問題を解決します。</p></li>
+<li><p>この方法でも解析が短い場合は問題ありませんが、長くなると<strong>大変です</strong>。</p></li>
+<li><p><strong>パイプ</strong>を使うとこの問題を解決できます。</p></li>
 </ul>
 </section>
 <section id="パイプの使い方" class="slide level2">
 <h2>パイプの使い方</h2>
 <ul>
-<li>まずはパイプ（<code>|&gt;</code>）の基本的な使い方を覚えましょう。
+<li>まず、パイプ（<code>|&gt;</code>）の基本的な使い方を覚えましょう。
 <ul>
-<li>以前は<code>%&gt;%</code>と書きましたが、最近のRでは<code>|&gt;</code>と書きます。</li>
+<li>以前は<code>%&gt;%</code>と書いていましたが、最近のRでは<code>|&gt;</code>が使われます。</li>
 </ul></li>
-<li><code>arrange(データ, 列名)</code>というような書き方をしてきましたが、パイプを使うとこのように書きます：</li>
+<li>例えば、<code>arrange(データ, 列名)</code>のように書いてきましたが、パイプを使うと次のように書けます：</li>
 </ul>
 <p><code>データ |&gt; arrange(列名)</code></p>
 </section>
@@ -483,7 +514,7 @@
 <ul>
 <li>つまり、<code>|&gt;</code>は<strong>左側のものを右側へ渡す</strong>機能があります。</li>
 </ul>
-<p>使ってみましょう。</p>
+<p>試してみましょう。</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>students <span class="sc">|&gt;</span> <span class="fu">arrange</span>(meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -507,12 +538,12 @@
 <p><code>students |&gt; arrange(meal_plan)</code></p>
 <p>と</p>
 <p><code>arrange(students, meal_plan)</code></p>
-<p>は<strong>同じです</strong>。</p>
+<p>は<strong>同じ意味</strong>です。</p>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>パイプの便利な点は、<strong>途中結果を保存することなく</strong>解析のステップを次から次へと進めることができる点です。</li>
+<li>パイプの便利な点は、<strong>途中結果を保存せず</strong>に解析のステップを次々と進められるところです。</li>
 </ul>
 <div class="medsmall">
 <div class="cell">
@@ -532,7 +563,7 @@
 <section class="slide level2">
 
 <ul>
-<li>Rは改行があっても構いませんので、改行を入れるともっと読みやすくなります。</li>
+<li>Rは改行があっても構いませんので、改行を入れるとさらに読みやすくなります。</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>students <span class="sc">|&gt;</span></span>
@@ -556,37 +587,41 @@
 <span id="cb8-2"><a></a>  <span class="fu">filter</span>(meal_plan <span class="sc">==</span> <span class="st">"Lunch only"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb8-3"><a></a>  <span class="fu">arrange</span>(full_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>|&gt;</code> を見たら、「それから」と読みます：</p>
-<p><em><code>students</code>から始めて、<strong>それから</strong>食事プランが”Lunch only”となっている学生に絞り込んで、<strong>それから</strong>学生の名前順に並び替える</em></p>
+<p><code>|&gt;</code>を見たら、「それから」と読むと理解しやすいです：</p>
+<p><em><code>students</code>から始めて、<strong>それから</strong>食事プランが”Lunch only”の学生に絞り込んで、<strong>それから</strong>学生の名前順に並び替える</em></p>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>これからは基本的にパイプを使ってコードを書きます。
+<li>今後は基本的にパイプを使ってコードを書きます。
 <ul>
-<li>最初は違和感があるかもしれませんが、すぐに慣れるでしょう。</li>
+<li>最初は慣れないかもしれませんが、すぐに馴染むでしょう。</li>
 </ul></li>
 </ul>
+</section>
+<section id="チャレンジ-②" class="slide level2">
+<h2>チャレンジ ②</h2>
+<p>パイプを使って<code>students</code>から<code>student_id</code>が2より大きい行だけに絞り、<code>favourite_food</code>の順で並び替えてください。</p>
 </section>
 <section id="欠測データについて" class="slide level2">
 <h2>欠測データについて</h2>
 <ul>
-<li><p><code>age</code>には<code>NA</code>という値が入っています。</p></li>
-<li><p><code>NA</code>は英語で「Not Applicable」（「該当しない」）という意味です。</p>
+<li><p><code>age</code>には<code>NA</code>という値が含まれています。</p></li>
+<li><p><code>NA</code>は「Not Applicable」（「該当しない」）を意味します。</p>
 <ul>
-<li>つまり、そのデータは該当しないか、あるいは欠損しているという意味です。</li>
-<li><code>age</code>の場合は何らかの理由でその人の年齢が分からないということです。</li>
-<li>（一つはうまく数字への変換ができなかったためですが、もう一つは元々そうなっていました）</li>
+<li>この値は、データが該当しないか、または欠損していることを示します。</li>
+<li><code>age</code>の場合、何らかの理由でその人の年齢がわからないことを意味します。</li>
+<li>（一部はうまく数字に変換できなかったためですが、もう一つは元々そうなっていました）</li>
 </ul></li>
 </ul>
 </section>
 <section id="欠測データを省く方法" class="slide level2">
 <h2>欠測データを省く方法</h2>
 <ul>
-<li>欠測データがデータフレームに含まれていると、エラーの原因になることが多いです。
+<li>データフレームに欠測データが含まれていると、エラーの原因になることが多いです。
 <ul>
-<li>解析を行う前にそれを除外する必要があります。</li>
-<li><code>is.na()</code>関数はその値が<code>NA</code>であるかどうかを教えてくれます。</li>
+<li>解析を行う前にそれらを除外する必要があります。</li>
+<li><code>is.na()</code>関数は、その値が<code>NA</code>であるかを確認してくれます。</li>
 </ul></li>
 <li>例えば：</li>
 </ul>
@@ -599,7 +634,7 @@
 </section>
 <section class="slide level2">
 
-<p>では、使ってみましょう。</p>
+<p>使ってみましょう。</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>students <span class="sc">|&gt;</span></span>
 <span id="cb11-2"><a></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -611,7 +646,7 @@
 2          5 Chidiegwu Dunkel Pizza          Breakfast and lunch    NA</code></pre>
 </div>
 </div>
-<p>あらら。これはちょっとまずいですね。欠測データ<strong>だけ</strong>に絞られてしまいました。</p>
+<p>あら、これはまずいですね。欠測データ<strong>だけ</strong>が抽出されてしまいました。</p>
 <p>私たちが欲しいのは、その<strong>逆</strong>です。</p>
 </section>
 <section class="slide level2">
@@ -619,7 +654,7 @@
 <ul>
 <li><code>!</code>は論理ベクトルを<strong>反転</strong>させます。
 <ul>
-<li>つまり、<code>TRUE</code>を<code>FALSE</code>に、<code>FALSE</code>を<code>TRUE</code>にします。「否」と読めば良いです。</li>
+<li>つまり、<code>TRUE</code>を<code>FALSE</code>に、<code>FALSE</code>を<code>TRUE</code>にします。「否」と読むと理解しやすいです。</li>
 </ul></li>
 </ul>
 <div class="cell">
@@ -632,7 +667,7 @@
 <section class="slide level2">
 
 <ul>
-<li><code>!</code>を使って<code>NA</code><strong>ではない</strong>データだけに絞り込みましょう。</li>
+<li><code>!</code>を使って、<code>NA</code><strong>ではない</strong>データだけに絞り込みましょう。</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>students <span class="sc">|&gt;</span></span>
@@ -648,9 +683,359 @@
 </div>
 </div>
 </section>
-<section id="チャレンジ-②" class="slide level2">
-<h2>チャレンジ ②</h2>
+<section id="チャレンジ-③" class="slide level2">
+<h2>チャレンジ ③</h2>
 <p><code>students</code>から<code>age</code>が<code>NA</code>になっている行を除外してから、<code>favorite_food</code>の順で並び替えてください。（パイプを使ってください）</p>
+</section>
+<section id="列を選ぶ" class="slide level2">
+<h2>列を選ぶ</h2>
+<ul>
+<li><p>特にデータが大きい場合、解析に不要な列があることがあります。</p></li>
+<li><p>必要な列だけに絞ることで、解析がやりやすくなります。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>列を選ぶ関数は<code>select()</code>です。例えば、<code>student_id</code>、<code>full_name</code>、<code>meal_plan</code>を選択します：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>students <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">select</span>(student_id, full_name, meal_plan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 6 × 3
+  student_id full_name        meal_plan          
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              
+1          1 Sunil Huffmann   Lunch only         
+2          2 Barclay Lynn     Lunch only         
+3          3 Jayendra Lyne    Breakfast and lunch
+4          4 Leon Rossini     Lunch only         
+5          5 Chidiegwu Dunkel Breakfast and lunch
+6          6 Güvenç Attila    Lunch only         </code></pre>
+</div>
+</div>
+</section>
+<section id="列や行を扱う関数" class="slide level2">
+<h2>列や行を扱う関数</h2>
+<ul>
+<li>前回は以下のデータ処理に使用する関数を学びました：
+<ul>
+<li><code>rename()</code>で列の名前を変更する</li>
+<li><code>mutate()</code>で列の内容を変更する</li>
+<li><code>select()</code>で列を選択する</li>
+<li><code>arrange()</code>で行を並び替える</li>
+<li><code>filter()</code>で行を絞り込む</li>
+</ul></li>
+</ul>
+</section>
+<section id="新しいプロジェクトgapminder" class="slide level2">
+<h2>新しいプロジェクト：<code>gapminder</code></h2>
+<ul>
+<li><p>これから学ぶ関数はもっと大きなデータで使用するため、<strong>新しいプロジェクト</strong>を作成します。</p></li>
+<li><p>このプロジェクトでは<code>gapminder</code>というデータセットを使用します。1952年から2007年までの各国の経済データが含まれています（第4回の課題でも使用しました）。</p></li>
+</ul>
+</section>
+<section id="gapminderプロジェクトの作成" class="slide level2">
+<h2><code>gapminder</code>プロジェクトの作成</h2>
+<ol type="1">
+<li>デスクトップに<code>gapminder_analysis</code>というプロジェクトを作成し、そのプロジェクトを開いてください。</li>
+</ol>
+<ul>
+<li>プロジェクトの作成方法については、<a href="https://joelnitta.github.io/joho-shori/day3/#/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">第3回のスライド</a>を参照してください。</li>
+</ul>
+</section>
+<section id="gapminderプロジェクトの作成-1" class="slide level2">
+<h2><code>gapminder</code>プロジェクトの作成</h2>
+<ol start="2" type="1">
+<li>データをMoodleからダウンロードし、<code>gapminder_analysis</code>の中に保存してください：</li>
+</ol>
+<p><a href="https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476" class="uri">https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476</a></p>
+</section>
+<section id="gapminderプロジェクトの作成-2" class="slide level2">
+<h2><code>gapminder</code>プロジェクトの作成</h2>
+<ol start="3" type="1">
+<li>新しいプロジェクト内に<code>gapminder.R</code>というRファイルを作成し、<code>gapminder</code>というデータセットを読み込むコードを書きます：</li>
+</ol>
+<div class="medsmall">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>gapminder.R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a><span class="co"># Load raw data</span></span>
+<span id="cb19-5"><a></a>gapminder_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"gapminder.csv"</span>)</span>
+<span id="cb19-6"><a></a></span>
+<span id="cb19-7"><a></a><span class="co"># Fix column names</span></span>
+<span id="cb19-8"><a></a>gapminder <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(gapminder_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="データの集計" class="slide level2">
+<h2>データの集計</h2>
+<ul>
+<li><p>今まで学んだ関数はデータフレームの値を個別に扱いました（主に<strong>列</strong>か<strong>行</strong>に対する処理を行ってきました）。</p></li>
+<li><p>しかし、データフレームに含まれる値の<strong>平均や合計を計算したい場合</strong>には、さらに操作が必要です。</p></li>
+</ul>
+</section>
+<section id="データの合計をcountで数える" class="slide level2">
+<h2>データの合計を<code>count()</code>で数える</h2>
+<ul>
+<li><p>データの全体像を掴むために、まず数を数えることは有効です。</p></li>
+<li><p>例えば、<code>gapminder</code>にいくつの国が含まれているかを数えます。</p>
+<ul>
+<li><strong>注意</strong>：<code>count()</code>のような集計関数の結果は、入力のデータと大きく異なります！</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">count</span>(country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 142 × 2
+   country         n
+   &lt;chr&gt;       &lt;int&gt;
+ 1 Afghanistan    12
+ 2 Albania        12
+ 3 Algeria        12
+ 4 Angola         12
+ 5 Argentina      12
+ 6 Australia      12
+ 7 Austria        12
+ 8 Bahrain        12
+ 9 Bangladesh     12
+10 Belgium        12
+# ℹ 132 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="データの平均などを計算するためにsummarizeを使う" class="slide level2">
+<h2>データの平均などを計算するために<code>summarize()</code>を使う</h2>
+<ul>
+<li><p><code>summarize()</code>（「集計する」）の使い方は<code>mutate()</code>と似ています。</p></li>
+<li><p><code>summarize(データ, 新しい列名 = コマンド)</code></p>
+<ul>
+<li>コマンドには、新しい列の生成方法を指定します</li>
+<li>新しい列名の設定は<strong>任意</strong>であり、わかりやすい名前を指定します。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>例えば、全体の寿命の平均を計算しましょう：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_life_exp =</span> <span class="fu">mean</span>(life_exp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  mean_life_exp
+          &lt;dbl&gt;
+1          59.5</code></pre>
+</div>
+</div>
+<ul>
+<li><code>mean()</code>は平均を計算する関数です。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>また、最も短い寿命を求めます：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">summarize</span>(<span class="at">min_life_exp =</span> <span class="fu">min</span>(life_exp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  min_life_exp
+         &lt;dbl&gt;
+1         23.6</code></pre>
+</div>
+</div>
+<ul>
+<li><code>min()</code>は最小値を返す関数です。</li>
+</ul>
+</section>
+<section id="グループ化" class="slide level2">
+<h2>グループ化</h2>
+<ul>
+<li><p>しかし、<strong>全体の</strong>平均や最小値だけでは役立ちません。</p></li>
+<li><p>代わりに、<strong>国ごと</strong>の値が知りたい場合があります。</p></li>
+<li><p>そのように「何か<strong>ごと</strong>」に計算するには、<strong>グループ化</strong>を使用します。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>グループを指定する関数は<code>group_by()</code>です：</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">group_by</span>(country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.3em"><code># A tibble: 1,704 × 6
+# Groups:   country [142]
+   country      year      pop continent life_exp gdp_percap
+   &lt;chr&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;
+ 1 Afghanistan  1952  8425333 Asia          28.8       779.
+ 2 Afghanistan  1957  9240934 Asia          30.3       821.
+ 3 Afghanistan  1962 10267083 Asia          32.0       853.
+ 4 Afghanistan  1967 11537966 Asia          34.0       836.
+ 5 Afghanistan  1972 13079460 Asia          36.1       740.
+ 6 Afghanistan  1977 14880372 Asia          38.4       786.
+ 7 Afghanistan  1982 12881816 Asia          39.9       978.
+ 8 Afghanistan  1987 13867957 Asia          40.8       852.
+ 9 Afghanistan  1992 16317921 Asia          41.7       649.
+10 Afghanistan  1997 22227415 Asia          41.8       635.
+# ℹ 1,694 more rows</code></pre>
+</div>
+</div>
+<p>これで国ごとのグループが作成されました</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/groups_annotated.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li><p>ただし、グループ化だけではまだ計算が行われていません。</p></li>
+<li><p>グループ化の次に<code>summarize()</code>を用いて計算します：</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="medsmall">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb28-4"><a></a>    <span class="at">mean_life_exp =</span> <span class="fu">mean</span>(life_exp)</span>
+<span id="cb28-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 142 × 2
+   country     mean_life_exp
+   &lt;chr&gt;               &lt;dbl&gt;
+ 1 Afghanistan          37.5
+ 2 Albania              68.4
+ 3 Algeria              59.0
+ 4 Angola               37.9
+ 5 Argentina            69.1
+ 6 Australia            74.7
+ 7 Austria              73.1
+ 8 Bahrain              65.6
+ 9 Bangladesh           49.8
+10 Belgium              73.6
+# ℹ 132 more rows</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="チャレンジ-④" class="slide level2">
+<h2>チャレンジ ④</h2>
+<ul>
+<li>国ごとに寿命の最小値を求めてください。</li>
+</ul>
+</section>
+<section id="グループ化-1" class="slide level2">
+<h2>グループ化</h2>
+<ul>
+<li>同時に複数の計算も可能です。
+<ul>
+<li>各新しい列をカンマで区切ります</li>
+</ul></li>
+<li>例えば、平均と標準偏差：</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="medsmall">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb30-4"><a></a>    <span class="at">mean_life_exp =</span> <span class="fu">mean</span>(life_exp),</span>
+<span id="cb30-5"><a></a>    <span class="at">sd_life_exp =</span> <span class="fu">sd</span>(life_exp)</span>
+<span id="cb30-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 142 × 3
+  country     mean_life_exp sd_life_exp
+  &lt;chr&gt;               &lt;dbl&gt;       &lt;dbl&gt;
+1 Afghanistan          37.5        5.10
+2 Albania              68.4        6.32
+3 Algeria              59.0       10.3 
+4 Angola               37.9        4.01
+5 Argentina            69.1        4.19
+6 Australia            74.7        4.15
+# ℹ 136 more rows</code></pre>
+</div>
+</div>
+</div>
+<ul>
+<li><code>sd()</code>（「standard deviation」）は標準偏差を計算する関数です。</li>
+</ul>
+</section>
+<section id="チャレンジ-⑤" class="slide level2">
+<h2>チャレンジ ⑤</h2>
+<ul>
+<li>国ごとの一人当たり総生産の平均と標準偏差を計算してください。</li>
+</ul>
+</section>
+<section id="パイプライン" class="slide level2">
+<h2>パイプライン</h2>
+<ul>
+<li><p>パイプとコマンドを組み合わせることで、複雑なデータ処理を簡単に行うことができます。</p></li>
+<li><p>例えば、アジアの国だけに絞ってから、国ごとの計算も可能です：</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="medsmall">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
+<span id="cb32-4"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb32-5"><a></a>    <span class="at">mean_life_exp =</span> <span class="fu">mean</span>(life_exp),</span>
+<span id="cb32-6"><a></a>    <span class="at">sd_life_exp =</span> <span class="fu">sd</span>(life_exp)</span>
+<span id="cb32-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 33 × 3
+   country         mean_life_exp sd_life_exp
+   &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt;
+ 1 Afghanistan              37.5        5.10
+ 2 Bahrain                  65.6        8.57
+ 3 Bangladesh               49.8        9.03
+ 4 Cambodia                 47.9        8.93
+ 5 China                    61.8       10.3 
+ 6 Hong Kong China          73.5        6.69
+ 7 India                    53.2        9.26
+ 8 Indonesia                54.3       11.5 
+ 9 Iran                     58.6        8.98
+10 Iraq                     56.6        5.74
+# ℹ 23 more rows</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="まとめ" class="slide level2">
+<h2>まとめ</h2>
+<ul>
+<li>グループ化により、グループごとの集計が可能です。
+<ul>
+<li><code>group_by</code>でグループを定義</li>
+<li><code>summarize()</code>でグループごとの計算を実行</li>
+</ul></li>
+<li>パイプ（<code>|&gt;</code>）で複数のデータ処理操作をつなぐことで、複雑なデータ処理パイプラインが構築できます。</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
