@@ -931,41 +931,6 @@
     "text": "チャレンジ ③\n\npenguins_analysisというプロジェクトをデスクトップに作成して開いてください。終わったら、再度students_analysisを開いてください。\n\n（penguinsは別の教科書のデータセットです）"
   },
   {
-    "objectID": "day3/index.html#データフレームのデータ型",
-    "href": "day3/index.html#データフレームのデータ型",
-    "title": "情報処理演習",
-    "section": "データフレームのデータ型",
-    "text": "データフレームのデータ型\n\n今回読み込んだデータをよく見てみましょう。\n\nAGEという列のデータ型は？"
-  },
-  {
-    "objectID": "day3/index.html#データフレームのデータ型-1",
-    "href": "day3/index.html#データフレームのデータ型-1",
-    "title": "情報処理演習",
-    "section": "データフレームのデータ型",
-    "text": "データフレームのデータ型\n\nAGEは数値（dbl）ではなく、文字（chr）として読み込まれています。\n\nなぜでしょう？"
-  },
-  {
-    "objectID": "day3/index.html#データフレームのデータ型-2",
-    "href": "day3/index.html#データフレームのデータ型-2",
-    "title": "情報処理演習",
-    "section": "データフレームのデータ型",
-    "text": "データフレームのデータ型\n\nAGEの中に\"five\"が含まれていたため、すべてが文字として認識されてしまったようです。\n\n自動的なデータ型の検出がうまく機能しませんでした。\n\nこのような場合は、自分でデータ型を指定する必要があります。"
-  },
-  {
-    "objectID": "day3/index.html#データフレームのデータ型の指定",
-    "href": "day3/index.html#データフレームのデータ型の指定",
-    "title": "情報処理演習",
-    "section": "データフレームのデータ型の指定",
-    "text": "データフレームのデータ型の指定\n\nread_csv()のcol_types引数を使用します。\n\n\ncol_types = list(列名 = col_何ちゃら())\n\n\ncol_types = list(AGE = col_double())"
-  },
-  {
-    "objectID": "day3/index.html#他のデータ型",
-    "href": "day3/index.html#他のデータ型",
-    "title": "情報処理演習",
-    "section": "他のデータ型",
-    "text": "他のデータ型\n\ncol_character() 文字\ncol_logical() 論理\ncol_double() 数字"
-  },
-  {
     "objectID": "day5/index.html#おさらい",
     "href": "day5/index.html#おさらい",
     "title": "情報処理演習",

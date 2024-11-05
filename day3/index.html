@@ -929,76 +929,87 @@ Which would you like to update?</code></pre>
 <li>（<code>penguins</code>は別の教科書のデータセットです）</li>
 </ul></li>
 </ul>
-</section>
-<section id="データフレームのデータ型" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li>今回読み込んだデータをよく見てみましょう。
-<ul>
-<li><code>AGE</code>という列のデータ型は？</li>
-</ul></li>
-</ul>
-</section>
-<section id="データフレームのデータ型-1" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li><code>AGE</code>は数値（<code>dbl</code>）ではなく、文字（<code>chr</code>）として読み込まれています。
-<ul>
-<li>なぜでしょう？</li>
-</ul></li>
-</ul>
-</section>
-<section id="データフレームのデータ型-2" class="slide level2">
-<h2>データフレームのデータ型</h2>
-<ul>
-<li><code>AGE</code>の中に<code>"five"</code>が含まれていたため、すべてが文字として認識されてしまったようです。
-<ul>
-<li>自動的なデータ型の検出がうまく機能しませんでした。</li>
-</ul></li>
-<li>このような場合は、自分でデータ型を指定する必要があります。</li>
-</ul>
-</section>
-<section id="データフレームのデータ型の指定" class="slide level2">
-<h2>データフレームのデータ型の指定</h2>
-<ul>
-<li><code>read_csv()</code>の<code>col_types</code>引数を使用します。</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>col_types <span class="ot">=</span> <span class="fu">list</span>(列名 <span class="ot">=</span> col_何ちゃら())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>col_types <span class="ot">=</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
+<!-- comment out slide content not covered in class
 
-<div class="medsmall">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>, <span class="at">col_types =</span> <span class="fu">list</span>(<span class="at">AGE =</span> <span class="fu">col_double</span>()))</span>
-<span id="cb15-2"><a></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
+## データフレームのデータ型
+
+- 今回読み込んだデータをよく見てみましょう。
+  - `AGE`という列のデータ型は？
+
+## データフレームのデータ型
+
+- `AGE`は数値（`dbl`）ではなく、文字（`chr`）として読み込まれています。
+  - なぜでしょう？
+
+## データフレームのデータ型
+
+- `AGE`の中に`"five"`が含まれていたため、すべてが文字として認識されてしまったようです。
+  - 自動的なデータ型の検出がうまく機能しませんでした。
+
+- このような場合は、自分でデータ型を指定する必要があります。
+
+## データフレームのデータ型の指定
+
+- `read_csv()`の`col_types`引数を使用します。
+
+
+::: {.cell}
+
+```{.r .cell-code}
+col_types = list(列名 = col_何ちゃら())
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+col_types = list(AGE = col_double())
+```
+:::
+
+
+---
+
+::: {.medsmall}
+
+
+::: {.cell}
+
+```{.r .cell-code}
+students <- read_csv("Z:/Desktop/students.csv", col_types = list(AGE = col_double()))
+students
+```
+:::
+
+::: {.cell}
+::: {.cell-output .cell-output-stdout}
+
+```
+# A tibble: 6 × 5
   `Student ID` `Full Name`      favourite.food     mealPlan              AGE
-         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;
+         <dbl> <chr>            <chr>              <chr>               <dbl>
 1            1 Sunil Huffmann   Strawberry yoghurt Lunch only              4
 2            2 Barclay Lynn     French fries       Lunch only              5
 3            3 Jayendra Lyne    N/A                Breakfast and lunch     7
 4            4 Leon Rossini     Anchovies          Lunch only             NA
 5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA
-6            6 Güvenç Attila    Ice cream          Lunch only              6</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="他のデータ型" class="slide level2">
-<h2>他のデータ型</h2>
-<ul>
-<li><code>col_character()</code> 文字</li>
-<li><code>col_logical()</code> 論理</li>
-<li><code>col_double()</code> 数字</li>
-</ul>
+6            6 Güvenç Attila    Ice cream          Lunch only              6
+```
+
+
+:::
+:::
+
+
+:::
+
+## 他のデータ型
+
+- `col_character()` 文字
+- `col_logical()` 論理
+- `col_double()` 数字
+
+-->
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
