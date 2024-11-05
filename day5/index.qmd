@@ -11,24 +11,6 @@ execute:
 
 <https://data-science-chiba-2024.github.io/day5/>
 
-## クイズ
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![](../images/joho2024-qr-code.png)
-:::
-
-::: {.column width="50%"}
-**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
-
-クイズの際はスマートフォンを利用して回答してください。他の行為（スライドを閲覧することやRStudioの操作など）は**禁止**です。
-:::
-
-::::
-
-または、[gosocrative.com](https://gosocrative.com) で「joho2024」を入力
-
 ## おさらい
 
 - 前回は以下のデータ処理に必要な関数を学びました：
