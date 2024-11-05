@@ -463,6 +463,8 @@ students <- read_csv("data/students.csv")
 - `penguins_analysis`というプロジェクトをデスクトップに作成して開いてください。終わったら、再度`students_analysis`を開いてください。
   - （`penguins`は別の教科書のデータセットです）
 
+<!-- comment out slide content not covered in class
+
 ## データフレームのデータ型
 
 - 今回読み込んだデータをよく見てみましょう。
@@ -517,3 +519,5 @@ students
 - `col_character()` 文字
 - `col_logical()` 論理
 - `col_double()` 数字
+
+-->
