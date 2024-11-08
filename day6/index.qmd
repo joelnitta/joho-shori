@@ -1,0 +1,391 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 第6回：データの結合、可視化（１）
+
+<https://data-science-chiba-2024.github.io/day6/>
+
+## クイズ
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/joho2024-qr-code.png)
+:::
+
+::: {.column width="50%"}
+**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
+
+クイズの際は質問に回答してください。他の行為（スライドを閲覧することやRStudioの操作など）は**禁止**です。
+:::
+
+::::
+
+# データの結合
+
+## データの結合
+
+- 多くの場合、使いたいデータが複数のデータセット（データフレーム、あるいはファイル）に跨いで入っている
+
+- したがって、**データの結合**（join）を行う必要がある
+
+- 今回は飛行のデータを使ってデータの結合を学びます
+
+## プロジェクトの準備
+
+- 新しいデータセットを解析しますので、新しいプロジェクトを作りましょう。
+
+- `flights_analysis`というプロジェクトを作って、デスクトップにおいてください。
+
+## パッケージの準備
+
+- プロジェクトの中に`flights.R`という新しいスクリプトを作って、コードを書きます：
+
+```{r}
+#| filename: flights.R
+library(nycflights13)
+library(tidyverse)
+```
+
+## `nycflights13`パッケージについて
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- このパッケージには複数の練習用のデータセットが入っています。
+
+- `flights`という2013年にデータフレームにはニューヨーク市を出発した飛行データが入っています
+:::
+
+::: {.column width="50%"}
+![](../images/nyflights.jpg)
+:::
+
+::::
+
+::: {.aside}
+<https://www.express.co.uk/travel/articles/1440362/us-holidays-jetblue-flights-travel-low-cost-budget-heathrow-gatwick>
+:::
+
+## 複数のデータセットの例：飛行のデータ
+
+- `flights`を打つと、飛行データが見えます：
+
+```{r}
+#| class: small
+flights
+```
+
+---
+
+- でも、データが多いため、今回の授業に使う列を選んで、`flights2`として保存しましょう：
+
+```{r}
+flights2 <- flights |>
+  select(year, time_hour, origin, dest, tailnum, carrier)
+```
+
+## 複数のデータセットの例：航空会社のデータ
+
+- `airlines`には航空会社の名前のデータが入っています：
+
+```{r}
+airlines
+```
+
+## 飛行データと航空データの結合
+
+どうやってこのデータを`nycflights13`と結合させることができるのでしょうか？
+
+## `left_join()`で別のデータフレームからデータを加える
+
+- データの結合をする関数は`left_join()`です。
+  - **左**の方のデータに新しいデートを**結合**させる、という意味です
+
+航空会社の名前を追加しましょう：
+
+```{r}
+flights2 |>
+  left_join(airlines)
+```
+
+## 結合する時は「鍵」が大事
+
+上のコードを走らせた際、このメッセージがありました：
+
+```
+Joining with `by = join_by(carrier)`
+```
+
+- つまり、それぞれのデータフレームが**共通に持っている列**です。これ**「鍵」（Key）**と呼ぶ。
+
+- 共通に持っている列がないと、結合ができない。
+
+## 結合する時は「鍵」が大事
+
+上のコードは自動的に共通する列を鍵として使ったけど、手動で指定することもできる：
+
+```{r}
+flights2 |>
+  left_join(
+    airlines,
+    by = join_by(carrier))
+```
+
+## 鍵となる列の条件
+
+- 右側のデータの鍵が行を**識別できる**必要がある。それぞれの`carrier`はデータに一回だけ出てくる
+
+- `count()`で確かめる（`n`が全て`1`になっている）
+
+```{r}
+airlines
+
+airlines |>
+  count(carrier) |>
+  filter(n > 1)
+```
+
+## 他のデータに結合してみる
+
+`nycflights13`パッケージに他のデータフレームがいくつかある：
+
+![](https://r4ds.hadley.nz/diagrams/relational.png)
+
+## チャレンジ：他のデータに結合してみる
+
+`planes`のデータを`flights2`に結合することができますか？
+
+# データの可視化
+
+## データの可視化について
+
+- EDA（**E**ploratory **D**ata **A**nalysis）の際、データの**可視化**が重要なツールになる
+
+---
+
+![Image by Allison Horst](../images/ggplot2_exploratory.png)
+
+## ggplot2について
+
+- Rには備え付けの関数、`plot()`があるが、今回は`tidyverse`の`ggplot2`パッケージを使う
+
+- `gg` = "**G**rammar of **G**raphics"（画像の文法）
+  - 「文法」が分かれば、（ほとんど）<br>どんな図でも作れる
+
+## ggplot2について
+
+図の構造にはいくつか**決まった要素**がある
+
+- **geometry**: 図はどのような**形**にする？
+
+- **aesthetics**: データをどのように図に**表す**？
+
+## Geometry
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Pie chart
+<br><br>
+<img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-pie-1.png" alt="drawing" height="220">
+:::
+
+::: {.column width="50%"}
+Bar graph
+<br><br>
+<img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-bars-1.png" alt="drawing" height="220">
+:::
+
+::::
+
+:::: {.aside}
+::: {.small}
+https://clauswilke.com/dataviz/proportional-ink.html
+:::
+::::
+
+## Aesthetics
+
+<img src="https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png" alt="drawing" height="250">
+
+:::: {.aside}
+::: {.small}
+https://clauswilke.com/dataviz/aesthetic-mapping.html
+:::
+::::
+
+## プロジェクトの準備
+
+- 新しいデータセットを解析しますので、新しいプロジェクトを作りましょう。
+
+- `penguins_analysis`というプロジェクトを作って、デスクトップにおいてください。
+
+## パッケージの準備
+
+- プロジェクトの中に`penguins.R`という新しいスクリプトを作って、コードを書きます：
+
+```{r}
+#| filename: penguins.R
+library(tidyverse)
+library(palmerpenguins)
+
+penguins
+```
+
+---
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+
+## palmerpenguinsについて
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png)
+
+## 目的：このグラフを作る
+
+![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+
+## `ggplot()`でグラフの基盤を作る
+
+```{r}
+#| output-location: column
+ggplot(data = penguins)
+```
+
+## `mapping()`で座標を指定する
+
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+)
+```
+
+## `mapping()`で座標を指定する
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "3-6"
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+)
+```
+
+## `geom_()`でデータの形を指定する
+
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+) +
+  geom_point()
+```
+
+## `geom_()`でデータの形を指定する
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "7-8"
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+) +
+  geom_point()
+```
+
+## チャレンジ
+
+`bill_length_mm`を横軸、`bill_depth_mm`を縦軸にして、点グラフを作成して下さい
+
+## `color`で色を潰す
+
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point()
+```
+
+## `color`で色を潰す
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "6"
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point()
+```
+
+## チャレンジ
+
+色で島（`island`）を表てください
+
+## チャレンジ
+
+色で種（`species`、形で島（`island`）を表てください
+
+## `geom_smooth()`回帰直線を付け加える
+
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+## `geom_smooth()`回帰直線を付け加える
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "9-10"
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
