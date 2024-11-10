@@ -31,7 +31,7 @@ execute:
 
 ## データの結合
 
-- 多くの場合、使いたいデータが複数のデータセット（データフレーム、あるいはファイル）に跨いで入っている
+- 多くの場合、使いたいデータが複数のデータセット（データフレーム、あるいはファイル）に跨いでいる
 
 - したがって、**データの結合**（join）を行う必要がある
 
@@ -64,7 +64,7 @@ library(tidyverse)
 :::
 
 ::: {.column width="50%"}
-![](../images/nyflights.jpg)
+![](https://cdn.images.express.co.uk/img/dynamic/25/590x/JetBlue-flights-1440362.webp?r=1621865971540)
 :::
 
 ::::
@@ -79,6 +79,7 @@ library(tidyverse)
 
 ```{r}
 #| class: small
+#| attr-output: "style='font-size: 0.8em'"
 flights
 ```
 
@@ -86,14 +87,23 @@ flights
 
 - でも、データが多いため、今回の授業に使う列を選んで、`flights2`として保存しましょう：
 
+::: {.medsmall}
+
 ```{r}
 flights2 <- flights |>
   select(year, time_hour, origin, dest, tailnum, carrier)
+
+flights2
 ```
+
+:::
 
 ## 複数のデータセットの例：航空会社のデータ
 
-- `airlines`には航空会社の名前のデータが入っています：
+- `airlines`には航空会社の名前のデータが入っています。
+  - `carrier`は航空会社コードのこと（二文字）。例えば、全日空の航空会社コードは`NH`。
+
+---
 
 ```{r}
 airlines
@@ -101,37 +111,53 @@ airlines
 
 ## 飛行データと航空データの結合
 
-どうやってこのデータを`nycflights13`と結合させることができるのでしょうか？
+どうやって飛行データに航空会社の名前を結合させることができるのでしょうか？
+
+## チャレンジ ①
+
+まずは、列を確認しましょう。
+
+**二つのデータフレームの間に共通している列名はどれでしょうか？**
+
+---
+
+この列名**を元に**データの結合を行います。
 
 ## `left_join()`で別のデータフレームからデータを加える
 
 - データの結合をする関数は`left_join()`です。
   - **左**の方のデータに新しいデートを**結合**させる、という意味です
 
+---
+
 航空会社の名前を追加しましょう：
 
 ```{r}
+#| attr-output: "style='font-size: 0.3em'"
 flights2 |>
   left_join(airlines)
 ```
 
 ## 結合する時は「鍵」が大事
 
-上のコードを走らせた際、このメッセージがありました：
+上のコードを実行した際、このメッセージがありました：
 
 ```
 Joining with `by = join_by(carrier)`
 ```
 
-- つまり、それぞれのデータフレームが**共通に持っている列**です。これ**「鍵」（Key）**と呼ぶ。
+- つまり、それぞれのデータフレームが**共通に持っている列**を元に結合しました。これ列を**「鍵」（Key）**と呼ぶ。
 
-- 共通に持っている列がないと、結合ができない。
+- 共通に持っている列がないと、**結合ができません**。
 
 ## 結合する時は「鍵」が大事
 
-上のコードは自動的に共通する列を鍵として使ったけど、手動で指定することもできる：
+上のコードは自動的に共通する列を鍵として使ったけど、手動で指定することもできます：
+
+---
 
 ```{r}
+#| attr-output: "style='font-size: 0.3em'"
 flights2 |>
   left_join(
     airlines,
@@ -140,17 +166,30 @@ flights2 |>
 
 ## 鍵となる列の条件
 
-- 右側のデータの鍵が行を**識別できる**必要がある。それぞれの`carrier`はデータに一回だけ出てくる
+- 右側のデータの鍵が行を**識別できる**必要があります。つまり、それぞれの`carrier`はデータに一回だけ出現する、ということです。
 
-- `count()`で確かめる（`n`が全て`1`になっている）
+- `count()`で確かめることができます。
+
+---
 
 ```{r}
-airlines
+airlines |>
+  count(carrier)
+```
 
+---
+
+`n`が全て`1`になっていることを確認したいわけです。
+
+それは`filter()`でできます：
+
+```{r}
 airlines |>
   count(carrier) |>
   filter(n > 1)
 ```
+
+`n`が全て`1`なので、航空会社コードは全て、それぞれ１回だけ出ていることが分かりました。
 
 ## 他のデータに結合してみる
 
@@ -158,15 +197,18 @@ airlines |>
 
 ![](https://r4ds.hadley.nz/diagrams/relational.png)
 
-## チャレンジ：他のデータに結合してみる
+## チャレンジ ②：他のデータに結合してみる
 
-`planes`のデータを`flights2`に結合することができますか？
+飛行機のデータが入っている`planes`のデータフレームを`flights2`に結合することができますか？
 
 # データの可視化
 
 ## データの可視化について
 
-- EDA（**E**ploratory **D**ata **A**nalysis）の際、データの**可視化**が重要なツールになる
+- EDA（**E**xploratory **D**ata **A**nalysis）の際、データの**可視化**が重要なツールになる
+
+- 本授業では`ggplot2`というパッケージを使います
+  - Rに備え付けの`plot()`関数もありますが、使い方はちょっと難しい（統一性が少ない）ので、使いません。
 
 ---
 
@@ -174,10 +216,10 @@ airlines |>
 
 ## ggplot2について
 
-- Rには備え付けの関数、`plot()`があるが、今回は`tidyverse`の`ggplot2`パッケージを使う
-
-- `gg` = "**G**rammar of **G**raphics"（画像の文法）
+- `gg` = "**G**rammar of **G**raphics"（**画像**の**文法**）
   - 「文法」が分かれば、（ほとんど）<br>どんな図でも作れる
+
+（前に`ggplot`というパッケージもありましたが、`ggplot2`は新しいバージョン）
 
 ## ggplot2について
 
@@ -187,18 +229,18 @@ airlines |>
 
 - **aesthetics**: データをどのように図に**表す**？
 
-## Geometry
+## Geometry（形）
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-Pie chart
+円グラフ
 <br><br>
 <img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-pie-1.png" alt="drawing" height="220">
 :::
 
 ::: {.column width="50%"}
-Bar graph
+ボーグラフ
 <br><br>
 <img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-bars-1.png" alt="drawing" height="220">
 :::
@@ -211,7 +253,7 @@ https://clauswilke.com/dataviz/proportional-ink.html
 :::
 ::::
 
-## Aesthetics
+## Aesthetics（データの表し方）
 
 <img src="https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png" alt="drawing" height="250">
 
@@ -220,6 +262,35 @@ https://clauswilke.com/dataviz/proportional-ink.html
 https://clauswilke.com/dataviz/aesthetic-mapping.html
 :::
 ::::
+
+## 図の文法
+
+::: {.columns}
+::: {.column width="60%"}
+- Geometry（形）：点グラフ
+- Aesthetics（データの表し方）
+  - `year`（年）: 横軸の位置（`x`）
+  - `pop`（人口、万人単位）: 縦軸の位置（`y`）
+  - `life_exp`（寿命）：点のサイズ
+:::
+::: {.column  width="40%"}
+```{r}
+#| echo: false
+library(tidyverse)
+library(janitor)
+gapminder_raw <- read_csv(here::here("data/gapminder_data.csv"))
+gapminder <- clean_names(gapminder_raw)
+
+gapminder |>
+  filter(country == "Japan") |>
+  mutate(pop = pop/10000) |>
+  ggplot(aes(x = year, y = pop, size = life_exp)) +
+    geom_point() +
+  theme_gray(base_size = 16)
+```
+
+:::
+::: 
 
 ## プロジェクトの準備
 
@@ -231,13 +302,20 @@ https://clauswilke.com/dataviz/aesthetic-mapping.html
 
 - プロジェクトの中に`penguins.R`という新しいスクリプトを作って、コードを書きます：
 
+---
+
+::: {.medsmall}
+
 ```{r}
 #| filename: penguins.R
+#| attr-output: "style='font-size: 0.4em'"
 library(tidyverse)
 library(palmerpenguins)
 
 penguins
 ```
+
+:::
 
 ---
 
@@ -253,13 +331,16 @@ penguins
 
 ## `ggplot()`でグラフの基盤を作る
 
+::: {.medium}
 ```{r}
 #| output-location: column
 ggplot(data = penguins)
 ```
+:::
 
 ## `mapping()`で座標を指定する
 
+::: {.medium}
 ```{r}
 #| output-location: column
 ggplot(
@@ -270,9 +351,11 @@ ggplot(
   )
 )
 ```
+:::
 
 ## `mapping()`で座標を指定する
 
+::: {.medium}
 ```{r}
 #| output-location: column
 #| code-line-numbers: "3-6"
@@ -284,9 +367,11 @@ ggplot(
   )
 )
 ```
+:::
 
 ## `geom_()`でデータの形を指定する
 
+::: {.medium}
 ```{r}
 #| output-location: column
 ggplot(
@@ -298,9 +383,11 @@ ggplot(
 ) +
   geom_point()
 ```
+:::
 
 ## `geom_()`でデータの形を指定する
 
+::: {.medium}
 ```{r}
 #| output-location: column
 #| code-line-numbers: "7-8"
@@ -313,13 +400,15 @@ ggplot(
 ) +
   geom_point()
 ```
+:::
 
-## チャレンジ
+## チャレンジ ③
 
 `bill_length_mm`を横軸、`bill_depth_mm`を縦軸にして、点グラフを作成して下さい
 
 ## `color`で色を潰す
 
+::: {.medium}
 ```{r}
 #| output-location: column
 ggplot(
@@ -332,9 +421,11 @@ ggplot(
 ) +
   geom_point()
 ```
+:::
 
 ## `color`で色を潰す
 
+::: {.medium}
 ```{r}
 #| output-location: column
 #| code-line-numbers: "6"
@@ -348,44 +439,12 @@ ggplot(
 ) +
   geom_point()
 ```
+:::
 
-## チャレンジ
+## チャレンジ ④
 
 色で島（`island`）を表てください
 
-## チャレンジ
+## チャレンジ ⑤
 
 色で種（`species`、形で島（`island`）を表てください
-
-## `geom_smooth()`回帰直線を付け加える
-
-```{r}
-#| output-location: column
-ggplot(
-  data = penguins,
-  mapping = aes(
-    x = flipper_length_mm,
-    y = body_mass_g,
-    color = species
-  )
-) +
-  geom_point() +
-  geom_smooth(method = "lm")
-```
-
-## `geom_smooth()`回帰直線を付け加える
-
-```{r}
-#| output-location: column
-#| code-line-numbers: "9-10"
-ggplot(
-  data = penguins,
-  mapping = aes(
-    x = flipper_length_mm,
-    y = body_mass_g,
-    color = species
-  )
-) +
-  geom_point() +
-  geom_smooth(method = "lm")
-```
