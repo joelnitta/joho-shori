@@ -1208,7 +1208,7 @@
     "href": "day6/index.html#連絡事項",
     "title": "情報処理演習",
     "section": "連絡事項",
-    "text": "連絡事項\n\nオンデマンド回の課題と倫理教育e-learningの締め切りは 11月21日（木） です。\n\n早めの提出を心がけてください。\n\n11月14日（水）の12:00〜13:00にオフィスアワーを設けます。コードに困っている方は、ぜひご参加ください。"
+    "text": "連絡事項\n\nオンデマンド回の課題と倫理教育e-learningの締め切りは 11月21日（木） です。\n\n早めの提出を心がけてください。\n\n11月14日（木）の12:00〜13:00にオフィスアワーを設けます。コードに困っている方は、ぜひご参加ください。"
   },
   {
     "objectID": "day6/index.html#クイズ",
@@ -1355,7 +1355,7 @@
     "href": "day6/index.html#図の文法",
     "title": "情報処理演習",
     "section": "図の文法",
-    "text": "図の文法\n\n\n\nGeometry（形）：点グラフ\nAesthetics（データの表現方法）\n\nyear（年）: 横軸（x）\npop（人口、万人単位）: 縦軸（y）\nlife_exp（寿命）：点のサイズ\n\n\n\n\n{.column width=“40%”}\n\n::: :::"
+    "text": "図の文法\n\n\n\nGeometry（形）：点グラフ\nAesthetics（データの表現方法）\n\nyear（年）: 横軸（x）\npop（人口、万人単位）: 縦軸（y）\nlife_exp（寿命）：点のサイズ"
   },
   {
     "objectID": "day6/index.html#プロジェクトの準備-1",
