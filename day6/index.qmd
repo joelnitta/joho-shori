@@ -279,9 +279,7 @@ https://clauswilke.com/dataviz/aesthetic-mapping.html
   - `pop`（人口、万人単位）: 縦軸（`y`）
   - `life_exp`（寿命）：点のサイズ
 :::
-:::
-
- {.column  width="40%"}
+::: {.column  width="40%"}
 ```{r}
 #| echo: false
 library(tidyverse)
