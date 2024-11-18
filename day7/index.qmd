@@ -1,0 +1,381 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# 第7回：データの可視化（2）
+
+<https://data-science-chiba-2024.github.io/day7/>
+
+## 連絡事項
+
+- オンデマンド回の課題と倫理教育e-learningの締め切りは **11月21日（木）** です。
+  - **早めの提出を心がけてください。**
+
+## クイズ
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/joho2024-qr-code.png)
+:::
+
+::: {.column width="50%"}
+**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
+
+クイズ中は質問に回答してください。他の行為（スライドの閲覧やRStudioの操作など）は**禁止**です。
+:::
+
+::::
+
+## 前回のおさらい
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(palmerpenguins)
+library(ggrepel)
+library(showtext)
+```
+
+- ggplot2のggは「**g**rammar of **g**raphics」（「図の文法」）です
+- 図の文法
+  - 標本方法（aesthetics）
+  - 形状（geometry）
+
+## パッケージの準備
+
+- `penguins_analysis`を開いて、その中の`penguins.R`を開きます
+
+- パッケージとデータをロードします：
+
+---
+
+::: {.medsmall}
+
+```{r}
+#| filename: penguins.R
+#| attr-output: "style='font-size: 0.4em'"
+library(tidyverse)
+library(palmerpenguins)
+
+penguins
+```
+
+:::
+
+---
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+
+## 前回の最後に書いた図
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  penguins,
+  aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point()
+```
+:::
+
+
+## モデルとは、データを予測する数式
+
+- 次に、**データの関係を表すモデル**を加えたいと思います。
+- **線形モデル**（linear model）は、二つの変数を関係を一直線で表すモデルです。
+- $y=ax+b$ という数式で表します
+
+
+---
+
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+# Add a Japanese font
+font_add_google("Noto Sans JP", "noto")
+showtext_auto()
+
+# Create sample data
+set.seed(123)
+x <- seq(1, 10, by = 0.5)
+a <- 2  # slope
+b <- 3  # intercept
+y <- a * x + b + rnorm(length(x), sd = 2)  # Add some noise to the data
+data <- data.frame(x = x, y = y)
+
+# Label data for ggrepel
+label_data <- data.frame(
+  x = c(0, 3),  # X position for y-intercept and slope
+  y = c(b, a * 3 + b),  # Y position for y-intercept and slope
+  label = c("y切片 (b = 3)", "傾き (a = 2)")  # Labels
+)
+
+# Generate the plot
+ggplot(data, aes(x = x, y = y)) +
+  geom_point(color = "blue", size = 2) +  # Scatter plot of points
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey20") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey20") +
+  labs(
+    title = "y = ax + b のグラフ",
+    x = "X軸",
+    y = "Y軸"
+  ) +
+  scale_y_continuous(limits = c(0, NA)) +
+  theme_gray(base_size = 24, base_family = "noto")
+```
+
+---
+
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+# Generate the plot
+ggplot(data, aes(x = x, y = y)) +
+  geom_point(color = "blue", size = 2) +  # Scatter plot of points
+  geom_abline(slope = a, intercept = b, color = "red") +  # Line for y = ax + b
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey20") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey20") +
+  # Intercept annotation
+  annotate("point", x = 0, y = b, color = "purple", size = 4) + 
+  geom_label_repel(
+    data = label_data[1,],
+    aes(x = x, y = y, label = label),
+    color = c("purple"),
+    size = 10,
+    fontface = "bold",
+    label.padding = 0.5,
+    ylim = 2.5, xlim = 1
+  ) +
+  # Slope annotation
+  annotate("segment", x = 2.5, xend = 3.5, y = a * 2.5 + b, yend = a * 3.5 + b, 
+           arrow = arrow(length = unit(0.2, "cm")), color = "darkgreen", size = 1.5) +
+  geom_label_repel(
+    data = label_data[2,],
+    aes(x = x, y = y, label = label),
+    color = c("dark green"),
+    size = 10,
+    fontface = "bold",
+    label.padding = 0.5,
+    ylim = 10, xlim = 5
+  ) +
+  annotate("text", x = 6, y = max(y) - 2, label = "y = 2x + 3", 
+           color = "red", size = 10, hjust = 0) +  # Annotate equation
+  labs(
+    title = "y = ax + b のグラフ",
+    x = "X軸",
+    y = "Y軸"
+  ) +
+  scale_y_continuous(limits = c(0, NA)) +
+  theme_gray(base_size = 24, base_family = "noto")
+```
+
+---
+
+### geom_smooth()で線形モデルを加える
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_smooth(method = "lm")
+```
+
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **でも、今のモデルは種ごとになっている**（それぞれに違う傾きと切片がある）
+
+- 目的のグラフでは一つの線しかない（**全部の種が一つのモデルに入っている**）
+:::
+
+::: {.column width="50%"}
+![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+:::
+
+::::
+
+---
+
+### `color`を外すと、全部の種が同じモデルに含まれる
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+) +
+  geom_smooth(method = "lm")
+```
+
+:::
+
+---
+
+### geom_point()で元のデータを点で表す
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g
+  )
+) +
+  geom_smooth(method = "lm") +
+  geom_point()
+```
+
+:::
+
+---
+
+[そうか、色をまた戻さないと・・]{.large}
+
+---
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_smooth(method = "lm") +
+  geom_point()
+```
+
+:::
+
+---
+
+[しまった、また種別の線になった。<br>どうしよう？]{.large}
+
+---
+
+### `geom_()`の中に`mapping`を入れられます
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(data = penguins) +
+  geom_point(
+    mapping = aes(
+      x = flipper_length_mm,
+      y = body_mass_g,
+      color = species
+    )
+  )
+```
+:::
+
+---
+
+[`aes()`を`geom_()`の中に入れると、それぞれの`geom_`に異なるデータの表現方法を指定することができます！]{.medlarge}
+
+---
+
+### `geom_()`の中に`mapping`を入れられます
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(data = penguins) +
+  geom_point(
+    mapping = aes(
+      x = flipper_length_mm,
+      y = body_mass_g,
+      color = species
+    )
+  ) +
+  geom_smooth(
+    mapping = aes(
+      x = flipper_length_mm,
+      y = body_mass_g
+    ),
+    method = "lm"
+  )
+```
+:::
+
+---
+
+[でも、一々書くとめんどくさい・・]{.medlarge}
+
+---
+
+- `ggplot()`の中に`aes()`を入れると、それが**全部**の`geom_()`に適応される
+
+- 共通に持っているデータの表現方法だけを`ggplot()`に書けばいい！
+
+---
+
+共通の表現方法を`ggplot()`に、他はそれぞれの`geom_()`に書きます：
+
+::: {.medium}
+```{r}
+#| output-location: column
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g)
+  ) +
+  geom_point(aes(color = species)) +
+  geom_smooth(method = "lm")
+```
+:::
+
+## チャレンジ
+
+種を点の形で表してください
+
+## レーヤーについて
+
+- `+`で加えるコードを**「レーヤー」**（layer）と呼びます
+- レーヤーには**順番があります**：下から上まで塗って行きます
+
+---
+
+![](https://r.qcbs.ca/workshop03/book-en/images/gglayers.png)
+
+## チャレンジ
+
+`geom_point()`のレーヤーと`geom_smooth`のレーヤーの順番を変えてみてください。
+
+図がどう変わりましたか？
+
+## `labs`
