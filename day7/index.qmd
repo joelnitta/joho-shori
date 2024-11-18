@@ -106,7 +106,6 @@ ggplot(
 - **線形モデル**（linear model）は、二つの変数を関係を一直線で表すモデルです。
 - $y=ax+b$ という数式で表します
 
-
 ---
 
 ```{r}
@@ -192,6 +191,11 @@ ggplot(data, aes(x = x, y = y)) +
   theme_gray(base_size = 24, base_family = "noto")
 ```
 
+```{r}
+#| echo: false
+showtext_auto(enable = FALSE)
+```
+
 ---
 
 ### geom_smooth()で線形モデルを加える
@@ -249,7 +253,7 @@ ggplot(
 
 ---
 
-### geom_point()で元のデータを点で表す
+### `geom_point()`で元のデータを点で表す
 
 ::: {.medsmall}
 ```{r}
@@ -369,7 +373,7 @@ ggplot(
 ```
 :::
 
-## チャレンジ
+## チャレンジ ①
 
 種を点の形で表してください
 
@@ -382,7 +386,7 @@ ggplot(
 
 ![](https://r.qcbs.ca/workshop03/book-en/images/gglayers.png)
 
-## チャレンジ
+## チャレンジ ②
 
 `geom_point()`のレーヤーと`geom_smooth`のレーヤーの順番を変えてみてください。
 
@@ -402,9 +406,9 @@ ggplot(
 
 ---
 
-::: {.medsmall}
-
 ### `labs`レーヤーでラベルを指定する
+
+::: {.medsmall}
 
 ```{r}
 #| output-location: column
@@ -424,7 +428,7 @@ ggplot(
 
 :::
 
-## チャレンジ
+## チャレンジ ③
 
 縦軸のラベルを読みやすくしてください。
 
@@ -584,7 +588,9 @@ ggplot(
 
 :::
 
-## `theme_()`で図の全体の色やフォントなどを整える
+---
+
+### `theme_()`で図の全体の色やフォントなどを整える
 
 ::: {.medsmall}
 
@@ -611,7 +617,7 @@ ggplot(
 
 :::
 
-## 他の`theme_()`
+## 他の`theme_()` {.smaller}
 
 ggplot2にはこのような`theme_()`があります：
 
@@ -624,16 +630,18 @@ ggplot2にはこのような`theme_()`があります：
 - `theme_classic()`
 - `theme_void()`
 
-# チャレンジ
+
+## チャレンジ ④
 
 他のテーマを試してみてください。どちらが好きですか？
 
-## `ggthemes`パッケージにはもっとあります
+---
+
+### `ggthemes`パッケージにはもっとあります
 
 <iframe src="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/" 
         width="800" 
-        height="600" 
-        style="border:none;">
+        height="600">
 </iframe>
 
 ## まとめ
