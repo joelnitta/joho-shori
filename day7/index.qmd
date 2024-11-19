@@ -36,10 +36,9 @@ execute:
 
 - 前回のおさらい
 - データの可視化（2）
-  - 図にモデルを加える
-  - 図のラベルを整える
-  - 図の色を整える
-- フリータイム（課題に取り組む時間）
+  - グラフにモデルを加える
+  - グラフのラベルを整える
+  - グラフの色を整える
 
 ## 前回のおさらい
 
@@ -57,7 +56,12 @@ library(ggthemes)
   - グラフ中の要素とデータの紐付け（aesthetics）
   - 形状（geometry）
 
-## パッケージの準備
+## 準備
+
+- 前回欠席した方は、Moodleから第7回の`penguins_analysis.zip`をダウンロードして、デスクトップで解凍してください。
+  - やり方の詳細については[第5回のスライド](https://joelnitta.github.io/joho-shori/day5/#/%E6%BA%96%E5%82%99)を参照してください
+
+---
 
 - `penguins_analysis`プロジェクトを開き、その中の`penguins.R`を開きます。
 
@@ -82,14 +86,18 @@ penguins
 
 ![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
 
-## 前回の最後に書いた図
+## 目的：このグラフを作る
+
+![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+
+## 前回の最後に書いたグラフ
 
 ::: {.medsmall}
 ```{r}
 #| output-location: column
 ggplot(
-  penguins,
-  aes(
+  data = penguins,
+  mapping = aes(
     x = flipper_length_mm,
     y = body_mass_g,
     color = species
@@ -98,6 +106,45 @@ ggplot(
   geom_point()
 ```
 :::
+
+## 前回の最後に書いたグラフ
+
+::: {.medsmall}
+```{r}
+#| output-location: column
+#| code-line-numbers: "3-8"
+ggplot(
+  data = penguins,
+  # グラフ中の要素とデータの紐付け
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point()
+```
+:::
+
+## 前回の最後に書いたグラフ
+
+::: {.medsmall}
+```{r}
+#| output-location: column
+#| code-line-numbers: "9-10"
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  # グラフの形状
+  geom_point()
+```
+:::
+
 
 
 ## モデルとは、データを予測する数式
@@ -203,6 +250,7 @@ showtext_auto(enable = FALSE)
 ::: {.medsmall}
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|9"
 ggplot(
   data = penguins,
   mapping = aes(
@@ -280,6 +328,7 @@ ggplot(
 ::: {.medsmall}
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|6"
 ggplot(
   data = penguins,
   mapping = aes(
@@ -362,6 +411,7 @@ ggplot(data = penguins) +
 ::: {.medsmall}
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|3-6|7"
 ggplot(
   data = penguins,
   mapping = aes(
@@ -390,19 +440,19 @@ ggplot(
 
 `geom_point()`のレイヤーと`geom_smooth()`のレイヤーの順番を入れ替えてみてください。
 
-図がどのように変化しましたか？
+グラフがどのように変化しましたか？
 
-## `labs`レイヤーで図のラベルを整える
+## `labs`レイヤーでグラフのラベルを整える
 
 - 発表時には、図を誰にでも分かりやすくする必要があります
 - あなた（図を作った人）は`flipper_length_mm`が何を指しているか分かるでしょうが、見る人には分かりにくいことがあります
 
-## `labs`レイヤーで図のラベルを整える
+## `labs`レイヤーでグラフのラベルを整える
 
 - 名前の作り方は使う人によって異なります：
   - `flipper_length_mm`：コードを書く人
   - `Flipper length (mm)`：図を見る人
-- **解決策**：元のデータの変数名（列名）は変更せずに、**分かりやすいラベルを図の作成時に指定します**
+- **解決策**：元のデータの変数名（列名）は変更せずに、**分かりやすいラベルをグラフの作成時に指定します**
 
 ---
 
@@ -412,14 +462,14 @@ ggplot(
 
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|9-11"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g,
-    shape = species)
+    y = body_mass_g)
   ) +
-  geom_point(aes(color = species)) +
+  geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
     x = "Flipper length (mm)"
@@ -434,7 +484,7 @@ ggplot(
 
 ---
 
-### ラベルを整えた図
+### ラベルを整えたグラフ
 
 ::: {.medsmall}
 
@@ -444,10 +494,9 @@ ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g,
-    shape = species)
+    y = body_mass_g)
   ) +
-  geom_point(aes(color = species)) +
+  geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
     title = "Body mass and flipper length",
@@ -461,10 +510,10 @@ ggplot(
 
 ## 色を整える
 
-- ラベルだけでなく、色も誰にでも分かりやすくする必要があります
-- 世界人口の約**4〜5％**が色覚異常を持つ（男性8％、女性0.5％）
+- ラベルだけでなく、**色**も誰にでも分かりやすくする必要があります
+- 世界人口の約**4〜5％**が**色覚異常**を持つ（男性8％、女性0.5％）
 - ggplot2のデフォルトの色は色覚異常の方にとって識別が難しい場合があります
-- 色覚異常に配慮したカラーパレットを使用することが重要です
+- **色覚異常に配慮したカラーパレットを使用することが重要です**
 
 ## `ggthemes`の色を使う
 
@@ -486,14 +535,14 @@ library(ggthemes)
 
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|15"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g,
-    shape = species)
+    y = body_mass_g)
   ) +
-  geom_point(aes(color = species)) +
+  geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
     title = "Body mass and flipper length",
@@ -508,6 +557,24 @@ ggplot(
 
 # 完成！
 
+## グラフの保存方法
+
+- `ggsave()`でグラフをファイルに書き出す
+
+```{r}
+#| eval: false
+ggsave("penguins.pdf")
+```
+
+## グラフの保存方法
+
+- ファイルの拡張子を変えると、出力ファイルが自動的にそのファイル形式になる
+
+```{r}
+#| eval: false
+ggsave("penguins.jpg")
+```
+
 ## 文字化けを防ぐ方法
 
 - ggplot2のデフォルトフォントでは日本語が文字化けする可能性があります
@@ -518,6 +585,7 @@ ggplot(
 
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|10-12"
 ggplot(
   data = penguins,
   mapping = aes(
@@ -567,6 +635,7 @@ showtext_auto()
 
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|1-2|17"
 font_add_google("Noto Sans JP", "noto")
 showtext_auto()
 
@@ -590,12 +659,13 @@ ggplot(
 
 ---
 
-### `theme_()`で図全体のデザインを整える
+### `theme_()`でグラフ全体のデザインを整える
 
 ::: {.medsmall}
 
 ```{r}
 #| output-location: column
+#| code-line-numbers: "|17"
 ggplot(
   data = penguins,
   mapping = aes(
@@ -649,6 +719,4 @@ ggplot2には以下の`theme_()`が用意されています：
 - `+`でレイヤーを増やす
 - `labs`でラベルを整える
 - `scale_color_()`でデータの色を整える
-- `theme_()`で図全体のデザインを整える
-
-# フリータイム
+- `theme_()`でグラフ全体のデザインを整える
