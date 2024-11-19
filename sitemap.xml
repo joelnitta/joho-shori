@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>git@github.com:joelnitta/joho-shori/day1/index.html</loc>
-    <lastmod>2024-11-12T05:50:00.451Z</lastmod>
+    <lastmod>2024-11-19T03:17:07.892Z</lastmod>
   </url>
   <url>
     <loc>git@github.com:joelnitta/joho-shori/on-demand/index.html</loc>
-    <lastmod>2024-11-12T05:49:56.187Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github.com:joelnitta/joho-shori/day5/index.html</loc>
-    <lastmod>2024-11-12T05:49:55.537Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github.com:joelnitta/joho-shori/day3/index.html</loc>
-    <lastmod>2024-11-12T05:49:52.403Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github.com:joelnitta/joho-shori/day4/index.html</loc>
-    <lastmod>2024-11-12T05:49:50.823Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github.com:joelnitta/joho-shori/day2/index.html</loc>
-    <lastmod>2024-11-12T05:49:53.774Z</lastmod>
+    <lastmod>2024-11-19T03:17:01.204Z</lastmod>
   </url>
   <url>
     <loc>git@github.com:joelnitta/joho-shori/index.html</loc>
-    <lastmod>2024-11-12T05:49:55.883Z</lastmod>
+    <lastmod>2024-11-19T03:16:49.425Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github.com:joelnitta/joho-shori/day2/index.html</loc>
+    <lastmod>2024-11-19T03:16:46.241Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github.com:joelnitta/joho-shori/day4/index.html</loc>
+    <lastmod>2024-11-19T03:16:41.705Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github.com:joelnitta/joho-shori/day3/index.html</loc>
+    <lastmod>2024-11-19T03:16:44.117Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github.com:joelnitta/joho-shori/day5/index.html</loc>
+    <lastmod>2024-11-19T03:16:48.914Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github.com:joelnitta/joho-shori/day7/index.html</loc>
+    <lastmod>2024-11-19T03:17:00.724Z</lastmod>
   </url>
   <url>
     <loc>git@github.com:joelnitta/joho-shori/day6/index.html</loc>
-    <lastmod>2024-11-12T05:49:59.407Z</lastmod>
+    <lastmod>2024-11-19T03:17:06.250Z</lastmod>
   </url>
 </urlset>

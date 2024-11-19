@@ -420,522 +420,53 @@
     "text": "課題\n\nMoodleにクイズがある。締め切りまでに完成させてください。\n\n\n中部大学の資料を読んでから、Moodleにクイズがあるので、締め切りまでに完成させてください。"
   },
   {
-    "objectID": "day5/index.html#おさらい",
-    "href": "day5/index.html#おさらい",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "情報処理演習",
-    "section": "おさらい",
-    "text": "おさらい\n\n前回は以下のデータ処理に必要な関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の中身を変える\narrange()で行を並び替える\nfilter()で行を絞り込む"
+    "section": "",
+    "text": "千葉大学 国際教養学部\n担当教員：ニッタ ジョエル"
   },
   {
-    "objectID": "day5/index.html#準備",
-    "href": "day5/index.html#準備",
+    "objectID": "index.html#概要",
+    "href": "index.html#概要",
     "title": "情報処理演習",
-    "section": "準備",
-    "text": "準備\n\n前回欠席した方は、Moodleから第5回のstudents_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\n後ほどMoodleから別のファイルをダウンロードする必要があるため、今のうちに全員Moodleにログインしてください\n\nデスクトップにあるstudents_analysisフォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。"
+    "section": "概要",
+    "text": "概要\n近年、私たちの生活のあらゆる場面において「データ」が活用されるようになっています。したがって、データを適切に整理し、データに潜むメッセージを読み解くスキルが現代社会において必須となっています。本授業では、データ構造の基本とデータ解析に必要なスキルを「R」というプログラミング言語を通じて学びます。また、生成AIの原理と正しい使い方についても学びます。"
   },
   {
-    "objectID": "day5/index.html#チャレンジ-①",
-    "href": "day5/index.html#チャレンジ-①",
+    "objectID": "index.html#教科書",
+    "href": "index.html#教科書",
     "title": "情報処理演習",
-    "section": "チャレンジ ①",
-    "text": "チャレンジ ①\n早速チャレンジに取り組みましょう。\nstudentsから食事プランが\"Lunch only\"の学生を抽出し、名前をZからAの順に並べ替えてください。"
+    "section": "教科書",
+    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n英語版はオンラインで無料で利用可能 https://r4ds.hadley.nz/\n日本語版はアマゾンなど\n\n課題範囲（毎週のリーディング）のみPDFをMoodleで配布予定"
   },
   {
-    "objectID": "day5/index.html#パイプについて",
-    "href": "day5/index.html#パイプについて",
+    "objectID": "index.html#教室",
+    "href": "index.html#教室",
     "title": "情報処理演習",
-    "section": "パイプについて",
-    "text": "パイプについて\n\nチャレンジ①では、まず条件で絞り込んだデータを一時保存してから、次のステップ（列の並び替え）を行いました。"
+    "section": "教室",
+    "text": "教室\nG1-501 情報処理演習室"
   },
   {
-    "objectID": "day5/index.html#パイプについて-1",
-    "href": "day5/index.html#パイプについて-1",
+    "objectID": "index.html#スケジュール",
+    "href": "index.html#スケジュール",
     "title": "情報処理演習",
-    "section": "パイプについて",
-    "text": "パイプについて\n\nこの方法でも解析が短い場合は問題ありませんが、長くなると大変です。\nパイプを使うとこの問題を解決できます。"
+    "section": "スケジュール",
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2024-11-12）: データの可視化（１）\n\nスライド\n\n第７回（2024-11-19）: データの可視化（２）\n\nスライド\n\nオンデマンド回\n\nスライド\n録画"
   },
   {
-    "objectID": "day5/index.html#パイプの使い方",
-    "href": "day5/index.html#パイプの使い方",
+    "objectID": "index.html#オフィスアワー",
+    "href": "index.html#オフィスアワー",
     "title": "情報処理演習",
-    "section": "パイプの使い方",
-    "text": "パイプの使い方\n\nまず、パイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書いていましたが、最近のRでは|&gt;が使われます。\n\n例えば、arrange(データ, 列名)のように書いてきましたが、パイプを使うと次のように書けます：\n\nデータ |&gt; arrange(列名)"
+    "section": "オフィスアワー",
+    "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにてご連絡ください）。対面・非対面での相談をご希望とご都合に合わせて対応いたします。"
   },
   {
-    "objectID": "day5/index.html#チャレンジ-②",
-    "href": "day5/index.html#チャレンジ-②",
+    "objectID": "index.html#リンク",
+    "href": "index.html#リンク",
     "title": "情報処理演習",
-    "section": "チャレンジ ②",
-    "text": "チャレンジ ②\nパイプを使ってstudentsからstudent_idが2より大きい行だけに絞り、favourite_foodの順で並び替えてください。"
-  },
-  {
-    "objectID": "day5/index.html#欠測データについて",
-    "href": "day5/index.html#欠測データについて",
-    "title": "情報処理演習",
-    "section": "欠測データについて",
-    "text": "欠測データについて\n\nageにはNAという値が含まれています。\nNAは「Not Applicable」（「該当しない」）を意味します。\n\nこの値は、データが該当しないか、または欠損していることを示します。\nageの場合、何らかの理由でその人の年齢がわからないことを意味します。\n（一部はうまく数字に変換できなかったためですが、もう一つは元々そうなっていました）"
-  },
-  {
-    "objectID": "day5/index.html#欠測データを省く方法",
-    "href": "day5/index.html#欠測データを省く方法",
-    "title": "情報処理演習",
-    "section": "欠測データを省く方法",
-    "text": "欠測データを省く方法\n\nデータフレームに欠測データが含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれらを除外する必要があります。\nis.na()関数は、その値がNAであるかを確認してくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
-  },
-  {
-    "objectID": "day5/index.html#チャレンジ-③",
-    "href": "day5/index.html#チャレンジ-③",
-    "title": "情報処理演習",
-    "section": "チャレンジ ③",
-    "text": "チャレンジ ③\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
-  },
-  {
-    "objectID": "day5/index.html#列を選ぶ",
-    "href": "day5/index.html#列を選ぶ",
-    "title": "情報処理演習",
-    "section": "列を選ぶ",
-    "text": "列を選ぶ\n\n特にデータが大きい場合、解析に不要な列があることがあります。\n必要な列だけに絞ることで、解析がやりやすくなります。"
-  },
-  {
-    "objectID": "day5/index.html#列や行を扱う関数",
-    "href": "day5/index.html#列や行を扱う関数",
-    "title": "情報処理演習",
-    "section": "列や行を扱う関数",
-    "text": "列や行を扱う関数\n\n前回は以下のデータ処理に使用する関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の内容を変更する\nselect()で列を選択する\narrange()で行を並び替える\nfilter()で行を絞り込む"
-  },
-  {
-    "objectID": "day5/index.html#新しいプロジェクトgapminder",
-    "href": "day5/index.html#新しいプロジェクトgapminder",
-    "title": "情報処理演習",
-    "section": "新しいプロジェクト：gapminder",
-    "text": "新しいプロジェクト：gapminder\n\nこれから学ぶ関数はもっと大きなデータで使用するため、新しいプロジェクトを作成します。\nこのプロジェクトではgapminderというデータセットを使用します。1952年から2007年までの各国の経済データが含まれています（第4回の課題でも使用しました）。"
-  },
-  {
-    "objectID": "day5/index.html#gapminderプロジェクトの作成",
-    "href": "day5/index.html#gapminderプロジェクトの作成",
-    "title": "情報処理演習",
-    "section": "gapminderプロジェクトの作成",
-    "text": "gapminderプロジェクトの作成\n\nデスクトップにgapminder_analysisというプロジェクトを作成し、そのプロジェクトを開いてください。\n\n\nプロジェクトの作成方法については、第3回のスライドを参照してください。"
-  },
-  {
-    "objectID": "day5/index.html#gapminderプロジェクトの作成-1",
-    "href": "day5/index.html#gapminderプロジェクトの作成-1",
-    "title": "情報処理演習",
-    "section": "gapminderプロジェクトの作成",
-    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476"
-  },
-  {
-    "objectID": "day5/index.html#gapminderプロジェクトの作成-2",
-    "href": "day5/index.html#gapminderプロジェクトの作成-2",
-    "title": "情報処理演習",
-    "section": "gapminderプロジェクトの作成",
-    "text": "gapminderプロジェクトの作成\n\n新しいプロジェクト内にgapminder.RというRファイルを作成し、gapminderというデータセットを読み込むコードを書きます：\n\n\n\n\n\ngapminder.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\ngapminder_raw &lt;- read_csv(\"gapminder.csv\")\n\n# Fix column names\ngapminder &lt;- clean_names(gapminder_raw)"
-  },
-  {
-    "objectID": "day5/index.html#データの集計",
-    "href": "day5/index.html#データの集計",
-    "title": "情報処理演習",
-    "section": "データの集計",
-    "text": "データの集計\n\n今まで学んだ関数はデータフレームの値を個別に扱いました（主に列か行に対する処理を行ってきました）。\nしかし、データフレームに含まれる値の平均や合計を計算したい場合には、さらに操作が必要です。"
-  },
-  {
-    "objectID": "day5/index.html#データの合計をcountで数える",
-    "href": "day5/index.html#データの合計をcountで数える",
-    "title": "情報処理演習",
-    "section": "データの合計をcount()で数える",
-    "text": "データの合計をcount()で数える\n\nデータの全体像を掴むために、まず数を数えることは有効です。\n例えば、gapminderにいくつの国が含まれているかを数えます。\n\n注意：count()のような集計関数の結果は、入力のデータと大きく異なります！"
-  },
-  {
-    "objectID": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
-    "href": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
-    "title": "情報処理演習",
-    "section": "データの平均などを計算するためにsummarize()を使う",
-    "text": "データの平均などを計算するためにsummarize()を使う\n\nsummarize()（「集計する」）の使い方はmutate()と似ています。\nsummarize(データ, 新しい列名 = コマンド)\n\nコマンドには、新しい列の生成方法を指定します\n新しい列名の設定は任意であり、わかりやすい名前を指定します。"
-  },
-  {
-    "objectID": "day5/index.html#summarizeによく使う計算のコマンド",
-    "href": "day5/index.html#summarizeによく使う計算のコマンド",
-    "title": "情報処理演習",
-    "section": "summarize()によく使う計算のコマンド",
-    "text": "summarize()によく使う計算のコマンド\n集計をする際、以下の関数を覚えておくと便利です：\n\nmax()：最大値を計算する\nmin()：最小値を計算する\nmean()：平均値を計算する\nsd()：標準偏差を計算する\nn()：それぞれのグループごとのデータの数（行数）を数える"
-  },
-  {
-    "objectID": "day5/index.html#グループ化",
-    "href": "day5/index.html#グループ化",
-    "title": "情報処理演習",
-    "section": "グループ化",
-    "text": "グループ化\n\nしかし、全体の平均や最小値だけでは役立ちません。\n代わりに、国ごとの値が知りたい場合があります。\nそのように「何かごと」に計算するには、グループ化を使用します。"
-  },
-  {
-    "objectID": "day5/index.html#チャレンジ-④",
-    "href": "day5/index.html#チャレンジ-④",
-    "title": "情報処理演習",
-    "section": "チャレンジ ④",
-    "text": "チャレンジ ④\n\n国ごとに寿命の最小値を求めてください。"
-  },
-  {
-    "objectID": "day5/index.html#グループ化-1",
-    "href": "day5/index.html#グループ化-1",
-    "title": "情報処理演習",
-    "section": "グループ化",
-    "text": "グループ化\n\n同時に複数の計算も可能です。\n\n各新しい列をカンマで区切ります\n\n例えば、平均と標準偏差："
-  },
-  {
-    "objectID": "day5/index.html#チャレンジ-⑤",
-    "href": "day5/index.html#チャレンジ-⑤",
-    "title": "情報処理演習",
-    "section": "チャレンジ ⑤",
-    "text": "チャレンジ ⑤\n\n国ごとの一人当たり総生産の平均と標準偏差を計算してください。"
-  },
-  {
-    "objectID": "day5/index.html#パイプライン",
-    "href": "day5/index.html#パイプライン",
-    "title": "情報処理演習",
-    "section": "パイプライン",
-    "text": "パイプライン\n\nパイプとコマンドを組み合わせることで、複雑なデータ処理を簡単に行うことができます。\n例えば、アジアの国だけに絞ってから、国ごとの計算も可能です："
-  },
-  {
-    "objectID": "day5/index.html#まとめ",
-    "href": "day5/index.html#まとめ",
-    "title": "情報処理演習",
-    "section": "まとめ",
-    "text": "まとめ\n\nグループ化により、グループごとの集計が可能です。\n\ngroup_byでグループを定義\nsummarize()でグループごとの計算を実行\n\nパイプ（|&gt;）で複数のデータ処理操作をつなぐことで、複雑なデータ処理パイプラインが構築できます。"
-  },
-  {
-    "objectID": "day3/index.html#連絡事項",
-    "href": "day3/index.html#連絡事項",
-    "title": "情報処理演習",
-    "section": "連絡事項",
-    "text": "連絡事項\n\n第２回の宿題の締め切りを10月25日（金曜日） 23:59まで延長しました"
-  },
-  {
-    "objectID": "day3/index.html#クイズ",
-    "href": "day3/index.html#クイズ",
-    "title": "情報処理演習",
-    "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
-  },
-  {
-    "objectID": "day3/index.html#今後の宿題について",
-    "href": "day3/index.html#今後の宿題について",
-    "title": "情報処理演習",
-    "section": "今後の宿題について",
-    "text": "今後の宿題について\n\n宿題はこれまで通りオンラインで受けることも可能です。\n\n混雑している時間帯には接続できない可能性があります。\nしばらく使用しないとリセットされてしまいます。"
-  },
-  {
-    "objectID": "day3/index.html#今後の宿題について-1",
-    "href": "day3/index.html#今後の宿題について-1",
-    "title": "情報処理演習",
-    "section": "今後の宿題について",
-    "text": "今後の宿題について\n\nオンラインで受けてきた宿題はRパッケージ「 joholearnr」でもあります\n教室内のパソコンに宿題がインストールされているので、ここで受けることも可能になりました：\n\n右上の「環境」パネルで「Tutorial」タブをクリック（1）\n受けたい宿題を探します（2）\n「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）"
-  },
-  {
-    "objectID": "day3/index.html#アウトライン",
-    "href": "day3/index.html#アウトライン",
-    "title": "情報処理演習",
-    "section": "アウトライン",
-    "text": "アウトライン\n\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
-  },
-  {
-    "objectID": "day3/index.html#rstudioの設定の変更",
-    "href": "day3/index.html#rstudioの設定の変更",
-    "title": "情報処理演習",
-    "section": "RStudioの設定の変更",
-    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
-  },
-  {
-    "objectID": "day3/index.html#データフレームについて",
-    "href": "day3/index.html#データフレームについて",
-    "title": "情報処理演習",
-    "section": "データフレームについて",
-    "text": "データフレームについて\n\nデータフレームは最もよく使われるデータ形式です。\n\n行と列から構成される2次元データ（表形式データ）\nエクセルのスプレッドシートと同じようなもの"
-  },
-  {
-    "objectID": "day3/index.html#データフレームについて-1",
-    "href": "day3/index.html#データフレームについて-1",
-    "title": "情報処理演習",
-    "section": "データフレームについて",
-    "text": "データフレームについて\n\nエクセルとの大きな違い：各列は同じデータ型を持たなければなりません。\n\nつまり、各列がベクトルであるということです。\n\ntidyverseでは、「tibble」と呼ばれます。"
-  },
-  {
-    "objectID": "day3/index.html#初データの読み込み",
-    "href": "day3/index.html#初データの読み込み",
-    "title": "情報処理演習",
-    "section": "初データの読み込み",
-    "text": "初データの読み込み\n\n練習として、教科書に掲載されているstudents.csvファイルをRに読み込みます。\nまず、このリンクからstudents.csvをデスクトップにダウンロードしてください：\n\nhttps://pos.it/r4ds-students-csv"
-  },
-  {
-    "objectID": "day3/index.html#csvファイルについて",
-    "href": "day3/index.html#csvファイルについて",
-    "title": "情報処理演習",
-    "section": ".csvファイルについて",
-    "text": ".csvファイルについて\n\n.csvは、Comma-separated valuesの略です。\n\nデータはコンマ（,）で区切られています。\n\nエクセルの.xlsxファイルとの違い\n\n.csvの中身は単純な文字列なので、直接中身を確認することができます。\n.xlsx（または.xls）ファイルはエクセルのみに対応しています。\n.xlsxはエクセルを持っていない方にとって使いにくいので、.csvを推奨します。"
-  },
-  {
-    "objectID": "day3/index.html#csvファイルをrに読み込む",
-    "href": "day3/index.html#csvファイルをrに読み込む",
-    "title": "情報処理演習",
-    "section": ".csvファイルをRに読み込む",
-    "text": ".csvファイルをRに読み込む\n\nこれから使用する関数はtidyverseパッケージに含まれているので、まずはtidyverseをロードしましょう。"
-  },
-  {
-    "objectID": "day3/index.html#フォルダ構造について",
-    "href": "day3/index.html#フォルダ構造について",
-    "title": "情報処理演習",
-    "section": "フォルダ構造について",
-    "text": "フォルダ構造について\n\nZ:/Desktop/students.csvはstudents.csvのパス、つまりそのファイルがどこにあるのかを示す情報です。\n\nパスはコンピューター内の住所のようなものです。"
-  },
-  {
-    "objectID": "day3/index.html#csvファイルをrに読み込む-1",
-    "href": "day3/index.html#csvファイルをrに読み込む-1",
-    "title": "情報処理演習",
-    "section": ".csvファイルをRに読み込む",
-    "text": ".csvファイルをRに読み込む\n\nこれでRに.csvファイルのデータを読み込むことができました。\nしかし、データの読み込みからデータの解析の最後まで、すべての作業を一度で終わらせることは現実的ではありません。\nここで一旦作業を停止して、RStudioを閉じましょう。"
-  },
-  {
-    "objectID": "day3/index.html#作業の再開",
-    "href": "day3/index.html#作業の再開",
-    "title": "情報処理演習",
-    "section": "作業の再開",
-    "text": "作業の再開\n\n再度RStudioを開きましょう。\n今までの成果はどうなっているのでしょうか？\n\nまたすべて一からやり直す必要があります。\n\nもっと良いやり方があるはずです…。"
-  },
-  {
-    "objectID": "day3/index.html#スクリプト",
-    "href": "day3/index.html#スクリプト",
-    "title": "情報処理演習",
-    "section": "スクリプト",
-    "text": "スクリプト\n\nこれまではRのコマンドを直接コンソールに入力していました。\n\n同じ作業を再度行うときは効率が悪いです。\n\nスクリプト（テキストファイル）にコマンドを保存すると、後々楽になります。\n「File」 → 「New File」 → 「RScript」"
-  },
-  {
-    "objectID": "day3/index.html#スクリプトの編集",
-    "href": "day3/index.html#スクリプトの編集",
-    "title": "情報処理演習",
-    "section": "スクリプトの編集",
-    "text": "スクリプトの編集\n\nスクリプトにこれまで書いたコードを入れましょう：\n\nコメントを入れることで、自分にこのコードが何をしているのかをメモしておきましょう。\n\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
-  },
-  {
-    "objectID": "day3/index.html#スクリプトの保存",
-    "href": "day3/index.html#スクリプトの保存",
-    "title": "情報処理演習",
-    "section": "スクリプトの保存",
-    "text": "スクリプトの保存\n\nスクリプトを保存しましょう。\n「File」 → 「Save As」 → 場所とファイル名を決めて保存します。\n今回はstudents.Rとしましょう。\n\nRスクリプトは.rもしくは.Rのファイル拡張子を使用します。"
-  },
-  {
-    "objectID": "day3/index.html#スクリプトとコンソールの違い",
-    "href": "day3/index.html#スクリプトとコンソールの違い",
-    "title": "情報処理演習",
-    "section": "スクリプトとコンソールの違い",
-    "text": "スクリプトとコンソールの違い\n\nスクリプトに記述されているRコードは「これから実行するコマンドのリスト」のようなものです（レシピをイメージしてください）。\nRにそのコマンドを実行するように指示する必要があります。"
-  },
-  {
-    "objectID": "day3/index.html#スクリプトからのコマンドの実行",
-    "href": "day3/index.html#スクリプトからのコマンドの実行",
-    "title": "情報処理演習",
-    "section": "スクリプトからのコマンドの実行",
-    "text": "スクリプトからのコマンドの実行\n\nまずはカーソルを実行したい行に置きます（矢印キーかマウスを使ってください）。\n「Run」アイコンをクリックします。"
-  },
-  {
-    "objectID": "day3/index.html#チャレンジ-①",
-    "href": "day3/index.html#チャレンジ-①",
-    "title": "情報処理演習",
-    "section": "チャレンジ ①",
-    "text": "チャレンジ ①\nRStudioを閉じてから、再度スクリプトを開いてコマンドを実行してください。\n\n一々コマンドを入力するよりは便利でしょう？"
-  },
-  {
-    "objectID": "day3/index.html#プロジェクトについて",
-    "href": "day3/index.html#プロジェクトについて",
-    "title": "情報処理演習",
-    "section": "プロジェクトについて",
-    "text": "プロジェクトについて\n\nスクリプトを書くことでデータ解析の作業をかなり楽にしましたが、次にはファイルを整理する必要があります。\nファイルの整理には、RStudioのプロジェクト機能を使用します。"
-  },
-  {
-    "objectID": "day3/index.html#プロジェクトについて-1",
-    "href": "day3/index.html#プロジェクトについて-1",
-    "title": "情報処理演習",
-    "section": "プロジェクトについて",
-    "text": "プロジェクトについて\n\nRStudioのプロジェクトとは、データ解析に使用するフォルダーのことです。\nこのフォルダー内に、特定のデータ解析プロジェクトに必要なファイルを配置します。"
-  },
-  {
-    "objectID": "day3/index.html#プロジェクトの作り方",
-    "href": "day3/index.html#プロジェクトの作り方",
-    "title": "情報処理演習",
-    "section": "プロジェクトの作り方",
-    "text": "プロジェクトの作り方\n\n「File」 → 「New Project…」 → 「New Directory」 → 「New Project」\n今回のプロジェクトはstudents_analysisと名付け、デスクトップに配置しましょう。\n\nこの教室のコンピューターはデスクトップ以外の場所にプロジェクトを置くと、ログアウト時に消去されます。"
-  },
-  {
-    "objectID": "day3/index.html#プロジェクトの作り方-1",
-    "href": "day3/index.html#プロジェクトの作り方-1",
-    "title": "情報処理演習",
-    "section": "プロジェクトの作り方",
-    "text": "プロジェクトの作り方\n\nstudents_analysisプロジェクトを作成したら、その中にdataというフォルダーを作成し、students.csvをdataに移動してください。\n\n「Files」パネルでフォルダーアイコンをクリックします。"
-  },
-  {
-    "objectID": "day3/index.html#プロジェクトの開き方",
-    "href": "day3/index.html#プロジェクトの開き方",
-    "title": "情報処理演習",
-    "section": "プロジェクトの開き方",
-    "text": "プロジェクトの開き方\n\nRStudioを一旦閉じましょう。\n今度は、アプリ一覧からではなく、プロジェクトからRStudioを開きましょう。\nstudents_projectフォルダーを開き、その中のstudents_project.Rprojファイルをダブルクリックしてください。"
-  },
-  {
-    "objectID": "day3/index.html#パスについて",
-    "href": "day3/index.html#パスについて",
-    "title": "情報処理演習",
-    "section": "パスについて",
-    "text": "パスについて\n\nプロジェクトを開いた後、スクリプトを使ってもう一度students.csvを読み込みましょう：\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")\n\nError: 'Z:/Desktop/students.csv' does not exist.\n\n\n\n今度はうまくいかない。なぜでしょう？"
-  },
-  {
-    "objectID": "day3/index.html#チャレンジ-②",
-    "href": "day3/index.html#チャレンジ-②",
-    "title": "情報処理演習",
-    "section": "チャレンジ ②",
-    "text": "チャレンジ ②\n\nこのコードをどのように変更すればstudents.csvを読み込むことができるでしょうか？\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
-  },
-  {
-    "objectID": "day3/index.html#絶対パス",
-    "href": "day3/index.html#絶対パス",
-    "title": "情報処理演習",
-    "section": "絶対パス",
-    "text": "絶対パス\n\n一つの解決方法は絶対パスを指定することです：\n\nコンピューターの最上位ディレクトリ（教室のパソコンではZ:）から始まります。\n\nMacの場合は/から始まります。\n\n\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students_project/data/students.csv\")\n\n\nしかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。"
-  },
-  {
-    "objectID": "day3/index.html#相対パス",
-    "href": "day3/index.html#相対パス",
-    "title": "情報処理演習",
-    "section": "相対パス",
-    "text": "相対パス\n\nもう一つの方法は「相対パス」と呼ばれるものです。\nつまり、Rの作業ディレクトリ（Rが現在入っているフォルダー）から見たパスです。\ngetwd()でRの作業ディレクトリを確認できます：\n\n“Get working directory”\n\n\n\ngetwd()"
-  },
-  {
-    "objectID": "day3/index.html#チャレンジ-③",
-    "href": "day3/index.html#チャレンジ-③",
-    "title": "情報処理演習",
-    "section": "チャレンジ ③",
-    "text": "チャレンジ ③\n\npenguins_analysisというプロジェクトをデスクトップに作成して開いてください。終わったら、再度students_analysisを開いてください。\n\n（penguinsは別の教科書のデータセットです）"
-  },
-  {
-    "objectID": "day4/index.html#連絡事項",
-    "href": "day4/index.html#連絡事項",
-    "title": "情報処理演習",
-    "section": "連絡事項",
-    "text": "連絡事項\n\n第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。\n宿題のウエブサイトの容量を増やしました。\n宿題のパッケージをインストールするコードをアップデートしました。"
-  },
-  {
-    "objectID": "day4/index.html#クイズ",
-    "href": "day4/index.html#クイズ",
-    "title": "情報処理演習",
-    "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
-  },
-  {
-    "objectID": "day4/index.html#データの整理data-wrangling",
-    "href": "day4/index.html#データの整理data-wrangling",
-    "title": "情報処理演習",
-    "section": "データの整理（Data Wrangling）",
-    "text": "データの整理（Data Wrangling）\n\nデータが手に入ると、まだ解析に使えない状態であることが多いです。\nデータの整理（「wrangling」）は解析に使えるように整えるプロセスです。\n\n元々はカウボーイが牛を扱う技術から来ています。"
-  },
-  {
-    "objectID": "day4/index.html#準備",
-    "href": "day4/index.html#準備",
-    "title": "情報処理演習",
-    "section": "準備",
-    "text": "準備\n\nstudents_analysisプロジェクトを再度開きます。\n\n\n\n新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。\n先のスライドで説明したように、データ解析を行う前にデータの整理が必要なケースが多いです。\n今回のstudents.csvに入っているデータもその一例です。"
-  },
-  {
-    "objectID": "day4/index.html#データ整理の関数",
-    "href": "day4/index.html#データ整理の関数",
-    "title": "情報処理演習",
-    "section": "データ整理の関数",
-    "text": "データ整理の関数\nこれから学ぶ関数の共通点：\n\nデータフレームを入力とし、データフレームを返す\n最初の引数が入力のデータフレーム\n他の引数は詳細（引数名に引用符を使わない）\n\n関数(データフレーム, 他の設定) ➞ データフレーム"
-  },
-  {
-    "objectID": "day4/index.html#データの整理列名を整える",
-    "href": "day4/index.html#データの整理列名を整える",
-    "title": "情報処理演習",
-    "section": "データの整理：列名を整える",
-    "text": "データの整理：列名を整える\n\nデータフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：\n\n打ちやすい\n覚えやすい\n\n`Full Name`は打ちづらいです。`もありますし、スペースも入っています。\nおすすめ：小文字のみを使用し、スペースの代わりに_を使う"
-  },
-  {
-    "objectID": "day4/index.html#renameで列名を変える",
-    "href": "day4/index.html#renameで列名を変える",
-    "title": "情報処理演習",
-    "section": "rename()で列名を変える",
-    "text": "rename()で列名を変える\n\nrename()は列名を変更する関数です。\n\n新しい名前 = 前の名前と指定します。\n\n\n\nrename(students_raw, full_name = `Full Name`)\n\n# A tibble: 6 × 5\n  `Student ID` full_name        favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
-  },
-  {
-    "objectID": "day4/index.html#チャレンジ-①",
-    "href": "day4/index.html#チャレンジ-①",
-    "title": "情報処理演習",
-    "section": "チャレンジ ①",
-    "text": "チャレンジ ①\n`Student ID`という列を使いやすい列名に変更してください。"
-  },
-  {
-    "objectID": "day4/index.html#renameで列名を変える-1",
-    "href": "day4/index.html#renameで列名を変える-1",
-    "title": "情報処理演習",
-    "section": "rename()で列名を変える",
-    "text": "rename()で列名を変える\n\n複数の列名を変更する際は、コンマで区切って書きます。"
-  },
-  {
-    "objectID": "day4/index.html#一気に列名を扱いやすくする",
-    "href": "day4/index.html#一気に列名を扱いやすくする",
-    "title": "情報処理演習",
-    "section": "一気に列名を扱いやすくする",
-    "text": "一気に列名を扱いやすくする\n\n名前を一つずつ変更するのは手間がかかります。\nclean_names()という関数が列名を一気にきれいにしてくれます。\n\nこの関数はtidyverseに含まれていないパッケージ、janitorに入っているため、まずはjanitorをロードする必要があります。"
-  },
-  {
-    "objectID": "day4/index.html#mutateで列の中身を変える",
-    "href": "day4/index.html#mutateで列の中身を変える",
-    "title": "情報処理演習",
-    "section": "mutate()で列の中身を変える",
-    "text": "mutate()で列の中身を変える\n\n「mutate」は「変化させる」という意味です。\nageは数字のはずですが、文字として読み込まれてしまいました。修正しましょう。\n\n\nmutate(students_renamed, age = parse_number(age))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n4          4 Leon Rossini     Anchovies          Lunch only             NA\n5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA\n6          6 Güvenç Attila    Ice cream          Lunch only              6"
-  },
-  {
-    "objectID": "day4/index.html#きれいなデータを保存する",
-    "href": "day4/index.html#きれいなデータを保存する",
-    "title": "情報処理演習",
-    "section": "きれいなデータを保存する",
-    "text": "きれいなデータを保存する\n\nこれでデータが（ほとんど）整いましたので、studentsとして保存します。\n\n\n\n\n\nstudents.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\nstudents_raw &lt;- read_csv(\"data/students.csv\")\n\n# Rename columns\nstudents_renamed &lt;- clean_names(students_raw)\n\n# Convert age to numeric\nstudents &lt;- mutate(students_renamed, age = parse_number(age))"
-  },
-  {
-    "objectID": "day4/index.html#arrangeで行を並び替える",
-    "href": "day4/index.html#arrangeで行を並び替える",
-    "title": "情報処理演習",
-    "section": "arrange()で行を並び替える",
-    "text": "arrange()で行を並び替える\n\narrange()は行の順序を並び替える関数です。\n\n食事プラン（「meal_plan」）の順に並び替えましょう。"
-  },
-  {
-    "objectID": "day4/index.html#arrangeで行を並び替える-1",
-    "href": "day4/index.html#arrangeで行を並び替える-1",
-    "title": "情報処理演習",
-    "section": "arrange()で行を並び替える",
-    "text": "arrange()で行を並び替える\n\nデフォルト設定では、arrange()は小さい方から大きい方へと並び替えます。\n逆の順にするには、列名をdesc()の中に書きます。\n\n\narrange(students, desc(meal_plan))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          4 Leon Rossini     Anchovies          Lunch only             NA\n4          6 Güvenç Attila    Ice cream          Lunch only              6\n5          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA"
-  },
-  {
-    "objectID": "day4/index.html#チャレンジ-②",
-    "href": "day4/index.html#チャレンジ-②",
-    "title": "情報処理演習",
-    "section": "チャレンジ ②",
-    "text": "チャレンジ ②\n学生の名前の順に並び替えてください。"
-  },
-  {
-    "objectID": "day4/index.html#filterで行を絞り込む",
-    "href": "day4/index.html#filterで行を絞り込む",
-    "title": "情報処理演習",
-    "section": "filter()で行を絞り込む",
-    "text": "filter()で行を絞り込む\n\n生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。\nfilter()で条件を設定し、その行だけに絞り込みます。"
-  },
-  {
-    "objectID": "day4/index.html#データの比較",
-    "href": "day4/index.html#データの比較",
-    "title": "情報処理演習",
-    "section": "データの比較",
-    "text": "データの比較\nデータの比較を行う主な記号：\n\n&gt; より大きい\n&lt; より小さい\n== イコール（=ではありません！）\n| あるいは\n& そして（複数条件の指定）\n\n比較の記号のアウトプットは論理ベクトルです。"
-  },
-  {
-    "objectID": "day4/index.html#まとめ",
-    "href": "day4/index.html#まとめ",
-    "title": "情報処理演習",
-    "section": "まとめ",
-    "text": "まとめ\n\nデータを読み込んだ後、整える必要があります。\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。"
+    "section": "リンク",
+    "text": "リンク\n\nシラバス\nMoodle"
   },
   {
     "objectID": "day2/index.html#クイズ",
@@ -1155,53 +686,704 @@
     "text": "連絡事項\n\n来週（10月15日）は休みです\n次回は10月22日です"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "day4/index.html#連絡事項",
+    "href": "day4/index.html#連絡事項",
     "title": "情報処理演習",
-    "section": "",
-    "text": "千葉大学 国際教養学部\n担当教員：ニッタ ジョエル"
+    "section": "連絡事項",
+    "text": "連絡事項\n\n第3回の宿題の締め切りを11月1日（金曜日） 23:59まで延長しました。\n宿題のウエブサイトの容量を増やしました。\n宿題のパッケージをインストールするコードをアップデートしました。"
   },
   {
-    "objectID": "index.html#概要",
-    "href": "index.html#概要",
+    "objectID": "day4/index.html#クイズ",
+    "href": "day4/index.html#クイズ",
     "title": "情報処理演習",
-    "section": "概要",
-    "text": "概要\n近年、私たちの生活のあらゆる場面において「データ」が活用されるようになっています。したがって、データを適切に整理し、データに潜むメッセージを読み解くスキルが現代社会において必須となっています。本授業では、データ構造の基本とデータ解析に必要なスキルを「R」というプログラミング言語を通じて学びます。また、生成AIの原理と正しい使い方についても学びます。"
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
   },
   {
-    "objectID": "index.html#教科書",
-    "href": "index.html#教科書",
+    "objectID": "day4/index.html#データの整理data-wrangling",
+    "href": "day4/index.html#データの整理data-wrangling",
     "title": "情報処理演習",
-    "section": "教科書",
-    "text": "教科書\n\nR for Data Science (2nd Edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n英語版はオンラインで無料で利用可能 https://r4ds.hadley.nz/\n日本語版はアマゾンなど\n\n課題範囲（毎週のリーディング）のみPDFをMoodleで配布予定"
+    "section": "データの整理（Data Wrangling）",
+    "text": "データの整理（Data Wrangling）\n\nデータが手に入ると、まだ解析に使えない状態であることが多いです。\nデータの整理（「wrangling」）は解析に使えるように整えるプロセスです。\n\n元々はカウボーイが牛を扱う技術から来ています。"
   },
   {
-    "objectID": "index.html#教室",
-    "href": "index.html#教室",
+    "objectID": "day4/index.html#準備",
+    "href": "day4/index.html#準備",
     "title": "情報処理演習",
-    "section": "教室",
-    "text": "教室\nG1-501 情報処理演習室"
+    "section": "準備",
+    "text": "準備\n\nstudents_analysisプロジェクトを再度開きます。\n\n\n\n新しいコマンドの勉強に進む前に、今までのスクリプトを少し変更したいと思います。\n先のスライドで説明したように、データ解析を行う前にデータの整理が必要なケースが多いです。\n今回のstudents.csvに入っているデータもその一例です。"
   },
   {
-    "objectID": "index.html#スケジュール",
-    "href": "index.html#スケジュール",
+    "objectID": "day4/index.html#データ整理の関数",
+    "href": "day4/index.html#データ整理の関数",
     "title": "情報処理演習",
-    "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2024-11-12）: データの可視化（１）\n\nスライド\n\n第７回（2024-11-19）: データの可視化（２）\nオンデマンド回\n\nスライド\n録画"
+    "section": "データ整理の関数",
+    "text": "データ整理の関数\nこれから学ぶ関数の共通点：\n\nデータフレームを入力とし、データフレームを返す\n最初の引数が入力のデータフレーム\n他の引数は詳細（引数名に引用符を使わない）\n\n関数(データフレーム, 他の設定) ➞ データフレーム"
   },
   {
-    "objectID": "index.html#オフィスアワー",
-    "href": "index.html#オフィスアワー",
+    "objectID": "day4/index.html#データの整理列名を整える",
+    "href": "day4/index.html#データの整理列名を整える",
     "title": "情報処理演習",
-    "section": "オフィスアワー",
-    "text": "オフィスアワー\n予約制（joelnitta@chiba-u.jpまでメールにてご連絡ください）。対面・非対面での相談をご希望とご都合に合わせて対応いたします。"
+    "section": "データの整理：列名を整える",
+    "text": "データの整理：列名を整える\n\nデータフレームの列名は任意ですが、使いやすい名前には以下の特徴があります：\n\n打ちやすい\n覚えやすい\n\n`Full Name`は打ちづらいです。`もありますし、スペースも入っています。\nおすすめ：小文字のみを使用し、スペースの代わりに_を使う"
   },
   {
-    "objectID": "index.html#リンク",
-    "href": "index.html#リンク",
+    "objectID": "day4/index.html#renameで列名を変える",
+    "href": "day4/index.html#renameで列名を変える",
     "title": "情報処理演習",
-    "section": "リンク",
-    "text": "リンク\n\nシラバス\nMoodle"
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\nrename()は列名を変更する関数です。\n\n新しい名前 = 前の名前と指定します。\n\n\n\nrename(students_raw, full_name = `Full Name`)\n\n# A tibble: 6 × 5\n  `Student ID` full_name        favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-①",
+    "href": "day4/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\n`Student ID`という列を使いやすい列名に変更してください。"
+  },
+  {
+    "objectID": "day4/index.html#renameで列名を変える-1",
+    "href": "day4/index.html#renameで列名を変える-1",
+    "title": "情報処理演習",
+    "section": "rename()で列名を変える",
+    "text": "rename()で列名を変える\n\n複数の列名を変更する際は、コンマで区切って書きます。"
+  },
+  {
+    "objectID": "day4/index.html#一気に列名を扱いやすくする",
+    "href": "day4/index.html#一気に列名を扱いやすくする",
+    "title": "情報処理演習",
+    "section": "一気に列名を扱いやすくする",
+    "text": "一気に列名を扱いやすくする\n\n名前を一つずつ変更するのは手間がかかります。\nclean_names()という関数が列名を一気にきれいにしてくれます。\n\nこの関数はtidyverseに含まれていないパッケージ、janitorに入っているため、まずはjanitorをロードする必要があります。"
+  },
+  {
+    "objectID": "day4/index.html#mutateで列の中身を変える",
+    "href": "day4/index.html#mutateで列の中身を変える",
+    "title": "情報処理演習",
+    "section": "mutate()で列の中身を変える",
+    "text": "mutate()で列の中身を変える\n\n「mutate」は「変化させる」という意味です。\nageは数字のはずですが、文字として読み込まれてしまいました。修正しましょう。\n\n\nmutate(students_renamed, age = parse_number(age))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n4          4 Leon Rossini     Anchovies          Lunch only             NA\n5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA\n6          6 Güvenç Attila    Ice cream          Lunch only              6"
+  },
+  {
+    "objectID": "day4/index.html#きれいなデータを保存する",
+    "href": "day4/index.html#きれいなデータを保存する",
+    "title": "情報処理演習",
+    "section": "きれいなデータを保存する",
+    "text": "きれいなデータを保存する\n\nこれでデータが（ほとんど）整いましたので、studentsとして保存します。\n\n\n\n\n\nstudents.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\nstudents_raw &lt;- read_csv(\"data/students.csv\")\n\n# Rename columns\nstudents_renamed &lt;- clean_names(students_raw)\n\n# Convert age to numeric\nstudents &lt;- mutate(students_renamed, age = parse_number(age))"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える",
+    "href": "day4/index.html#arrangeで行を並び替える",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\narrange()は行の順序を並び替える関数です。\n\n食事プラン（「meal_plan」）の順に並び替えましょう。"
+  },
+  {
+    "objectID": "day4/index.html#arrangeで行を並び替える-1",
+    "href": "day4/index.html#arrangeで行を並び替える-1",
+    "title": "情報処理演習",
+    "section": "arrange()で行を並び替える",
+    "text": "arrange()で行を並び替える\n\nデフォルト設定では、arrange()は小さい方から大きい方へと並び替えます。\n逆の順にするには、列名をdesc()の中に書きます。\n\n\narrange(students, desc(meal_plan))\n\n# A tibble: 6 × 5\n  student_id full_name        favourite_food     meal_plan             age\n       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;\n1          1 Sunil Huffmann   Strawberry yoghurt Lunch only              4\n2          2 Barclay Lynn     French fries       Lunch only              5\n3          4 Leon Rossini     Anchovies          Lunch only             NA\n4          6 Güvenç Attila    Ice cream          Lunch only              6\n5          3 Jayendra Lyne    N/A                Breakfast and lunch     7\n6          5 Chidiegwu Dunkel Pizza              Breakfast and lunch    NA"
+  },
+  {
+    "objectID": "day4/index.html#チャレンジ-②",
+    "href": "day4/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\n学生の名前の順に並び替えてください。"
+  },
+  {
+    "objectID": "day4/index.html#filterで行を絞り込む",
+    "href": "day4/index.html#filterで行を絞り込む",
+    "title": "情報処理演習",
+    "section": "filter()で行を絞り込む",
+    "text": "filter()で行を絞り込む\n\n生データが必要以上に多い場合がよくあります（特に「ビッグデータ」を扱っているとき）。\nfilter()で条件を設定し、その行だけに絞り込みます。"
+  },
+  {
+    "objectID": "day4/index.html#データの比較",
+    "href": "day4/index.html#データの比較",
+    "title": "情報処理演習",
+    "section": "データの比較",
+    "text": "データの比較\nデータの比較を行う主な記号：\n\n&gt; より大きい\n&lt; より小さい\n== イコール（=ではありません！）\n| あるいは\n& そして（複数条件の指定）\n\n比較の記号のアウトプットは論理ベクトルです。"
+  },
+  {
+    "objectID": "day4/index.html#まとめ",
+    "href": "day4/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nデータを読み込んだ後、整える必要があります。\nrename()は列の名前を変更する。\narrange()は行を並び替える。\nmutate()は列の中身を変える。\nfilter()は行を絞り込む。"
+  },
+  {
+    "objectID": "day3/index.html#連絡事項",
+    "href": "day3/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n第２回の宿題の締め切りを10月25日（金曜日） 23:59まで延長しました"
+  },
+  {
+    "objectID": "day3/index.html#クイズ",
+    "href": "day3/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+  },
+  {
+    "objectID": "day3/index.html#今後の宿題について",
+    "href": "day3/index.html#今後の宿題について",
+    "title": "情報処理演習",
+    "section": "今後の宿題について",
+    "text": "今後の宿題について\n\n宿題はこれまで通りオンラインで受けることも可能です。\n\n混雑している時間帯には接続できない可能性があります。\nしばらく使用しないとリセットされてしまいます。"
+  },
+  {
+    "objectID": "day3/index.html#今後の宿題について-1",
+    "href": "day3/index.html#今後の宿題について-1",
+    "title": "情報処理演習",
+    "section": "今後の宿題について",
+    "text": "今後の宿題について\n\nオンラインで受けてきた宿題はRパッケージ「 joholearnr」でもあります\n教室内のパソコンに宿題がインストールされているので、ここで受けることも可能になりました：\n\n右上の「環境」パネルで「Tutorial」タブをクリック（1）\n受けたい宿題を探します（2）\n「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）"
+  },
+  {
+    "objectID": "day3/index.html#アウトライン",
+    "href": "day3/index.html#アウトライン",
+    "title": "情報処理演習",
+    "section": "アウトライン",
+    "text": "アウトライン\n\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
+  },
+  {
+    "objectID": "day3/index.html#rstudioの設定の変更",
+    "href": "day3/index.html#rstudioの設定の変更",
+    "title": "情報処理演習",
+    "section": "RStudioの設定の変更",
+    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
+  },
+  {
+    "objectID": "day3/index.html#データフレームについて",
+    "href": "day3/index.html#データフレームについて",
+    "title": "情報処理演習",
+    "section": "データフレームについて",
+    "text": "データフレームについて\n\nデータフレームは最もよく使われるデータ形式です。\n\n行と列から構成される2次元データ（表形式データ）\nエクセルのスプレッドシートと同じようなもの"
+  },
+  {
+    "objectID": "day3/index.html#データフレームについて-1",
+    "href": "day3/index.html#データフレームについて-1",
+    "title": "情報処理演習",
+    "section": "データフレームについて",
+    "text": "データフレームについて\n\nエクセルとの大きな違い：各列は同じデータ型を持たなければなりません。\n\nつまり、各列がベクトルであるということです。\n\ntidyverseでは、「tibble」と呼ばれます。"
+  },
+  {
+    "objectID": "day3/index.html#初データの読み込み",
+    "href": "day3/index.html#初データの読み込み",
+    "title": "情報処理演習",
+    "section": "初データの読み込み",
+    "text": "初データの読み込み\n\n練習として、教科書に掲載されているstudents.csvファイルをRに読み込みます。\nまず、このリンクからstudents.csvをデスクトップにダウンロードしてください：\n\nhttps://pos.it/r4ds-students-csv"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルについて",
+    "href": "day3/index.html#csvファイルについて",
+    "title": "情報処理演習",
+    "section": ".csvファイルについて",
+    "text": ".csvファイルについて\n\n.csvは、Comma-separated valuesの略です。\n\nデータはコンマ（,）で区切られています。\n\nエクセルの.xlsxファイルとの違い\n\n.csvの中身は単純な文字列なので、直接中身を確認することができます。\n.xlsx（または.xls）ファイルはエクセルのみに対応しています。\n.xlsxはエクセルを持っていない方にとって使いにくいので、.csvを推奨します。"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルをrに読み込む",
+    "href": "day3/index.html#csvファイルをrに読み込む",
+    "title": "情報処理演習",
+    "section": ".csvファイルをRに読み込む",
+    "text": ".csvファイルをRに読み込む\n\nこれから使用する関数はtidyverseパッケージに含まれているので、まずはtidyverseをロードしましょう。"
+  },
+  {
+    "objectID": "day3/index.html#フォルダ構造について",
+    "href": "day3/index.html#フォルダ構造について",
+    "title": "情報処理演習",
+    "section": "フォルダ構造について",
+    "text": "フォルダ構造について\n\nZ:/Desktop/students.csvはstudents.csvのパス、つまりそのファイルがどこにあるのかを示す情報です。\n\nパスはコンピューター内の住所のようなものです。"
+  },
+  {
+    "objectID": "day3/index.html#csvファイルをrに読み込む-1",
+    "href": "day3/index.html#csvファイルをrに読み込む-1",
+    "title": "情報処理演習",
+    "section": ".csvファイルをRに読み込む",
+    "text": ".csvファイルをRに読み込む\n\nこれでRに.csvファイルのデータを読み込むことができました。\nしかし、データの読み込みからデータの解析の最後まで、すべての作業を一度で終わらせることは現実的ではありません。\nここで一旦作業を停止して、RStudioを閉じましょう。"
+  },
+  {
+    "objectID": "day3/index.html#作業の再開",
+    "href": "day3/index.html#作業の再開",
+    "title": "情報処理演習",
+    "section": "作業の再開",
+    "text": "作業の再開\n\n再度RStudioを開きましょう。\n今までの成果はどうなっているのでしょうか？\n\nまたすべて一からやり直す必要があります。\n\nもっと良いやり方があるはずです…。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプト",
+    "href": "day3/index.html#スクリプト",
+    "title": "情報処理演習",
+    "section": "スクリプト",
+    "text": "スクリプト\n\nこれまではRのコマンドを直接コンソールに入力していました。\n\n同じ作業を再度行うときは効率が悪いです。\n\nスクリプト（テキストファイル）にコマンドを保存すると、後々楽になります。\n「File」 → 「New File」 → 「RScript」"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトの編集",
+    "href": "day3/index.html#スクリプトの編集",
+    "title": "情報処理演習",
+    "section": "スクリプトの編集",
+    "text": "スクリプトの編集\n\nスクリプトにこれまで書いたコードを入れましょう：\n\nコメントを入れることで、自分にこのコードが何をしているのかをメモしておきましょう。\n\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトの保存",
+    "href": "day3/index.html#スクリプトの保存",
+    "title": "情報処理演習",
+    "section": "スクリプトの保存",
+    "text": "スクリプトの保存\n\nスクリプトを保存しましょう。\n「File」 → 「Save As」 → 場所とファイル名を決めて保存します。\n今回はstudents.Rとしましょう。\n\nRスクリプトは.rもしくは.Rのファイル拡張子を使用します。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトとコンソールの違い",
+    "href": "day3/index.html#スクリプトとコンソールの違い",
+    "title": "情報処理演習",
+    "section": "スクリプトとコンソールの違い",
+    "text": "スクリプトとコンソールの違い\n\nスクリプトに記述されているRコードは「これから実行するコマンドのリスト」のようなものです（レシピをイメージしてください）。\nRにそのコマンドを実行するように指示する必要があります。"
+  },
+  {
+    "objectID": "day3/index.html#スクリプトからのコマンドの実行",
+    "href": "day3/index.html#スクリプトからのコマンドの実行",
+    "title": "情報処理演習",
+    "section": "スクリプトからのコマンドの実行",
+    "text": "スクリプトからのコマンドの実行\n\nまずはカーソルを実行したい行に置きます（矢印キーかマウスを使ってください）。\n「Run」アイコンをクリックします。"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-①",
+    "href": "day3/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\nRStudioを閉じてから、再度スクリプトを開いてコマンドを実行してください。\n\n一々コマンドを入力するよりは便利でしょう？"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトについて",
+    "href": "day3/index.html#プロジェクトについて",
+    "title": "情報処理演習",
+    "section": "プロジェクトについて",
+    "text": "プロジェクトについて\n\nスクリプトを書くことでデータ解析の作業をかなり楽にしましたが、次にはファイルを整理する必要があります。\nファイルの整理には、RStudioのプロジェクト機能を使用します。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトについて-1",
+    "href": "day3/index.html#プロジェクトについて-1",
+    "title": "情報処理演習",
+    "section": "プロジェクトについて",
+    "text": "プロジェクトについて\n\nRStudioのプロジェクトとは、データ解析に使用するフォルダーのことです。\nこのフォルダー内に、特定のデータ解析プロジェクトに必要なファイルを配置します。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの作り方",
+    "href": "day3/index.html#プロジェクトの作り方",
+    "title": "情報処理演習",
+    "section": "プロジェクトの作り方",
+    "text": "プロジェクトの作り方\n\n「File」 → 「New Project…」 → 「New Directory」 → 「New Project」\n今回のプロジェクトはstudents_analysisと名付け、デスクトップに配置しましょう。\n\nこの教室のコンピューターはデスクトップ以外の場所にプロジェクトを置くと、ログアウト時に消去されます。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの作り方-1",
+    "href": "day3/index.html#プロジェクトの作り方-1",
+    "title": "情報処理演習",
+    "section": "プロジェクトの作り方",
+    "text": "プロジェクトの作り方\n\nstudents_analysisプロジェクトを作成したら、その中にdataというフォルダーを作成し、students.csvをdataに移動してください。\n\n「Files」パネルでフォルダーアイコンをクリックします。"
+  },
+  {
+    "objectID": "day3/index.html#プロジェクトの開き方",
+    "href": "day3/index.html#プロジェクトの開き方",
+    "title": "情報処理演習",
+    "section": "プロジェクトの開き方",
+    "text": "プロジェクトの開き方\n\nRStudioを一旦閉じましょう。\n今度は、アプリ一覧からではなく、プロジェクトからRStudioを開きましょう。\nstudents_projectフォルダーを開き、その中のstudents_project.Rprojファイルをダブルクリックしてください。"
+  },
+  {
+    "objectID": "day3/index.html#パスについて",
+    "href": "day3/index.html#パスについて",
+    "title": "情報処理演習",
+    "section": "パスについて",
+    "text": "パスについて\n\nプロジェクトを開いた後、スクリプトを使ってもう一度students.csvを読み込みましょう：\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")\n\nError: 'Z:/Desktop/students.csv' does not exist.\n\n\n\n今度はうまくいかない。なぜでしょう？"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-②",
+    "href": "day3/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\n\nこのコードをどのように変更すればstudents.csvを読み込むことができるでしょうか？\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")"
+  },
+  {
+    "objectID": "day3/index.html#絶対パス",
+    "href": "day3/index.html#絶対パス",
+    "title": "情報処理演習",
+    "section": "絶対パス",
+    "text": "絶対パス\n\n一つの解決方法は絶対パスを指定することです：\n\nコンピューターの最上位ディレクトリ（教室のパソコンではZ:）から始まります。\n\nMacの場合は/から始まります。\n\n\n\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students_project/data/students.csv\")\n\n\nしかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。"
+  },
+  {
+    "objectID": "day3/index.html#相対パス",
+    "href": "day3/index.html#相対パス",
+    "title": "情報処理演習",
+    "section": "相対パス",
+    "text": "相対パス\n\nもう一つの方法は「相対パス」と呼ばれるものです。\nつまり、Rの作業ディレクトリ（Rが現在入っているフォルダー）から見たパスです。\ngetwd()でRの作業ディレクトリを確認できます：\n\n“Get working directory”\n\n\n\ngetwd()"
+  },
+  {
+    "objectID": "day3/index.html#チャレンジ-③",
+    "href": "day3/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\n\npenguins_analysisというプロジェクトをデスクトップに作成して開いてください。終わったら、再度students_analysisを開いてください。\n\n（penguinsは別の教科書のデータセットです）"
+  },
+  {
+    "objectID": "day5/index.html#おさらい",
+    "href": "day5/index.html#おさらい",
+    "title": "情報処理演習",
+    "section": "おさらい",
+    "text": "おさらい\n\n前回は以下のデータ処理に必要な関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の中身を変える\narrange()で行を並び替える\nfilter()で行を絞り込む"
+  },
+  {
+    "objectID": "day5/index.html#準備",
+    "href": "day5/index.html#準備",
+    "title": "情報処理演習",
+    "section": "準備",
+    "text": "準備\n\n前回欠席した方は、Moodleから第5回のstudents_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\n後ほどMoodleから別のファイルをダウンロードする必要があるため、今のうちに全員Moodleにログインしてください\n\nデスクトップにあるstudents_analysisフォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-①",
+    "href": "day5/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\n早速チャレンジに取り組みましょう。\nstudentsから食事プランが\"Lunch only\"の学生を抽出し、名前をZからAの順に並べ替えてください。"
+  },
+  {
+    "objectID": "day5/index.html#パイプについて",
+    "href": "day5/index.html#パイプについて",
+    "title": "情報処理演習",
+    "section": "パイプについて",
+    "text": "パイプについて\n\nチャレンジ①では、まず条件で絞り込んだデータを一時保存してから、次のステップ（列の並び替え）を行いました。"
+  },
+  {
+    "objectID": "day5/index.html#パイプについて-1",
+    "href": "day5/index.html#パイプについて-1",
+    "title": "情報処理演習",
+    "section": "パイプについて",
+    "text": "パイプについて\n\nこの方法でも解析が短い場合は問題ありませんが、長くなると大変です。\nパイプを使うとこの問題を解決できます。"
+  },
+  {
+    "objectID": "day5/index.html#パイプの使い方",
+    "href": "day5/index.html#パイプの使い方",
+    "title": "情報処理演習",
+    "section": "パイプの使い方",
+    "text": "パイプの使い方\n\nまず、パイプ（|&gt;）の基本的な使い方を覚えましょう。\n\n以前は%&gt;%と書いていましたが、最近のRでは|&gt;が使われます。\n\n例えば、arrange(データ, 列名)のように書いてきましたが、パイプを使うと次のように書けます：\n\nデータ |&gt; arrange(列名)"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-②",
+    "href": "day5/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\nパイプを使ってstudentsからstudent_idが2より大きい行だけに絞り、favourite_foodの順で並び替えてください。"
+  },
+  {
+    "objectID": "day5/index.html#欠測データについて",
+    "href": "day5/index.html#欠測データについて",
+    "title": "情報処理演習",
+    "section": "欠測データについて",
+    "text": "欠測データについて\n\nageにはNAという値が含まれています。\nNAは「Not Applicable」（「該当しない」）を意味します。\n\nこの値は、データが該当しないか、または欠損していることを示します。\nageの場合、何らかの理由でその人の年齢がわからないことを意味します。\n（一部はうまく数字に変換できなかったためですが、もう一つは元々そうなっていました）"
+  },
+  {
+    "objectID": "day5/index.html#欠測データを省く方法",
+    "href": "day5/index.html#欠測データを省く方法",
+    "title": "情報処理演習",
+    "section": "欠測データを省く方法",
+    "text": "欠測データを省く方法\n\nデータフレームに欠測データが含まれていると、エラーの原因になることが多いです。\n\n解析を行う前にそれらを除外する必要があります。\nis.na()関数は、その値がNAであるかを確認してくれます。\n\n例えば：\n\n\nis.na(c(1, 2, NA, 3))\n\n[1] FALSE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-③",
+    "href": "day5/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\nstudentsからageがNAになっている行を除外してから、favorite_foodの順で並び替えてください。（パイプを使ってください）"
+  },
+  {
+    "objectID": "day5/index.html#列を選ぶ",
+    "href": "day5/index.html#列を選ぶ",
+    "title": "情報処理演習",
+    "section": "列を選ぶ",
+    "text": "列を選ぶ\n\n特にデータが大きい場合、解析に不要な列があることがあります。\n必要な列だけに絞ることで、解析がやりやすくなります。"
+  },
+  {
+    "objectID": "day5/index.html#列や行を扱う関数",
+    "href": "day5/index.html#列や行を扱う関数",
+    "title": "情報処理演習",
+    "section": "列や行を扱う関数",
+    "text": "列や行を扱う関数\n\n前回は以下のデータ処理に使用する関数を学びました：\n\nrename()で列の名前を変更する\nmutate()で列の内容を変更する\nselect()で列を選択する\narrange()で行を並び替える\nfilter()で行を絞り込む"
+  },
+  {
+    "objectID": "day5/index.html#新しいプロジェクトgapminder",
+    "href": "day5/index.html#新しいプロジェクトgapminder",
+    "title": "情報処理演習",
+    "section": "新しいプロジェクト：gapminder",
+    "text": "新しいプロジェクト：gapminder\n\nこれから学ぶ関数はもっと大きなデータで使用するため、新しいプロジェクトを作成します。\nこのプロジェクトではgapminderというデータセットを使用します。1952年から2007年までの各国の経済データが含まれています（第4回の課題でも使用しました）。"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成",
+    "href": "day5/index.html#gapminderプロジェクトの作成",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\nデスクトップにgapminder_analysisというプロジェクトを作成し、そのプロジェクトを開いてください。\n\n\nプロジェクトの作成方法については、第3回のスライドを参照してください。"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成-1",
+    "href": "day5/index.html#gapminderプロジェクトの作成-1",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476"
+  },
+  {
+    "objectID": "day5/index.html#gapminderプロジェクトの作成-2",
+    "href": "day5/index.html#gapminderプロジェクトの作成-2",
+    "title": "情報処理演習",
+    "section": "gapminderプロジェクトの作成",
+    "text": "gapminderプロジェクトの作成\n\n新しいプロジェクト内にgapminder.RというRファイルを作成し、gapminderというデータセットを読み込むコードを書きます：\n\n\n\n\n\ngapminder.R\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# Load raw data\ngapminder_raw &lt;- read_csv(\"gapminder.csv\")\n\n# Fix column names\ngapminder &lt;- clean_names(gapminder_raw)"
+  },
+  {
+    "objectID": "day5/index.html#データの集計",
+    "href": "day5/index.html#データの集計",
+    "title": "情報処理演習",
+    "section": "データの集計",
+    "text": "データの集計\n\n今まで学んだ関数はデータフレームの値を個別に扱いました（主に列か行に対する処理を行ってきました）。\nしかし、データフレームに含まれる値の平均や合計を計算したい場合には、さらに操作が必要です。"
+  },
+  {
+    "objectID": "day5/index.html#データの合計をcountで数える",
+    "href": "day5/index.html#データの合計をcountで数える",
+    "title": "情報処理演習",
+    "section": "データの合計をcount()で数える",
+    "text": "データの合計をcount()で数える\n\nデータの全体像を掴むために、まず数を数えることは有効です。\n例えば、gapminderにいくつの国が含まれているかを数えます。\n\n注意：count()のような集計関数の結果は、入力のデータと大きく異なります！"
+  },
+  {
+    "objectID": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
+    "href": "day5/index.html#データの平均などを計算するためにsummarizeを使う",
+    "title": "情報処理演習",
+    "section": "データの平均などを計算するためにsummarize()を使う",
+    "text": "データの平均などを計算するためにsummarize()を使う\n\nsummarize()（「集計する」）の使い方はmutate()と似ています。\nsummarize(データ, 新しい列名 = コマンド)\n\nコマンドには、新しい列の生成方法を指定します\n新しい列名の設定は任意であり、わかりやすい名前を指定します。"
+  },
+  {
+    "objectID": "day5/index.html#summarizeによく使う計算のコマンド",
+    "href": "day5/index.html#summarizeによく使う計算のコマンド",
+    "title": "情報処理演習",
+    "section": "summarize()によく使う計算のコマンド",
+    "text": "summarize()によく使う計算のコマンド\n集計をする際、以下の関数を覚えておくと便利です：\n\nmax()：最大値を計算する\nmin()：最小値を計算する\nmean()：平均値を計算する\nsd()：標準偏差を計算する\nn()：それぞれのグループごとのデータの数（行数）を数える"
+  },
+  {
+    "objectID": "day5/index.html#グループ化",
+    "href": "day5/index.html#グループ化",
+    "title": "情報処理演習",
+    "section": "グループ化",
+    "text": "グループ化\n\nしかし、全体の平均や最小値だけでは役立ちません。\n代わりに、国ごとの値が知りたい場合があります。\nそのように「何かごと」に計算するには、グループ化を使用します。"
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-④",
+    "href": "day5/index.html#チャレンジ-④",
+    "title": "情報処理演習",
+    "section": "チャレンジ ④",
+    "text": "チャレンジ ④\n\n国ごとに寿命の最小値を求めてください。"
+  },
+  {
+    "objectID": "day5/index.html#グループ化-1",
+    "href": "day5/index.html#グループ化-1",
+    "title": "情報処理演習",
+    "section": "グループ化",
+    "text": "グループ化\n\n同時に複数の計算も可能です。\n\n各新しい列をカンマで区切ります\n\n例えば、平均と標準偏差："
+  },
+  {
+    "objectID": "day5/index.html#チャレンジ-⑤",
+    "href": "day5/index.html#チャレンジ-⑤",
+    "title": "情報処理演習",
+    "section": "チャレンジ ⑤",
+    "text": "チャレンジ ⑤\n\n国ごとの一人当たり総生産の平均と標準偏差を計算してください。"
+  },
+  {
+    "objectID": "day5/index.html#パイプライン",
+    "href": "day5/index.html#パイプライン",
+    "title": "情報処理演習",
+    "section": "パイプライン",
+    "text": "パイプライン\n\nパイプとコマンドを組み合わせることで、複雑なデータ処理を簡単に行うことができます。\n例えば、アジアの国だけに絞ってから、国ごとの計算も可能です："
+  },
+  {
+    "objectID": "day5/index.html#まとめ",
+    "href": "day5/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nグループ化により、グループごとの集計が可能です。\n\ngroup_byでグループを定義\nsummarize()でグループごとの計算を実行\n\nパイプ（|&gt;）で複数のデータ処理操作をつなぐことで、複雑なデータ処理パイプラインが構築できます。"
+  },
+  {
+    "objectID": "day7/index.html#連絡事項",
+    "href": "day7/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\nオンデマンド回の課題と倫理教育e-learningの締め切りは 11月21日（木） です。\n\n早めの提出を心がけてください。"
+  },
+  {
+    "objectID": "day7/index.html#クイズ",
+    "href": "day7/index.html#クイズ",
+    "title": "情報処理演習",
+    "section": "クイズ",
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\nクイズ中は質問に回答してください。他の行為（スライドの閲覧やRStudioの操作など）は禁止です。"
+  },
+  {
+    "objectID": "day7/index.html#今日のアウトライン",
+    "href": "day7/index.html#今日のアウトライン",
+    "title": "情報処理演習",
+    "section": "今日のアウトライン",
+    "text": "今日のアウトライン\n\n前回のおさらい\nデータの可視化（2）\n\nグラフにモデルを加える\nグラフのラベルを整える\nグラフの色を整える"
+  },
+  {
+    "objectID": "day7/index.html#前回のおさらい",
+    "href": "day7/index.html#前回のおさらい",
+    "title": "情報処理演習",
+    "section": "前回のおさらい",
+    "text": "前回のおさらい\n\nggplot2のggは「grammar of graphics」（「図の文法」）を意味します。\n図の文法：\n\nグラフ中の要素とデータの紐付け（aesthetics）\n形状（geometry）"
+  },
+  {
+    "objectID": "day7/index.html#準備",
+    "href": "day7/index.html#準備",
+    "title": "情報処理演習",
+    "section": "準備",
+    "text": "準備\n\n前回欠席した方は、Moodleから第7回のpenguins_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\nやり方の詳細については第5回のスライドを参照してください"
+  },
+  {
+    "objectID": "day7/index.html#目的このグラフを作る",
+    "href": "day7/index.html#目的このグラフを作る",
+    "title": "情報処理演習",
+    "section": "目的：このグラフを作る",
+    "text": "目的：このグラフを作る"
+  },
+  {
+    "objectID": "day7/index.html#前回の最後に書いたグラフ",
+    "href": "day7/index.html#前回の最後に書いたグラフ",
+    "title": "情報処理演習",
+    "section": "前回の最後に書いたグラフ",
+    "text": "前回の最後に書いたグラフ\n\n\n\nggplot(\n  data = penguins,\n  mapping = aes(\n    x = flipper_length_mm,\n    y = body_mass_g,\n    color = species\n  )\n) +\n  geom_point()"
+  },
+  {
+    "objectID": "day7/index.html#前回の最後に書いたグラフ-1",
+    "href": "day7/index.html#前回の最後に書いたグラフ-1",
+    "title": "情報処理演習",
+    "section": "前回の最後に書いたグラフ",
+    "text": "前回の最後に書いたグラフ\n\n\n\nggplot(\n  data = penguins,\n  # グラフ中の要素とデータの紐付け\n  mapping = aes(\n    x = flipper_length_mm,\n    y = body_mass_g,\n    color = species\n  )\n) +\n  geom_point()"
+  },
+  {
+    "objectID": "day7/index.html#前回の最後に書いたグラフ-2",
+    "href": "day7/index.html#前回の最後に書いたグラフ-2",
+    "title": "情報処理演習",
+    "section": "前回の最後に書いたグラフ",
+    "text": "前回の最後に書いたグラフ\n\n\n\nggplot(\n  data = penguins,\n  mapping = aes(\n    x = flipper_length_mm,\n    y = body_mass_g,\n    color = species\n  )\n) +\n  # グラフの形状\n  geom_point()"
+  },
+  {
+    "objectID": "day7/index.html#モデルとはデータを予測する数式",
+    "href": "day7/index.html#モデルとはデータを予測する数式",
+    "title": "情報処理演習",
+    "section": "モデルとは、データを予測する数式",
+    "text": "モデルとは、データを予測する数式\n\n次に、データの関係を表すモデルを加えます。\n線形モデル（linear model）は、二つの変数の関係を一直線で表すモデルです。\n\\(y=ax+b\\) という数式で表されます。"
+  },
+  {
+    "objectID": "day7/index.html#チャレンジ-①",
+    "href": "day7/index.html#チャレンジ-①",
+    "title": "情報処理演習",
+    "section": "チャレンジ ①",
+    "text": "チャレンジ ①\n種を点の形で表現してください。"
+  },
+  {
+    "objectID": "day7/index.html#レイヤーについて",
+    "href": "day7/index.html#レイヤーについて",
+    "title": "情報処理演習",
+    "section": "レイヤーについて",
+    "text": "レイヤーについて\n\n+で追加するコードを「レイヤー」（layer）と呼びます\nレイヤーには順序があります：下から上へと重ねていきます"
+  },
+  {
+    "objectID": "day7/index.html#チャレンジ-②",
+    "href": "day7/index.html#チャレンジ-②",
+    "title": "情報処理演習",
+    "section": "チャレンジ ②",
+    "text": "チャレンジ ②\ngeom_point()のレイヤーとgeom_smooth()のレイヤーの順番を入れ替えてみてください。\nグラフがどのように変化しましたか？"
+  },
+  {
+    "objectID": "day7/index.html#labsレイヤーでグラフのラベルを整える",
+    "href": "day7/index.html#labsレイヤーでグラフのラベルを整える",
+    "title": "情報処理演習",
+    "section": "labsレイヤーでグラフのラベルを整える",
+    "text": "labsレイヤーでグラフのラベルを整える\n\n発表時には、図を誰にでも分かりやすくする必要があります\nあなた（図を作った人）はflipper_length_mmが何を指しているか分かるでしょうが、見る人には分かりにくいことがあります"
+  },
+  {
+    "objectID": "day7/index.html#labsレイヤーでグラフのラベルを整える-1",
+    "href": "day7/index.html#labsレイヤーでグラフのラベルを整える-1",
+    "title": "情報処理演習",
+    "section": "labsレイヤーでグラフのラベルを整える",
+    "text": "labsレイヤーでグラフのラベルを整える\n\n名前の作り方は使う人によって異なります：\n\nflipper_length_mm：コードを書く人\nFlipper length (mm)：図を見る人\n\n解決策：元のデータの変数名（列名）は変更せずに、分かりやすいラベルをグラフの作成時に指定します"
+  },
+  {
+    "objectID": "day7/index.html#チャレンジ-③",
+    "href": "day7/index.html#チャレンジ-③",
+    "title": "情報処理演習",
+    "section": "チャレンジ ③",
+    "text": "チャレンジ ③\n縦軸のラベルを読みやすくしてください。"
+  },
+  {
+    "objectID": "day7/index.html#色を整える",
+    "href": "day7/index.html#色を整える",
+    "title": "情報処理演習",
+    "section": "色を整える",
+    "text": "色を整える\n\nラベルだけでなく、色も誰にでも分かりやすくする必要があります\n世界人口の約4〜5％が色覚異常を持つ（男性8％、女性0.5％）\nggplot2のデフォルトの色は色覚異常の方にとって識別が難しい場合があります\n色覚異常に配慮したカラーパレットを使用することが重要です"
+  },
+  {
+    "objectID": "day7/index.html#ggthemesの色を使う",
+    "href": "day7/index.html#ggthemesの色を使う",
+    "title": "情報処理演習",
+    "section": "ggthemesの色を使う",
+    "text": "ggthemesの色を使う\n\nggthemesパッケージには色覚異常に配慮した色が含まれています\ntidyverseには含まれていないので、インストールが必要です\n\n\ninstall.packages(\"ggthemes\")\n\nlibrary(ggthemes)"
+  },
+  {
+    "objectID": "day7/index.html#グラフの保存方法",
+    "href": "day7/index.html#グラフの保存方法",
+    "title": "情報処理演習",
+    "section": "グラフの保存方法",
+    "text": "グラフの保存方法\n\nggsave()でグラフをファイルに書き出す\n\n\nggsave(\"penguins.pdf\")"
+  },
+  {
+    "objectID": "day7/index.html#グラフの保存方法-1",
+    "href": "day7/index.html#グラフの保存方法-1",
+    "title": "情報処理演習",
+    "section": "グラフの保存方法",
+    "text": "グラフの保存方法\n\nファイルの拡張子を変えると、出力ファイルが自動的にそのファイル形式になる\n\n\nggsave(\"penguins.jpg\")"
+  },
+  {
+    "objectID": "day7/index.html#文字化けを防ぐ方法",
+    "href": "day7/index.html#文字化けを防ぐ方法",
+    "title": "情報処理演習",
+    "section": "文字化けを防ぐ方法",
+    "text": "文字化けを防ぐ方法\n\nggplot2のデフォルトフォントでは日本語が文字化けする可能性があります"
+  },
+  {
+    "objectID": "day7/index.html#showtextで日本語フォントを利用する",
+    "href": "day7/index.html#showtextで日本語フォントを利用する",
+    "title": "情報処理演習",
+    "section": "showtextで日本語フォントを利用する",
+    "text": "showtextで日本語フォントを利用する\n\nshowtextパッケージを使用するとカスタムフォントが利用可能になります\ntidyverseには含まれていないので、インストールが必要です\n\n\ninstall.packages(\"showtext\")\n\nlibrary(showtext)"
+  },
+  {
+    "objectID": "day7/index.html#showtextで日本語フォントを利用する-1",
+    "href": "day7/index.html#showtextで日本語フォントを利用する-1",
+    "title": "情報処理演習",
+    "section": "showtextで日本語フォントを利用する",
+    "text": "showtextで日本語フォントを利用する\n\nggplot()の前にフォント設定を行います：\n\n\n# Add a Japanese font\nfont_add_google(\"Noto Sans JP\", \"noto\")\nshowtext_auto()"
+  },
+  {
+    "objectID": "day7/index.html#他のtheme_",
+    "href": "day7/index.html#他のtheme_",
+    "title": "情報処理演習",
+    "section": "他のtheme_()",
+    "text": "他のtheme_()\nggplot2には以下のtheme_()が用意されています：\n\ntheme_grey() （デフォルト）\ntheme_bw()\ntheme_linedraw()\ntheme_light()\ntheme_dark()\ntheme_minimal()\ntheme_classic()\ntheme_void()"
+  },
+  {
+    "objectID": "day7/index.html#チャレンジ-④",
+    "href": "day7/index.html#チャレンジ-④",
+    "title": "情報処理演習",
+    "section": "チャレンジ ④",
+    "text": "チャレンジ ④\n他のテーマを試してみてください。どのテーマが好きですか？"
+  },
+  {
+    "objectID": "day7/index.html#まとめ",
+    "href": "day7/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\ngeom_smooth()でモデルを追加できる\n+でレイヤーを増やす\nlabsでラベルを整える\nscale_color_()でデータの色を整える\ntheme_()でグラフ全体のデザインを整える"
   },
   {
     "objectID": "day6/index.html#連絡事項",
