@@ -29,28 +29,28 @@ G1-501 情報処理演習室
 
 （すべての講義に録画はありません）
 
-- 第１回（2024-10-01）: **ガイダンス、RとRStudioのインストール、R入門（１）**
+- 第１回（2025-10-07）: **ガイダンス、RとRStudioのインストール、R入門（１）**
   - [スライド](day1/index.qmd)
   - リーディング: [R4DS Introduction](https://r4ds.hadley.nz/intro)
-- 第２回（2024-10-08）: **R入門（２）**
+- 第２回（2025-10-14）: **R入門（２）**
   - [スライド](day2/index.qmd)
   - リーディング: [R4DS Chapter 2 (Workflow: Basics)](https://r4ds.hadley.nz/workflow-basics)
-- 第３回（2024-10-22）: **プロジェクトの整理とデータの読み込み**
+- 第３回（2025-10-21）: **プロジェクトの整理とデータの読み込み**
   - [スライド](day3/index.qmd)
   - リーディング
     - [R4DS Chapter 6 (Workflow: Scripts and projects)](https://r4ds.hadley.nz/workflow-scripts)
     - [R4DS Chapter 7 (Data Import)](https://r4ds.hadley.nz/data-import)
-- 第４回（2024-10-29）: **データの整理（１）**
+- 第４回（2025-10-28）: **データの整理（１）**
   - [スライド](day4/index.qmd)
   - リーディング: [R4DS Chapter 3 (Data transformation)](https://r4ds.hadley.nz/data-transform)
-- 第５回（2024-11-05）: **データの整理（２）**
+- 第５回（2025-11-04）: **データの整理（２）**
   - [スライド](day5/index.qmd)
   - リーディング
     - [R4DS Chapter 3 (Data transformation: Groups)](https://r4ds.hadley.nz/data-transform#groups)
     - [R4DS Chapter 19 (Joins: 19.1 - 19.4)](https://r4ds.hadley.nz/joins)
-- 第６回（2024-11-12）: **データの可視化（１）**
+- 第６回（2025-11-11）: **データの可視化（１）**
   - [スライド](day6/index.qmd)
-- 第７回（2024-11-19）: **データの可視化（２）**
+- 第７回（2025-11-18）: **データの可視化（２）**
   - [スライド](day7/index.qmd)
 - オンデマンド回
   - [スライド](on-demand/index.qmd)
@@ -62,5 +62,5 @@ G1-501 情報処理演習室
 
 ## リンク
 
-- [シラバス](https://syllabus.gs.chiba-u.jp/2024/101101101076000/Z011202901/ja_JP)
-- [Moodle](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=37946)
+- [シラバス](https://syllabus.gs.chiba-u.jp/2025/101101101076000/Z011202901/ja_JP)
+- [Moodle](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299)
