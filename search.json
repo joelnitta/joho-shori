@@ -11,14 +11,14 @@
     "href": "day1/index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）\nオンデマンド講義とe-learning"
+    "text": "スケジュール\n\nガイダンス、RとRStudioの紹介、R入門（１）\nR入門（２）\nプロジェクトの整理とデータの読み込み\nデータの整理（１）\nデータの整理（２）\nデータの可視化（１）\nデータの可視化（２）、AIによるプログラミング\nオンデマンド講義とe-learning"
   },
   {
     "objectID": "day1/index.html#moodle",
     "href": "day1/index.html#moodle",
     "title": "情報処理演習",
     "section": "Moodle",
-    "text": "Moodle\n基本情報や宿題は全部Moodle「2024-情報処理演習（T4・火3）」に掲載される。\n常に確認してください。\nhttps://moodle.gs.chiba-u.jp/moodle/course/view.php?id=37946"
+    "text": "Moodle\n基本情報や宿題は全部Moodle「2025-情報処理演習（T4・火3）」に掲載される。\n常に確認してください。\nhttps://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299"
   },
   {
     "objectID": "day1/index.html#オフィスアワー",
@@ -46,7 +46,7 @@
     "href": "day1/index.html#課題と評価",
     "title": "情報処理演習",
     "section": "課題と評価",
-    "text": "課題と評価\n\n宿題（50%）\n\nブラウザで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n\n第1回目の宿題の締め切りは2024年10月8日 12:50\n\n全7回"
+    "text": "課題と評価\n\n宿題（50%）\n\nブラウザで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n\n第1回目の宿題の締め切りは2025年10月14日 12:50\n\n全7回"
   },
   {
     "objectID": "day1/index.html#課題と評価-1",
@@ -60,21 +60,21 @@
     "href": "day1/index.html#欠席ポリシー",
     "title": "情報処理演習",
     "section": "欠席ポリシー",
-    "text": "欠席ポリシー\n\n出席は取りません　\nどんな理由があっても、遅れた提出・クイズの再実施は認めません\nそのかわり、成績にはもっとも低い点数の宿題・クイズ一件分は使いません"
+    "text": "欠席ポリシー\n\n出席は取りません　\n緊急事態以外の理由による遅れた提出・クイズの再実施は認めません\nそのかわり、成績にはもっとも低い点数の宿題・クイズ一件分は使いません"
   },
   {
     "objectID": "day1/index.html#オンデマンド回生成aiの基本",
     "href": "day1/index.html#オンデマンド回生成aiの基本",
     "title": "情報処理演習",
     "section": "オンデマンド回：生成AIの基本",
-    "text": "オンデマンド回：生成AIの基本\n\nMoodle -&gt; 「オンデマンド回」\n\nオンデマンド講義（YouTubeからアケセス、10分）\n中部大学の「ChatGPTについて」の資料\nクイズ\n\n締め切り：2024年11月21日 23:59"
+    "text": "オンデマンド回：生成AIの基本\n\nMoodle -&gt; 「オンデマンド回」\n\nオンデマンド講義（YouTubeからアケセス、10分）\n中部大学の「ChatGPTについて」の資料\nクイズ\n\n締め切り：2025年11月25日 23:59"
   },
   {
     "objectID": "day1/index.html#倫理教育e-learning",
     "href": "day1/index.html#倫理教育e-learning",
     "title": "情報処理演習",
     "section": "倫理教育e-learning",
-    "text": "倫理教育e-learning\n\nMoodle -&gt; 「倫理教育e-learning 」\n\n「登録および受講方法」のPDFを読んでください\n自分でMoodleの倫理教育e-learning授業を登録して、受講してください\n資料を読んでから、クイズ（二つ）を受けてください\n\n締め切り：2024年11月21日 23:59"
+    "text": "倫理教育e-learning\n\nMoodle -&gt; 「倫理教育e-learning 」\n\n「登録および受講方法」のPDFを読んでください\n自分でMoodleの倫理教育e-learning授業を登録して、受講してください\n資料を読んでから、クイズ（二つ）を受けてください\n\n締め切り：2025年11月20日 23:59"
   },
   {
     "objectID": "day1/index.html#データサイエンスとは-1",
@@ -102,7 +102,7 @@
     "href": "day1/index.html#なぜデータサイエンスを勉強するのか",
     "title": "情報処理演習",
     "section": "なぜデータサイエンスを勉強するのか？",
-    "text": "なぜデータサイエンスを勉強するのか？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため\n\nシラバス検索の結果\n\n「データサイエンス」：71件\n「プログラミング」：166件"
+    "text": "なぜデータサイエンスを勉強するのか？\n\n毎日の生活のため\nキャリアのため\n今後の授業の基礎になるため\n\nシラバス検索の結果（フリーワード）\n\n「データサイエンス」：84件\n「プログラミング」：167件"
   },
   {
     "objectID": "day1/index.html#本授業の目的",
@@ -137,7 +137,7 @@
     "href": "day1/index.html#再現性とは-2",
     "title": "情報処理演習",
     "section": "再現性とは？",
-    "text": "再現性とは？\n\n\n\n再現性がなければ、「サイエンス」にはならない！\n\n\n\n\n\n\n\nhttps://www.drugdesigntech.com/how-maximize-the-reproducibility-of-your-research/"
+    "text": "再現性とは？\n\n\n\n再現性がなければ、「サイエンス」にはならない！\n\n\n\n\n\n\nhttps://www.drugdesigntech.com/how-maximize-the-reproducibility-of-your-research/"
   },
   {
     "objectID": "day1/index.html#再現可能にするには",
@@ -159,6 +159,13 @@
     "title": "情報処理演習",
     "section": "他のプログラミング言語もある",
     "text": "他のプログラミング言語もある\n\n特に、PythonはRと同様（あるいはもっと）人気がある\n大事なのは、プログラミングの基本を押さえること"
+  },
+  {
+    "objectID": "day1/index.html#aiにやらせればいいんじゃないの",
+    "href": "day1/index.html#aiにやらせればいいんじゃないの",
+    "title": "情報処理演習",
+    "section": "「AIにやらせればいいんじゃないの？」",
+    "text": "「AIにやらせればいいんじゃないの？」\n\nAI（ChatGPTなど）はコードを書くのが得意なことが多いが…\n何を求めるのかを正確に伝えるには、基本的な知識が必要\nうまくいかないときに自分で対処するためにも、基礎が大切"
   },
   {
     "objectID": "day1/index.html#rとrstudioについて",
@@ -221,7 +228,7 @@
     "href": "day1/index.html#エラーについて",
     "title": "情報処理演習",
     "section": "エラーについて",
-    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError: &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
+    "text": "エラーについて\n\nRに認識されないコマンドを入力すると、エラーメッセージが返される\n\n\n3 % 9\n\nError in parse(text = input): &lt;text&gt;:1:3: unexpected input\n1: 3 % 9\n      ^"
   },
   {
     "objectID": "day1/index.html#エラーについて-1",
@@ -333,14 +340,14 @@
     "href": "on-demand/index.html#みなさん生成aichatgptdeeplなどを使っていますか",
     "title": "情報処理演習",
     "section": "みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？",
-    "text": "みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？\n\n\n\n私はよく使っています\nデータサイエンスのみならず、様々な場面において大事なツール\nでも、そもそもAIが何をしているのか、分かりますか？\n\n\n\nhttps://chat.openai.com/\n\n\n\nみなさん、ChatGPTとか、DeepLといった、いわゆる「生成AI」を使ったことがありますか？ 私はよく使っています。\nChatGPTに何か質問すると、まるで何でも知っているすごく頭のいい人みたいなペラペラな答えが返ってきます。\nこのようにですね。本当にすごいのです。\n生成AIはデータサイエンスだけでなく、様々な場面においてとても大事なツールになっています。 私は特にプログラミングや翻訳に使っています。 でも、生成AIを使う前に、それが何をしているのか、ちゃんと理解する必要があります。"
+    "text": "みなさん、生成AI（ChatGPT、DeepLなど）を使っていますか？\n\n\n\n私はよく使っています\nデータサイエンスのみならず、様々な場面において大事なツール\nでも、そもそもAIが何をしているのか、分かりますか？\n\n\n\nhttps://chat.openai.com/\n\n\nみなさん、ChatGPTとか、DeepLといった、いわゆる「生成AI」を使ったことがありますか？ 私はよく使っています。\nChatGPTに何か質問すると、まるで何でも知っているすごく頭のいい人みたいなペラペラな答えが返ってきます。\nこのようにですね。本当にすごいのです。\n生成AIはデータサイエンスだけでなく、様々な場面においてとても大事なツールになっています。 私は特にプログラミングや翻訳に使っています。 でも、生成AIを使う前に、それが何をしているのか、ちゃんと理解する必要があります。"
   },
   {
     "objectID": "on-demand/index.html#artificial-intelligenceという名前は嘘",
     "href": "on-demand/index.html#artificial-intelligenceという名前は嘘",
     "title": "情報処理演習",
     "section": "Artificial Intelligenceという名前は嘘",
-    "text": "Artificial Intelligenceという名前は嘘\n\n\n\nAI ＝ Artificial Intelligence （人工知能）\n・・でも、AIは何も考えていない！\n\n真偽を知らない！\n\n\n\n\n\n\n\n\nそもそも「AI」は何を意味しているのでしょうか？\nAはArtificial(人工的)でIはIntelligence（知能）ですね。\nでも、この名前に騙（だま）されないでください！確かに人工的ではありますが、知能は全く関係ありませんから。\nAIは知能を持っていなければ、真偽も知りません。では、何で「すごく頭のいい人」のように答えることができるのでしょうか？\n\n\nChatGPTによる画像"
+    "text": "Artificial Intelligenceという名前は嘘\n\n\n\nAI ＝ Artificial Intelligence （人工知能）\n・・でも、AIは何も考えていない！\n\n真偽を知らない！\n\n\n\n\n\n\n\nそもそも「AI」は何を意味しているのでしょうか？\nAはArtificial(人工的)でIはIntelligence（知能）ですね。\nでも、この名前に騙（だま）されないでください！確かに人工的ではありますが、知能は全く関係ありませんから。\nAIは知能を持っていなければ、真偽も知りません。では、何で「すごく頭のいい人」のように答えることができるのでしょうか？\n\n\nChatGPTによる画像"
   },
   {
     "objectID": "on-demand/index.html#llmは言葉を予測するモデルである",
@@ -452,7 +459,7 @@
     "href": "index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2024-10-01）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2024-10-08）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2024-10-22）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2024-10-29）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2024-11-05）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2024-11-12）: データの可視化（１）\n\nスライド\n\n第７回（2024-11-19）: データの可視化（２）\n\nスライド\n\nオンデマンド回\n\nスライド\n録画"
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2025-10-07）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2025-10-14）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2025-10-21）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2025-10-28）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2025-11-04）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2025-11-11）: データの可視化（１）\n\nスライド\n\n第７回（2025-11-18）: データの可視化（２）、AIによるプログラミング\n\nスライド\n\nオンデマンド回\n\nスライド\n録画"
   },
   {
     "objectID": "index.html#オフィスアワー",
@@ -473,7 +480,7 @@
     "href": "day2/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意：質問は複数選択です。すべての正しい答えを選択してください。\n\n\nあるいは、gosocrative.com で joho2024を入力"
+    "text": "クイズ\n\n\n\n\n注意：質問は複数選択です。すべての正しい答えを選択してください。\n\nあるいは、gosocrative.com で joho2024を入力"
   },
   {
     "objectID": "day2/index.html#アウトライン",
@@ -697,7 +704,7 @@
     "href": "day4/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\nまたは、gosocrative.com で joho2024を入力"
   },
   {
     "objectID": "day4/index.html#データの整理data-wrangling",
@@ -823,7 +830,7 @@
     "href": "day3/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
-    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\n\nまたは、gosocrative.com で joho2024を入力"
+    "text": "クイズ\n\n\n\n\n注意： 質問は複数選択です。すべての正しい答えを選んでください。\n\nまたは、gosocrative.com で joho2024を入力"
   },
   {
     "objectID": "day3/index.html#今後の宿題について",
@@ -1425,7 +1432,7 @@
     "href": "day6/index.html#nycflights13パッケージについて",
     "title": "情報処理演習",
     "section": "nycflights13パッケージについて",
-    "text": "nycflights13パッケージについて\n\n\n\nこのパッケージには複数の練習用データセットが含まれています。\nflightsというデータフレームは2013年のニューヨーク市発の飛行データです。\n\n\n\n\n\n\n\nhttps://www.express.co.uk/travel/articles/1440362/us-holidays-jetblue-flights-travel-low-cost-budget-heathrow-gatwick"
+    "text": "nycflights13パッケージについて\n\n\n\nこのパッケージには複数の練習用データセットが含まれています。\nflightsというデータフレームは2013年のニューヨーク市発の飛行データです。\n\n\n\n\n\n\nhttps://www.express.co.uk/travel/articles/1440362/us-holidays-jetblue-flights-travel-low-cost-budget-heathrow-gatwick"
   },
   {
     "objectID": "day6/index.html#複数のデータセットの例飛行データ",
@@ -1523,7 +1530,7 @@
     "href": "day6/index.html#geometry形",
     "title": "情報処理演習",
     "section": "Geometry（形）",
-    "text": "Geometry（形）\n\n\n円グラフ  \n\n棒グラフ  \n\n\n\n\n\nhttps://clauswilke.com/dataviz/proportional-ink.html"
+    "text": "Geometry（形）\n\n\n円グラフ  \n\n棒グラフ  \n\n\n\n\nhttps://clauswilke.com/dataviz/proportional-ink.html"
   },
   {
     "objectID": "day6/index.html#aestheticsデータの表現方法",
