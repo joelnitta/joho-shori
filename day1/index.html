@@ -586,25 +586,6 @@
 <li><p>次のプロンプトで、別のコマンドを試してみましょう</p></li>
 </ul>
 </section>
-<section id="コメントについて" class="slide level2">
-<h2>コメントについて</h2>
-<ul>
-<li><p><code>#</code>の後に書いた文は「コメント」です</p></li>
-<li><p>Rはコメントを無視するので、何を書いてもエラーになりません</p></li>
-<li><p>自分用のメモとして使う</p>
-<ul>
-<li>日本語で書いても大丈夫</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># これはコメントです</span></span>
-<span id="cb3-2"><a></a><span class="co"># 3 % 9</span></span>
-<span id="cb3-3"><a></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 27</code></pre>
-</div>
-</div>
-</section>
 <section id="チャレンジ" class="slide level2">
 <h2>チャレンジ</h2>
 <ul>
@@ -625,7 +606,7 @@
 </ul>
 <p>やり方：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p><code>x</code>というオブジェクトに<code>10</code>が入りました</p></li>
@@ -638,7 +619,7 @@
 <li>オブジェクトの中身を確認したいときはオブジェクト名を打つか、右上の「Environment」パネルで確認</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
@@ -650,8 +631,8 @@
 <li>同じ名前で再度データを保存すると注意なしで上書きされる</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb8-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb6-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 100</code></pre>
 </div>
@@ -663,7 +644,7 @@
 <li>オブジェクトは他の数字と同じように計算に使います：</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>x <span class="sc">+</span> <span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>x <span class="sc">+</span> <span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 150</code></pre>
 </div>
@@ -695,8 +676,8 @@
 <li><p>投稿する前に正しく答えられたかどうか確認できる</p></li>
 </ul>
 </section>
-<section id="宿題のやり方-1" class="slide level2">
-<h2>宿題のやり方</h2>
+<section id="宿題のやり方その１" class="slide level2">
+<h2>宿題のやり方（その１）</h2>
 <ul>
 <li>早速試してみましょう（今回は成績に影響しません）</li>
 </ul>
@@ -706,6 +687,28 @@
 
 
 <img data-src="../images/tutorial-screenshot.png" class="r-stretch"></section>
+<section id="宿題のやり方その２" class="slide level2">
+<h2>宿題のやり方（その２）</h2>
+<ul>
+<li>教室内のパソコンに宿題がインストールされているので、<strong>ここで</strong>受けることも可能です：
+<ul>
+<li>右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)</li>
+<li>受けたい宿題を探します（2）</li>
+<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>注意：完成コードを提出する前に「Stop」ボタンをクリックすると、<strong>今までの答えが消去される</strong>ので気をつけてください。</li>
+</ul>
+
+<img data-src="../images/tutorial-stop.png" class="r-stretch"></section>
 <section id="クイズについて" class="slide level2">
 <h2>クイズについて</h2>
 <ul>

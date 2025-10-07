@@ -200,78 +200,6 @@
 <section id="クイズ" class="slide level2">
 <h2>クイズ</h2>
 </section>
-<section id="今後の宿題について" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li>宿題はこれまで通りオンラインで受けることも可能です。
-<ul>
-<li>混雑している時間帯には接続できない可能性があります。</li>
-<li>しばらく使用しないとリセットされてしまいます。</li>
-</ul></li>
-</ul>
-</section>
-<section id="今後の宿題について-1" class="slide level2">
-<h2>今後の宿題について</h2>
-<ul>
-<li><p>オンラインで受けてきた宿題は<strong>Rパッケージ</strong>「 <code>joholearnr</code>」でもあります</p></li>
-<li><p>教室内のパソコンに宿題がインストールされているので、<strong>ここで</strong>受けることも可能になりました：</p>
-<ul>
-<li>右上の「環境」パネルで「Tutorial」タブをクリック（1）</li>
-<li>受けたい宿題を探します（2）</li>
-<li>「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../images/tutorial-rstudio-screenshot.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<ul>
-<li>チュートリアルが終わったら（完成コードを提出したら）、「Stop」ボタンをクリックしてください。</li>
-</ul>
-
-<img data-src="../images/tutorial-stop.png" class="r-stretch"><ul>
-<li>注意：完成コードを提出する前に「Stop」ボタンをクリックすると、<strong>今までの答えが消去される</strong>ので気をつけてください。</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>リストに今週の宿題が表示されていない場合は、パッケージのアップデート（再インストール）が必要です。
-<ul>
-<li>以下のようにインストールを行ってください：</li>
-</ul></li>
-</ul>
-<div class="medsmall">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(</span>
-<span id="cb1-2"><a></a>  <span class="st">"joholearnr"</span>,</span>
-<span id="cb1-3"><a></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://joelnitta.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span>)</span>
-<span id="cb1-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<ul>
-<li>コードが長いので、コピーペーストがおすすめです。
-<ul>
-<li>上のテキストの上にマウスを置くと、その右上に小さなクリップボードのアイコンが出ます。アイコンをクリックするとコードがコピーされます。</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>もし以下のメッセージが表示されたら：</li>
-</ul>
-<pre><code>These packages have more recent versions available.
-It is recommended to update all of them
-Which would you like to update?</code></pre>
-<p><code>3</code>を押してからエンターキーを押してください（他のパッケージをアップデートしない）。</p>
-<ul>
-<li><code>install()</code>を実行したら、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されます。</li>
-</ul>
-</section>
 <section id="アウトライン" class="slide level2">
 <h2>アウトライン</h2>
 <ul>
@@ -368,7 +296,7 @@ Which would you like to update?</code></pre>
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -381,8 +309,8 @@ Which would you like to update?</code></pre>
 
 <div class="medsmall">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span>
-<span id="cb4-2"><a></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span>
+<span id="cb2-2"><a></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -470,10 +398,10 @@ Which would you like to update?</code></pre>
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="co"># Load data</span></span>
-<span id="cb6-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="co"># Load data</span></span>
+<span id="cb4-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="スクリプトの保存" class="slide level2">
@@ -620,10 +548,10 @@ Which would you like to update?</code></pre>
 <li>プロジェクトを開いた後、スクリプトを使ってもう一度<code>students.csv</code>を読み込みましょう：</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="co"># Load data</span></span>
-<span id="cb7-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a><span class="co"># Load data</span></span>
+<span id="cb5-4"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error: 'Z:/Desktop/students.csv' does not exist.</code></pre>
 </div>
@@ -648,8 +576,8 @@ Which would you like to update?</code></pre>
 <li>このコードをどのように変更すれば<code>students.csv</code>を読み込むことができるでしょうか？</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb9-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Load data</span></span>
+<span id="cb7-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="絶対パス" class="slide level2">
@@ -664,8 +592,8 @@ Which would you like to update?</code></pre>
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb10-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students_project/data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Load data</span></span>
+<span id="cb8-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Z:/Desktop/students_project/data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>しかし、もしこのプロジェクトを再度移動した場合、同じような問題が発生します。</li>
@@ -682,7 +610,7 @@ Which would you like to update?</code></pre>
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -692,8 +620,8 @@ Which would you like to update?</code></pre>
 <li><p>したがって、以下のようにデータを読み込むことができます：</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># Load data</span></span>
-<span id="cb12-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Load data</span></span>
+<span id="cb10-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
