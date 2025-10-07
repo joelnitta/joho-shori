@@ -9,88 +9,9 @@ execute:
 
 # 第3回：プロジェクトの整理とデータの読み込み
 
-<https://joelnita.github.io/joho-shori/day3/>
-
-## 連絡事項
-
-- 第２回の宿題の締め切りを10月25日（金曜日） 23:59まで延長しました
+<https://joelnitta.github.io/joho-shori/day3/>
 
 ## クイズ
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![](../images/joho2024-qr-code.png)
-:::
-
-::: {.column width="50%"}
-**注意：** 質問は複数選択です。**すべて**の正しい答えを選んでください。
-:::
-
-::::
-
-または、[gosocrative.com](https://gosocrative.com) で joho2024を入力
-
-## 今後の宿題について
-
-- 宿題はこれまで通りオンラインで受けることも可能です。
-  - 混雑している時間帯には接続できない可能性があります。
-  - しばらく使用しないとリセットされてしまいます。
-
-## 今後の宿題について
-
-- オンラインで受けてきた宿題は**Rパッケージ**「 `joholearnr`」でもあります
-
-- 教室内のパソコンに宿題がインストールされているので、**ここで**受けることも可能になりました：
-  - 右上の「環境」パネルで「Tutorial」タブをクリック（1）
-  - 受けたい宿題を探します（2）
-  - 「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）
-
----
-
-![](../images/tutorial-rstudio-screenshot.png)
-
----
-
-- チュートリアルが終わったら（完成コードを提出したら）、「Stop」ボタンをクリックしてください。
-
-![](../images/tutorial-stop.png)
-
-- 注意：完成コードを提出する前に「Stop」ボタンをクリックすると、**今までの答えが消去される**ので気をつけてください。
-
----
-
-- リストに今週の宿題が表示されていない場合は、パッケージのアップデート（再インストール）が必要です。
-  - 以下のようにインストールを行ってください：
-
-:::{.medsmall}
-```{r}
-#| label: install-joholearnr-2
-#| echo: true
-#| eval: false
-install.packages(
-  "joholearnr",
-  repos = c("https://joelnitta.r-universe.dev", "https://cloud.r-project.org")
-)
-```
-:::
-
-- コードが長いので、コピーペーストがおすすめです。
-  - 上のテキストの上にマウスを置くと、その右上に小さなクリップボードのアイコンが出ます。アイコンをクリックするとコードがコピーされます。
-
----
-
-- もし以下のメッセージが表示されたら：
-
-```
-These packages have more recent versions available.
-It is recommended to update all of them
-Which would you like to update?
-```
-
-`3`を押してからエンターキーを押してください（他のパッケージをアップデートしない）。
-
-- `install()`を実行したら、一旦RStudioを閉じてから再度開いてください。そうすると、新しいチュートリアル（宿題）が表示されます。
 
 ## アウトライン
 

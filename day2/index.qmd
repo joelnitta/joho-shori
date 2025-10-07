@@ -9,23 +9,9 @@ execute:
 
 # 第２回：R入門（２）
 
-<https://joelnita.github.io/joho-shori/day2/>
+<https://joelnitta.github.io/joho-shori/day2/>
 
 ## クイズ
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![](../images/joho2024-qr-code.png)
-:::
-
-::: {.column width="50%"}
-**注意：**質問は複数選択です。**すべて**の正しい答えを選択してください。
-:::
-
-::::
-
-あるいは、[gosocrative.com](https://gosocrative.com) で joho2024を入力
 
 ## アウトライン
 
@@ -37,7 +23,7 @@ execute:
 
 ## コメントについて
 
-<!-- FIXME: remove this section after lecture -->
+<!-- FIXME: consider moving to Day 3 -->
 
 - `#`の後に書いた文は「コメント」です
 - Rはコメントを無視するので、何を書いてもエラーになりません
@@ -55,7 +41,7 @@ execute:
 宿題にこのようなところがあります：
 
 ```{r}
-#| eval: false 
+#| eval: false
 
 # 計算
 y <- ____
@@ -473,9 +459,3 @@ install_github("joelnitta/joholearnr")
 - `install_github()`は、カスタムなRパッケージをインストールする関数です
 
 -->
-
-## 連絡事項
-
-- 来週（10月15日）は休みです
-
-- 次回は10月22日です
