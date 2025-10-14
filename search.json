@@ -308,6 +308,13 @@
     "text": "宿題のやり方（その２）\n\n教室内のパソコンに宿題がインストールされているので、ここで受けることも可能です：\n\n右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)\n受けたい宿題を探します（2）\n「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）"
   },
   {
+    "objectID": "day1/index.html#宿題のした線について",
+    "href": "day1/index.html#宿題のした線について",
+    "title": "情報処理演習",
+    "section": "宿題のした線について",
+    "text": "宿題のした線について\n宿題にこのようなところがあります：\n\n# 計算\ny &lt;- ____\n# 計算結果の確認\ny\n\n\n____を消してから、コードを書いてください\n\n下線が残っているとエラーになってしまいます"
+  },
+  {
     "objectID": "day1/index.html#クイズについて",
     "href": "day1/index.html#クイズについて",
     "title": "情報処理演習",
@@ -473,7 +480,14 @@
     "href": "day2/index.html#アウトライン",
     "title": "情報処理演習",
     "section": "アウトライン",
-    "text": "アウトライン\n\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
+    "text": "アウトライン\n\n連絡事項\nR入門（２）: Rの基本的な要素を学ぶ\n\nベクトル\nデータ型\n関数\nパッケージ"
+  },
+  {
+    "objectID": "day2/index.html#動画について",
+    "href": "day2/index.html#動画について",
+    "title": "情報処理演習",
+    "section": "動画について",
+    "text": "動画について\n今後、毎回の講義動画を Moodle に掲載します。\n\n復習や理解の確認に活用してください。\nただし、「動画があるから出席しなくてもいい」ということではありません。授業への参加を前提としています。"
   },
   {
     "objectID": "day2/index.html#コメントについて",
@@ -481,13 +495,6 @@
     "title": "情報処理演習",
     "section": "コメントについて",
     "text": "コメントについて\n\n\n#の後に書いた文は「コメント」です\nRはコメントを無視するので、何を書いてもエラーになりません\n自分用のメモとして使う\n\n日本語で書いても大丈夫\n\n\n\n# これはコメントです\n# 3 % 9\n3 * 9\n\n[1] 27"
-  },
-  {
-    "objectID": "day2/index.html#宿題のした線について",
-    "href": "day2/index.html#宿題のした線について",
-    "title": "情報処理演習",
-    "section": "宿題のした線について",
-    "text": "宿題のした線について\n宿題にこのようなところがあります：\n\n# 計算\ny &lt;- ____\n# 計算結果の確認\ny\n\n\n____を消してから、コードを書いてください\n\n下線が残っているとエラーになってしまいます"
   },
   {
     "objectID": "day2/index.html#ベクトルについて",
@@ -504,6 +511,13 @@
     "text": "ベクトルについて\n\n1から10までの数をオブジェクトに保存すれば、今度はそれを使って様々な計算ができます\n例えば、一気に全ての値を2で割る：\n\n\nx &lt;- 1:10\n\nx / 2\n\n [1] 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0"
   },
   {
+    "objectID": "day2/index.html#チャレンジ",
+    "href": "day2/index.html#チャレンジ",
+    "title": "情報処理演習",
+    "section": "チャレンジ",
+    "text": "チャレンジ\n5から16までのベクトルと作る"
+  },
+  {
     "objectID": "day2/index.html#ベクトルについて-2",
     "href": "day2/index.html#ベクトルについて-2",
     "title": "情報処理演習",
@@ -511,11 +525,11 @@
     "text": "ベクトルについて\n\nもう一つのベクトルの作り方があります：c\n\nc は combine（結合する）という意味\n\n\n\nc(1, 2, 3)\n\n[1] 1 2 3"
   },
   {
-    "objectID": "day2/index.html#チャレンジ",
-    "href": "day2/index.html#チャレンジ",
+    "objectID": "day2/index.html#チャレンジ-1",
+    "href": "day2/index.html#チャレンジ-1",
     "title": "情報処理演習",
     "section": "チャレンジ",
-    "text": "チャレンジ\n\n40から50までのベクトルを作る\n40, 42, 46 を含むベクトルを作る"
+    "text": "チャレンジ\n\n40から60までのベクトルを作る\n40, 42, 46 を含むベクトルを作る"
   },
   {
     "objectID": "day2/index.html#データ型について",
@@ -536,7 +550,7 @@
     "href": "day2/index.html#データ型について-2",
     "title": "情報処理演習",
     "section": "データ型について",
-    "text": "データ型について\n\nあるベクトルには一つのデータ型しか持てません。\n\n異なるデータ型を結合すると、強制的に同じになります。\n\n\n\nc(\"ramen\", \"gyoza\", 10, 11)\n\n[1] \"ramen\" \"gyoza\" \"10\"    \"11\"   \n\n\n\n\" は文字を表します。つまり、Rにとって \"10\" は数ではなく、文字です。"
+    "text": "データ型について\n\nあるベクトルには一つのデータ型しか持てません。\n\n異なるデータ型を結合すると、強制的に同じ型になります。\n\n\n\nc(\"ramen\", \"gyoza\", 10, 11)\n\n[1] \"ramen\" \"gyoza\" \"10\"    \"11\"   \n\n\n\n\" は文字を表します。つまり、Rにとって \"10\" は数ではなく、文字です。"
   },
   {
     "objectID": "day2/index.html#データ型について-3",
@@ -553,8 +567,8 @@
     "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in 10 + \"20\": non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
   },
   {
-    "objectID": "day2/index.html#チャレンジ-1",
-    "href": "day2/index.html#チャレンジ-1",
+    "objectID": "day2/index.html#チャレンジ-2",
+    "href": "day2/index.html#チャレンジ-2",
     "title": "情報処理演習",
     "section": "チャレンジ",
     "text": "チャレンジ\n以下のコードを実行すると、結果のデータ型はどれでしょうか？\n\nc(19, 21, 40, TRUE, TRUE, FALSE)\n\n\n\nc(menu, ages)"
@@ -609,8 +623,8 @@
     "text": "引数について\n\nヘルプファイルでは、digits = 0 と書いてあります\n\nこれは、デフォルトの設定では残す小数の桁数はゼロ、という意味です\n\n\n\nround(x = pi, digits = 0)\n\n[1] 3"
   },
   {
-    "objectID": "day2/index.html#チャレンジ-2",
-    "href": "day2/index.html#チャレンジ-2",
+    "objectID": "day2/index.html#チャレンジ-3",
+    "href": "day2/index.html#チャレンジ-3",
     "title": "情報処理演習",
     "section": "チャレンジ",
     "text": "チャレンジ\n\nsort() は入力を並び替える関数です。\n\n引数は x（ベクトル）と decreasing（論理）\n\n\n今まで扱ったデータを以下のように並び替えてください：\n\nages を小さい順から大きい順に\nages を大きい順から小さい順に\nmenu をAからZまでの順に\nmenu をZからAまでの順に"
@@ -634,25 +648,25 @@
     "href": "day2/index.html#パッケージのインストール-1",
     "title": "情報処理演習",
     "section": "パッケージのインストール",
-    "text": "パッケージのインストール\n\n一度インストールしたら、次回からはインストールする必要はありません*\nパッケージをアップデートしたい時に再インストールすれば良い\nパッケージのインストールしただけでは、まだ使える状態になっていません"
+    "text": "パッケージのインストール\n\n一度インストールしたら、次回からはインストールする必要はありません\nパッケージをアップデートしたい時に再インストールすれば良い\nパッケージのインストールしただけでは、まだ使える状態になっていません"
   },
   {
     "objectID": "day2/index.html#パッケージのロード",
     "href": "day2/index.html#パッケージのロード",
     "title": "情報処理演習",
     "section": "パッケージのロード",
-    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするためにロードする必要があります\n\nlibrary() 関数でロードします：\n\nlibrary(ggplot2)"
+    "text": "パッケージのロード\n\nパッケージをインストールしたら、使える状態にするためにロードする必要があります\n\nlibrary() 関数でパッケージをロードします：\n\nlibrary(ggplot2)"
   },
   {
     "objectID": "day2/index.html#install.packagesとlibraryの違い",
     "href": "day2/index.html#install.packagesとlibraryの違い",
     "title": "情報処理演習",
     "section": "install.packages()とlibrary()の違い",
-    "text": "install.packages()とlibrary()の違い\n\ninstall.packages() は一度だけで良いです（パソコンにパッケージをダウンロードします）*\nlibrary() はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）\ninstall.packages() はパッケージ名を引用符で囲む\nlibrary はパッケージ名を引用符で囲まない"
+    "text": "install.packages()とlibrary()の違い\n\ninstall.packages() は一度だけで良いです（パソコンにパッケージをダウンロードします）\nlibrary() はRを使うたびに実行する必要があります（パッケージを現在のRセッションで使用可能にします）\ninstall.packages() はパッケージ名を引用符で囲む\nlibrary はパッケージ名を引用符で囲まない"
   },
   {
-    "objectID": "day2/index.html#チャレンジ-3",
-    "href": "day2/index.html#チャレンジ-3",
+    "objectID": "day2/index.html#チャレンジ-4",
+    "href": "day2/index.html#チャレンジ-4",
     "title": "情報処理演習",
     "section": "チャレンジ",
     "text": "チャレンジ\n\nemojiというパッケージをインストールしてから、ロードしてください\nemoji(\"smile\")というコマンドを実行してください"
@@ -670,6 +684,13 @@
     "title": "情報処理演習",
     "section": "情報処理演習室の注意点",
     "text": "情報処理演習室の注意点\n\ninstall.packages() は一度だけで良い\n\nと説明しましたが、この教室のパソコンからログアウトするとパッケージを含むあなたのデータが全て消去されてしまいます。\nそのため、この教室のパソコンに新しくインストールするパッケージは毎回インストールが必要です。"
+  },
+  {
+    "objectID": "day2/index.html#まとめ",
+    "href": "day2/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\nベクトル：一連のデータをまとめたもの\nRには3つの基本的なデータ型がある\n\n数値\n文字列\n論理値\n\n関数：入力を受け取り、計算を行い、出力を返す\nパッケージ：関数をまとめたもの"
   },
   {
     "objectID": "day4/index.html#クイズ",
