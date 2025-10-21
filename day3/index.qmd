@@ -15,17 +15,42 @@ execute:
 
 ## アウトライン
 
+- 連絡事項
 - プロジェクトの整理とデータの読み込み
   - ファイルとフォルダー
   - データフレーム
   - スクリプト
   - プロジェクトの作成
 
+# 連絡事項
+
+## 宿題の完成コードについて
+
+- 何人かは完成コードの貼り付けがうまく行っていません
+
+- 「投稿内容を確認する」ボタンを押したあと、その画面を**スクリーンショットしてファイルとして提出してください**
+
+- これは、コードの貼り付けがうまくいかなかった場合に備えるためです
+
+---
+
+![](../images/naiyo-check.jpg)
+
+---
+
+![](../images/hw-done.jpg)
+
+---
+
+![](../images/hw-submission.jpg)
+
+# プロジェクトの整理とデータの読み込み
+
 ## RStudioの設定の変更
 
 - 再現性を担保するために、RStudioの設定を変更する必要があります。
 
-- そうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。
+- そうしないと、予想外の（自分が書いたコードに依存しない）結果になってしまう恐れがある。
 
 - 「Tools」→「Global Options」→「Workspace」
   - 「Restore .RData into workspace at startup」→ **外す**
@@ -180,7 +205,7 @@ students <- read_csv("Z:/Desktop/students.csv")
 
 ## スクリプトの保存
 
-- スクリプトを保存しましょう。
+- スクリプトをデスクトップに保存しましょう。
 
 - 「File」 → 「Save As」 → 場所とファイル名を決めて保存します。
 
@@ -384,6 +409,13 @@ students <- read_csv("data/students.csv")
 - `penguins_analysis`というプロジェクトをデスクトップに作成して開いてください。終わったら、再度`students_analysis`を開いてください。
   - （`penguins`は別の教科書のデータセットです）
 
+## まとめ
+
+- 表形式データはCSVファイルに保存する
+- スクリプト（`.R`, `.r`ファイル）にRのコードを書く
+- パス ＝ ファイルの「場所」（PC内での位置）
+- Rプロジェクト（`.Rproj`） を使ってデータとスクリプトを整理・管理する
+
 <!-- comment out slide content not covered in class
 
 ## データフレームのデータ型
@@ -409,12 +441,12 @@ students <- read_csv("data/students.csv")
 
 ```{r}
 #| eval: false
-col_types = list(列名 = col_何ちゃら())
+col_types <- list(列名 = col_何ちゃら())
 ```
 
 ```{r}
 #| eval: false
-col_types = list(AGE = col_double())
+col_types <- list(AGE = col_double())
 ```
 
 ---
