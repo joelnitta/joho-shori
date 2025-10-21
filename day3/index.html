@@ -203,6 +203,7 @@
 <section id="アウトライン" class="slide level2">
 <h2>アウトライン</h2>
 <ul>
+<li>連絡事項</li>
 <li>プロジェクトの整理とデータの読み込み
 <ul>
 <li>ファイルとフォルダー</li>
@@ -211,12 +212,42 @@
 <li>プロジェクトの作成</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="連絡事項" class="title-slide slide level1 center">
+<h1>連絡事項</h1>
+
+</section>
+<section id="宿題の完成コードについて" class="slide level2">
+<h2>宿題の完成コードについて</h2>
+<ul>
+<li><p>何人かは完成コードの貼り付けがうまく行っていません</p></li>
+<li><p>「投稿内容を確認する」ボタンを押したあと、その画面を<strong>スクリーンショットしてファイルとして提出してください</strong></p></li>
+<li><p>これは、コードの貼り付けがうまくいかなかった場合に備えるためです</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../images/naiyo-check.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/hw-done.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../images/hw-submission.jpg" class="r-stretch"></section></section>
+<section>
+<section id="プロジェクトの整理とデータの読み込み" class="title-slide slide level1 center">
+<h1>プロジェクトの整理とデータの読み込み</h1>
+
 </section>
 <section id="rstudioの設定の変更" class="slide level2">
 <h2>RStudioの設定の変更</h2>
 <ul>
 <li><p>再現性を担保するために、RStudioの設定を変更する必要があります。</p></li>
-<li><p>そうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。</p></li>
+<li><p>そうしないと、予想外の（自分が書いたコードに依存しない）結果になってしまう恐れがある。</p></li>
 <li><p>「Tools」→「Global Options」→「Workspace」</p>
 <ul>
 <li>「Restore .RData into workspace at startup」→ <strong>外す</strong></li>
@@ -407,7 +438,7 @@
 <section id="スクリプトの保存" class="slide level2">
 <h2>スクリプトの保存</h2>
 <ul>
-<li><p>スクリプトを保存しましょう。</p></li>
+<li><p>スクリプトをデスクトップに保存しましょう。</p></li>
 <li><p>「File」 → 「Save As」 → 場所とファイル名を決めて保存します。</p></li>
 <li><p>今回は<code>students.R</code>としましょう。</p>
 <ul>
@@ -644,6 +675,15 @@
 <li>（<code>penguins</code>は別の教科書のデータセットです）</li>
 </ul></li>
 </ul>
+</section>
+<section id="まとめ" class="slide level2">
+<h2>まとめ</h2>
+<ul>
+<li>表形式データはCSVファイルに保存する</li>
+<li>スクリプト（<code>.R</code>, <code>.r</code>ファイル）にRのコードを書く</li>
+<li>パス ＝ ファイルの「場所」（PC内での位置）</li>
+<li>Rプロジェクト（<code>.Rproj</code>） を使ってデータとスクリプトを整理・管理する</li>
+</ul>
 <!-- comment out slide content not covered in class
 
 ## データフレームのデータ型
@@ -672,14 +712,14 @@
 ::: {.cell}
 
 ```{.r .cell-code}
-col_types = list(列名 = col_何ちゃら())
+col_types <- list(列名 = col_何ちゃら())
 ```
 :::
 
 ::: {.cell}
 
 ```{.r .cell-code}
-col_types = list(AGE = col_double())
+col_types <- list(AGE = col_double())
 ```
 :::
 

@@ -823,14 +823,21 @@
     "href": "day3/index.html#アウトライン",
     "title": "情報処理演習",
     "section": "アウトライン",
-    "text": "アウトライン\n\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
+    "text": "アウトライン\n\n連絡事項\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
+  },
+  {
+    "objectID": "day3/index.html#宿題の完成コードについて",
+    "href": "day3/index.html#宿題の完成コードについて",
+    "title": "情報処理演習",
+    "section": "宿題の完成コードについて",
+    "text": "宿題の完成コードについて\n\n何人かは完成コードの貼り付けがうまく行っていません\n「投稿内容を確認する」ボタンを押したあと、その画面をスクリーンショットしてファイルとして提出してください\nこれは、コードの貼り付けがうまくいかなかった場合に備えるためです"
   },
   {
     "objectID": "day3/index.html#rstudioの設定の変更",
     "href": "day3/index.html#rstudioの設定の変更",
     "title": "情報処理演習",
     "section": "RStudioの設定の変更",
-    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果が得られます。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
+    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果になってしまう恐れがある。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
   },
   {
     "objectID": "day3/index.html#データフレームについて",
@@ -907,7 +914,7 @@
     "href": "day3/index.html#スクリプトの保存",
     "title": "情報処理演習",
     "section": "スクリプトの保存",
-    "text": "スクリプトの保存\n\nスクリプトを保存しましょう。\n「File」 → 「Save As」 → 場所とファイル名を決めて保存します。\n今回はstudents.Rとしましょう。\n\nRスクリプトは.rもしくは.Rのファイル拡張子を使用します。"
+    "text": "スクリプトの保存\n\nスクリプトをデスクトップに保存しましょう。\n「File」 → 「Save As」 → 場所とファイル名を決めて保存します。\n今回はstudents.Rとしましょう。\n\nRスクリプトは.rもしくは.Rのファイル拡張子を使用します。"
   },
   {
     "objectID": "day3/index.html#スクリプトとコンソールの違い",
@@ -999,6 +1006,13 @@
     "title": "情報処理演習",
     "section": "チャレンジ ③",
     "text": "チャレンジ ③\n\npenguins_analysisというプロジェクトをデスクトップに作成して開いてください。終わったら、再度students_analysisを開いてください。\n\n（penguinsは別の教科書のデータセットです）"
+  },
+  {
+    "objectID": "day3/index.html#まとめ",
+    "href": "day3/index.html#まとめ",
+    "title": "情報処理演習",
+    "section": "まとめ",
+    "text": "まとめ\n\n表形式データはCSVファイルに保存する\nスクリプト（.R, .rファイル）にRのコードを書く\nパス ＝ ファイルの「場所」（PC内での位置）\nRプロジェクト（.Rproj） を使ってデータとスクリプトを整理・管理する"
   },
   {
     "objectID": "day5/index.html#クイズ",
