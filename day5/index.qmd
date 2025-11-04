@@ -23,10 +23,10 @@ execute:
 
 ## 準備
 
-- 前回欠席した方は、[Moodle](<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295207>)から第5回の`students_analysis.zip`をダウンロードして、デスクトップで解凍してください。
-  - 後ほどMoodleから別のファイルをダウンロードする必要があるため、**今のうちに全員Moodleにログインしてください**
+- 全員が同じ状態になるために、まず[Moodle](<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1471180>)から第5回の`students_analysis_day5.zip`をダウンロードして、デスクトップで解凍してください。
 
-- デスクトップにある`students_analysis`フォルダー内の`students_analysis.Rproj`をダブルクリックして、プロジェクトを開いてください。
+- デスクトップにある`students_analysis_day5`フォルダー内の`students_analysis.Rproj`をダブルクリックして、プロジェクトを開いてください。
+  - FireFoxを使ってください。
 
 ---
 
@@ -290,7 +290,7 @@ students |>
 
 2. データをMoodleからダウンロードし、`gapminder_analysis`の中に保存してください：
 
-<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476>
+<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1444823>
 
 ## `gapminder`プロジェクトの作成
 

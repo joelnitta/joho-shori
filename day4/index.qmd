@@ -13,6 +13,12 @@ execute:
 
 ## クイズ
 
+## 連絡事項
+
+- 宿題に答える際は「Submit Answer」を忘れないように！
+
+- 前回欠席した方はMoodleから`students_analysis.zip`をダウンロードしてください
+
 ## データの整理（Data Wrangling）
 
 - データが手に入ると、まだ解析に使えない状態であることが多いです。
