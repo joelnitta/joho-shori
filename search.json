@@ -700,6 +700,13 @@
     "text": "クイズ"
   },
   {
+    "objectID": "day4/index.html#連絡事項",
+    "href": "day4/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n宿題に答える際は「Submit Answer」を忘れないように！\n前回欠席した方はMoodleからstudents_analysis.zipをダウンロードしてください"
+  },
+  {
     "objectID": "day4/index.html#データの整理data-wrangling",
     "href": "day4/index.html#データの整理data-wrangling",
     "title": "情報処理演習",
@@ -1033,7 +1040,7 @@
     "href": "day5/index.html#準備",
     "title": "情報処理演習",
     "section": "準備",
-    "text": "準備\n\n前回欠席した方は、Moodleから第5回のstudents_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\n後ほどMoodleから別のファイルをダウンロードする必要があるため、今のうちに全員Moodleにログインしてください\n\nデスクトップにあるstudents_analysisフォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。"
+    "text": "準備\n\n全員が同じ状態になるために、まずMoodleから第5回のstudents_analysis_day5.zipをダウンロードして、デスクトップで解凍してください。\nデスクトップにあるstudents_analysis_day5フォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。\n\nFireFoxを使ってください。"
   },
   {
     "objectID": "day5/index.html#チャレンジ-①",
@@ -1124,7 +1131,7 @@
     "href": "day5/index.html#gapminderプロジェクトの作成-1",
     "title": "情報処理演習",
     "section": "gapminderプロジェクトの作成",
-    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1295476"
+    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1444823"
   },
   {
     "objectID": "day5/index.html#gapminderプロジェクトの作成-2",
