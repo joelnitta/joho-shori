@@ -11,12 +11,12 @@ execute:
 
 <https://joelnitta.github.io/joho-shori/day7/>
 
+## クイズ
+
 ## 連絡事項
 
-- オンデマンド回の課題と倫理教育e-learningの締め切りは **11月20日（木）** です。
+- 倫理教育e-learningの締め切りは **11月20日（木）** です。
   - **早めの提出を心がけてください。**
-
-## クイズ
 
 ## 今日のアウトライン
 
@@ -74,7 +74,7 @@ penguins
 
 ## 目的：このグラフを作る
 
-![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+![](../images/penguin-plot.png)
 
 ## 前回の最後に書いたグラフ
 
@@ -157,21 +157,21 @@ showtext_auto()
 # Create sample data
 set.seed(123)
 x <- seq(1, 10, by = 0.5)
-a <- 2  # slope
-b <- 3  # intercept
-y <- a * x + b + rnorm(length(x), sd = 2)  # Add some noise to the data
+a <- 2 # slope
+b <- 3 # intercept
+y <- a * x + b + rnorm(length(x), sd = 2) # Add some noise to the data
 data <- data.frame(x = x, y = y)
 
 # Label data for ggrepel
 label_data <- data.frame(
-  x = c(0, 3),  # X position for y-intercept and slope
-  y = c(b, a * 3 + b),  # Y position for y-intercept and slope
-  label = c("y切片 (b = 3)", "傾き (a = 2)")  # Labels
+  x = c(0, 3), # X position for y-intercept and slope
+  y = c(b, a * 3 + b), # Y position for y-intercept and slope
+  label = c("y切片 (b = 3)", "傾き (a = 2)") # Labels
 )
 
 # Generate the plot
 ggplot(data, aes(x = x, y = y)) +
-  geom_point(color = "blue", size = 2) +  # Scatter plot of points
+  geom_point(color = "blue", size = 2) + # Scatter plot of points
   geom_hline(yintercept = 0, linetype = "dashed", color = "grey20") +
   geom_vline(xintercept = 0, linetype = "dashed", color = "grey20") +
   labs(
@@ -192,14 +192,14 @@ ggplot(data, aes(x = x, y = y)) +
 
 # Generate the plot
 ggplot(data, aes(x = x, y = y)) +
-  geom_point(color = "blue", size = 2) +  # Scatter plot of points
-  geom_abline(slope = a, intercept = b, color = "red") +  # Line for y = ax + b
+  geom_point(color = "blue", size = 2) + # Scatter plot of points
+  geom_abline(slope = a, intercept = b, color = "red") + # Line for y = ax + b
   geom_hline(yintercept = 0, linetype = "dashed", color = "grey20") +
   geom_vline(xintercept = 0, linetype = "dashed", color = "grey20") +
   # Intercept annotation
-  annotate("point", x = 0, y = b, color = "purple", size = 4) + 
+  annotate("point", x = 0, y = b, color = "purple", size = 4) +
   geom_label_repel(
-    data = label_data[1,],
+    data = label_data[1, ],
     aes(x = x, y = y, label = label),
     color = c("purple"),
     size = 10,
@@ -208,10 +208,12 @@ ggplot(data, aes(x = x, y = y)) +
     ylim = 2.5, xlim = 1
   ) +
   # Slope annotation
-  annotate("segment", x = 2.5, xend = 3.5, y = a * 2.5 + b, yend = a * 3.5 + b, 
-           arrow = arrow(length = unit(0.2, "cm")), color = "darkgreen", size = 1.5) +
+  annotate("segment",
+    x = 2.5, xend = 3.5, y = a * 2.5 + b, yend = a * 3.5 + b,
+    arrow = arrow(length = unit(0.2, "cm")), color = "darkgreen", size = 1.5
+  ) +
   geom_label_repel(
-    data = label_data[2,],
+    data = label_data[2, ],
     aes(x = x, y = y, label = label),
     color = c("dark green"),
     size = 10,
@@ -219,8 +221,10 @@ ggplot(data, aes(x = x, y = y)) +
     label.padding = 0.5,
     ylim = 10, xlim = 5
   ) +
-  annotate("text", x = 6, y = max(y) - 2, label = "y = 2x + 3", 
-           color = "red", size = 10, hjust = 0) +  # Annotate equation
+  annotate("text",
+    x = 6, y = max(y) - 2, label = "y = 2x + 3",
+    color = "red", size = 10, hjust = 0
+  ) + # Annotate equation
   labs(
     title = "y = ax + b のグラフ",
     x = "X軸",
@@ -264,12 +268,39 @@ ggplot(
 
 ::: {.column width="50%"}
 - **ただし、現在のモデルは種ごとになっています**（それぞれに異なる傾きと切片があります）。
-
-- 今回の目的は、一つのモデルで全ての種をまとめることです。
 :::
 
 ::: {.column width="50%"}
-![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+```{r}
+#| echo: false
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_smooth(method = "lm")
+
+```
+
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- ただし、現在のモデルは種ごとになっています（それぞれに異なる傾きと切片があります）。
+
+- 今回の目的は、**一つのモデルで全ての種をまとめることです**。
+:::
+
+::: {.column width="50%"}
+![](../images/penguin-plot-single-model.jpg)
 :::
 
 ::::
@@ -412,13 +443,14 @@ ggplot(data = penguins) +
 ::: {.medsmall}
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|3-6|7"
+#| code-line-numbers: "|3-6|8"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g)
-  ) +
+    y = body_mass_g
+  )
+) +
   geom_point(aes(color = species)) +
   geom_smooth(method = "lm")
 
@@ -437,7 +469,7 @@ ggplot(
 
 ---
 
-![](https://r.qcbs.ca/workshop03/book-en/images/gglayers.png)
+![](../images/ggplot2-layers.png)
 
 ## チャレンジ ②
 
@@ -465,13 +497,14 @@ ggplot(
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|9-11"
+#| code-line-numbers: "|10-12"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g)
-  ) +
+    y = body_mass_g
+  )
+) +
   geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
@@ -497,15 +530,18 @@ ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g)
-  ) +
+    y = body_mass_g
+  )
+) +
   geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
     title = "Body mass and flipper length",
     subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)", y = "Body mass (g)",
-    color = "Species", shape = "Species"
+    x = "Flipper length (mm)",
+    y = "Body mass (g)",
+    color = "Species",
+    shape = "Species"
   )
 ```
 
@@ -538,20 +574,23 @@ library(ggthemes)
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|15"
+#| code-line-numbers: "|18"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g)
-  ) +
+    y = body_mass_g
+  )
+) +
   geom_point(aes(color = species, shape = species)) +
   geom_smooth(method = "lm") +
   labs(
     title = "Body mass and flipper length",
     subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)", y = "Body mass (g)",
-    color = "Species", shape = "Species"
+    x = "Flipper length (mm)",
+    y = "Body mass (g)",
+    color = "Species",
+    shape = "Species"
   ) +
   scale_color_colorblind()
 ```
@@ -588,14 +627,15 @@ ggsave("penguins.jpg")
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|10-12"
+#| code-line-numbers: "|11-13"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
     y = body_mass_g,
-    shape = species)
-  ) +
+    shape = species
+  )
+) +
   geom_point(aes(color = species)) +
   geom_smooth(method = "lm") +
   labs(
@@ -638,7 +678,7 @@ showtext_auto()
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|1-2|17"
+#| code-line-numbers: "|1-2|18"
 font_add_google("Noto Sans JP", "noto")
 showtext_auto()
 
@@ -647,8 +687,9 @@ ggplot(
   mapping = aes(
     x = flipper_length_mm,
     y = body_mass_g,
-    shape = species)
-  ) +
+    shape = species
+  )
+) +
   geom_point(aes(color = species)) +
   geom_smooth(method = "lm") +
   labs(
@@ -668,21 +709,24 @@ ggplot(
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "|17"
+#| code-line-numbers: "|20"
 ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
     y = body_mass_g,
-    shape = species)
-  ) +
+    shape = species
+  )
+) +
   geom_point(aes(color = species)) +
   geom_smooth(method = "lm") +
   labs(
     title = "Body mass and flipper length",
     subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)", y = "Body mass (g)",
-    color = "Species", shape = "Species"
+    x = "Flipper length (mm)",
+    y = "Body mass (g)",
+    color = "Species",
+    shape = "Species"
   ) +
   scale_color_colorblind() +
   theme_minimal()

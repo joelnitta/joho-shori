@@ -329,6 +329,10 @@ Digital Humanities
 
 ![](../images/r_vs_rstudio.png)
 
+## R バージョンの選択（Windows のみ）
+
+![](../images/select-R-01.png)
+
 ---
 
 ![](../images/rstudo_panel_ja.png)

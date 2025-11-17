@@ -320,7 +320,7 @@ penguins
 
 ## 目的：このグラフを作成する
 
-![](https://r4ds.hadley.nz/data-visualize_files/figure-html/unnamed-chunk-7-1.png)
+![](../images/penguin-plot.png)
 
 ## `ggplot()`でグラフの基盤を作成する
 
