@@ -91,6 +91,7 @@ ggplot(
 ) +
   geom_point()
 ```
+
 :::
 
 ## 前回の最後に書いたグラフ
@@ -109,7 +110,9 @@ ggplot(
   )
 ) +
   geom_point()
+
 ```
+
 :::
 
 ## 前回の最後に書いたグラフ
@@ -128,7 +131,9 @@ ggplot(
 ) +
   # グラフの形状
   geom_point()
+
 ```
+
 :::
 
 
@@ -176,6 +181,7 @@ ggplot(data, aes(x = x, y = y)) +
   ) +
   scale_y_continuous(limits = c(0, NA)) +
   theme_gray(base_size = 24, base_family = "noto")
+
 ```
 
 ---
@@ -222,6 +228,7 @@ ggplot(data, aes(x = x, y = y)) +
   ) +
   scale_y_continuous(limits = c(0, NA)) +
   theme_gray(base_size = 24, base_family = "noto")
+
 ```
 
 ```{r}
@@ -246,6 +253,7 @@ ggplot(
   )
 ) +
   geom_smooth(method = "lm")
+
 ```
 
 :::
@@ -281,6 +289,7 @@ ggplot(
   )
 ) +
   geom_smooth(method = "lm")
+
 ```
 
 :::
@@ -301,6 +310,7 @@ ggplot(
 ) +
   geom_smooth(method = "lm") +
   geom_point()
+
 ```
 
 :::
@@ -325,6 +335,7 @@ ggplot(
 ) +
   geom_smooth(method = "lm") +
   geom_point()
+
 ```
 
 :::
@@ -348,7 +359,9 @@ ggplot(data = penguins) +
       color = species
     )
   )
+
 ```
+
 :::
 
 ---
@@ -377,7 +390,9 @@ ggplot(data = penguins) +
     ),
     method = "lm"
   )
+
 ```
+
 :::
 
 ---
@@ -406,7 +421,9 @@ ggplot(
   ) +
   geom_point(aes(color = species)) +
   geom_smooth(method = "lm")
+
 ```
+
 :::
 
 ## チャレンジ ①
