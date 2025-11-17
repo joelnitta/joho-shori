@@ -210,6 +210,13 @@
     "text": "RStudioの基本的な使い方\n\n「R」というソフトではなく、「RStudio」を開くように気をつけてください"
   },
   {
+    "objectID": "day1/index.html#r-バージョンの選択windows-のみ",
+    "href": "day1/index.html#r-バージョンの選択windows-のみ",
+    "title": "情報処理演習",
+    "section": "R バージョンの選択（Windows のみ）",
+    "text": "R バージョンの選択（Windows のみ）"
+  },
+  {
     "objectID": "day1/index.html#rstudioの基本的な使い方-1",
     "href": "day1/index.html#rstudioの基本的な使い方-1",
     "title": "情報処理演習",
@@ -1211,18 +1218,18 @@
     "text": "まとめ\n\nグループ化により、グループごとの集計が可能です。\n\ngroup_byでグループを定義\nsummarize()でグループごとの計算を実行\n\nパイプ（|&gt;）で複数のデータ処理操作をつなぐことで、複雑なデータ処理パイプラインが構築できます。"
   },
   {
-    "objectID": "day7/index.html#連絡事項",
-    "href": "day7/index.html#連絡事項",
-    "title": "情報処理演習",
-    "section": "連絡事項",
-    "text": "連絡事項\n\nオンデマンド回の課題と倫理教育e-learningの締め切りは 11月20日（木） です。\n\n早めの提出を心がけてください。"
-  },
-  {
     "objectID": "day7/index.html#クイズ",
     "href": "day7/index.html#クイズ",
     "title": "情報処理演習",
     "section": "クイズ",
     "text": "クイズ"
+  },
+  {
+    "objectID": "day7/index.html#連絡事項",
+    "href": "day7/index.html#連絡事項",
+    "title": "情報処理演習",
+    "section": "連絡事項",
+    "text": "連絡事項\n\n倫理教育e-learningの締め切りは 11月20日（木） です。\n\n早めの提出を心がけてください。"
   },
   {
     "objectID": "day7/index.html#今日のアウトライン",
