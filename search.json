@@ -18,7 +18,7 @@
     "href": "day1/index.html#moodle",
     "title": "情報処理演習",
     "section": "Moodle",
-    "text": "Moodle\n基本情報や宿題は全部Moodle「2025-情報処理演習（T4・火3）」に掲載される。\n常に確認してください。\nhttps://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299"
+    "text": "Moodle\n基本情報や宿題は全部Moodle「2026-情報処理演習（T4・火3）」に掲載される。\n常に確認してください。\nhttps://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769"
   },
   {
     "objectID": "day1/index.html#オフィスアワー",
@@ -46,7 +46,7 @@
     "href": "day1/index.html#課題と評価",
     "title": "情報処理演習",
     "section": "課題と評価",
-    "text": "課題と評価\n\n宿題（50%）\n\nブラウザで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n\n第1回目の宿題の締め切りは 2025年10月14日 12:50\n\n全7回"
+    "text": "課題と評価\n\n宿題（50%）\n\nブラウザで受ける（チュートリアル式）\nMoodleで提出\n締め切り：次の週の授業まで\n\n第1回目の宿題の締め切りは 2026年10月13日 12:50\n\n全7回"
   },
   {
     "objectID": "day1/index.html#課題と評価-1",
@@ -67,14 +67,14 @@
     "href": "day1/index.html#オンデマンド回生成aiの基本",
     "title": "情報処理演習",
     "section": "オンデマンド回：生成AIの基本",
-    "text": "オンデマンド回：生成AIの基本\n\nMoodle -&gt; 「オンデマンド回」\n\nオンデマンド講義（YouTubeからアケセス、10分）\n中部大学の「ChatGPTについて」の資料\nクイズ\n\n締め切り：2025年11月17日 23:59 （第７回の前日までに）"
+    "text": "オンデマンド回：生成AIの基本\n\nMoodle -&gt; 「オンデマンド回」\n\nオンデマンド講義（YouTubeからアケセス、10分）\n中部大学の「ChatGPTについて」の資料\nクイズ\n\n締め切り：2026年11月23日 23:59 （第７回の前日までに）"
   },
   {
     "objectID": "day1/index.html#倫理教育e-learning",
     "href": "day1/index.html#倫理教育e-learning",
     "title": "情報処理演習",
     "section": "倫理教育e-learning",
-    "text": "倫理教育e-learning\n\nMoodle -&gt; 「倫理教育e-learning 」\n\n「登録および受講方法」のPDFを読んでください\n自分でMoodleの倫理教育e-learning授業を登録して、受講してください\n資料を読んでから、クイズ（二つ）を受けてください\n\n締め切り：2025年11月20日 23:59"
+    "text": "倫理教育e-learning\n\nMoodle -&gt; 「倫理教育e-learning 」\n\n「登録および受講方法」のPDFを読んでください\n自分でMoodleの倫理教育e-learning授業を登録して、受講してください\n資料を読んでから、クイズ（二つ）を受けてください\n\n締め切り：2026年11月24日 23:59"
   },
   {
     "objectID": "day1/index.html#データサイエンスとは-1",
@@ -459,7 +459,7 @@
     "href": "index.html#スケジュール",
     "title": "情報処理演習",
     "section": "スケジュール",
-    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2025-10-07）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2025-10-14）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2025-10-21）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2025-10-28）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2025-11-04）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2025-11-11）: データの可視化（１）\n\nスライド\n\n第７回（2025-11-18）: データの可視化（２）、AIによるプログラミング\n\nスライド\n\nオンデマンド回\n\nスライド\n録画"
+    "text": "スケジュール\n毎週のリーディングは講義の前に読んでください。下のリンクは英語ですが、Moodleに日本語版のPDFがあります。\n（すべての講義に録画はありません）\n\n第１回（2026-10-06）: ガイダンス、RとRStudioのインストール、R入門（１）\n\nスライド\nリーディング: R4DS Introduction\n\n第２回（2026-10-13）: R入門（２）\n\nスライド\nリーディング: R4DS Chapter 2 (Workflow: Basics)\n\n第３回（2026-10-20）: プロジェクトの整理とデータの読み込み\n\nスライド\nリーディング\n\nR4DS Chapter 6 (Workflow: Scripts and projects)\nR4DS Chapter 7 (Data Import)\n\n\n第４回（2026-10-27）: データの整理（１）\n\nスライド\nリーディング: R4DS Chapter 3 (Data transformation)\n\n第５回（2026-11-10）: データの整理（２）\n\nスライド\nリーディング\n\nR4DS Chapter 3 (Data transformation: Groups)\nR4DS Chapter 19 (Joins: 19.1 - 19.4)\n\n\n第６回（2026-11-17）: データの可視化（１）\n\nスライド\n\n第７回（2026-11-24）: データの可視化（２）、AIによるプログラミング\n\nスライド\n\nオンデマンド回\n\nスライド\n録画"
   },
   {
     "objectID": "index.html#オフィスアワー",
@@ -571,7 +571,7 @@
     "href": "day2/index.html#データ型が大事な理由",
     "title": "情報処理演習",
     "section": "データ型が大事な理由",
-    "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in 10 + \"20\": non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
+    "text": "データ型が大事な理由\n\nデータ型が一致していないと、エラーになってしまうことがあります。\n\n\n10 + \"20\"\n\nError in `10 + \"20\"`:\n! non-numeric argument to binary operator\n\n\n\n特に外部からデータを読み込んだ際、予想と違ったデータ型になってしまうことがあります。"
   },
   {
     "objectID": "day2/index.html#チャレンジ-2",
@@ -991,7 +991,7 @@
     "href": "day3/index.html#パスについて",
     "title": "情報処理演習",
     "section": "パスについて",
-    "text": "パスについて\n\nプロジェクトを開いた後、スクリプトを使ってもう一度students.csvを読み込みましょう：\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")\n\nError: 'Z:/Desktop/students.csv' does not exist.\n\n\n\n今度はうまくいかない。なぜでしょう？"
+    "text": "パスについて\n\nプロジェクトを開いた後、スクリプトを使ってもう一度students.csvを読み込みましょう：\n\n\nlibrary(tidyverse)\n\n# Load data\nstudents &lt;- read_csv(\"Z:/Desktop/students.csv\")\n\nError:\n! 'Z:/Desktop/students.csv' does not exist.\n\n\n\n今度はうまくいかない。なぜでしょう？"
   },
   {
     "objectID": "day3/index.html#チャレンジ-②",
@@ -1229,7 +1229,7 @@
     "href": "day7/index.html#連絡事項",
     "title": "情報処理演習",
     "section": "連絡事項",
-    "text": "連絡事項\n\n倫理教育e-learningの締め切りは 11月20日（木） です。\n\n早めの提出を心がけてください。"
+    "text": "連絡事項\n\n倫理教育e-learningの締め切りは 11月24日（火） です。\n\n早めの提出を心がけてください。"
   },
   {
     "objectID": "day7/index.html#今日のアウトライン",
@@ -1404,7 +1404,7 @@
     "href": "day6/index.html#連絡事項",
     "title": "情報処理演習",
     "section": "連絡事項",
-    "text": "連絡事項\n\n締め切りが迫っています\n\nオンデマンド回の課題：2025年11月17日（月） 23:59\n倫理教育e-learning：2025年11月20日（木） 23:59\n\n\n早めの提出を心がけてください。"
+    "text": "連絡事項\n\n締め切りが迫っています\n\nオンデマンド回の課題：2026年11月23日（月） 23:59\n倫理教育e-learning：2026年11月24日（火） 23:59\n\n\n早めの提出を心がけてください。"
   },
   {
     "objectID": "day6/index.html#クイズ",
