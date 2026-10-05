@@ -78,11 +78,11 @@ execute:
 
 PDFをMoodleからダウンロードして、毎週のリーディングを講義の**前に**読んでください。
 
-- 今週：[「はじめに」](https://moodle.gs.chiba-u.jp/moodle/pluginfile.php/2417197/mod_resource/content/2/r4ds-intro.pdf)
+- 今週：「はじめに」
   - 「何を学ぶのか」（vi-vii）
   - 「準備するもの」（ix-xi）
 
-- 来週：[２章「ワークフロー：基本」（27~32）](https://moodle.gs.chiba-u.jp/moodle/pluginfile.php/2417198/mod_resource/content/3/r4ds-chapter-2.pdf)
+- 来週： ２章「ワークフロー：基本」（27~32）
 
 他のリーディングは随時お知らせする
 
@@ -114,7 +114,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## オンデマンド回：生成AIの基本
 
-- Moodle -> [「オンデマンド回」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769#section-1)
+- Moodle -> 「オンデマンド回」
   - オンデマンド講義（[YouTubeからアケセス](https://www.youtube.com/watch?v=ok837FBoEI8)、10分）
   - 中部大学の「[ChatGPTについて](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)」の資料
   - クイズ
@@ -122,7 +122,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## 倫理教育e-learning 
 
-- Moodle -> [「倫理教育e-learning 」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769#section-9)
+- Moodle -> 「倫理教育e-learning 」
   - 「登録および受講方法」のPDFを読んでください
   - 自分でMoodleの倫理教育e-learning授業を登録して、受講してください
   - 資料を読んでから、クイズ（二つ）を受けてください
