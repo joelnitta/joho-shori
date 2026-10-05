@@ -19,10 +19,10 @@ execute:
 
 ::: {.column}
 - 研究テーマその１：**シダ植物の進化と生態学**
-  - [Biodiversity and Japan](https://syllabus.gs.chiba-u.jp/2024/401001000000000/G15N945001/en_US)
+  - [Biodiversity and Japan](https://syllabus.gs.chiba-u.jp/2026/401001000000000/G15N945001/en_US)
 
 - 研究テーマその２：**データサイエンス**用ソフトの開発
-  - [Reproducible Data Analysis](https://syllabus.gs.chiba-u.jp/2024/101101101076000/Z011531301/en_US)
+  - [Reproducible Data Analysis](https://syllabus.gs.chiba-u.jp/2026/101101101076000/Z011531301/en_US)
 
 - <https://www.joelnitta.com>
 :::
@@ -46,11 +46,11 @@ execute:
 
 ## Moodle
 
-基本情報や宿題は全部Moodle「2025-情報処理演習（T4・火3）」に掲載される。
+基本情報や宿題は全部Moodle「2026-情報処理演習（T4・火3）」に掲載される。
 
 常に確認してください。
 
-<https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299>
+<https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769>
 
 ## オフィスアワー
 
@@ -92,7 +92,7 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
   - ブラウザで受ける（チュートリアル式）
   - Moodleで提出
   - 締め切り：次の週の授業まで
-    - 第1回目の宿題の締め切りは **2025年10月14日 12:50**
+    - 第1回目の宿題の締め切りは **2026年10月13日 12:50**
   - 全7回
 
 ## 課題と評価
@@ -114,19 +114,19 @@ PDFをMoodleからダウンロードして、毎週のリーディングを講�
 
 ## オンデマンド回：生成AIの基本
 
-- Moodle -> [「オンデマンド回」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299#section-1)
+- Moodle -> [「オンデマンド回」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769#section-1)
   - オンデマンド講義（[YouTubeからアケセス](https://www.youtube.com/watch?v=ok837FBoEI8)、10分）
   - 中部大学の「[ChatGPTについて](https://edu.isc.chubu.ac.jp/hsuzuki/iip/DataScience/ChatGPT/chatgpt.html)」の資料
   - クイズ
-- **締め切り：2025年11月17日 23:59** （第７回の前日までに）
+- **締め切り：2026年11月23日 23:59** （第７回の前日までに）
 
 ## 倫理教育e-learning 
 
-- Moodle -> [「倫理教育e-learning 」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=44299#section-9)
+- Moodle -> [「倫理教育e-learning 」](https://moodle.gs.chiba-u.jp/moodle/course/view.php?id=50769#section-9)
   - 「登録および受講方法」のPDFを読んでください
   - 自分でMoodleの倫理教育e-learning授業を登録して、受講してください
   - 資料を読んでから、クイズ（二つ）を受けてください
-- **締め切り：2025年11月20日 23:59**
+- **締め切り：2026年11月24日 23:59**
 
 # データサイエンスとは？
 
