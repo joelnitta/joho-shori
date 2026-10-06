@@ -39,7 +39,7 @@
     "href": "day1/index.html#リーディング",
     "title": "情報処理演習",
     "section": "リーディング",
-    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n\n今週：「はじめに」\n\n「何を学ぶのか」（vi-vii）\n「準備するもの」（ix-xi）\n\n来週：２章「ワークフロー：基本」（27~32）\n\n他のリーディングは随時お知らせする"
+    "text": "リーディング\nPDFをMoodleからダウンロードして、毎週のリーディングを講義の前に読んでください。\n\n今週：「はじめに」\n\n「何を学ぶのか」（vi-vii）\n「準備するもの」（ix-xi）\n\n来週： ２章「ワークフロー：基本」（27~32）\n\n他のリーディングは随時お知らせする"
   },
   {
     "objectID": "day1/index.html#課題と評価",
@@ -96,6 +96,13 @@
     "title": "情報処理演習",
     "section": "文系のデータサイエンス",
     "text": "文系のデータサイエンス\nDigital Humanities"
+  },
+  {
+    "objectID": "day1/index.html#アンケート調査のデータ解析",
+    "href": "day1/index.html#アンケート調査のデータ解析",
+    "title": "情報処理演習",
+    "section": "アンケート調査のデータ解析",
+    "text": "アンケート調査のデータ解析\n\n\n\nhttps://formhug.ai/blog/how-to-analyze-survey-results"
   },
   {
     "objectID": "day1/index.html#なぜデータサイエンスを勉強するのか",
@@ -301,18 +308,11 @@
     "text": "宿題のやり方\n\n宿題は全部オンラインになっている\nブラウザーの中でRコードを実行することによって答える\n最後に完成コードが出るので、これをMoodleにコピペして、投稿\n投稿する前に正しく答えられたかどうか確認できる"
   },
   {
-    "objectID": "day1/index.html#宿題のやり方その１",
-    "href": "day1/index.html#宿題のやり方その１",
+    "objectID": "day1/index.html#宿題のやり方-1",
+    "href": "day1/index.html#宿題のやり方-1",
     "title": "情報処理演習",
-    "section": "宿題のやり方（その１）",
-    "text": "宿題のやり方（その１）\n\n早速試してみましょう（今回は成績に影響しません）\n\nhttps://joelnitta.shinyapps.io/00-learnr/"
-  },
-  {
-    "objectID": "day1/index.html#宿題のやり方その２",
-    "href": "day1/index.html#宿題のやり方その２",
-    "title": "情報処理演習",
-    "section": "宿題のやり方（その２）",
-    "text": "宿題のやり方（その２）\n\n教室内のパソコンに宿題がインストールされているので、ここで受けることも可能です：\n\n右上の「環境」パネルに新しい「Tutorial」タブをクリック(1)\n受けたい宿題を探します（2）\n「Start Tutorial」をクリックするとブラウザ内でチュートリアルが始まります（3）"
+    "section": "宿題のやり方",
+    "text": "宿題のやり方\n\n早速試してみましょう（今回は成績に影響しません）\n\nhttps://joelnitta.shinyapps.io/00-learnr/"
   },
   {
     "objectID": "day1/index.html#宿題のした線について",
@@ -320,6 +320,13 @@
     "title": "情報処理演習",
     "section": "宿題のした線について",
     "text": "宿題のした線について\n宿題にこのようなところがあります：\n\n# 計算\ny &lt;- ____\n# 計算結果の確認\ny\n\n\n____を消してから、コードを書いてください\n\n下線が残っているとエラーになってしまいます"
+  },
+  {
+    "objectID": "day1/index.html#スクリーンショットについて",
+    "href": "day1/index.html#スクリーンショットについて",
+    "title": "情報処理演習",
+    "section": "スクリーンショットについて",
+    "text": "スクリーンショットについて\n「投稿内容を確認する」ボタンを押したあと、その画面をスクリーンショットしてファイルとして提出してください（コードの貼り付けがうまくいかなかった場合に備えるためです）\n\n必ず以下の情報が入るようにすること：\n\n\n名前\n\n\n学籍番号\n\n\n採点の結果\n\n\n完成コード"
   },
   {
     "objectID": "day1/index.html#クイズについて",
