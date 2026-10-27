@@ -15,9 +15,36 @@ execute:
 
 ## 連絡事項
 
-- 宿題に答える際は「Submit Answer」を忘れないように！
-
 - 前回欠席した方はMoodleから`students_analysis.zip`をダウンロードしてください
+  - FireFoxを使ってください。
+
+- デスクトップにある`students_analysis`フォルダー内の`students_analysis.Rproj`をダブルクリックして、プロジェクトを開いてください。
+
+---
+
+![](../images/download-project-1.png)
+
+---
+
+![](../images/download-project-2_annotated.png)
+
+---
+
+![](../images/download-project-3_annotated.png)
+
+---
+
+![](../images/download-project-5_annotated.png)
+
+---
+
+![](../images/download-project-6.png)
+
+---
+
+![](../images/download-project-7_annotated.png)
+
+---
 
 ## データの整理（Data Wrangling）
 
@@ -32,7 +59,7 @@ execute:
 
 ---
 
-![Image by Allison Horst](https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png){fig-alt="data wrangling monsters"}
+![Image by Allison Horst](../images/data_cowboy.png){fig-alt="data wrangling monsters"}
 
 ## 準備
 
@@ -301,7 +328,7 @@ c(1, 2, 3, 4, 5, 6) > 4
 
 ```{r}
 #| error: TRUE
-11 = 11
+11 <- 11
 ```
 
 ## まとめ
