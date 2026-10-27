@@ -711,7 +711,7 @@
     "href": "day4/index.html#連絡事項",
     "title": "情報処理演習",
     "section": "連絡事項",
-    "text": "連絡事項\n\n宿題に答える際は「Submit Answer」を忘れないように！\n前回欠席した方はMoodleからstudents_analysis.zipをダウンロードしてください"
+    "text": "連絡事項\n\n前回欠席した方はMoodleからstudents_analysis.zipをダウンロードしてください\n\nFireFoxを使ってください。\n\nデスクトップにあるstudents_analysisフォルダー内のstudents_analysis.Rprojをダブルクリックして、プロジェクトを開いてください。"
   },
   {
     "objectID": "day4/index.html#データの整理data-wrangling",
@@ -840,11 +840,11 @@
     "text": "アウトライン\n\nプロジェクトの整理とデータの読み込み\n\nファイルとフォルダー\nデータフレーム\nスクリプト\nプロジェクトの作成"
   },
   {
-    "objectID": "day3/index.html#rstudioの設定の変更",
-    "href": "day3/index.html#rstudioの設定の変更",
+    "objectID": "day3/index.html#rstudioの設定の変更ni",
+    "href": "day3/index.html#rstudioの設定の変更ni",
     "title": "情報処理演習",
-    "section": "RStudioの設定の変更",
-    "text": "RStudioの設定の変更\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果になってしまう恐れがある。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
+    "section": "RStudioの設定の変更ni",
+    "text": "RStudioの設定の変更ni\n\n再現性を担保するために、RStudioの設定を変更する必要があります。\nそうしないと、予想外の（自分が書いたコードに依存しない）結果になってしまう恐れがある。\n「Tools」→「Global Options」→「Workspace」\n\n「Restore .RData into workspace at startup」→ 外す\n「Save workspace to .RData on exit」→ 「Never」"
   },
   {
     "objectID": "day3/index.html#データフレームについて",
