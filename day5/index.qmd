@@ -288,9 +288,7 @@ students |>
 
 ## `gapminder`プロジェクトの作成
 
-2. データをMoodleからダウンロードし、`gapminder_analysis`の中に保存してください：
-
-<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1444823>
+2. データを Moodle の第5回からダウンロードし、`gapminder_analysis`の中に保存してください
 
 ## `gapminder`プロジェクトの作成
 
