@@ -23,7 +23,7 @@ execute:
 
 ## 準備
 
-- 全員が同じ状態になるために、まず[Moodle](<https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1471180>)から第5回の`students_analysis_day5.zip`をダウンロードして、デスクトップで解凍してください。
+- 全員が同じ状態になるために、まず Moodle から第5回の`students_analysis_day5.zip`をダウンロードして、デスクトップで解凍してください。
 
 - デスクトップにある`students_analysis_day5`フォルダー内の`students_analysis.Rproj`をダブルクリックして、プロジェクトを開いてください。
   - FireFoxを使ってください。
@@ -117,8 +117,8 @@ arrange(students_lunch, desc(full_name))
 
 ## パイプの使い方
 
-- まず、パイプ（`|>`）の基本的な使い方を覚えましょう。
-  - 以前は`%>%`と書いていましたが、最近のRでは`|>`が使われます。
+- まず、パイプ（`|>`）の基本的な使い方を覚えましょう。ま
+  - 以前は`%>%`と書いていましたが、最近のRでは`|>`が使われています。
 
 - 例えば、`arrange(データ, 列名)`のように書いてきましたが、パイプを使うと次のように書けます：
 
