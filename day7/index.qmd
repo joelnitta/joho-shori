@@ -15,7 +15,7 @@ execute:
 
 ## 連絡事項
 
-- 倫理教育e-learningの締め切りは **11月24日（火）** です。
+- 倫理教育e-learningの締め切りは **2027年2月26日（金）** です。
   - **早めの提出を心がけてください。**
 
 ## 今日のアウトライン
@@ -44,7 +44,7 @@ library(ggthemes)
 
 ## 準備
 
-- 前回欠席した方は、Moodleから第7回の`penguins_analysis.zip`をダウンロードして、デスクトップで解凍してください。
+- 前回欠席した方は、`penguins_analysis`プロジェクトを作成し、その中に`penguins.R`スクリプトを作成してください。
   - やり方の詳細については[第5回のスライド](https://joelnitta.github.io/joho-shori/day5/#/%E6%BA%96%E5%82%99)を参照してください
 
 ---
