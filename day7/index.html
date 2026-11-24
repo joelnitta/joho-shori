@@ -810,18 +810,13 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggsave</span>(<span class="st">"penguins.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="文字化けを防ぐ方法" class="slide level2">
-<h2>文字化けを防ぐ方法</h2>
-<ul>
-<li>ggplot2のデフォルトフォントでは日本語が文字化けする可能性があります</li>
-</ul>
-</section>
 <section class="slide level2">
 
+<h3 id="theme_でグラフ全体のデザインを整える"><code>theme_()</code>でグラフ全体のデザインを整える</h3>
 <div class="medsmall">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" data-code-line-numbers="|11-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" data-code-line-numbers="|20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb19-2"><a></a>  <span class="at">data =</span> penguins,</span>
 <span id="cb19-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb19-4"><a></a>    <span class="at">x =</span> flipper_length_mm,</span>
@@ -832,109 +827,20 @@
 <span id="cb19-9"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb19-10"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
 <span id="cb19-11"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-12"><a></a>    <span class="at">title =</span> <span class="st">"ペンギンの体重および翼の長さ"</span></span>
-<span id="cb19-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb19-14"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-12"><a></a>    <span class="at">title =</span> <span class="st">"Body mass and flipper length"</span>,</span>
+<span id="cb19-13"><a></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
+<span id="cb19-14"><a></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span id="cb19-15"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
+<span id="cb19-16"><a></a>    <span class="at">color =</span> <span class="st">"Species"</span>,</span>
+<span id="cb19-17"><a></a>    <span class="at">shape =</span> <span class="st">"Species"</span></span>
+<span id="cb19-18"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb19-19"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb19-20"><a></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
 <figure>
 <p><img data-src="index_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div></div>
-</div>
-</section>
-<section id="showtextで日本語フォントを利用する" class="slide level2">
-<h2><code>showtext</code>で日本語フォントを利用する</h2>
-<ul>
-<li><code>showtext</code>パッケージを使用するとカスタムフォントが利用可能になります</li>
-<li><code>tidyverse</code>には含まれていないので、インストールが必要です</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">install.packages</span>(<span class="st">"showtext"</span>)</span>
-<span id="cb20-2"><a></a></span>
-<span id="cb20-3"><a></a><span class="fu">library</span>(showtext)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="showtextで日本語フォントを利用する-1" class="slide level2">
-<h2><code>showtext</code>で日本語フォントを利用する</h2>
-<ul>
-<li><code>ggplot()</code>の前にフォント設定を行います：</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Add a Japanese font</span></span>
-<span id="cb21-2"><a></a><span class="fu">font_add_google</span>(<span class="st">"Noto Sans JP"</span>, <span class="st">"noto"</span>)</span>
-<span id="cb21-3"><a></a><span class="fu">showtext_auto</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="theme_でフォントを指定する"><code>theme_()</code>でフォントを指定する</h3>
-<div class="medsmall">
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" data-code-line-numbers="|1-2|18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">font_add_google</span>(<span class="st">"Noto Sans JP"</span>, <span class="st">"noto"</span>)</span>
-<span id="cb22-2"><a></a><span class="fu">showtext_auto</span>()</span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb22-5"><a></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb22-6"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb22-7"><a></a>    <span class="at">x =</span> flipper_length_mm,</span>
-<span id="cb22-8"><a></a>    <span class="at">y =</span> body_mass_g,</span>
-<span id="cb22-9"><a></a>    <span class="at">shape =</span> species</span>
-<span id="cb22-10"><a></a>  )</span>
-<span id="cb22-11"><a></a>) <span class="sc">+</span></span>
-<span id="cb22-12"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb22-13"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
-<span id="cb22-14"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb22-15"><a></a>    <span class="at">title =</span> <span class="st">"ペンギンの体重および翼の長さ"</span></span>
-<span id="cb22-16"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb22-17"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb22-18"><a></a>  <span class="fu">theme_grey</span>(<span class="at">base_family =</span> <span class="st">"noto"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="theme_でグラフ全体のデザインを整える"><code>theme_()</code>でグラフ全体のデザインを整える</h3>
-<div class="medsmall">
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" data-code-line-numbers="|20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb23-2"><a></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb23-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb23-4"><a></a>    <span class="at">x =</span> flipper_length_mm,</span>
-<span id="cb23-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
-<span id="cb23-6"><a></a>    <span class="at">shape =</span> species</span>
-<span id="cb23-7"><a></a>  )</span>
-<span id="cb23-8"><a></a>) <span class="sc">+</span></span>
-<span id="cb23-9"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb23-10"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
-<span id="cb23-11"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb23-12"><a></a>    <span class="at">title =</span> <span class="st">"Body mass and flipper length"</span>,</span>
-<span id="cb23-13"><a></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
-<span id="cb23-14"><a></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>,</span>
-<span id="cb23-15"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
-<span id="cb23-16"><a></a>    <span class="at">color =</span> <span class="st">"Species"</span>,</span>
-<span id="cb23-17"><a></a>    <span class="at">shape =</span> <span class="st">"Species"</span></span>
-<span id="cb23-18"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb23-19"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb23-20"><a></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </figure>
 </div>
 </div>

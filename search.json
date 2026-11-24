@@ -1351,27 +1351,6 @@
     "text": "グラフの保存方法\n\nファイルの拡張子を変えると、出力ファイルが自動的にそのファイル形式になる\n\n\nggsave(\"penguins.jpg\")"
   },
   {
-    "objectID": "day7/index.html#文字化けを防ぐ方法",
-    "href": "day7/index.html#文字化けを防ぐ方法",
-    "title": "情報処理演習",
-    "section": "文字化けを防ぐ方法",
-    "text": "文字化けを防ぐ方法\n\nggplot2のデフォルトフォントでは日本語が文字化けする可能性があります"
-  },
-  {
-    "objectID": "day7/index.html#showtextで日本語フォントを利用する",
-    "href": "day7/index.html#showtextで日本語フォントを利用する",
-    "title": "情報処理演習",
-    "section": "showtextで日本語フォントを利用する",
-    "text": "showtextで日本語フォントを利用する\n\nshowtextパッケージを使用するとカスタムフォントが利用可能になります\ntidyverseには含まれていないので、インストールが必要です\n\n\ninstall.packages(\"showtext\")\n\nlibrary(showtext)"
-  },
-  {
-    "objectID": "day7/index.html#showtextで日本語フォントを利用する-1",
-    "href": "day7/index.html#showtextで日本語フォントを利用する-1",
-    "title": "情報処理演習",
-    "section": "showtextで日本語フォントを利用する",
-    "text": "showtextで日本語フォントを利用する\n\nggplot()の前にフォント設定を行います：\n\n\n# Add a Japanese font\nfont_add_google(\"Noto Sans JP\", \"noto\")\nshowtext_auto()"
-  },
-  {
     "objectID": "day7/index.html#他のtheme_",
     "href": "day7/index.html#他のtheme_",
     "title": "情報処理演習",
