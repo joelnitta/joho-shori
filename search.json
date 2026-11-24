@@ -1131,7 +1131,7 @@
     "href": "day5/index.html#gapminderプロジェクトの作成-1",
     "title": "情報処理演習",
     "section": "gapminderプロジェクトの作成",
-    "text": "gapminderプロジェクトの作成\n\nデータをMoodleからダウンロードし、gapminder_analysisの中に保存してください：\n\nhttps://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1444823"
+    "text": "gapminderプロジェクトの作成\n\nデータを Moodle の第5回からダウンロードし、gapminder_analysisの中に保存してください"
   },
   {
     "objectID": "day5/index.html#gapminderプロジェクトの作成-2",
@@ -1222,7 +1222,7 @@
     "href": "day7/index.html#連絡事項",
     "title": "情報処理演習",
     "section": "連絡事項",
-    "text": "連絡事項\n\n倫理教育e-learningの締め切りは 11月24日（火） です。\n\n早めの提出を心がけてください。"
+    "text": "連絡事項\n\n倫理教育e-learningの締め切りは 2027年2月26日（金） です。\n\n早めの提出を心がけてください。"
   },
   {
     "objectID": "day7/index.html#今日のアウトライン",
@@ -1243,7 +1243,7 @@
     "href": "day7/index.html#準備",
     "title": "情報処理演習",
     "section": "準備",
-    "text": "準備\n\n前回欠席した方は、Moodleから第7回のpenguins_analysis.zipをダウンロードして、デスクトップで解凍してください。\n\nやり方の詳細については第5回のスライドを参照してください"
+    "text": "準備\n\n前回欠席した方は、penguins_analysisプロジェクトを作成し、その中にpenguins.Rスクリプトを作成してください。\n\nやり方の詳細については第5回のスライドを参照してください"
   },
   {
     "objectID": "day7/index.html#目的このグラフを作る",
